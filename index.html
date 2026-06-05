@@ -1621,7 +1621,7 @@ section{position:relative}
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
-      <div class="footer-copy">&copy; <span id="year">2026</span> Zale IT</div>
+      <div class="footer-copy">&copy; <span id="year">2022</span> Zale IT</div>
     </div>
     <div class="footer-bottom">
       <p class="footer-legal">Zale IT Pty Ltd · Brisbane QLD · <a href="mailto:support@zaleit.com.au">support@zaleit.com.au</a></p>
@@ -1749,7 +1749,7 @@ section{position:relative}
   }
 
   /* ---------- Footer year ---------- */
-  document.getElementById('year').textContent = new Date().getFullYear();
+  /* Year is set statically in the markup; no dynamic override. */
 
   /* ---------- Scroll reveal ---------- */
   var revealEls = document.querySelectorAll('.reveal');

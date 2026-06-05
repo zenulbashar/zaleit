@@ -1354,7 +1354,7 @@ img,svg{display:block;max-width:100%}
         <a href="index.html#about">About</a>
         <a href="index.html#contact">Contact</a>
       </nav>
-      <div class="footer-copy">&copy; <span id="year">2026</span> Zale IT</div>
+      <div class="footer-copy">&copy; <span id="year">2022</span> Zale IT</div>
     </div>
     <div class="footer-bottom">
       <p class="footer-legal">Zale IT Pty Ltd · Brisbane QLD · <a href="mailto:support@zaleit.com.au">support@zaleit.com.au</a></p>
@@ -1376,7 +1376,7 @@ img,svg{display:block;max-width:100%}
   });
   Array.prototype.forEach.call(mm.querySelectorAll('a'),function(a){a.addEventListener('click',function(){mm.classList.remove('open');burger.classList.remove('open')})});
 
-  document.getElementById('year').textContent=new Date().getFullYear();
+  /* Footer year is set statically in the markup; no dynamic override. */
 
   // smooth scroll for category chips
   Array.prototype.forEach.call(document.querySelectorAll('.cat-chip'),function(a){
