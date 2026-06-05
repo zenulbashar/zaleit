@@ -1,0 +1,1428 @@
+<!DOCTYPE html>
+<html lang="en-AU">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hardware Catalogue · Zale IT — Brisbane IT &amp; Cybersecurity</title>
+<meta name="description" content="Zale IT hardware catalogue — laptops, desktops, networking, UPS, monitors, accessories and software (prices ex GST) for Australian business. Brisbane-based IT support.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%231a1a1a'/><path d='M16 4l11 4v8c0 6.5-4.5 11-11 14C9 27 4 22.5 4 16V8l12-4z' fill='%2376b900'/><path d='M11 16l3.5 3.5L21 13' stroke='white' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round' fill='none'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --nv:#76b900;--nv-bright:#8fd000;--nv-deep:#3d6200;--nv-mid:#4a7a00;
+  --ink:#1a1a1a;--ink-soft:#555;--ink-faint:#6e6e6e;--line:#e0e0e0;--light:#f5f5f5;
+  --space:#0a0a0a;--surface:#111;--nav-h:64px;--maxw:1240px;
+}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 70px);-webkit-text-size-adjust:100%}
+body{font-family:'Outfit',system-ui,sans-serif;color:var(--ink);background:#fff;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+h1,h2,h3{line-height:1.1;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+img,svg{display:block;max-width:100%}
+:focus-visible{outline:3px solid var(--nv);outline-offset:3px}
+.wrap{width:100%;max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+/* grain */
+#grain{position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.035;mix-blend-mode:overlay}
+
+/* NAV */
+.nav{position:fixed;top:0;left:0;right:0;z-index:100;height:var(--nav-h);display:flex;align-items:center;background:rgba(0,0,0,.95);backdrop-filter:saturate(120%) blur(10px);-webkit-backdrop-filter:saturate(120%) blur(10px);border-bottom:1px solid #222;transition:background .3s,box-shadow .3s}
+.nav.scrolled{background:rgba(0,0,0,.98);box-shadow:0 2px 18px rgba(0,0,0,.4)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.logo{display:flex;align-items:center;gap:11px;font-weight:900;font-size:1.18rem;color:#fff;letter-spacing:-.02em}
+.logo-mark{width:36px;height:36px;border-radius:0;background:#76b900;display:grid;place-items:center;color:#000;flex-shrink:0}
+.logo-mark svg{width:20px;height:20px}
+.logo b{color:#76b900}
+.nav-links{display:flex;align-items:center;gap:4px}
+.nav-links a{padding:7px 11px;font-size:.92rem;font-weight:500;color:rgba(255,255,255,.6);transition:color .2s,background .2s}
+.nav-links a:hover{color:#76b900;background:rgba(118,185,0,.08)}
+.nav-links a.active{color:#76b900;font-weight:700}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.btn-primary{background:#76b900;color:#000;padding:9px 20px;font-size:14px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,transform .15s;display:inline-flex;align-items:center;gap:8px}
+.btn-primary:hover{background:#4a7a00;transform:translateY(-1px)}
+.burger{display:none;width:44px;height:44px;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger span{display:block;width:22px;height:2px;background:#fff;transition:transform .3s,opacity .3s}
+.burger.open span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0}
+.burger.open span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.mobile-menu{position:fixed;top:var(--nav-h);left:0;right:0;z-index:99;background:rgba(0,0,0,.98);border-bottom:1px solid #333;display:flex;flex-direction:column;padding:14px 24px 26px;gap:2px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .3s,opacity .3s,visibility .3s}
+.mobile-menu.open{transform:translateY(0);opacity:1;visibility:visible}
+.mobile-menu a{padding:14px 8px;font-size:1.05rem;font-weight:500;color:rgba(255,255,255,.7);border-bottom:1px solid #222}
+.mobile-menu a:last-of-type{border-bottom:none}
+
+/* HEADER */
+.chead{background:var(--space);color:#fff;padding:calc(var(--nav-h) + 54px) 0 46px;position:relative;overflow:hidden;isolation:isolate}
+.chead::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(700px 360px at 85% -10%,rgba(118,185,0,.18),transparent 60%),radial-gradient(500px 320px at 5% 120%,rgba(60,98,0,.16),transparent 60%)}
+.chead-dots{position:absolute;inset:0;z-index:-1;background-image:radial-gradient(circle,rgba(118,185,0,.14) 1px,transparent 1px);background-size:30px 30px;mask-image:radial-gradient(ellipse 70% 60% at 70% 30%,#000 30%,transparent 100%)}
+.chead .eyebrow{background:rgba(118,185,0,.12);border-color:rgba(118,185,0,.35);color:#c2e88f}
+.chead h1{font-weight:900;font-size:clamp(2.1rem,5vw,3.4rem);text-transform:uppercase;letter-spacing:-.03em;margin:18px 0 12px}
+.chead h1 em{font-style:normal;color:#76b900}
+.chead p{color:rgba(255,255,255,.72);max-width:60ch;font-size:1.05rem}
+.rrp-note{margin-top:16px;display:inline-flex;align-items:center;gap:9px;font-size:.85rem;color:#c2e88f;background:rgba(118,185,0,.1);border:1px solid rgba(118,185,0,.3);padding:8px 14px}
+.rrp-note svg{width:15px;height:15px}
+
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.74rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--nv-deep);padding:6px 12px;background:rgba(118,185,0,.1);border:1px solid rgba(118,185,0,.25)}
+.eyebrow::before{content:"";width:16px;height:3px;background:var(--nv)}
+
+/* STICKY CONTROL BAR: search + category chips */
+.cbar{position:sticky;top:var(--nav-h);z-index:90;background:rgba(255,255,255,.92);backdrop-filter:saturate(160%) blur(14px);-webkit-backdrop-filter:saturate(160%) blur(14px);border-bottom:1px solid var(--line)}
+.cbar-inner{display:flex;flex-direction:column;gap:12px;padding:14px 0}
+.csearch{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:#fff;padding:10px 16px;max-width:440px}
+.csearch:focus-within{border-color:var(--nv)}
+.csearch svg{width:18px;height:18px;color:var(--ink-faint);flex-shrink:0}
+.csearch input{border:none;outline:none;font-family:inherit;font-size:15px;width:100%;color:var(--ink);background:transparent}
+.cchips{display:flex;gap:8px;overflow-x:auto;padding-bottom:2px;scrollbar-width:thin}
+.cat-chip{flex-shrink:0;padding:8px 14px;font-size:.82rem;font-weight:600;letter-spacing:.03em;text-transform:uppercase;color:var(--ink-soft);background:var(--light);border:1px solid var(--line);white-space:nowrap;transition:all .2s}
+.cat-chip:hover{border-color:var(--nv);color:var(--nv-deep)}
+.cat-chip.active{background:#76b900;color:#000;border-color:#76b900}
+.cresult{font-size:.85rem;color:var(--ink-faint)}
+
+/* CATEGORY SECTIONS */
+.cat{padding:54px 0;border-bottom:1px solid var(--line)}
+.cat:nth-child(even){background:var(--light)}
+.cat-head{margin-bottom:30px}
+.cat-title{font-weight:900;font-size:clamp(1.5rem,3.2vw,2.1rem);text-transform:uppercase;color:var(--ink);margin:14px 0 8px}
+.cat-sub{color:var(--ink-soft);max-width:64ch;font-size:1rem}
+
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.pcard{background:#fff;padding:22px 22px 18px;display:flex;flex-direction:column;position:relative;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,z-index .01s;overflow:hidden}
+.cat:nth-child(even) .pcard{background:#fff}
+.pcard::after{content:"";position:absolute;top:0;left:-70%;width:55%;height:100%;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 40%,rgba(118,185,0,.13) 50%,transparent 60%);transform:skewX(-12deg);transition:left .6s cubic-bezier(.2,.8,.2,1)}
+.pcard:hover{transform:translateY(-4px);z-index:5;box-shadow:0 18px 44px rgba(0,0,0,.14),0 0 0 1px rgba(118,185,0,.5),0 0 26px rgba(118,185,0,.22)}
+.pcard:hover::after{left:130%}
+.pc-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}
+.pc-brand{font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#3d6200;background:#f0f7e0;border:1px solid rgba(118,185,0,.25);padding:3px 9px}
+.pc-model{font-size:.7rem;color:var(--ink-faint);font-weight:500;text-align:right;word-break:break-all}
+.pc-name{font-size:1.02rem;font-weight:700;color:var(--ink);margin-bottom:12px;line-height:1.25}
+.pb-specs{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.pb{font-size:.72rem;font-weight:600;color:var(--ink-soft);background:var(--light);border:1px solid var(--line);padding:3px 9px}
+.pc-desc{font-size:.88rem;color:var(--ink-soft);line-height:1.5;margin-bottom:16px;flex:1}
+.pc-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:10px;margin-top:auto;padding-top:12px;border-top:1px solid var(--line)}
+.pc-price{font-size:1.5rem;font-weight:900;color:var(--ink);letter-spacing:-.02em;display:flex;align-items:baseline;gap:6px}
+.pc-rrp{font-size:.62rem;font-weight:700;letter-spacing:.08em;color:#3d6200;background:#f0f7e0;padding:2px 6px;transform:translateY(-3px)}
+.pc-enq{font-size:.78rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:#76b900;white-space:nowrap;transition:color .2s}
+.pc-enq:hover{color:#4a7a00}
+.no-results{display:none;text-align:center;padding:60px 0;color:var(--ink-faint);font-size:1.05rem}
+
+/* CTA strip */
+.cta-strip{background:#000;color:#fff;border-top:3px solid #76b900;padding:46px 0;text-align:center}
+.cta-strip h2{font-weight:900;font-size:clamp(1.5rem,3vw,2.1rem);text-transform:uppercase;margin-bottom:10px}
+.cta-strip p{color:rgba(255,255,255,.6);margin-bottom:22px;max-width:54ch;margin-left:auto;margin-right:auto}
+
+/* FOOTER */
+.footer{background:#000;color:rgba(255,255,255,.55);padding:42px 0 34px}
+.footer .wrap{display:flex;flex-direction:column;gap:20px}
+.footer-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}
+.footer .logo{color:#fff}
+.footer-nav{display:flex;gap:6px;flex-wrap:wrap}
+.footer-nav a{padding:7px 13px;font-size:.94rem;font-weight:500;color:rgba(255,255,255,.45);transition:color .2s,background .2s}
+.footer-nav a:hover{color:#76b900;background:rgba(118,185,0,.07)}
+.footer-copy{font-size:.9rem;color:rgba(255,255,255,.55)}
+.footer-bottom{border-top:1px solid #1e1e1e;padding-top:18px;display:flex;flex-direction:column;gap:4px}
+.footer-legal{font-size:.84rem;color:rgba(255,255,255,.5)}
+.footer-legal a{color:#76b900}
+
+@media (max-width:780px){
+  .nav-links{display:none}
+  .burger{display:flex}
+}
+@media (prefers-reduced-motion: reduce){
+  *{animation:none!important;transition:none!important}
+  .pcard:hover{transform:none}
+}
+</style>
+</head>
+<body>
+<svg id="grain" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"><filter id="gf"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="2" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(#gf)"/></svg>
+
+<nav class="nav" id="nav" aria-label="Primary">
+  <div class="wrap">
+    <a href="index.html" class="logo" aria-label="Zale IT home">
+      <span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 8.4-8 11-4.6-2.6-8-6-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span>
+      <span>Zale <b>IT</b></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#hardware">Hardware</a></li>
+      <li><a href="index.html#partners">Partners</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+    </ul>
+    <div class="nav-cta">
+      <a href="index.html#contact" class="btn-primary">Free Assessment</a>
+      <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#services">Services</a>
+  <a href="index.html#hardware">Hardware</a>
+  <a href="index.html#partners">Partners</a>
+  <a href="index.html#about">About</a>
+  <a href="index.html#contact">Contact</a>
+  <a href="index.html#contact" class="btn-primary" style="margin-top:14px">Free Assessment</a>
+</div>
+
+<header class="chead">
+  <div class="chead-dots" aria-hidden="true"></div>
+  <div class="wrap">
+    <span class="eyebrow">Catalogue · April–June 2026</span>
+    <h1>Hardware <em>Catalogue</em></h1>
+    <p>Business-grade laptops, desktops, networking, power protection, monitors and accessories — sourced, configured and delivered by Zale IT across Australia.</p>
+    <div class="rrp-note"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg> All prices shown are in AUD and exclude GST. Contact us for a tailored quote.</div>
+  </div>
+</header>
+
+<div class="cbar">
+  <div class="wrap">
+    <div class="cbar-inner">
+      <div class="csearch">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.3-4.3"/></svg>
+        <input type="search" id="psearch" placeholder="Search products, brands or model numbers…" aria-label="Search the catalogue">
+        <span class="cresult" id="cresult"></span>
+      </div>
+      <div class="cchips"><a href="#laptops" class="cat-chip">Laptops &amp; Notebooks</a><a href="#tablets" class="cat-chip">Tablets &amp; 2-in-1</a><a href="#desktops" class="cat-chip">Desktops &amp; Mini-PCs</a><a href="#aio" class="cat-chip">All-in-One PCs</a><a href="#gaming" class="cat-chip">Gaming &amp; Workstation</a><a href="#networking" class="cat-chip">Networking</a><a href="#power" class="cat-chip">UPS &amp; Power</a><a href="#monitors" class="cat-chip">Monitors &amp; Mounting</a><a href="#chairs" class="cat-chip">Office Chairs</a><a href="#docks" class="cat-chip">Docks, Cables &amp; Accessories</a><a href="#software" class="cat-chip">Software</a></div>
+    </div>
+  </div>
+</div>
+
+<main>
+  <section class="cat" id="laptops">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">46 products</span>
+        <h2 class="cat-title">Laptops &amp; Notebooks</h2>
+        <p class="cat-sub">Business notebooks, ultrabooks and 2-in-1s from Leader, Lenovo, HP and ASUS.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="leader 2-in-1 convertible 360 sct4-z1 sct4-z1-r5p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCT4-Z1-R5P</span></div>
+        <h3 class="pc-name">2-in-1 Convertible 360 SCT4-Z1</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD Touch</span><span class="pb">Ryzen 5 7430U</span><span class="pb">16GB DDR4</span><span class="pb">1TB NVMe</span><span class="pb">Active Pen</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,699</div><a class="pc-enq" href="index.html?enquiry=Leader%202-in-1%20Convertible%20360%20SCT4-Z1%20%28SCT4-Z1-R5P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader companion scp4-h2 scp4-h2-r5p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP4-H2-R5P</span></div>
+        <h3 class="pc-name">Companion SCP4-H2</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Ryzen 5 7430U</span><span class="pb">16GB DDR4</span><span class="pb">512GB NVMe</span><span class="pb">Backlit KB</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,329</div><a class="pc-enq" href="index.html?enquiry=Leader%20Companion%20SCP4-H2%20%28SCP4-H2-R5P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader companion sce5-h2 sce5-h2-c8p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCE5-H2-C8P</span></div>
+        <h3 class="pc-name">Companion SCE5-H2</h3>
+        <div class="pb-specs"><span class="pb">15.6&quot; FHD</span><span class="pb">Celeron N4500</span><span class="pb">8GB DDR4</span><span class="pb">128GB NVMe</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$699</div><a class="pc-enq" href="index.html?enquiry=Leader%20Companion%20SCE5-H2%20%28SCE5-H2-C8P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader breeze 4b3 sce4-b3-c8p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCE4-B3-C8P</span></div>
+        <h3 class="pc-name">Breeze 4B3</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Celeron N4500</span><span class="pb">8GB DDR4</span><span class="pb">128GB eMMC</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$599</div><a class="pc-enq" href="index.html?enquiry=Leader%20Breeze%204B3%20%28SCE4-B3-C8P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader companion 4c3 scp4-c3-i5h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP4-C3-I5H</span></div>
+        <h3 class="pc-name">Companion 4C3</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Core 5 120U</span><span class="pb">16GB DDR4</span><span class="pb">500GB NVMe</span><span class="pb">Win 11 Home</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,499</div><a class="pc-enq" href="index.html?enquiry=Leader%20Companion%204C3%20%28SCP4-C3-I5H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader companion 4c3 scp4-c3-i7h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP4-C3-I7H</span></div>
+        <h3 class="pc-name">Companion 4C3</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Core 7 150U</span><span class="pb">16GB DDR4</span><span class="pb">500GB NVMe</span><span class="pb">Win 11 Home</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,599</div><a class="pc-enq" href="index.html?enquiry=Leader%20Companion%204C3%20%28SCP4-C3-I7H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader companion 4c3 scp4-c3-i7641tbp">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP4-C3-I7641TBP</span></div>
+        <h3 class="pc-name">Companion 4C3</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Core 7 150U</span><span class="pb">64GB DDR4</span><span class="pb">1TB NVMe</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,149</div><a class="pc-enq" href="index.html?enquiry=Leader%20Companion%204C3%20%28SCP4-C3-I7641TBP%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader companion scp5-h2 scp5-h2-r5p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP5-H2-R5P</span></div>
+        <h3 class="pc-name">Companion SCP5-H2</h3>
+        <div class="pb-specs"><span class="pb">15.6&quot; FHD</span><span class="pb">Ryzen 5 7430U</span><span class="pb">16GB DDR4</span><span class="pb">512GB NVMe</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,299</div><a class="pc-enq" href="index.html?enquiry=Leader%20Companion%20SCP5-H2%20%28SCP5-H2-R5P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader companion plus scp5-c2 scp5-c2-i5h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP5-C2-I5H</span></div>
+        <h3 class="pc-name">Companion Plus SCP5-C2</h3>
+        <div class="pb-specs"><span class="pb">15.6&quot; FHD</span><span class="pb">Core 5 120U</span><span class="pb">16GB DDR4</span><span class="pb">1TB NVMe</span><span class="pb">Win 11 Home</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,699</div><a class="pc-enq" href="index.html?enquiry=Leader%20Companion%20Plus%20SCP5-C2%20%28SCP5-C2-I5H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader companion plus scp5-c2 scp5-c2-i7h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP5-C2-I7H</span></div>
+        <h3 class="pc-name">Companion Plus SCP5-C2</h3>
+        <div class="pb-specs"><span class="pb">15.6&quot; FHD</span><span class="pb">Core 7 150U</span><span class="pb">32GB DDR4</span><span class="pb">1TB NVMe</span><span class="pb">Win 11 Home</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,099</div><a class="pc-enq" href="index.html?enquiry=Leader%20Companion%20Plus%20SCP5-C2%20%28SCP5-C2-I7H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 4c2 scp4-c2-a5h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP4-C2-A5H</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 4C2</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Ryzen AI 5 340</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,999</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%204C2%20%28SCP4-C2-A5H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 4c2 scp4-c2-a7h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP4-C2-A7H</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 4C2</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Ryzen AI 7 350</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,199</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%204C2%20%28SCP4-C2-A7H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 4c2 scp4-c2-a9h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP4-C2-A9H</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 4C2</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Ryzen AI 9 HX 370</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,499</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%204C2%20%28SCP4-C2-A9H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 4c1 scu4-c1-u516p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCU4-C1-U516P</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 4C1</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD+</span><span class="pb">Core Ultra 5 226V</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,599</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%204C1%20%28SCU4-C1-U516P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 4c1 scu4-c1-u732p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCU4-C1-U732P</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 4C1</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD+</span><span class="pb">Core Ultra 7 258V</span><span class="pb">32GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,999</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%204C1%20%28SCU4-C1-U732P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 6c1 scp6-c1-a5p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP6-C1-A5P</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 6C1</h3>
+        <div class="pb-specs"><span class="pb">16&quot; FHD</span><span class="pb">Ryzen AI 5 340</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,199</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%206C1%20%28SCP6-C1-A5P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 6c1 scp6-c1-a7p">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP6-C1-A7P</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 6C1</h3>
+        <div class="pb-specs"><span class="pb">16&quot; FHD</span><span class="pb">Ryzen AI 7 350</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,299</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%206C1%20%28SCP6-C1-A7P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 6c1 scp6-c1-a7gp">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCP6-C1-A7GP</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 6C1</h3>
+        <div class="pb-specs"><span class="pb">16&quot; QHD+</span><span class="pb">Ryzen AI 7 350</span><span class="pb">RTX 5060 8GB</span><span class="pb">32GB DDR5</span><span class="pb">1TB NVMe</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,299</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%206C1%20%28SCP6-C1-A7GP%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 6c2 scu6-c2-u516h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCU6-C2-U516H</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 6C2</h3>
+        <div class="pb-specs"><span class="pb">16&quot; QHD+</span><span class="pb">Core Ultra 5 226V</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,649</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%206C2%20%28SCU6-C2-U516H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader ai companion copilot+ 6c2 scu6-c2-u732h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SCU6-C2-U732H</span></div>
+        <h3 class="pc-name">AI Companion Copilot+ 6C2</h3>
+        <div class="pb-specs"><span class="pb">16&quot; QHD+</span><span class="pb">Core Ultra 7 258V</span><span class="pb">32GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,099</div><a class="pc-enq" href="index.html?enquiry=Leader%20AI%20Companion%20Copilot%2B%206C2%20%28SCU6-C2-U732H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkbook 14 g9 nbl-14-i516512g9">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-14-I516512G9</span></div>
+        <h3 class="pc-name">ThinkBook 14 G9</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core 5 210H</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,599</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkBook%2014%20G9%20%28NBL-14-I516512G9%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkbook 16 g9 nbl-16-i516512g9">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-16-I516512G9</span></div>
+        <h3 class="pc-name">ThinkBook 16 G9</h3>
+        <div class="pb-specs"><span class="pb">16&quot; WUXGA</span><span class="pb">Core 5 210H</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,649</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkBook%2016%20G9%20%28NBL-16-I516512G9%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkbook 14 g9 nbl-14-i716512g9">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-14-I716512G9</span></div>
+        <h3 class="pc-name">ThinkBook 14 G9</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core 7 240H</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,799</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkBook%2014%20G9%20%28NBL-14-I716512G9%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkbook 16 g9 nbl-16-i716512g9">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-16-I716512G9</span></div>
+        <h3 class="pc-name">ThinkBook 16 G9</h3>
+        <div class="pb-specs"><span class="pb">16&quot; WUXGA</span><span class="pb">Core 7 240H</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,849</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkBook%2016%20G9%20%28NBL-16-I716512G9%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkbook 14 yoga g5 nbl-14y-u516512g5">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-14Y-U516512G5</span></div>
+        <h3 class="pc-name">ThinkBook 14 Yoga G5</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA Touch</span><span class="pb">Core Ultra 5 225U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Pen</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,049</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkBook%2014%20Yoga%20G5%20%28NBL-14Y-U516512G5%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkbook 14 yoga g5 nbl-14y-u732512g5">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-14Y-U732512G5</span></div>
+        <h3 class="pc-name">ThinkBook 14 Yoga G5</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA Touch</span><span class="pb">Core Ultra 7 255U</span><span class="pb">32GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Pen</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,599</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkBook%2014%20Yoga%20G5%20%28NBL-14Y-U732512G5%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkpad t14 g5 nbl-t14-u516512g5">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-T14-U516512G5</span></div>
+        <h3 class="pc-name">ThinkPad T14 G5</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core Ultra 5 225H</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">3yr Premier</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,749</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkPad%20T14%20G5%20%28NBL-T14-U516512G5%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkpad t14 g6 nbl-t14-u732512g6">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-T14-U732512G6</span></div>
+        <h3 class="pc-name">ThinkPad T14 G6</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core Ultra 7 255H</span><span class="pb">32GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">3yr Premier</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,149</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkPad%20T14%20G6%20%28NBL-T14-U732512G6%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkpad x1 yoga 14&quot; nbl-x1yg-u716512tg9">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-X1YG-U716512TG9</span></div>
+        <h3 class="pc-name">ThinkPad X1 Yoga 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA Touch</span><span class="pb">Core Ultra 7 155U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">3yr Premier</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,549</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkPad%20X1%20Yoga%2014%22%20%28NBL-X1YG-U716512TG9%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo thinkpad x1 carbon g13 aura 14&quot; nbl-x1cb-u732512g13">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">NBL-X1CB-U732512G13</span></div>
+        <h3 class="pc-name">ThinkPad X1 Carbon G13 Aura 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA Touch</span><span class="pb">Core Ultra 7 255H</span><span class="pb">32GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">1kg</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,799</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20ThinkPad%20X1%20Carbon%20G13%20Aura%2014%22%20%28NBL-X1CB-U732512G13%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp probook 4 g1i 16&quot; nbhp-460-c516512g1i">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-460-C516512G1I</span></div>
+        <h3 class="pc-name">ProBook 4 G1i 16&quot;</h3>
+        <div class="pb-specs"><span class="pb">16&quot; WUXGA</span><span class="pb">Core i5-1334U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,599</div><a class="pc-enq" href="index.html?enquiry=HP%20ProBook%204%20G1i%2016%22%20%28NBHP-460-C516512G1I%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp probook 4 g1i 14&quot; nbhp-440-c516512g1i">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-440-C516512G1I</span></div>
+        <h3 class="pc-name">ProBook 4 G1i 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core i5-1334U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,649</div><a class="pc-enq" href="index.html?enquiry=HP%20ProBook%204%20G1i%2014%22%20%28NBHP-440-C516512G1I%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp probook 4 g1i 16&quot; nbhp-460-u716512g1i">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-460-U716512G1I</span></div>
+        <h3 class="pc-name">ProBook 4 G1i 16&quot;</h3>
+        <div class="pb-specs"><span class="pb">16&quot; WUXGA</span><span class="pb">Core Ultra 7 255U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">AI Boost</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,499</div><a class="pc-enq" href="index.html?enquiry=HP%20ProBook%204%20G1i%2016%22%20%28NBHP-460-U716512G1I%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp probook 4 g1i 14&quot; nbhp-440-u716512g1i">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-440-U716512G1I</span></div>
+        <h3 class="pc-name">ProBook 4 G1i 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core Ultra 7 255U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">AI Boost</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,599</div><a class="pc-enq" href="index.html?enquiry=HP%20ProBook%204%20G1i%2014%22%20%28NBHP-440-U716512G1I%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp elitebook 840 g10 14&quot; nbhp-840-i716512lgx2">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-840-I716512LGX2</span></div>
+        <h3 class="pc-name">EliteBook 840 G10 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core i7-1355U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">4G</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,649</div><a class="pc-enq" href="index.html?enquiry=HP%20EliteBook%20840%20G10%2014%22%20%28NBHP-840-I716512LGX2%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp zbook 8 g1i firefly 14&quot; nbhp-zb814-u716512tg1ia">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-ZB814-U716512TG1IA</span></div>
+        <h3 class="pc-name">ZBook 8 G1i Firefly 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA Touch</span><span class="pb">Core Ultra 7 255U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Arc</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,699</div><a class="pc-enq" href="index.html?enquiry=HP%20ZBook%208%20G1i%20Firefly%2014%22%20%28NBHP-ZB814-U716512TG1IA%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp elitebook 6 g1i 14&quot; nbhp-eb64-u716512lg1i">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-EB64-U716512LG1I</span></div>
+        <h3 class="pc-name">EliteBook 6 G1i 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core Ultra 7 255U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">4G</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,049</div><a class="pc-enq" href="index.html?enquiry=HP%20EliteBook%206%20G1i%2014%22%20%28NBHP-EB64-U716512LG1I%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp elitebook 8 g1i 14&quot; nbhp-eb84-u516512g1iv">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-EB84-U516512G1IV</span></div>
+        <h3 class="pc-name">EliteBook 8 G1i 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core Ultra 5 226V</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Arc</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,249</div><a class="pc-enq" href="index.html?enquiry=HP%20EliteBook%208%20G1i%2014%22%20%28NBHP-EB84-U516512G1IV%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp elitebook 8 g1i 14&quot; nbhp-eb84-u716512g1i">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-EB84-U716512G1I</span></div>
+        <h3 class="pc-name">EliteBook 8 G1i 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WUXGA</span><span class="pb">Core Ultra 7 255U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Arc</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,549</div><a class="pc-enq" href="index.html?enquiry=HP%20EliteBook%208%20G1i%2014%22%20%28NBHP-EB84-U716512G1I%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="hp elitebook 8 g1i 16&quot; nbhp-eb86-u716512g1iv">
+        <div class="pc-top"><span class="pc-brand">HP</span><span class="pc-model">NBHP-EB86-U716512G1IV</span></div>
+        <h3 class="pc-name">EliteBook 8 G1i 16&quot;</h3>
+        <div class="pb-specs"><span class="pb">16&quot; WUXGA</span><span class="pb">Core Ultra 7 256V</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Copilot+</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,599</div><a class="pc-enq" href="index.html?enquiry=HP%20EliteBook%208%20G1i%2016%22%20%28NBHP-EB86-U716512G1IV%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="asus expertbook b1 15.6&quot; nba-b1503cva-s75315x">
+        <div class="pc-top"><span class="pc-brand">ASUS</span><span class="pc-model">NBA-B1503CVA-S75315X</span></div>
+        <h3 class="pc-name">ExpertBook B1 15.6&quot;</h3>
+        <div class="pb-specs"><span class="pb">15.6&quot; FHD</span><span class="pb">Core 5 120U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,369</div><a class="pc-enq" href="index.html?enquiry=ASUS%20ExpertBook%20B1%2015.6%22%20%28NBA-B1503CVA-S75315X%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="asus expertbook b1 14&quot; nba-b1403cva-s65042x">
+        <div class="pc-top"><span class="pc-brand">ASUS</span><span class="pc-model">NBA-B1403CVA-S65042X</span></div>
+        <h3 class="pc-name">ExpertBook B1 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; FHD</span><span class="pb">Core 5 120U</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,399</div><a class="pc-enq" href="index.html?enquiry=ASUS%20ExpertBook%20B1%2014%22%20%28NBA-B1403CVA-S65042X%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="asus expertbook b3 16&quot; nba-b3605cca-mb0943x">
+        <div class="pc-top"><span class="pc-brand">ASUS</span><span class="pc-model">NBA-B3605CCA-MB0943X</span></div>
+        <h3 class="pc-name">ExpertBook B3 16&quot;</h3>
+        <div class="pb-specs"><span class="pb">16&quot; WUXGA</span><span class="pb">Core Ultra 5 225H</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,739</div><a class="pc-enq" href="index.html?enquiry=ASUS%20ExpertBook%20B3%2016%22%20%28NBA-B3605CCA-MB0943X%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="asus expertbook b1 15.6&quot; nba-b1503cva-s75317x">
+        <div class="pc-top"><span class="pc-brand">ASUS</span><span class="pc-model">NBA-B1503CVA-S75317X</span></div>
+        <h3 class="pc-name">ExpertBook B1 15.6&quot;</h3>
+        <div class="pb-specs"><span class="pb">15.6&quot; FHD</span><span class="pb">Core 7 150U</span><span class="pb">32GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,879</div><a class="pc-enq" href="index.html?enquiry=ASUS%20ExpertBook%20B1%2015.6%22%20%28NBA-B1503CVA-S75317X%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="asus expertbook b3 16&quot; nba-b3605cca-mb0942x">
+        <div class="pc-top"><span class="pc-brand">ASUS</span><span class="pc-model">NBA-B3605CCA-MB0942X</span></div>
+        <h3 class="pc-name">ExpertBook B3 16&quot;</h3>
+        <div class="pb-specs"><span class="pb">16&quot; WUXGA</span><span class="pb">Core Ultra 7 255H</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,919</div><a class="pc-enq" href="index.html?enquiry=ASUS%20ExpertBook%20B3%2016%22%20%28NBA-B3605CCA-MB0942X%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="asus expertbook p5 14&quot; nba-p5405csa-u7321tb">
+        <div class="pc-top"><span class="pc-brand">ASUS</span><span class="pc-model">NBA-P5405CSA-U7321TB</span></div>
+        <h3 class="pc-name">ExpertBook P5 14&quot;</h3>
+        <div class="pb-specs"><span class="pb">14&quot; WQXGA</span><span class="pb">Core Ultra 7 258V</span><span class="pb">32GB DDR5</span><span class="pb">1TB SSD</span><span class="pb">3yr Onsite</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,929</div><a class="pc-enq" href="index.html?enquiry=ASUS%20ExpertBook%20P5%2014%22%20%28NBA-P5405CSA-U7321TB%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="tablets">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">4 products</span>
+        <h2 class="cat-title">Tablets &amp; 2-in-1</h2>
+        <p class="cat-sub">Android and Windows tablets for mobile and field teams.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="lenovo tab 10.1&quot; lte md-zaej0033au">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">MD-ZAEJ0033AU</span></div>
+        <h3 class="pc-name">Tab 10.1&quot; LTE</h3>
+        <div class="pb-specs"><span class="pb">10.1&quot; WUXGA</span><span class="pb">Android 14</span><span class="pb">4GB / 64GB</span><span class="pb">LTE</span><span class="pb">5100mAh</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$329</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20Tab%2010.1%22%20LTE%20%28MD-ZAEJ0033AU%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo idea tab 11 5g md-zafm0192au">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">MD-ZAFM0192AU</span></div>
+        <h3 class="pc-name">Idea Tab 11 5G</h3>
+        <div class="pb-specs"><span class="pb">11&quot; 2.5K</span><span class="pb">Android 15</span><span class="pb">5GB / 128GB</span><span class="pb">5G</span><span class="pb">7040mAh</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$549</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20Idea%20Tab%2011%205G%20%28MD-ZAFM0192AU%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader 2-in-1 tablet 10w6pro tbl-10w6pro">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">TBL-10W6PRO</span></div>
+        <h3 class="pc-name">2-in-1 Tablet 10W6PRO</h3>
+        <div class="pb-specs"><span class="pb">10.5&quot; FHD IPS Touch</span><span class="pb">Pentium N5030</span><span class="pb">8GB DDR4</span><span class="pb">128GB eMMC</span><span class="pb">Pen + KB</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$669</div><a class="pc-enq" href="index.html?enquiry=Leader%202-in-1%20Tablet%2010W6PRO%20%28TBL-10W6PRO%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="lenovo yoga tab plus ai wi-fi md-zaeg0045au">
+        <div class="pc-top"><span class="pc-brand">Lenovo</span><span class="pc-model">MD-ZAEG0045AU</span></div>
+        <h3 class="pc-name">Yoga Tab Plus AI Wi-Fi</h3>
+        <div class="pb-specs"><span class="pb">12.7&quot; 3K</span><span class="pb">Android 14</span><span class="pb">16GB / 512GB</span><span class="pb">Keyboard + Pen</span><span class="pb">NPU 20 TOPS</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,499</div><a class="pc-enq" href="index.html?enquiry=Lenovo%20Yoga%20Tab%20Plus%20AI%20Wi-Fi%20%28MD-ZAEG0045AU%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="desktops">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">15 products</span>
+        <h2 class="cat-title">Desktops &amp; Mini-PCs</h2>
+        <p class="cat-sub">Slim desktops, Copilot+ mini-PCs, NUCs and rugged box PCs.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="leader mini-pc nuc sn4pro-v8 sn4pro-v8">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SN4PRO-V8</span></div>
+        <h3 class="pc-name">Mini-PC NUC SN4PRO-V8</h3>
+        <div class="pb-specs"><span class="pb">Intel N150</span><span class="pb">8GB DDR4</span><span class="pb">128GB NVMe</span><span class="pb">VESA</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$799</div><a class="pc-enq" href="index.html?enquiry=Leader%20Mini-PC%20NUC%20SN4PRO-V8%20%28SN4PRO-V8%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="asus expertcenter d7 sff d701seres-514500133x">
+        <div class="pc-top"><span class="pc-brand">ASUS</span><span class="pc-model">D701SERES-514500133X</span></div>
+        <h3 class="pc-name">ExpertCenter D7 SFF</h3>
+        <div class="pb-specs"><span class="pb">Core i5-14500</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">3yr Onsite</span><span class="pb">Win 11 Pro</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,299</div><a class="pc-enq" href="index.html?enquiry=ASUS%20ExpertCenter%20D7%20SFF%20%28D701SERES-514500133X%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="shuttle sb860r8 cube ai pc 13l sys-sb860r8">
+        <div class="pc-top"><span class="pc-brand">Shuttle</span><span class="pc-model">SYS-SB860R8</span></div>
+        <h3 class="pc-name">SB860R8 Cube AI PC 13L</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 200</span><span class="pb">Up to 192GB DDR5</span><span class="pb">4× 3.5&quot; RAID</span><span class="pb">500W PSU</span><span class="pb">Barebone</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,649</div><a class="pc-enq" href="index.html?enquiry=Shuttle%20SB860R8%20Cube%20AI%20PC%2013L%20%28SYS-SB860R8%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="shuttle dh610 slim mini pc 1l sys-dh610">
+        <div class="pc-top"><span class="pc-brand">Shuttle</span><span class="pc-model">SYS-DH610</span></div>
+        <h3 class="pc-name">DH610 Slim Mini PC 1L</h3>
+        <div class="pb-specs"><span class="pb">12–14th Gen</span><span class="pb">2× DDR4</span><span class="pb">8× USB</span><span class="pb">3yr WTY</span><span class="pb">Barebone</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$699</div><a class="pc-enq" href="index.html?enquiry=Shuttle%20DH610%20Slim%20Mini%20PC%201L%20%28SYS-DH610%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="shuttle spcel03 edge iot pc sys-spcel03">
+        <div class="pc-top"><span class="pc-brand">Shuttle</span><span class="pc-model">SYS-SPCEL03</span></div>
+        <h3 class="pc-name">SPCEL03 Edge IoT PC</h3>
+        <div class="pb-specs"><span class="pb">Atom x6413E</span><span class="pb">DDR4</span><span class="pb">-20–60°C</span><span class="pb">PoE option</span><span class="pb">3yr WTY</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$979</div><a class="pc-enq" href="index.html?enquiry=Shuttle%20SPCEL03%20Edge%20IoT%20PC%20%28SYS-SPCEL03%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="shuttle na10h nano mini ai pc sys-na10h">
+        <div class="pc-top"><span class="pc-brand">Shuttle</span><span class="pc-model">SYS-NA10H</span></div>
+        <h3 class="pc-name">NA10H Nano Mini AI PC</h3>
+        <div class="pb-specs"><span class="pb">Ryzen 7/9</span><span class="pb">39 TOPS</span><span class="pb">2× DDR5</span><span class="pb">2.5G LAN</span><span class="pb">Barebone</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,469</div><a class="pc-enq" href="index.html?enquiry=Shuttle%20NA10H%20Nano%20Mini%20AI%20PC%20%28SYS-NA10H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="shuttle nt10h nano mini ai pc sys-nt10h">
+        <div class="pc-top"><span class="pc-brand">Shuttle</span><span class="pc-model">SYS-NT10H</span></div>
+        <h3 class="pc-name">NT10H Nano Mini AI PC</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 5/7/9</span><span class="pb">39 TOPS</span><span class="pb">2× DDR5</span><span class="pb">USB4</span><span class="pb">Barebone</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,609</div><a class="pc-enq" href="index.html?enquiry=Shuttle%20NT10H%20Nano%20Mini%20AI%20PC%20%28SYS-NT10H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="shuttle dn11h slim mini ai pc 1l sys-dn11h">
+        <div class="pc-top"><span class="pc-brand">Shuttle</span><span class="pc-model">SYS-DN11H</span></div>
+        <h3 class="pc-name">DN11H Slim Mini AI PC 1L</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 5/7/9</span><span class="pb">34 TOPS</span><span class="pb">3× M.2 RAID</span><span class="pb">4× 2.5G LAN</span><span class="pb">3yr WTY</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,869</div><a class="pc-enq" href="index.html?enquiry=Shuttle%20DN11H%20Slim%20Mini%20AI%20PC%201L%20%28SYS-DN11H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="shuttle bpcal03 embedded box pc sys-bpcal03">
+        <div class="pc-top"><span class="pc-brand">Shuttle</span><span class="pc-model">SYS-BPCAL03</span></div>
+        <h3 class="pc-name">BPCAL03 Embedded Box PC</h3>
+        <div class="pb-specs"><span class="pb">Core i5-1245UE vPro</span><span class="pb">2× DDR5</span><span class="pb">Fanless</span><span class="pb">-20–60°C</span><span class="pb">3yr WTY</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,969</div><a class="pc-enq" href="index.html?enquiry=Shuttle%20BPCAL03%20Embedded%20Box%20PC%20%28SYS-BPCAL03%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader corporate slim desktop ss46-u5 ss46-u5">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SS46-U5</span></div>
+        <h3 class="pc-name">Corporate Slim Desktop SS46-U5</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 5 225</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">500W Gold</span><span class="pb">3yr 4hr Onsite</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,999</div><a class="pc-enq" href="index.html?enquiry=Leader%20Corporate%20Slim%20Desktop%20SS46-U5%20%28SS46-U5%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader corporate slim desktop ss46-u7 ss46-u7">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SS46-U7</span></div>
+        <h3 class="pc-name">Corporate Slim Desktop SS46-U7</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 7 265</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">500W Gold</span><span class="pb">3yr 4hr Onsite</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,499</div><a class="pc-enq" href="index.html?enquiry=Leader%20Corporate%20Slim%20Desktop%20SS46-U7%20%28SS46-U7%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader corporate n17-i5 nuc mini-pc sn17-i5">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SN17-I5</span></div>
+        <h3 class="pc-name">Corporate N17-i5 NUC mini-PC</h3>
+        <div class="pb-specs"><span class="pb">Core i5-13420H</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">4× 4K</span><span class="pb">3yr 4hr Onsite</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,799</div><a class="pc-enq" href="index.html?enquiry=Leader%20Corporate%20N17-i5%20NUC%20mini-PC%20%28SN17-I5%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader corporate n16-u5 copilot+ mini-pc sn16-u5">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SN16-U5</span></div>
+        <h3 class="pc-name">Corporate N16-U5 Copilot+ mini-PC</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 5 226V</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span><span class="pb">3yr 4hr Onsite</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,999</div><a class="pc-enq" href="index.html?enquiry=Leader%20Corporate%20N16-U5%20Copilot%2B%20mini-PC%20%28SN16-U5%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader corporate n16-u7 copilot+ mini-pc sn16-u7">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SN16-U7</span></div>
+        <h3 class="pc-name">Corporate N16-U7 Copilot+ mini-PC</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 7 258V</span><span class="pb">32GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span><span class="pb">3yr 4hr Onsite</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,499</div><a class="pc-enq" href="index.html?enquiry=Leader%20Corporate%20N16-U7%20Copilot%2B%20mini-PC%20%28SN16-U7%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader corporate n16-u9 copilot+ mini-pc sn16-u9">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SN16-U9</span></div>
+        <h3 class="pc-name">Corporate N16-U9 Copilot+ mini-PC</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 9 288V</span><span class="pb">32GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Copilot+</span><span class="pb">3yr 4hr Onsite</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,999</div><a class="pc-enq" href="index.html?enquiry=Leader%20Corporate%20N16-U9%20Copilot%2B%20mini-PC%20%28SN16-U9%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="aio">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">4 products</span>
+        <h2 class="cat-title">All-in-One PCs</h2>
+        <p class="cat-sub">Space-saving all-in-one desktops with built-in displays.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="leader visionary aio 23.8&quot; home sv245-i5h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SV245-I5H</span></div>
+        <h3 class="pc-name">Visionary AIO 23.8&quot; Home</h3>
+        <div class="pb-specs"><span class="pb">23.8&quot; FHD</span><span class="pb">Core i5-13420H</span><span class="pb">16GB DDR4</span><span class="pb">1TB NVMe</span><span class="pb">Pop-up cam</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,599</div><a class="pc-enq" href="index.html?enquiry=Leader%20Visionary%20AIO%2023.8%22%20Home%20%28SV245-I5H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader visionary aio 27&quot; home sv275-i5h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SV275-I5H</span></div>
+        <h3 class="pc-name">Visionary AIO 27&quot; Home</h3>
+        <div class="pb-specs"><span class="pb">27&quot; FHD</span><span class="pb">Core i5-13420H</span><span class="pb">16GB DDR4</span><span class="pb">1TB NVMe</span><span class="pb">Height adj.</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,699</div><a class="pc-enq" href="index.html?enquiry=Leader%20Visionary%20AIO%2027%22%20Home%20%28SV275-I5H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="leader visionary aio 27&quot; home sv275-i7h">
+        <div class="pc-top"><span class="pc-brand">Leader</span><span class="pc-model">SV275-I7H</span></div>
+        <h3 class="pc-name">Visionary AIO 27&quot; Home</h3>
+        <div class="pb-specs"><span class="pb">27&quot; FHD</span><span class="pb">Core i7-13620H</span><span class="pb">16GB DDR4</span><span class="pb">1TB NVMe</span><span class="pb">Height adj.</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,899</div><a class="pc-enq" href="index.html?enquiry=Leader%20Visionary%20AIO%2027%22%20Home%20%28SV275-I7H%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="asus expertcenter p440 aio 23.8&quot; p440vak-bpcj97x">
+        <div class="pc-top"><span class="pc-brand">ASUS</span><span class="pc-model">P440VAK-BPCJ97X</span></div>
+        <h3 class="pc-name">ExpertCenter P440 AiO 23.8&quot;</h3>
+        <div class="pb-specs"><span class="pb">23.8&quot; FHD</span><span class="pb">Core 5 210H</span><span class="pb">16GB DDR5</span><span class="pb">512GB SSD</span><span class="pb">3yr Onsite</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,499</div><a class="pc-enq" href="index.html?enquiry=ASUS%20ExpertCenter%20P440%20AiO%2023.8%22%20%28P440VAK-BPCJ97X%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="gaming">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">11 products</span>
+        <h2 class="cat-title">Gaming &amp; Workstation</h2>
+        <p class="cat-sub">High-performance gaming notebooks, desktops and components.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="resistance striker r55-15 v1 gaming srs-r55-15v1">
+        <div class="pc-top"><span class="pc-brand">Resistance</span><span class="pc-model">SRS-R55-15V1</span></div>
+        <h3 class="pc-name">Striker R55-15 V1 Gaming</h3>
+        <div class="pb-specs"><span class="pb">Core i7-14650HX</span><span class="pb">RTX 5050 8GB</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">Wi-Fi 7</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,799</div><a class="pc-enq" href="index.html?enquiry=Resistance%20Striker%20R55-15%20V1%20Gaming%20%28SRS-R55-15V1%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="resistance striker r55-15 v1 gaming srs-r55-1532v1">
+        <div class="pc-top"><span class="pc-brand">Resistance</span><span class="pc-model">SRS-R55-1532V1</span></div>
+        <h3 class="pc-name">Striker R55-15 V1 Gaming</h3>
+        <div class="pb-specs"><span class="pb">Core i7-14650HX</span><span class="pb">RTX 5050</span><span class="pb">32GB DDR5</span><span class="pb">2TB NVMe</span><span class="pb">Wi-Fi 7</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,299</div><a class="pc-enq" href="index.html?enquiry=Resistance%20Striker%20R55-15%20V1%20Gaming%20%28SRS-R55-1532V1%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="resistance apache v44 essential gaming pc srav44-e">
+        <div class="pc-top"><span class="pc-brand">Resistance</span><span class="pc-model">SRAV44-E</span></div>
+        <h3 class="pc-name">Apache V44 Essential Gaming PC</h3>
+        <div class="pb-specs"><span class="pb">Core i5-12400</span><span class="pb">RTX 5050 8GB</span><span class="pb">16GB DDR5</span><span class="pb">1TB NVMe</span><span class="pb">650W Gold</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,499</div><a class="pc-enq" href="index.html?enquiry=Resistance%20Apache%20V44%20Essential%20Gaming%20PC%20%28SRAV44-E%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="resistance apache v44 plus gaming pc srav44-p">
+        <div class="pc-top"><span class="pc-brand">Resistance</span><span class="pc-model">SRAV44-P</span></div>
+        <h3 class="pc-name">Apache V44 Plus Gaming PC</h3>
+        <div class="pb-specs"><span class="pb">Core Ultra 5 225</span><span class="pb">RTX 5070</span><span class="pb">32GB DDR5</span><span class="pb">2TB NVMe</span><span class="pb">1000W Gold</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,999</div><a class="pc-enq" href="index.html?enquiry=Resistance%20Apache%20V44%20Plus%20Gaming%20PC%20%28SRAV44-P%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="resistance apache v44 ultimate gaming pc srav44-u">
+        <div class="pc-top"><span class="pc-brand">Resistance</span><span class="pc-model">SRAV44-U</span></div>
+        <h3 class="pc-name">Apache V44 Ultimate Gaming PC</h3>
+        <div class="pb-specs"><span class="pb">Ryzen 7 9800X3D</span><span class="pb">RTX 5080</span><span class="pb">64GB DDR5</span><span class="pb">4TB NVMe</span><span class="pb">1000W Gold</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$6,999</div><a class="pc-enq" href="index.html?enquiry=Resistance%20Apache%20V44%20Ultimate%20Gaming%20PC%20%28SRAV44-U%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="corsair frame 4000d rs mid-tower case cac-4000drs-bk">
+        <div class="pc-top"><span class="pc-brand">Corsair</span><span class="pc-model">CAC-4000DRS-BK</span></div>
+        <h3 class="pc-name">FRAME 4000D RS Mid-Tower Case</h3>
+        <div class="pb-specs"><span class="pb">ATX</span><span class="pb">430mm GPU</span><span class="pb">360mm rad</span><span class="pb">USB-C 3.2 Gen2</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$179</div><a class="pc-enq" href="index.html?enquiry=Corsair%20FRAME%204000D%20RS%20Mid-Tower%20Case%20%28CAC-4000DRS-BK%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="corsair nautilus 360 rs lcd cpu cooler cfcw-naut360rslcd-bk">
+        <div class="pc-top"><span class="pc-brand">Corsair</span><span class="pc-model">CFCW-NAUT360RSLCD-BK</span></div>
+        <h3 class="pc-name">NAUTILUS 360 RS LCD CPU Cooler</h3>
+        <div class="pb-specs"><span class="pb">360mm rad</span><span class="pb">LCD pump</span><span class="pb">3× PWM fans</span><span class="pb">AM5 / LGA1851</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$239</div><a class="pc-enq" href="index.html?enquiry=Corsair%20NAUTILUS%20360%20RS%20LCD%20CPU%20Cooler%20%28CFCW-NAUT360RSLCD-BK%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="corsair vanguard 96 mechanical keyboard kbch-van96mlxpla-bk">
+        <div class="pc-top"><span class="pc-brand">Corsair</span><span class="pc-model">KBCH-VAN96MLXPLA-BK</span></div>
+        <h3 class="pc-name">Vanguard 96 Mechanical Keyboard</h3>
+        <div class="pb-specs"><span class="pb">MLX Plasma</span><span class="pb">8kHz</span><span class="pb">NKRO</span><span class="pb">Wrist rest</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$269</div><a class="pc-enq" href="index.html?enquiry=Corsair%20Vanguard%2096%20Mechanical%20Keyboard%20%28KBCH-VAN96MLXPLA-BK%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="corsair hs80 max wireless headset spca-hs80maxw-sg">
+        <div class="pc-top"><span class="pc-brand">Corsair</span><span class="pc-model">SPCA-HS80MAXW-SG</span></div>
+        <h3 class="pc-name">HS80 MAX Wireless Headset</h3>
+        <div class="pb-specs"><span class="pb">50mm drivers</span><span class="pb">Dolby Atmos</span><span class="pb">24–130h</span><span class="pb">RGB</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$269</div><a class="pc-enq" href="index.html?enquiry=Corsair%20HS80%20MAX%20Wireless%20Headset%20%28SPCA-HS80MAXW-SG%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="corsair sf1000 sfx power supply pscp-sf1000">
+        <div class="pc-top"><span class="pc-brand">Corsair</span><span class="pc-model">PSCP-SF1000</span></div>
+        <h3 class="pc-name">SF1000 SFX Power Supply</h3>
+        <div class="pb-specs"><span class="pb">1000W</span><span class="pb">80+ Platinum</span><span class="pb">Fully modular</span><span class="pb">ATX 3.1</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$429</div><a class="pc-enq" href="index.html?enquiry=Corsair%20SF1000%20SFX%20Power%20Supply%20%28PSCP-SF1000%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="corsair hx1200i shift atx power supply pscp-hx1200i-sf">
+        <div class="pc-top"><span class="pc-brand">Corsair</span><span class="pc-model">PSCP-HX1200I-SF</span></div>
+        <h3 class="pc-name">HX1200i SHIFT ATX Power Supply</h3>
+        <div class="pb-specs"><span class="pb">1200W</span><span class="pb">80+ Platinum</span><span class="pb">Fully modular</span><span class="pb">10yr WTY</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$529</div><a class="pc-enq" href="index.html?enquiry=Corsair%20HX1200i%20SHIFT%20ATX%20Power%20Supply%20%28PSCP-HX1200I-SF%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="networking">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">24 products</span>
+        <h2 class="cat-title">Networking</h2>
+        <p class="cat-sub">Gateways, switches, access points, routers and racks.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="ubiquiti mobile router ultra nhu-umr-ultra">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-UMR-ULTRA</span></div>
+        <h3 class="pc-name">Mobile Router Ultra</h3>
+        <p class="pc-desc">Managed LTE mobile router, integrated Wi-Fi, WAN failover, DC power.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$189</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Mobile%20Router%20Ultra%20%28NHU-UMR-ULTRA%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti cloud gateway fiber nhu-ucg-fiber">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-UCG-FIBER</span></div>
+        <h3 class="pc-name">Cloud Gateway Fiber</h3>
+        <p class="pc-desc">Desktop 10G cloud gateway, integrated PoE switch, selectable NVR storage.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$559</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Cloud%20Gateway%20Fiber%20%28NHU-UCG-FIBER%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti dream router 7 nhu-udr7">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-UDR7</span></div>
+        <h3 class="pc-name">Dream Router 7</h3>
+        <p class="pc-desc">10G cloud gateway, integrated Wi-Fi 7, PoE switch, microSD storage.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$579</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Dream%20Router%207%20%28NHU-UDR7%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti cloud gateway max nhu-ucg-max">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-UCG-MAX</span></div>
+        <h3 class="pc-name">Cloud Gateway Max</h3>
+        <p class="pc-desc">Compact 2.5G gateway, 30+ device / 300+ client support, 512GB NVMe.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$589</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Cloud%20Gateway%20Max%20%28NHU-UCG-MAX%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti ai professional camera nhu-uvc-ai-pro-w">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-UVC-AI-PRO-W</span></div>
+        <h3 class="pc-name">AI Professional Camera</h3>
+        <p class="pc-desc">UniFi Protect 4K PoE camera, IP65 waterproof, PoE+, GbE port.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,049</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20AI%20Professional%20Camera%20%28NHU-UVC-AI-PRO-W%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti pro hd 24 nhu-usw-pro-hd-24">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-USW-PRO-HD-24</span></div>
+        <h3 class="pc-name">Pro HD 24</h3>
+        <p class="pc-desc">Layer 3 Etherlighting switch, 2× 10GbE, 22× 2.5GbE, 4× 10G SFP+.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,259</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Pro%20HD%2024%20%28NHU-USW-PRO-HD-24%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti pro xg 10 poe nhu-usw-pro-xg-10-poe">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-USW-PRO-XG-10-POE</span></div>
+        <h3 class="pc-name">Pro XG 10 PoE</h3>
+        <p class="pc-desc">1U 10-port Layer 3 PoE+++ switch, 10× 10GbE, 2× 10G SFP+.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,469</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Pro%20XG%2010%20PoE%20%28NHU-USW-PRO-XG-10-POE%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti pro hd 24 poe nhu-usw-pro-hd-24-poe">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-USW-PRO-HD-24-POE</span></div>
+        <h3 class="pc-name">Pro HD 24 PoE</h3>
+        <p class="pc-desc">Layer 3 Etherlighting PoE++ switch, 2× 10GbE, 22× 2.5GbE, 4× 10G SFP+.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,009</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Pro%20HD%2024%20PoE%20%28NHU-USW-PRO-HD-24-POE%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti pro xg 24 poe nhu-usw-pro-xg-24-poe">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-USW-PRO-XG-24-POE</span></div>
+        <h3 class="pc-name">Pro XG 24 PoE</h3>
+        <p class="pc-desc">24-port Layer 3 PoE+++ switch, 16× 10GbE, 8× 2.5GbE, 2× 25G SFP28.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,629</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Pro%20XG%2024%20PoE%20%28NHU-USW-PRO-XG-24-POE%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti pro xg aggregation nhu-pro-xg-aggregation">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-PRO-XG-AGGREGATION</span></div>
+        <h3 class="pc-name">Pro XG Aggregation</h3>
+        <p class="pc-desc">32-port Layer 3 Etherlighting switch for 25G SFP28 connections.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$5,019</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Pro%20XG%20Aggregation%20%28NHU-PRO-XG-AGGREGATION%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ubiquiti pro xg 48 poe nhu-usw-pro-xg-48-poe">
+        <div class="pc-top"><span class="pc-brand">Ubiquiti</span><span class="pc-model">NHU-USW-PRO-XG-48-POE</span></div>
+        <h3 class="pc-name">Pro XG 48 PoE</h3>
+        <p class="pc-desc">48-port Layer 3 PoE+++ switch, 32× 10GbE, 16× 2.5GbE, 4× 25G SFP28.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$5,109</div><a class="pc-enq" href="index.html?enquiry=Ubiquiti%20Pro%20XG%2048%20PoE%20%28NHU-USW-PRO-XG-48-POE%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="teltonika tap400 wi-fi 6 access point nht-tap400">
+        <div class="pc-top"><span class="pc-brand">Teltonika</span><span class="pc-model">NHT-TAP400</span></div>
+        <h3 class="pc-name">TAP400 Wi-Fi 6 Access Point</h3>
+        <p class="pc-desc">Wi-Fi 6, 2.5GbE backhaul, captive portal, RMS managed, mesh.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$199</div><a class="pc-enq" href="index.html?enquiry=Teltonika%20TAP400%20Wi-Fi%206%20Access%20Point%20%28NHT-TAP400%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="teltonika swm281 managed switch nht-swm281">
+        <div class="pc-top"><span class="pc-brand">Teltonika</span><span class="pc-model">NHT-SWM281</span></div>
+        <h3 class="pc-name">SWM281 Managed Switch</h3>
+        <p class="pc-desc">Layer 2+ non-PoE gigabit managed switch, RMS supported.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$479</div><a class="pc-enq" href="index.html?enquiry=Teltonika%20SWM281%20Managed%20Switch%20%28NHT-SWM281%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="teltonika rut906 4g router nht-rut906">
+        <div class="pc-top"><span class="pc-brand">Teltonika</span><span class="pc-model">NHT-RUT906</span></div>
+        <h3 class="pc-name">RUT906 4G Router</h3>
+        <p class="pc-desc">Industrial dual-SIM 4G LTE router, WAN failover, 4× Ethernet.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$489</div><a class="pc-enq" href="index.html?enquiry=Teltonika%20RUT906%204G%20Router%20%28NHT-RUT906%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="teltonika swm280 managed switch nht-swm280">
+        <div class="pc-top"><span class="pc-brand">Teltonika</span><span class="pc-model">NHT-SWM280</span></div>
+        <h3 class="pc-name">SWM280 Managed Switch</h3>
+        <p class="pc-desc">Layer 2+ half-PoE+ gigabit switch, 300W PoE budget, RMS.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$739</div><a class="pc-enq" href="index.html?enquiry=Teltonika%20SWM280%20Managed%20Switch%20%28NHT-SWM280%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="teltonika swm282 managed switch nht-swm282">
+        <div class="pc-top"><span class="pc-brand">Teltonika</span><span class="pc-model">NHT-SWM282</span></div>
+        <h3 class="pc-name">SWM282 Managed Switch</h3>
+        <p class="pc-desc">Layer 2+ full-PoE+ gigabit switch, 300W PoE budget, RMS.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$809</div><a class="pc-enq" href="index.html?enquiry=Teltonika%20SWM282%20Managed%20Switch%20%28NHT-SWM282%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="teltonika rutxr1 4g router nht-rutxr1">
+        <div class="pc-top"><span class="pc-brand">Teltonika</span><span class="pc-model">NHT-RUTXR1</span></div>
+        <h3 class="pc-name">RUTXR1 4G Router</h3>
+        <p class="pc-desc">Rack-mountable 4G CAT6 router, dual-SIM, redundant power, SFP.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$929</div><a class="pc-enq" href="index.html?enquiry=Teltonika%20RUTXR1%204G%20Router%20%28NHT-RUTXR1%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="teltonika rutm30 5g router nht-rutm30">
+        <div class="pc-top"><span class="pc-brand">Teltonika</span><span class="pc-model">NHT-RUTM30</span></div>
+        <h3 class="pc-name">RUTM30 5G Router</h3>
+        <p class="pc-desc">Compact 5G/4G CAT19 router, dual-band Wi-Fi, dual gigabit ports.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,079</div><a class="pc-enq" href="index.html?enquiry=Teltonika%20RUTM30%205G%20Router%20%28NHT-RUTM30%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="teltonika rutc50 5g router nht-rutc50">
+        <div class="pc-top"><span class="pc-brand">Teltonika</span><span class="pc-model">NHT-RUTC50</span></div>
+        <h3 class="pc-name">RUTC50 5G Router</h3>
+        <p class="pc-desc">5G CAT19 router, Wi-Fi 6 MU-MIMO, dual-SIM, Docker support.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,799</div><a class="pc-enq" href="index.html?enquiry=Teltonika%20RUTC50%205G%20Router%20%28NHT-RUTC50%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr open frame 6u wall mount frame rcldr-of300-6u">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">RCLDR-OF300-6U</span></div>
+        <h3 class="pc-name">Open Frame 6U Wall Mount Frame</h3>
+        <p class="pc-desc">Black metal open-frame wall mount rack, 6U.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$129</div><a class="pc-enq" href="index.html?enquiry=LDR%20Open%20Frame%206U%20Wall%20Mount%20Frame%20%28RCLDR-OF300-6U%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr assembled 9u hinged wall cabinet rcldr-ds550-9u-a">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">RCLDR-DS550-9U-A</span></div>
+        <h3 class="pc-name">Assembled 9U Hinged Wall Cabinet</h3>
+        <p class="pc-desc">Glass door, black metal, top fan vents, 9U hinged wall cabinet.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$369</div><a class="pc-enq" href="index.html?enquiry=LDR%20Assembled%209U%20Hinged%20Wall%20Cabinet%20%28RCLDR-DS550-9U-A%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr assembled 18u wall mount cabinet rcldr-ss450-18u-a">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">RCLDR-SS450-18U-A</span></div>
+        <h3 class="pc-name">Assembled 18U Wall Mount Cabinet</h3>
+        <p class="pc-desc">Glass door, black metal, top fan vents, 18U wall cabinet.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$469</div><a class="pc-enq" href="index.html?enquiry=LDR%20Assembled%2018U%20Wall%20Mount%20Cabinet%20%28RCLDR-SS450-18U-A%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr assembled soundproof cabinet 18u rcldr-sn03-18u">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">RCLDR-SN03-18U</span></div>
+        <h3 class="pc-name">Assembled Soundproof Cabinet 18U</h3>
+        <p class="pc-desc">Soundproof cabinet, 6 low-noise fans, lockable removable panels.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$5,499</div><a class="pc-enq" href="index.html?enquiry=LDR%20Assembled%20Soundproof%20Cabinet%2018U%20%28RCLDR-SN03-18U%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr assembled soundproof cabinet 24u rcldr-sn03-24u">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">RCLDR-SN03-24U</span></div>
+        <h3 class="pc-name">Assembled Soundproof Cabinet 24U</h3>
+        <p class="pc-desc">Soundproof cabinet, 6 low-noise fans, lockable removable panels.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$6,599</div><a class="pc-enq" href="index.html?enquiry=LDR%20Assembled%20Soundproof%20Cabinet%2024U%20%28RCLDR-SN03-24U%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="power">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">16 products</span>
+        <h2 class="cat-title">UPS &amp; Power</h2>
+        <p class="cat-sub">Uninterruptible power, line-interactive UPS and portable power.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="apc back-ups 750va / 410w upapcbx750mi">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPCBX750MI</span></div>
+        <h3 class="pc-name">Back-UPS 750VA / 410W</h3>
+        <p class="pc-desc">Line-interactive UPS, tower, 3× AU outlets, lead-acid battery.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$179</div><a class="pc-enq" href="index.html?enquiry=APC%20Back-UPS%20750VA%20/%20410W%20%28UPAPCBX750MI%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc back-ups 550va / 330w upapcbe550-az">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPCBE550-AZ</span></div>
+        <h3 class="pc-name">Back-UPS 550VA / 330W</h3>
+        <p class="pc-desc">Power-saving UPS, 8× AU outlets, user-replaceable battery.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$219</div><a class="pc-enq" href="index.html?enquiry=APC%20Back-UPS%20550VA%20/%20330W%20%28UPAPCBE550-AZ%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc back-ups 950va / 520w upapcbx950mi-az">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPCBX950MI-AZ</span></div>
+        <h3 class="pc-name">Back-UPS 950VA / 520W</h3>
+        <p class="pc-desc">Line-interactive UPS, tower, 4× AU outlets, lead-acid battery.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$229</div><a class="pc-enq" href="index.html?enquiry=APC%20Back-UPS%20950VA%20/%20520W%20%28UPAPCBX950MI-AZ%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc back-ups 1200va / 650w upapcbx1200mi-az">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPCBX1200MI-AZ</span></div>
+        <h3 class="pc-name">Back-UPS 1200VA / 650W</h3>
+        <p class="pc-desc">Line-interactive UPS, tower, 4× AU outlets, lead-acid battery.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$269</div><a class="pc-enq" href="index.html?enquiry=APC%20Back-UPS%201200VA%20/%20650W%20%28UPAPCBX1200MI-AZ%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc back-ups 700va / 405w upapcbe700-az">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPCBE700-AZ</span></div>
+        <h3 class="pc-name">Back-UPS 700VA / 405W</h3>
+        <p class="pc-desc">Power-saving UPS, 8× AU outlets, user-replaceable battery.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$289</div><a class="pc-enq" href="index.html?enquiry=APC%20Back-UPS%20700VA%20/%20405W%20%28UPAPCBE700-AZ%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc back-ups 1600va / 900w upapcbx1600mi-az">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPCBX1600MI-AZ</span></div>
+        <h3 class="pc-name">Back-UPS 1600VA / 900W</h3>
+        <p class="pc-desc">Line-interactive UPS, tower, 4× AU outlets, lead-acid battery.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$349</div><a class="pc-enq" href="index.html?enquiry=APC%20Back-UPS%201600VA%20/%20900W%20%28UPAPCBX1600MI-AZ%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc offgrid solar panel 100w upapc-psp100">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPC-PSP100</span></div>
+        <h3 class="pc-name">OffGrid Solar Panel 100W</h3>
+        <p class="pc-desc">Portable 100W solar panel, 23% efficiency, foldable with handle.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$479</div><a class="pc-enq" href="index.html?enquiry=APC%20OffGrid%20Solar%20Panel%20100W%20%28UPAPC-PSP100%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc offgrid power station 330 upapc-pps330-az">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPC-PPS330-AZ</span></div>
+        <h3 class="pc-name">OffGrid Power Station 330</h3>
+        <p class="pc-desc">332Wh lithium-ion, 2× AU outlets, sine wave, USB-A/C, wireless charge.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$699</div><a class="pc-enq" href="index.html?enquiry=APC%20OffGrid%20Power%20Station%20330%20%28UPAPC-PPS330-AZ%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc offgrid power station 500 upapc-pps500-az">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPC-PPS500-AZ</span></div>
+        <h3 class="pc-name">OffGrid Power Station 500</h3>
+        <p class="pc-desc">517Wh lithium-ion, 2× AU outlets, sine wave, USB-A/C, wireless charge.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,179</div><a class="pc-enq" href="index.html?enquiry=APC%20OffGrid%20Power%20Station%20500%20%28UPAPC-PPS500-AZ%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="apc offgrid power station 730 upapc-pps730-az">
+        <div class="pc-top"><span class="pc-brand">APC</span><span class="pc-model">UPAPC-PPS730-AZ</span></div>
+        <h3 class="pc-name">OffGrid Power Station 730</h3>
+        <p class="pc-desc">738Wh lithium-ion, 2× AU outlets, sine wave, USB-A/C, wireless charge.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,399</div><a class="pc-enq" href="index.html?enquiry=APC%20OffGrid%20Power%20Station%20730%20%28UPAPC-PPS730-AZ%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="powershield defender 1600va / 960w ups upps-d1600va">
+        <div class="pc-top"><span class="pc-brand">PowerShield</span><span class="pc-model">UPPS-D1600VA</span></div>
+        <h3 class="pc-name">Defender 1600VA / 960W UPS</h3>
+        <p class="pc-desc">AVR, LCD, 6× AU sockets, user-replaceable batteries, 2yr WTY.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$509</div><a class="pc-enq" href="index.html?enquiry=PowerShield%20Defender%201600VA%20/%20960W%20UPS%20%28UPPS-D1600VA%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="powershield commander 2000va / 1800w upps-pscm2000">
+        <div class="pc-top"><span class="pc-brand">PowerShield</span><span class="pc-model">UPPS-PSCM2000</span></div>
+        <h3 class="pc-name">Commander 2000VA / 1800W</h3>
+        <p class="pc-desc">Line-interactive pure sine wave tower UPS with AVR, 2yr WTY.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,579</div><a class="pc-enq" href="index.html?enquiry=PowerShield%20Commander%202000VA%20/%201800W%20%28UPPS-PSCM2000%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="powershield centurion rt 1500va / 1350w upps-pscert1500">
+        <div class="pc-top"><span class="pc-brand">PowerShield</span><span class="pc-model">UPPS-PSCERT1500</span></div>
+        <h3 class="pc-name">Centurion RT 1500VA / 1350W</h3>
+        <p class="pc-desc">True online double-conversion rack/tower UPS, PF 0.9, LCD.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,799</div><a class="pc-enq" href="index.html?enquiry=PowerShield%20Centurion%20RT%201500VA%20/%201350W%20%28UPPS-PSCERT1500%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="powershield commander rt 2000va / 1800w upps-crt2000va">
+        <div class="pc-top"><span class="pc-brand">PowerShield</span><span class="pc-model">UPPS-CRT2000VA</span></div>
+        <h3 class="pc-name">Commander RT 2000VA / 1800W</h3>
+        <p class="pc-desc">Hot-swappable batteries, 3× AU sockets, rack/tower, 2yr WTY.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,909</div><a class="pc-enq" href="index.html?enquiry=PowerShield%20Commander%20RT%202000VA%20/%201800W%20%28UPPS-CRT2000VA%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="powershield centurion rt 2000va / 1800w upps-pscert2000">
+        <div class="pc-top"><span class="pc-brand">PowerShield</span><span class="pc-model">UPPS-PSCERT2000</span></div>
+        <h3 class="pc-name">Centurion RT 2000VA / 1800W</h3>
+        <p class="pc-desc">True online double-conversion rack/tower UPS, 3× AU sockets.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$2,569</div><a class="pc-enq" href="index.html?enquiry=PowerShield%20Centurion%20RT%202000VA%20/%201800W%20%28UPPS-PSCERT2000%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="powershield centurion rt 3000va / 2700w upps-pscert3000">
+        <div class="pc-top"><span class="pc-brand">PowerShield</span><span class="pc-model">UPPS-PSCERT3000</span></div>
+        <h3 class="pc-name">Centurion RT 3000VA / 2700W</h3>
+        <p class="pc-desc">15A true online double-conversion rack/tower UPS, C13/C19.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$3,329</div><a class="pc-enq" href="index.html?enquiry=PowerShield%20Centurion%20RT%203000VA%20/%202700W%20%28UPPS-PSCERT3000%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="monitors">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">12 products</span>
+        <h2 class="cat-title">Monitors &amp; Mounting</h2>
+        <p class="cat-sub">Portable displays and Brateck monitor arms.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="verbatim portable touchscreen monitor 15.6&quot; mnv-49592">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">MNV-49592</span></div>
+        <h3 class="pc-name">Portable Touchscreen Monitor 15.6&quot;</h3>
+        <div class="pb-specs"><span class="pb">15.6&quot; IPS</span><span class="pb">1080p FHD</span><span class="pb">Touch</span><span class="pb">Built-in speakers</span></div>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$419</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20Portable%20Touchscreen%20Monitor%2015.6%22%20%28MNV-49592%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck affordable steel articulating arm (dual) mabt-ldt33-c024">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT33-C024</span></div>
+        <h3 class="pc-name">Affordable Steel Articulating Arm (Dual)</h3>
+        <p class="pc-desc">Dual monitor, 17–31&quot;, up to 9kg/screen, VESA 75/100.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$169</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Affordable%20Steel%20Articulating%20Arm%20%28Dual%29%20%28MABT-LDT33-C024%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck heavy-duty gas spring arm + usb (single) mabt-ldt82-c012uc-bk">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT82-C012UC-BK</span></div>
+        <h3 class="pc-name">Heavy-Duty Gas Spring Arm + USB (Single)</h3>
+        <p class="pc-desc">Single 17–45&quot; monitor, matte black, USB ports.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$169</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Heavy-Duty%20Gas%20Spring%20Arm%20%2B%20USB%20%28Single%29%20%28MABT-LDT82-C012UC-BK%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck economy spring-assisted arm (dual) mabt-ldt13-c024e">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT13-C024E</span></div>
+        <h3 class="pc-name">Economy Spring-Assisted Arm (Dual)</h3>
+        <p class="pc-desc">Dual monitor, 17–32&quot;, up to 9kg, independent arms.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$169</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Economy%20Spring-Assisted%20Arm%20%28Dual%29%20%28MABT-LDT13-C024E%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck pole-mounted gas spring arm (dual) mabt-ldt48-c024">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT48-C024</span></div>
+        <h3 class="pc-name">Pole-Mounted Gas Spring Arm (Dual)</h3>
+        <p class="pc-desc">Dual monitor, 17–32&quot;, up to 9kg/screen, VESA 75/100.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$189</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Pole-Mounted%20Gas%20Spring%20Arm%20%28Dual%29%20%28MABT-LDT48-C024%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck premium slim aluminium arm (single) mabt-ldt49-c012-b">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT49-C012-B</span></div>
+        <h3 class="pc-name">Premium Slim Aluminium Arm (Single)</h3>
+        <p class="pc-desc">Single 17–32&quot;, spring-assisted, up to 9kg, VESA 75/100.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$199</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Premium%20Slim%20Aluminium%20Arm%20%28Single%29%20%28MABT-LDT49-C012-B%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck economical spring-assisted arm (dual) mabt-ldt63-c024-b">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT63-C024-B</span></div>
+        <h3 class="pc-name">Economical Spring-Assisted Arm (Dual)</h3>
+        <p class="pc-desc">Dual monitor, 17–32&quot;, up to 9kg/screen, space grey.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$199</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Economical%20Spring-Assisted%20Arm%20%28Dual%29%20%28MABT-LDT63-C024-B%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck gas spring arm usb-a/usb-c (dual) mabt-ldt81-c022uc-b">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT81-C022UC-B</span></div>
+        <h3 class="pc-name">Gas Spring Arm USB-A/USB-C (Dual)</h3>
+        <p class="pc-desc">Dual monitor, 17–32&quot;, fine-texture black, USB-A/C ports.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$209</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Gas%20Spring%20Arm%20USB-A/USB-C%20%28Dual%29%20%28MABT-LDT81-C022UC-B%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck premium aluminium articulating stand mabt-ldt72-t024">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT72-T024</span></div>
+        <h3 class="pc-name">Premium Aluminium Articulating Stand</h3>
+        <p class="pc-desc">17–32&quot; monitor, up to 8kg, VESA 75/100.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$219</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Premium%20Aluminium%20Articulating%20Stand%20%28MABT-LDT72-T024%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck full extension gas spring arm (dual) mabt-ldt16-c024">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT16-C024</span></div>
+        <h3 class="pc-name">Full Extension Gas Spring Arm (Dual)</h3>
+        <p class="pc-desc">Dual monitor, 17–32&quot;, up to 8kg/screen, independent arms.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$229</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Full%20Extension%20Gas%20Spring%20Arm%20%28Dual%29%20%28MABT-LDT16-C024%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck interactive counterbalance arm (dual) mabt-ldt10-c024">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT10-C024</span></div>
+        <h3 class="pc-name">Interactive Counterbalance Arm (Dual)</h3>
+        <p class="pc-desc">Dual aluminium monitor arm, 13–32&quot;, up to 9kg/screen.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$299</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Interactive%20Counterbalance%20Arm%20%28Dual%29%20%28MABT-LDT10-C024%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="brateck heavy-duty gas spring arm + handle (dual) mabt-ldt23-c022">
+        <div class="pc-top"><span class="pc-brand">Brateck</span><span class="pc-model">MABT-LDT23-C022</span></div>
+        <h3 class="pc-name">Heavy-Duty Gas Spring Arm + Handle (Dual)</h3>
+        <p class="pc-desc">Dual aluminium monitor arm, 17–32&quot;, up to 8kg/screen, handle.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$399</div><a class="pc-enq" href="index.html?enquiry=Brateck%20Heavy-Duty%20Gas%20Spring%20Arm%20%2B%20Handle%20%28Dual%29%20%28MABT-LDT23-C022%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="chairs">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">7 products</span>
+        <h2 class="cat-title">Office Chairs</h2>
+        <p class="cat-sub">Ergonomic seating from LDR Office Solutions.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="ldr visit high chair ldr-visit">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">LDR-VISIT</span></div>
+        <h3 class="pc-name">VISIT High Chair</h3>
+        <p class="pc-desc">Vendor/hot-desk high chair, steel legs, moulded ABS, fabric. Black/Blue/Grey.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$329</div><a class="pc-enq" href="index.html?enquiry=LDR%20VISIT%20High%20Chair%20%28LDR-VISIT%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr ergolite max office chair ldr-ergolite-max">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">LDR-ERGOLITE-MAX</span></div>
+        <h3 class="pc-name">ErgoLite Max Office Chair</h3>
+        <p class="pc-desc">Ergonomic, lumbar support, mesh back, synchro tilt, fixed arms. Black/Blue/Grey.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$439</div><a class="pc-enq" href="index.html?enquiry=LDR%20ErgoLite%20Max%20Office%20Chair%20%28LDR-ERGOLITE-MAX%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr ergolite ultra ldr-ergolite-ultra">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">LDR-ERGOLITE-ULTRA</span></div>
+        <h3 class="pc-name">ErgoLite Ultra</h3>
+        <p class="pc-desc">Premium ergonomic chair, 3D arms, seat slider, lumbar, synchro tilt. Black/Blue/Grey.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$699</div><a class="pc-enq" href="index.html?enquiry=LDR%20ErgoLite%20Ultra%20%28LDR-ERGOLITE-ULTRA%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr flex learn 360 chair ldr-flexlearn-360">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">LDR-FLEXLEARN-360</span></div>
+        <h3 class="pc-name">Flex Learn 360 Chair</h3>
+        <p class="pc-desc">Training chair with writing table, moulded foam, alloy base, castors.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$749</div><a class="pc-enq" href="index.html?enquiry=LDR%20Flex%20Learn%20360%20Chair%20%28LDR-FLEXLEARN-360%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr focus ultra chair ldr-focus-ultra">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">LDR-FOCUS-ULTRA</span></div>
+        <h3 class="pc-name">Focus Ultra Chair</h3>
+        <p class="pc-desc">High-back lounge chair, ergonomic, fabric, wide headrest, curved arms.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$899</div><a class="pc-enq" href="index.html?enquiry=LDR%20Focus%20Ultra%20Chair%20%28LDR-FOCUS-ULTRA%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr flex learn ultra training chair ldr-flexlearn-ultra">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">LDR-FLEXLEARN-ULTRA</span></div>
+        <h3 class="pc-name">Flex Learn Ultra Training Chair</h3>
+        <p class="pc-desc">Soft-touch lounge training chair, storage shelf, laptop tray, cup holder.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$999</div><a class="pc-enq" href="index.html?enquiry=LDR%20Flex%20Learn%20Ultra%20Training%20Chair%20%28LDR-FLEXLEARN-ULTRA%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="ldr focus 360 chair ldr-focus-360">
+        <div class="pc-top"><span class="pc-brand">LDR</span><span class="pc-model">LDR-FOCUS-360</span></div>
+        <h3 class="pc-name">Focus 360 Chair</h3>
+        <p class="pc-desc">High-back executive chair, moulded foam, PU/fabric, 4-star alloy base.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$1,299</div><a class="pc-enq" href="index.html?enquiry=LDR%20Focus%20360%20Chair%20%28LDR-FOCUS-360%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="docks">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">25 products</span>
+        <h2 class="cat-title">Docks, Cables &amp; Accessories</h2>
+        <p class="cat-sub">Docking stations, chargers, cables, webcams and peripherals.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="verbatim tough max usb-c 240w cable 120cm cbv-66820">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">CBV-66820</span></div>
+        <h3 class="pc-name">Tough Max USB-C 240W Cable 120cm</h3>
+        <p class="pc-desc">USB-C to USB-C 240W, QC 4.0/3.0, 50,000+ bend rated.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$29</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20Tough%20Max%20USB-C%20240W%20Cable%20120cm%20%28CBV-66820%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim go nano wireless mouse miv-49043">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">MIV-49043</span></div>
+        <h3 class="pc-name">Go Nano Wireless Mouse</h3>
+        <p class="pc-desc">2.4GHz wireless, 1600dpi, 3-button. Pink/Black/Blue.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$29</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20Go%20Nano%20Wireless%20Mouse%20%28MIV-49043%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom usb-c 5-in-1 multiport dock hxsi-cht550">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-CHT550</span></div>
+        <h3 class="pc-name">USB-C 5-in-1 Multiport Dock</h3>
+        <p class="pc-desc">USB hub, PD, HDMI 2.0 4K@60Hz.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$29</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20USB-C%205-in-1%20Multiport%20Dock%20%28HXSI-CHT550%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim 35w gan charger (2-port) mpv-67015">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">MPV-67015</span></div>
+        <h3 class="pc-name">35W GaN Charger (2-Port)</h3>
+        <p class="pc-desc">Programmable GaN charger, 95% PCR housing, multi-protection.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$35</div><a class="pc-enq" href="index.html?enquiry=Verbatim%2035W%20GaN%20Charger%20%282-Port%29%20%28MPV-67015%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom sd511 m.2 ssd docking station hxsi-sd511">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-SD511</span></div>
+        <h3 class="pc-name">SD511 M.2 SSD Docking Station</h3>
+        <p class="pc-desc">NVMe &amp; SATA dual-protocol, USB 3.2 Gen2 10Gbps.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$39</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20SD511%20M.2%20SSD%20Docking%20Station%20%28HXSI-SD511%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom um650 usb condenser microphone hxsi-um650">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-UM650</span></div>
+        <h3 class="pc-name">UM650 USB Condenser Microphone</h3>
+        <p class="pc-desc">Cardioid USB mic, RGB, tripod &amp; pop filter.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$39</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20UM650%20USB%20Condenser%20Microphone%20%28HXSI-UM650%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim usb 3.2 card reader 4-in-1 64901">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">64901</span></div>
+        <h3 class="pc-name">USB 3.2 Card Reader 4-in-1</h3>
+        <p class="pc-desc">Reads CF/SD/microSD/MMC/Memory Stick and more.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$39</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20USB%203.2%20Card%20Reader%204-in-1%20%2864901%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim wireless keyboard &amp; mouse combo 66519">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">66519</span></div>
+        <h3 class="pc-name">Wireless Keyboard &amp; Mouse Combo</h3>
+        <p class="pc-desc">Single receiver, kickstands, sleep mode.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$39</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20Wireless%20Keyboard%20%26%20Mouse%20Combo%20%2866519%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim clarity sound headset spv-30195">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">SPV-30195</span></div>
+        <h3 class="pc-name">Clarity Sound Headset</h3>
+        <p class="pc-desc">USB-C, noise-cancelling mic, in-line controls.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$39</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20Clarity%20Sound%20Headset%20%28SPV-30195%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom da451 5-in-1 usb-c adapter hxsi-da451">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-DA451</span></div>
+        <h3 class="pc-name">DA451 5-in-1 USB-C Adapter</h3>
+        <p class="pc-desc">MST hub with VGA and dual HDMI, DP Alt Mode.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$49</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20DA451%205-in-1%20USB-C%20Adapter%20%28HXSI-DA451%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom se523 m.2 2230 nvme enclosure hxsi-se523">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-SE523</span></div>
+        <h3 class="pc-name">SE523 M.2 2230 NVMe Enclosure</h3>
+        <p class="pc-desc">USB-C 10Gbps, 100W PD, for NVMe M.2 2230 SSDs.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$49</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20SE523%20M.2%202230%20NVMe%20Enclosure%20%28HXSI-SE523%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom nw812v2 wifi 6e usb adapter hxsi-nw812v2">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-NW812V2</span></div>
+        <h3 class="pc-name">NW812v2 WiFi 6E USB Adapter</h3>
+        <p class="pc-desc">AX5400 tri-band, up to 2402Mbps on 5/6GHz.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$49</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20NW812v2%20WiFi%206E%20USB%20Adapter%20%28HXSI-NW812V2%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim 65w gan charger (3-port) mpv-67016">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">MPV-67016</span></div>
+        <h3 class="pc-name">65W GaN Charger (3-Port)</h3>
+        <p class="pc-desc">Programmable GaN charger, 95% PCR housing.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$65</div><a class="pc-enq" href="index.html?enquiry=Verbatim%2065W%20GaN%20Charger%20%283-Port%29%20%28MPV-67016%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom 48w 10-port usb 3.0 hub hxsi-chu810">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-CHU810</span></div>
+        <h3 class="pc-name">48W 10-Port USB 3.0 Hub</h3>
+        <p class="pc-desc">10-port hub &amp; charger, individual switches, 12V/4A.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$69</div><a class="pc-enq" href="index.html?enquiry=Simplecom%2048W%2010-Port%20USB%203.0%20Hub%20%28HXSI-CHU810%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom cht595 9-in-1 usb-c dock + nvme hxsi-cht595">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-CHT595</span></div>
+        <h3 class="pc-name">CHT595 9-in-1 USB-C Dock + NVMe</h3>
+        <p class="pc-desc">2× USB-A 10Gbps, USB-C, HDMI 4K@60Hz, SD, PD100W, M.2 enclosure.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$69</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20CHT595%209-in-1%20USB-C%20Dock%20%2B%20NVMe%20%28HXSI-CHT595%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim 1080p fhd auto focus webcam viv-66631">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">VIV-66631</span></div>
+        <h3 class="pc-name">1080p FHD Auto Focus Webcam</h3>
+        <p class="pc-desc">Directional mic up to 5m, auto brightness &amp; white balance.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$79</div><a class="pc-enq" href="index.html?enquiry=Verbatim%201080p%20FHD%20Auto%20Focus%20Webcam%20%28VIV-66631%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim external slimline cd/dvd writer cmv98938">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">CMV98938</span></div>
+        <h3 class="pc-name">External Slimline CD/DVD Writer</h3>
+        <p class="pc-desc">USB-powered, M-Disc ready, reads/writes CD &amp; DVD.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$79</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20External%20Slimline%20CD/DVD%20Writer%20%28CMV98938%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim active noise cancelling headset spv-66706">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">SPV-66706</span></div>
+        <h3 class="pc-name">Active Noise Cancelling Headset</h3>
+        <p class="pc-desc">Over-ear, ANC, flexible boom mic, 8h battery.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$89</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20Active%20Noise%20Cancelling%20Headset%20%28SPV-66706%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom chn622 usb-c 12-in-1 dock + stand hxsi-chn622">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-CHN622</span></div>
+        <h3 class="pc-name">CHN622 USB-C 12-in-1 Dock + Stand</h3>
+        <p class="pc-desc">Dual HDMI + VGA triple display, gigabit LAN, laptop stand.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$89</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20CHN622%20USB-C%2012-in-1%20Dock%20%2B%20Stand%20%28HXSI-CHN622%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim 100w gan charger (4-port) mpv-66966">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">MPV-66966</span></div>
+        <h3 class="pc-name">100W GaN Charger (4-Port)</h3>
+        <p class="pc-desc">Programmable GaN charger, 95% PCR housing.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$99</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20100W%20GaN%20Charger%20%284-Port%29%20%28MPV-66966%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim 140w gan charger (4-port) mpv-67035">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">MPV-67035</span></div>
+        <h3 class="pc-name">140W GaN Charger (4-Port)</h3>
+        <p class="pc-desc">Programmable GaN charger, 95% PCR housing.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$139</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20140W%20GaN%20Charger%20%284-Port%29%20%28MPV-67035%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom sd550v2 dual bay nvme dock hxsi-sd550v2">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-SD550V2</span></div>
+        <h3 class="pc-name">SD550v2 Dual Bay NVMe Dock</h3>
+        <p class="pc-desc">USB 3.2 Gen2x2, offline clone, dual NVMe M.2.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$149</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20SD550v2%20Dual%20Bay%20NVMe%20Dock%20%28HXSI-SD550V2%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom cht815 15-in-1 usb-c 4k triple dock hxsi-cht815">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">HXSI-CHT815</span></div>
+        <h3 class="pc-name">CHT815 15-in-1 USB-C 4K Triple Dock</h3>
+        <p class="pc-desc">Triple display MST, dual HDMI + DP, DP Alt Mode.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$159</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20CHT815%2015-in-1%20USB-C%204K%20Triple%20Dock%20%28HXSI-CHT815%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="simplecom cht660 laptop stand + 6-port usb-c dock nasi-cht660">
+        <div class="pc-top"><span class="pc-brand">Simplecom</span><span class="pc-model">NASI-CHT660</span></div>
+        <h3 class="pc-name">CHT660 Laptop Stand + 6-Port USB-C Dock</h3>
+        <p class="pc-desc">Adjustable aluminium stand, dual 4K HDMI, 10–17&quot; laptops.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$159</div><a class="pc-enq" href="index.html?enquiry=Simplecom%20CHT660%20Laptop%20Stand%20%2B%206-Port%20USB-C%20Dock%20%28NASI-CHT660%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="verbatim store&#x27;n&#x27;go grid hard drive 1tb hxv-grid1tb-blk">
+        <div class="pc-top"><span class="pc-brand">Verbatim</span><span class="pc-model">HXV-GRID1TB-BLK</span></div>
+        <h3 class="pc-name">Store&#x27;n&#x27;Go Grid Hard Drive 1TB</h3>
+        <p class="pc-desc">USB 3.2 Gen1, 1TB portable HDD, Nero backup software.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$159</div><a class="pc-enq" href="index.html?enquiry=Verbatim%20Store%27n%27Go%20Grid%20Hard%20Drive%201TB%20%28HXV-GRID1TB-BLK%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <section class="cat" id="software">
+    <div class="wrap">
+      <div class="cat-head">
+        <span class="eyebrow">6 products</span>
+        <h2 class="cat-title">Software</h2>
+        <p class="cat-sub">Microsoft Windows and Office licences.</p>
+      </div>
+      <div class="pgrid">
+      <article class="pcard" data-name="microsoft office home &amp; student 2024 sms-ofhs2024-ml-1u">
+        <div class="pc-top"><span class="pc-brand">Microsoft</span><span class="pc-model">SMS-OFHS2024-ML-1U</span></div>
+        <h3 class="pc-name">Office Home &amp; Student 2024</h3>
+        <p class="pc-desc">Word, Excel, PowerPoint for PC &amp; Mac (medialess).</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$249</div><a class="pc-enq" href="index.html?enquiry=Microsoft%20Office%20Home%20%26%20Student%202024%20%28SMS-OFHS2024-ML-1U%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="microsoft windows 11 home (oem) smswin11home64">
+        <div class="pc-top"><span class="pc-brand">Microsoft</span><span class="pc-model">SMSWIN11HOME64</span></div>
+        <h3 class="pc-name">Windows 11 Home (OEM)</h3>
+        <p class="pc-desc">OEM 64-bit, 1-pack, key only.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$249</div><a class="pc-enq" href="index.html?enquiry=Microsoft%20Windows%2011%20Home%20%28OEM%29%20%28SMSWIN11HOME64%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="microsoft windows 11 home (retail usb) sms-win11hret-usb">
+        <div class="pc-top"><span class="pc-brand">Microsoft</span><span class="pc-model">SMS-WIN11HRET-USB</span></div>
+        <h3 class="pc-name">Windows 11 Home (Retail USB)</h3>
+        <p class="pc-desc">Retail 64-bit USB flash drive.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$269</div><a class="pc-enq" href="index.html?enquiry=Microsoft%20Windows%2011%20Home%20%28Retail%20USB%29%20%28SMS-WIN11HRET-USB%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="microsoft windows 11 pro (oem) smswin11proem64">
+        <div class="pc-top"><span class="pc-brand">Microsoft</span><span class="pc-model">SMSWIN11PROEM64</span></div>
+        <h3 class="pc-name">Windows 11 Pro (OEM)</h3>
+        <p class="pc-desc">OEM 64-bit, 1-pack, key only.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$359</div><a class="pc-enq" href="index.html?enquiry=Microsoft%20Windows%2011%20Pro%20%28OEM%29%20%28SMSWIN11PROEM64%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="microsoft windows 11 pro (retail usb) sms-win11proret-usb">
+        <div class="pc-top"><span class="pc-brand">Microsoft</span><span class="pc-model">SMS-WIN11PRORET-USB</span></div>
+        <h3 class="pc-name">Windows 11 Pro (Retail USB)</h3>
+        <p class="pc-desc">Retail 64-bit USB flash drive.</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$399</div><a class="pc-enq" href="index.html?enquiry=Microsoft%20Windows%2011%20Pro%20%28Retail%20USB%29%20%28SMS-WIN11PRORET-USB%29#contact">Enquire</a></div>
+      </article>
+      <article class="pcard" data-name="microsoft office home &amp; business 2024 sms-offhb2024-ml">
+        <div class="pc-top"><span class="pc-brand">Microsoft</span><span class="pc-model">SMS-OFFHB2024-ML</span></div>
+        <h3 class="pc-name">Office Home &amp; Business 2024</h3>
+        <p class="pc-desc">Word, Excel, PowerPoint, Outlook for PC &amp; Mac (medialess).</p>
+        <div class="pc-foot"><div class="pc-price"><span class="pc-rrp">ex GST</span>$439</div><a class="pc-enq" href="index.html?enquiry=Microsoft%20Office%20Home%20%26%20Business%202024%20%28SMS-OFFHB2024-ML%29#contact">Enquire</a></div>
+      </article>
+      </div>
+    </div>
+  </section>
+  <p class="no-results" id="noResults">No products match your search. Try a different term.</p>
+</main>
+
+<section class="cta-strip">
+  <div class="wrap">
+    <h2>Need help choosing?</h2>
+    <p>Tell us what you're outfitting — a new office, a fleet refresh or a single workstation — and we'll put together the right gear at the right price.</p>
+    <a href="index.html#contact" class="btn-primary">Request a quote</a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <a href="index.html" class="logo" aria-label="Zale IT home"><span class="logo-mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l8 3v6c0 5-3.4 8.4-8 11-4.6-2.6-8-6-8-11V5l8-3z"/><path d="M9 12l2 2 4-4"/></svg></span><span>Zale <b>IT</b></span></a>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="index.html#services">Services</a>
+        <a href="index.html#hardware">Hardware</a>
+        <a href="index.html#partners">Partners</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <div class="footer-copy">&copy; <span id="year">2026</span> Zale IT</div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-legal">Zale IT Pty Ltd · Brisbane QLD · <a href="mailto:support@zaleit.com.au">support@zaleit.com.au</a></p>
+      <p class="footer-legal">Prices are in AUD, exclude GST and are indicative only — valid until 30 June 2026 or while stocks last. Specifications and availability subject to change. E&amp;OE.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  var nav=document.getElementById('nav');
+  addEventListener('scroll',function(){nav.classList.toggle('scrolled',scrollY>12)},{passive:true});
+
+  var burger=document.getElementById('burger'),mm=document.getElementById('mobileMenu');
+  burger.addEventListener('click',function(){
+    var o=mm.classList.toggle('open');burger.classList.toggle('open',o);
+    burger.setAttribute('aria-expanded',o?'true':'false');
+  });
+  Array.prototype.forEach.call(mm.querySelectorAll('a'),function(a){a.addEventListener('click',function(){mm.classList.remove('open');burger.classList.remove('open')})});
+
+  document.getElementById('year').textContent=new Date().getFullYear();
+
+  // smooth scroll for category chips
+  Array.prototype.forEach.call(document.querySelectorAll('.cat-chip'),function(a){
+    a.addEventListener('click',function(e){
+      var t=document.querySelector(a.getAttribute('href'));
+      if(t){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'});}
+    });
+  });
+
+  // active chip on scroll
+  var chips=Array.prototype.slice.call(document.querySelectorAll('.cat-chip'));
+  var map={};chips.forEach(function(c){map[c.getAttribute('href').slice(1)]=c});
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){
+      es.forEach(function(en){
+        if(en.isIntersecting){
+          chips.forEach(function(c){c.classList.remove('active')});
+          if(map[en.target.id])map[en.target.id].classList.add('active');
+        }
+      });
+    },{rootMargin:'-45% 0px -50% 0px',threshold:0});
+    Array.prototype.forEach.call(document.querySelectorAll('section.cat'),function(s){io.observe(s)});
+  }
+
+  // live search filter
+  var input=document.getElementById('psearch'),res=document.getElementById('cresult'),noRes=document.getElementById('noResults');
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.pcard'));
+  var cats=Array.prototype.slice.call(document.querySelectorAll('section.cat'));
+  var total=cards.length;
+  function apply(){
+    var q=input.value.trim().toLowerCase();
+    var shown=0;
+    cards.forEach(function(c){
+      var hit=!q||c.getAttribute('data-name').indexOf(q)!==-1;
+      c.style.display=hit?'':'none';
+      if(hit)shown++;
+    });
+    cats.forEach(function(s){
+      var any=s.querySelector('.pcard:not([style*="display: none"])');
+      s.style.display=any?'':'none';
+    });
+    noRes.style.display=shown?'none':'block';
+    res.textContent=q?(shown+' of '+total):'';
+  }
+  input.addEventListener('input',apply);
+})();
+</script>
+</body>
+</html>
