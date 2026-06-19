@@ -134,14 +134,21 @@ async function main() {
 
   const parser = new xml2js.Parser({
     explicitArray: false,
-    ignoreAttrs: true,
+    // MMT exposes most product fields as XML attributes (only MMTCode /
+    // Availability are child elements), so merge attributes onto the node
+    // rather than ignoring them.
+    mergeAttrs: true,
     trim: true,
     tagNameProcessors: [xml2js.processors.stripPrefix], // drop the mmt: namespace prefix
+    attrNameProcessors: [xml2js.processors.stripPrefix],
   });
 
   const parsed = await parser.parseStringPromise(xml);
   const rawProducts = collectProducts(parsed, []);
   console.log(`Parsed ${rawProducts.length} products from feed.`);
+  if (rawProducts[0]) {
+    console.log('First product fields:', Object.keys(rawProducts[0]).join(', '));
+  }
 
   const mapped = rawProducts.map(mapProduct);
 
