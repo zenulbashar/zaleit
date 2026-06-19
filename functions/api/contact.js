@@ -89,13 +89,31 @@ export async function onRequestPost(context) {
   }
 
   // ---- Step A: Forward to Formspree (notification channel) ----
+  // Pass through the visitor's browser context so Formspree's spam scoring
+  // sees a legitimate, browser-originated submission rather than a bare
+  // server-to-server request.
   try {
+    const fwdHeaders = {
+      "content-type": "application/json",
+      accept: "application/json",
+    };
+    const userAgent = request.headers.get("User-Agent");
+    const referer = request.headers.get("Referer");
+    const origin = request.headers.get("Origin");
+    // Cloudflare populates CF-Connecting-IP with the real visitor IP.
+    const clientIp =
+      request.headers.get("CF-Connecting-IP") ||
+      request.headers.get("X-Forwarded-For");
+
+    if (userAgent) fwdHeaders["User-Agent"] = userAgent;
+    if (referer) fwdHeaders["Referer"] = referer;
+    // Fall back to the request Origin so Formspree still sees zaleit.com.au.
+    if (referer || origin) fwdHeaders["Origin"] = origin || referer;
+    if (clientIp) fwdHeaders["CF-Connecting-IP"] = clientIp;
+
     const formspreeRes = await fetch(FORMSPREE_ENDPOINT, {
       method: "POST",
-      headers: {
-        "content-type": "application/json",
-        accept: "application/json",
-      },
+      headers: fwdHeaders,
       body: JSON.stringify({
         firstName,
         lastName,
@@ -104,6 +122,9 @@ export async function onRequestPost(context) {
         service,
         message,
         marketingConsent: marketingConsent ? "Yes" : "No",
+        // Formspree special fields: reply-to address and a clear subject line.
+        _replyto: email,
+        _subject: `New enquiry from ${firstName} ${lastName}`,
       }),
     });
 
