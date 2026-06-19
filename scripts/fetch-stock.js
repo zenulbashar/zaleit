@@ -129,20 +129,10 @@ function mapProduct(p) {
   const stock = parseInt(pick(p, 'Availability'), 10) || 0;
   return {
     code: pick(p, 'MMTCode'),
-    // Best-effort manufacturer/part number — used by the catalogue to match
-    // feed products to the existing hand-built cards (whose model numbers are
-    // manufacturer part numbers). Falls back to '' if the feed lacks it.
-    sku: pick(
-      p,
-      'ManufacturerSKU',
-      'ManufacturerPartNo',
-      'ManufacturerPartNumber',
-      'PartNumber',
-      'MPN',
-      'SKU',
-      'ProductCode',
-      'SupplierPartNo'
-    ),
+    // The feed carries no manufacturer part number (only MMTCode and
+    // ManufacturerCode), so there is no reliable key to match against the
+    // hand-built cards' model numbers. Kept for shape compatibility.
+    sku: '',
     name: pick(p, 'ShortDescription'),
     brand: pick(p, 'ManufacturerName'),
     category: pick(p, 'ParentCategoryName'),
@@ -151,7 +141,7 @@ function mapProduct(p) {
     rrpInc: round2(rrpInc), // raw inclusive figure, for reference
     stock,
     eta: pick(p, 'ETA'),
-    image: pick(p, 'LargeImageURL', 'ThumbnailImageURL'),
+    image: pick(p, 'LargeImageURL', 'HiresImageURL', 'ThumbnailImageURL'),
     description: pick(p, 'LongDescription'),
   };
 }
