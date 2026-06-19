@@ -43,16 +43,43 @@ function aestTimestamp(date) {
   );
 }
 
-// Case-insensitive lookup that returns the first present, non-empty value.
-function pick(obj, ...keys) {
-  if (!obj || typeof obj !== 'object') return '';
-  const lower = {};
-  for (const k of Object.keys(obj)) lower[k.toLowerCase()] = obj[k];
-  for (const key of keys) {
-    const v = lower[key.toLowerCase()];
-    if (v !== undefined && v !== null && String(v).trim() !== '') {
-      return String(v).trim();
+// Deep, case-insensitive search for the first non-empty scalar value whose key
+// matches `nameLower`, anywhere in the (nested) product node. The MMT feed
+// nests fields under wrappers (Description.ShortDescription, Pricing.RRPInc,
+// Manufacturer.*, Files.*), so a flat lookup misses them.
+function deepFind(node, nameLower) {
+  if (node == null) return undefined;
+  if (Array.isArray(node)) {
+    for (const item of node) {
+      const v = deepFind(item, nameLower);
+      if (v !== undefined) return v;
     }
+    return undefined;
+  }
+  if (typeof node === 'object') {
+    for (const [k, val] of Object.entries(node)) {
+      if (
+        k.toLowerCase() === nameLower &&
+        (typeof val === 'string' || typeof val === 'number') &&
+        String(val).trim() !== ''
+      ) {
+        return String(val).trim();
+      }
+    }
+    for (const val of Object.values(node)) {
+      const v = deepFind(val, nameLower);
+      if (v !== undefined) return v;
+    }
+  }
+  return undefined;
+}
+
+// Returns the first present, non-empty value among candidate keys (searched
+// case-insensitively at any depth of the product subtree).
+function pick(obj, ...keys) {
+  for (const key of keys) {
+    const v = deepFind(obj, key.toLowerCase());
+    if (v !== undefined) return v;
   }
   return '';
 }
@@ -148,6 +175,9 @@ async function main() {
   console.log(`Parsed ${rawProducts.length} products from feed.`);
   if (rawProducts[0]) {
     console.log('First product fields:', Object.keys(rawProducts[0]).join(', '));
+    if (process.env.MMT_DUMP) {
+      console.log('First product (full):', JSON.stringify(rawProducts[0], null, 2));
+    }
   }
 
   const mapped = rawProducts.map(mapProduct);
