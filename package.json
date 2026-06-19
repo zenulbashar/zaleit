@@ -1,0 +1,12 @@
+{
+  "name": "zaleit",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Zale IT website with MMT stock feed integration",
+  "scripts": {
+    "fetch-stock": "node scripts/fetch-stock.js"
+  },
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  }
+}

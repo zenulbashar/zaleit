@@ -1,0 +1,42 @@
+name: Update stock feed
+
+on:
+  schedule:
+    # 22:00 UTC == 08:00 AEST (UTC+10, Queensland has no DST)
+    - cron: '0 22 * * *'
+  workflow_dispatch:
+
+jobs:
+  update-stock:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: claude/focused-meitner-KoCU7
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Install dependencies
+        run: npm install xml2js
+
+      - name: Fetch stock feed
+        run: node scripts/fetch-stock.js
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          if git diff --quiet -- catalogue-data.json; then
+            echo "No changes to catalogue-data.json — nothing to commit."
+          else
+            git add catalogue-data.json
+            git commit -m "chore: update stock feed $(date -u +%Y-%m-%d)"
+            git push origin claude/focused-meitner-KoCU7
+          fi
