@@ -514,6 +514,9 @@ section{position:relative}
 .field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%2341566E' stroke-width='2.5'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 15px center;padding-right:42px;cursor:pointer}
 .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:#76b900;box-shadow:0 0 0 4px rgba(118,185,0,.15)}
 .field input:focus-visible,.field select:focus-visible,.field textarea:focus-visible{outline:none}
+.field-consent{margin-bottom:18px}
+.consent-label{display:flex;align-items:flex-start;gap:10px;font-size:.86rem;font-weight:500;color:var(--c-ink);cursor:pointer;margin-bottom:0;line-height:1.45}
+.consent-label input[type="checkbox"]{width:18px;height:18px;flex-shrink:0;margin-top:1px;accent-color:#76b900;cursor:pointer}
 .form-submit{width:100%;margin-top:6px;position:relative}
 .form-submit .btn{width:100%}
 .btn[disabled]{opacity:.75;cursor:wait}
@@ -1583,6 +1586,12 @@ section{position:relative}
             <textarea id="message" name="message" placeholder="Tell us about your business and what you're looking for…" required data-fs-field></textarea>
             <span data-fs-error="message" style="font-size:12px;color:#A32D2D;margin-top:3px;display:block"></span>
           </div>
+          <div class="field field-consent">
+            <label class="consent-label" for="marketingConsent">
+              <input type="checkbox" name="marketingConsent" id="marketingConsent">
+              <span>I'd like to receive product updates and offers from Zaleit IT</span>
+            </label>
+          </div>
           <div class="form-submit">
             <button type="submit" class="btn btn-primary" id="submitBtn" data-fs-submit-btn>
               <span class="spinner" aria-hidden="true"></span>
@@ -1733,18 +1742,108 @@ section{position:relative}
     dashObs.observe(dash);
   }
 
-  /* ---------- Contact form — Formspree Ajax ---------- */
-  window.formspree = window.formspree || function(){ (formspree.q = formspree.q || []).push(arguments); };
-  formspree('initForm', { formElement: '#contactForm', formId: 'mwvzgkka' });
-
-  /* Show branded success state after Formspree confirms submission */
+  /* ---------- Contact form — posts to /api/contact (Cloudflare Pages Function) ----------
+     The function forwards to Formspree (email notification) and, when the user
+     consents, syncs the contact to Brevo. Client-side validation and the branded
+     success panel are handled here. */
   var contactForm = document.getElementById('contactForm');
   var formSuccessPanel = document.getElementById('formSuccess');
+
   if(contactForm){
-    contactForm.addEventListener('fs:success', function(){
+    var submitBtn = contactForm.querySelector('[data-fs-submit-btn]');
+    var formError = contactForm.querySelector('[data-fs-error]:not([data-fs-error=""])') ||
+                    contactForm.querySelector('div[data-fs-error]');
+    var emailRe = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    var requiredFields = ['firstName','lastName','email','business','service','message'];
+
+    var setFieldError = function(name, msg){
+      var el = contactForm.querySelector('[data-fs-error="' + name + '"]');
+      if(el){ el.textContent = msg || ''; }
+      var input = contactForm.elements[name];
+      if(input){
+        if(msg){ input.setAttribute('aria-invalid','true'); }
+        else{ input.removeAttribute('aria-invalid'); }
+      }
+    };
+
+    var clearErrors = function(){
+      requiredFields.forEach(function(name){ setFieldError(name, ''); });
+      if(formError){ formError.style.display = 'none'; formError.textContent = ''; }
+    };
+
+    var showFormError = function(msg){
+      if(formError){ formError.textContent = msg; formError.style.display = 'block'; }
+    };
+
+    var validate = function(){
+      var firstInvalid = null;
+      requiredFields.forEach(function(name){
+        var input = contactForm.elements[name];
+        var value = input ? String(input.value || '').trim() : '';
+        var msg = '';
+        if(!value){
+          msg = 'This field is required.';
+        } else if(name === 'email' && !emailRe.test(value)){
+          msg = 'Please enter a valid email address.';
+        }
+        setFieldError(name, msg);
+        if(msg && !firstInvalid){ firstInvalid = input; }
+      });
+      return firstInvalid;
+    };
+
+    var setLoading = function(on){
+      if(!submitBtn){ return; }
+      if(on){ submitBtn.classList.add('loading'); submitBtn.setAttribute('disabled','disabled'); }
+      else{ submitBtn.classList.remove('loading'); submitBtn.removeAttribute('disabled'); }
+    };
+
+    var showSuccess = function(){
       contactForm.style.display = 'none';
       formSuccessPanel.classList.add('show');
       formSuccessPanel.scrollIntoView({ behavior: prefersReduced ? 'auto' : 'smooth', block: 'center' });
+    };
+
+    contactForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      clearErrors();
+
+      var firstInvalid = validate();
+      if(firstInvalid){
+        firstInvalid.focus();
+        return;
+      }
+
+      setLoading(true);
+
+      var payload = {
+        firstName: contactForm.elements.firstName.value.trim(),
+        lastName: contactForm.elements.lastName.value.trim(),
+        email: contactForm.elements.email.value.trim(),
+        business: contactForm.elements.business.value.trim(),
+        service: contactForm.elements.service.value,
+        message: contactForm.elements.message.value.trim(),
+        marketingConsent: contactForm.elements.marketingConsent ? contactForm.elements.marketingConsent.checked : false
+      };
+
+      fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+        body: JSON.stringify(payload)
+      }).then(function(res){
+        return res.json().catch(function(){ return { ok: res.ok }; });
+      }).then(function(data){
+        setLoading(false);
+        if(data && data.ok){
+          showSuccess();
+        } else {
+          showFormError((data && data.error) || "Something went wrong. Please try again or email support@zaleit.com.au.");
+        }
+      }).catch(function(){
+        setLoading(false);
+        showFormError("We couldn't reach the server. Please check your connection and try again.");
+      });
     });
   }
 
@@ -1940,6 +2039,5 @@ section{position:relative}
 
 })();
 </script>
-<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
 </body>
 </html>
