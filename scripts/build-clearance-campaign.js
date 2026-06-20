@@ -47,19 +47,19 @@ const NOTIFY_TO = 'support@zaleit.com.au';
 // Per-product "Buy Now" buttons open a pre-filled email to this address.
 const SALES_EMAIL = 'sales@zaleit.com.au';
 const ENQUIRE_URL = 'https://zaleit.com.au/?service=Hardware#contact';
-const FEATURE_COUNT = 4;
 const ACCENT = '#76b900'; // site green
 const INK = '#0e1b2a'; // dark header
-const MUTED_BADGE = '#41566e'; // accessory "ADD-ON" badge
 
 // --- Easily-editable copy (named constants) --------------------------------
 
 // Email title shown in the header inside the email.
-const EMAIL_TITLE = 'Laptops worth a look this week';
+// Options: "Complete Laptop Bundles for Your Team" | "Ready-to-Go Laptop Setups"
+//          | "Laptop Bundles: Pick Your Tier"
+const EMAIL_TITLE = 'Complete Laptop Bundles for Your Team';
 
 // Subhead under the title.
 const EMAIL_SUBHEAD =
-  'A curated pick of laptops and the gear that goes with them, chosen by our team.';
+  'Three ready-to-go laptop setups — each a laptop, dock and input device, priced as a bundle.';
 
 // Honest "special pricing" framing for the intro — NOT a fake discount.
 // Deliberately avoids "% off" / "sale" / "was/now" (those imply markdowns we
@@ -85,94 +85,40 @@ const OUT_FILE = path.join(__dirname, '..', 'campaign-clearance.html');
 // NOT a startsWith: that would wrongly match "Notebook Accessories".
 const LAPTOP_CATEGORIES = ['notebooks', 'notebooks workstation'];
 
-// Laptop-relevant accessory categories — an allow-list matched EXACTLY against
-// CategoryName (lowercased). We deliberately do NOT keyword-match product names,
-// and we deliberately EXCLUDE "Bags, Cases & Covers" / "Commercial Bags, Cases &
-// Covers" (polluted with iPad / tablet / Chromebook cases and stylus holders).
-const ACCESSORY_CATEGORIES = [
-  'docking stations',
-  'laptop docking and cradles',
-  'keyboards',
-  'keyboards & mice',
-  'mice',
-  'usb web cams',
-];
+// Dock pools (exact CategoryName, lowercased). "Docking Stations" is mostly
+// cheap USB-C hubs; the genuine powered docks live in "Laptop Docking and
+// Cradles". We treat them separately so Business gets a hub and Performance /
+// Flagship get real powered docks.
+const HUB_CATEGORIES = ['docking stations'];
+const POWERED_DOCK_CATEGORIES = ['laptop docking and cradles'];
 
-// Soft priority for accessories. Tier 1 = genuinely additive to a laptop;
-// tier 2 = redundant with a laptop's built-in (a standalone webcam). Tier is a
-// HARD gate: a tier-2 item is only chosen when tier 1 can't fill the slots.
-const ACCESSORY_PRIORITY = {
-  'docking stations': 1,
-  'laptop docking and cradles': 1,
-  'keyboards & mice': 1,
-  'mice': 1,
-  'keyboards': 1,
-  'usb web cams': 2,
-};
+// Input device pool (keyboards / combos / mice).
+const INPUT_CATEGORIES = ['keyboards', 'keyboards & mice', 'mice'];
 
-// Maps an accessory CategoryName (lowercased) to a STORY_TEMPLATES key.
-const ACCESSORY_STORY = {
-  'docking stations': 'dock',
-  'laptop docking and cradles': 'dock',
-  'keyboards': 'inputDevice',
-  'keyboards & mice': 'inputDevice',
-  'mice': 'inputDevice',
-  'usb web cams': 'callDevice',
-};
+// --- Tiers (editable) ------------------------------------------------------
+// Tier band by laptop ex-GST price (AUD).
+const TIER_BREAKS = { performanceMin: 2945, flagshipMin: 4330 };
+const TIER_LABELS = { business: 'Business', performance: 'Performance', flagship: 'Flagship' };
+const TIER_ORDER = ['business', 'performance', 'flagship'];
+const MOST_POPULAR_TIER = 'performance'; // gets the "MOST POPULAR" badge
+// Bundle price = sum of the items' ex-GST prices × (1 − discount). 0 = honest sum.
+const BUNDLE_DISCOUNT_PCT = 0;
 
-// ----------------------------------------------------------------------------
-// STORY TEMPLATES
-// ----------------------------------------------------------------------------
-//
-// Each product block LEADS with a 2-3 sentence use-case story, chosen by type
-// and filled from per-product data. Placeholders: {name}, {brand}, {cpu},
-// {ram}, {storage}, {screen}, plus {specPhrase} (a natural-language summary of
-// whatever specs parsed). Spec placeholders live in their OWN sentence so that
-// when a spec is missing the whole sentence is dropped — no dangling
-// "built with  and ". A variant is chosen deterministically by product code
-// (stable per product, varied across the basket). See fillStory().
-const STORY_TEMPLATES = {
-  // Mobile workstations: CAD, 3D, video, dev/data — heavy compute.
-  workstationLaptop: [
-    "When the workload is CAD drawings, 3D rendering or multi-stream video editing, the {name} keeps pace. Powered by {specPhrase}, it chews through heavy compute and large data sets without the spinning wheel. A genuine mobile workstation for engineers, editors and developers.",
-    "Some jobs need real horsepower — simulation, rendering, compiling, crunching data. The {name} is built for exactly that. It's configured with {specPhrase} to keep demanding applications responsive all day. Give your power users a machine that won't hold them back.",
-    "Designed for professionals who can't wait on their tools, the {name} delivers workstation-grade performance in a portable shell. Under the hood sits {specPhrase}, ready for 3D, video and data-heavy workflows. Take the studio anywhere the work happens.",
+// Per-tier bundle scenario stories. {name} is the laptop; the {specPhrase}
+// sentence is dropped when no specs parse (see fillStory). 2 variants per tier,
+// chosen deterministically by the laptop's code.
+const TIER_STORIES = {
+  business: [
+    'Built for everyday business productivity — email, documents, meetings and the web, all day without fuss. The {name} keeps your team moving. It comes configured with {specPhrase}.',
+    'A dependable setup for the daily grind of business — docs, inboxes and back-to-back calls. The {name} handles it all and standardises nicely across a team. Under the lid: {specPhrase}.',
   ],
-  // Business / ultrabook: hybrid work, meetings, travel, security, battery.
-  businessLaptop: [
-    "The {name} is made for hybrid work — light enough for the commute, secure enough for IT, and ready for back-to-back meetings. With {specPhrase}, it stays quick through email, docs and video calls. Ideal for teams moving between home, office and the road.",
-    "For staff who work everywhere, the {name} balances portability, security and all-day battery. It runs {specPhrase}, so multitasking across browser tabs, spreadsheets and Teams stays smooth. A dependable everyday laptop your whole business can standardise on.",
-    "Meetings, travel, hot-desking — the {name} handles a modern workday with ease. Built around {specPhrase}, it pairs enterprise-grade security with the battery life to leave the charger behind. A clean, professional choice for hybrid teams.",
+  performance: [
+    'For power users who multitask hard — big spreadsheets, dozens of tabs, design and dev tools running at once. The {name} keeps pace under pressure. It packs {specPhrase}.',
+    'When the workload steps up, so does this setup. The {name} is built for heavy multitasking and demanding apps, with {specPhrase} to stay responsive all day.',
   ],
-  // Docking stations: single-cable desk, multi-monitor, hot-desking.
-  dock: [
-    "Turn any desk into a full workstation with the {name}. One cable powers the laptop and drives multiple monitors, keyboard, mouse and network — perfect for hot-desking and tidy setups. Plug in, get to work, unplug and go.",
-    "The {name} ends cable clutter for good. A single connection adds dual displays, wired ethernet and all your peripherals, so shared desks and home offices stay clean and consistent. Ideal for hybrid teams that dock and undock daily.",
-    "Give every desk the same one-cable simplicity with the {name}. Connect once for charging, multi-monitor output and accessories — no more hunting for adapters. A small upgrade that makes hot-desking effortless.",
-  ],
-  // Keyboards / mice: ergonomics, wireless declutter, productivity.
-  inputDevice: [
-    "The {name} brings comfort to every working hour. Ergonomic design and wireless freedom cut the clutter and keep hands relaxed through long sessions. A small change that pays off in all-day productivity.",
-    "Upgrade the everyday with the {name}. Responsive, quiet and wireless, it declutters the desk and keeps focus on the work — not the cables. Comfort and precision your team will feel from day one.",
-    "Built for people who type and click all day, the {name} blends ergonomics with wireless convenience. Less strain, fewer cables, more done. An easy win for any workspace.",
-  ],
-  // Bags / sleeves / cases: protection on the commute, professional look.
-  bag: [
-    "Protect the daily carry with the {name}. Padded protection guards laptops against the knocks of the commute, while a clean, professional finish looks right in any meeting. Travel-ready peace of mind.",
-    "The {name} keeps hardware safe from desk to door to destination. Smart padding shields against bumps and drops, and the sharp design keeps things looking professional. Made for people on the move.",
-    "Commute with confidence using the {name}. Secure, well-padded protection meets a tidy professional look, so your laptop arrives ready for business. Everyday protection that travels well.",
-  ],
-  // Headsets / webcams: clear calls, remote meetings, hybrid teams.
-  callDevice: [
-    "Make every call clear with the {name}. Crisp audio and video cut through the noise of remote and hybrid meetings, so conversations stay sharp and professional. Fewer 'you're on mute' moments, better calls.",
-    "The {name} levels up remote meetings. Clean sound and a clear picture help hybrid teams connect like they're in the same room. A simple upgrade that makes every call count.",
-    "For teams that live in video calls, the {name} delivers the clarity that matters. Sharp audio and a professional image keep meetings smooth from home or office. Communication your colleagues will notice.",
-  ],
-  // Generic fallback for any unmatched accessory — clean, value-led.
-  generic: [
-    "The {name} is a practical, great-value addition to any setup. Reliable, easy to deploy and ready to work from day one. A smart pick for teams that want more without overspending.",
-    "Get dependable performance and clean value with the {name}. It does its job well and fits straight into your existing kit. An easy yes for budget-conscious upgrades.",
-    "Simple, useful and well-priced, the {name} earns its place on the desk. Straightforward to roll out and built to last. Quality that respects the budget.",
+  flagship: [
+    'For executives and the most demanding workloads — the {name} delivers top-tier performance, a premium build and the headroom for anything you throw at it. Configured with {specPhrase}.',
+    'The no-compromise choice. The {name} pairs flagship performance with premium design for leaders and power users who expect the best. It runs {specPhrase}.',
   ],
 };
 
@@ -306,32 +252,17 @@ function isExcludedUnit(name) {
   );
 }
 
-// Returns the accessory CategoryName (lowercased) if it's an allow-listed,
-// laptop-relevant accessory, else null. NO name-keyword matching.
-function accessoryCategory(p) {
-  const c = (p.category || '').trim().toLowerCase();
-  return ACCESSORY_CATEGORIES.includes(c) ? c : null;
+// CategoryName (lowercased, trimmed) helper.
+function catOf(p) {
+  return (p.category || '').trim().toLowerCase();
 }
+const inCats = (p, cats) => cats.includes(catOf(p));
 
-function isAccessory(p) {
-  return !isLaptopDevice(p) && accessoryCategory(p) !== null;
-}
-
-// Priority tier for an accessory (lower = preferred). Unknown allow-listed
-// categories default to tier 1 (treated as additive).
-function accessoryTier(p) {
-  return ACCESSORY_PRIORITY[accessoryCategory(p)] || 1;
-}
-
-// Story type for a product (drives STORY_TEMPLATES selection).
-function storyType(p) {
-  if (isLaptopDevice(p)) {
-    const t = `${p.category} ${p.name}`.toLowerCase();
-    if (/workstation|zbook|\bpro\b/.test(t)) return 'workstationLaptop';
-    return 'businessLaptop';
-  }
-  const key = ACCESSORY_STORY[accessoryCategory(p)];
-  return key && STORY_TEMPLATES[key] ? key : 'generic';
+// Tier key for a laptop ex-GST price.
+function tierForPrice(exGst) {
+  if (exGst >= TIER_BREAKS.flagshipMin) return 'flagship';
+  if (exGst >= TIER_BREAKS.performanceMin) return 'performance';
+  return 'business';
 }
 
 // ----------------------------------------------------------------------------
@@ -412,16 +343,6 @@ function specPhrase(specs) {
 // Selection
 // ----------------------------------------------------------------------------
 
-// margin % — internal ranking only. Never surfaced.
-function marginPct(p) {
-  if (!(p.rrpInc > 0)) return -Infinity;
-  return (p.rrpInc - p.yourPrice) / p.rrpInc;
-}
-
-function byMarginDesc(a, b) {
-  return marginPct(b) - marginPct(a);
-}
-
 // Heuristic "latest tech" score: count signals of a modern AI-era laptop in the
 // name + description. Higher = newer-feeling. This is a heuristic, not a spec
 // lookup — it just biases the hero pick toward current-gen machines.
@@ -439,75 +360,84 @@ function byLatestTechDesc(a, b) {
   return latestTechScore(b) - latestTechScore(a) || b.rrpInc - a.rrpInc;
 }
 
-// Pick up to n accessories. Tier is a HARD gate: tier 1 is filled before tier 2
-// is considered at all (so a webcam is only chosen when there aren't enough
-// tier-1 accessories). Within a tier we prefer DIFFERENT categories first
-// (dock + mouse beats dock + dock), then backfill that tier by margin before
-// dropping to the next tier.
-function pickVariedAccessories(pool, n) {
-  const out = [];
-  const tiers = [...new Set(pool.map(accessoryTier))].sort((a, b) => a - b);
-  for (const tier of tiers) {
-    if (out.length >= n) break;
-    const tierPool = pool.filter((p) => accessoryTier(p) === tier).sort(byMarginDesc);
-    const usedCats = new Set();
-    // First: distinct categories by margin.
-    for (const p of tierPool) {
-      if (out.length >= n) break;
-      const cat = accessoryCategory(p);
-      if (!usedCats.has(cat)) {
-        out.push(p);
-        usedCats.add(cat);
-      }
-    }
-    // Then: backfill remaining slots from THIS tier (same category allowed)
-    // before moving to the next tier.
-    for (const p of tierPool) {
-      if (out.length >= n) break;
-      if (!out.includes(p)) out.push(p);
-    }
-  }
-  return out;
-}
+const exGstOf = (p) => round2(p.rrpInc / 1.1);
+const byPriceAsc = (a, b) => exGstOf(a) - exGstOf(b);
 
-// Returns up to FEATURE_COUNT products, each tagged with { role, badge }.
-function selectFeatured(products) {
+// Build up to 3 tier bundles. Each bundle = { tierKey, label, mostPopular,
+// laptop, dock|null, input|null }. No product is reused across bundles.
+function selectBundles(products) {
   const inStock = products.filter((p) => p.availability > 0 && !isExcludedUnit(p.name));
-  if (inStock.length === 0) return [];
-
   const laptops = inStock.filter(isLaptopDevice);
-  // No real laptops → skip the week (don't build an accessory-only basket).
-  if (laptops.length === 0) return [];
+  if (laptops.length === 0) return []; // no laptops → skip + notify
 
-  const selected = [];
-  const seen = new Set();
-  const take = (p, role, badge) => {
-    if (!p || !p.code || seen.has(p.code)) return false;
-    seen.add(p.code);
-    selected.push({ ...p, role, badge });
-    return true;
+  const used = new Set();
+  const claim = (p) => {
+    if (!p || !p.code || used.has(p.code)) return null;
+    used.add(p.code);
+    return p;
   };
 
-  // 1. Hero laptop — best "latest tech" signal.
-  const hero = laptops.slice().sort(byLatestTechDesc)[0];
-  take(hero, 'hero', 'LATEST TECH');
+  // 1. Laptop per tier: highest latest-tech score within the tier's price band.
+  const bundles = [];
+  for (const tierKey of TIER_ORDER) {
+    const inBand = laptops
+      .filter((p) => tierForPrice(exGstOf(p)) === tierKey && !used.has(p.code))
+      .sort(byLatestTechDesc);
+    const laptop = claim(inBand[0]);
+    if (!laptop) continue; // no in-band laptop → skip this bundle
+    bundles.push({
+      tierKey,
+      label: TIER_LABELS[tierKey],
+      mostPopular: tierKey === MOST_POPULAR_TIER,
+      laptop,
+      dock: null,
+      input: null,
+    });
+  }
+  if (bundles.length === 0) return [];
 
-  // 2. Value laptop — highest margin among remaining laptops.
-  const value = laptops.filter((p) => !seen.has(p.code)).sort(byMarginDesc)[0];
-  take(value, 'value', 'BEST VALUE');
+  const byKey = Object.fromEntries(bundles.map((b) => [b.tierKey, b]));
+  const hubs = inStock.filter((p) => inCats(p, HUB_CATEGORIES)).sort(byPriceAsc);
+  const poweredDocks = inStock.filter((p) => inCats(p, POWERED_DOCK_CATEGORIES)).sort(byPriceAsc);
+  const inputs = inStock.filter((p) => inCats(p, INPUT_CATEGORIES)).sort(byPriceAsc);
+  const firstUnused = (arr) => arr.find((p) => !used.has(p.code));
+  const lastUnused = (arr) => [...arr].reverse().find((p) => !used.has(p.code));
 
-  // 3 & 4. Accessories — allow-listed categories only, tier-then-margin with
-  // category diversity. Slots = whatever the laptops didn't fill (2 laptops → 2
-  // accessories; 1 laptop → 3). If no accessories match, ship the laptops only.
-  const accSlots = FEATURE_COUNT - selected.length;
-  const accPool = inStock
-    .filter((p) => isAccessory(p) && !seen.has(p.code))
-    .sort(byMarginDesc);
-  for (const p of pickVariedAccessories(accPool, accSlots)) {
-    take(p, 'accessory', 'ADD-ON');
+  // 2. Docks. Business → cheapest hub; Performance/Flagship → powered docks
+  //    (lower-priced to Performance, higher to Flagship), falling back to the
+  //    priciest unused hub if powered docks run short. Business first so it
+  //    never steals a powered dock.
+  if (byKey.business) byKey.business.dock = claim(firstUnused(hubs)) || claim(firstUnused(poweredDocks));
+  for (const tierKey of ['performance', 'flagship']) {
+    const b = byKey[tierKey];
+    if (!b) continue;
+    b.dock = claim(firstUnused(poweredDocks)) || claim(lastUnused(hubs));
   }
 
-  return selected;
+  // 3. Input devices, distinct: Flagship = priciest unused, Business = cheapest
+  //    unused, Performance = a mid unused (assigned last so all three differ).
+  if (byKey.flagship) byKey.flagship.input = claim(lastUnused(inputs));
+  if (byKey.business) byKey.business.input = claim(firstUnused(inputs));
+  if (byKey.performance) {
+    const remaining = inputs.filter((p) => !used.has(p.code));
+    byKey.performance.input = claim(remaining[Math.floor(remaining.length / 2)]);
+  }
+
+  return bundles;
+}
+
+// All present items of a bundle, tagged with role, in display order.
+function bundleItems(bundle) {
+  const items = [{ ...bundle.laptop, role: 'laptop' }];
+  if (bundle.dock) items.push({ ...bundle.dock, role: 'dock' });
+  if (bundle.input) items.push({ ...bundle.input, role: 'input' });
+  return items;
+}
+
+// Bundle ex-GST price = sum of item ex-GST prices × (1 − discount).
+function bundlePriceExGst(bundle) {
+  const sum = bundleItems(bundle).reduce((s, it) => s + exGstOf(it), 0);
+  return Math.round(sum * (1 - BUNDLE_DISCOUNT_PCT / 100));
 }
 
 // ----------------------------------------------------------------------------
@@ -520,27 +450,6 @@ function escapeHtml(s) {
     .replace(/</g, '&lt;')
     .replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;');
-}
-
-function blurbify(desc) {
-  const t = String(desc || '')
-    .replace(/<[^>]*>/g, ' ')
-    .replace(/\s+/g, ' ')
-    .trim();
-  if (t.length <= 120) return t;
-  let cut = t.slice(0, 120);
-  const sp = cut.lastIndexOf(' ');
-  if (sp > 40) cut = cut.slice(0, sp);
-  return cut + '…';
-}
-
-function formatExGst(rrpInc) {
-  // Single division: raw inclusive RRPInc → ex-GST. No double-division.
-  const ex = round2(rrpInc / 1.1);
-  return 'ex GST $' + ex.toLocaleString('en-AU', {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  });
 }
 
 // Encode spaces (and other unsafe path chars) in an image URL's PATH only, so
@@ -559,14 +468,26 @@ function encodeImageUrl(u) {
   }
 }
 
-// "Buy Now" mailto with a pre-filled subject + body. NAME and CODE are
-// URL-encoded; newlines become %0D%0A via encodeURIComponent.
-function buyNowUrl(name, code) {
-  const subject = `Purchase enquiry: ${name}`;
+// Price label: "Price $X,XXX ex GST" / "Bundle price: $X,XXX ex GST" — whole
+// dollars, "ex GST" AFTER the figure.
+function priceLabel(dollars, opts = {}) {
+  const amount = '$' + Math.round(dollars).toLocaleString('en-AU');
+  return `${opts.bundle ? 'Bundle price: ' : 'Price '}${amount} ex GST`;
+}
+
+// "Buy Now" mailto for a BUNDLE: subject names the tier + laptop; body lists all
+// present items with model codes and the bundle price. Everything URL-encoded;
+// newlines become %0D%0A via encodeURIComponent. The href is HTML-escaped later.
+function bundleBuyUrl(bundle) {
+  const items = bundleItems(bundle);
+  const priceDollars = bundlePriceExGst(bundle);
+  const subject = `Bundle enquiry: ${bundle.label} Setup - ${bundle.laptop.name}`;
+  const lines = items.map((it) => `- ${it.name} (model ${it.code})`).join('\r\n');
   const body =
     `Hi Zale IT,\r\n\r\n` +
-    `I'd like to buy: ${name} (model ${code}).\r\n\r\n` +
-    `Please confirm availability and send a quote.\r\n\r\n` +
+    `I'm interested in the ${bundle.label} Setup:\r\n` +
+    `${lines}\r\n\r\n` +
+    `${priceLabel(priceDollars, { bundle: true })}. Please confirm availability and send a quote.\r\n\r\n` +
     `Thanks`;
   return `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 }
@@ -595,61 +516,38 @@ function fillStory(template, values) {
   return kept.join(' ');
 }
 
-// Assign a story-variant index to each product. Deterministic by product code,
-// but de-duplicated within the basket so two same-type products don't reuse the
-// same variant (satisfies "stable per product, varied across the basket").
-function assignVariantIndices(products) {
-  const byCode = new Map();
-  const usedByType = new Map();
-  for (const p of products) {
-    const type = storyType(p);
-    const len = (STORY_TEMPLATES[type] || STORY_TEMPLATES.generic).length;
-    const used = usedByType.get(type) || new Set();
-    let idx = hashCode(p.code || p.name) % len;
-    // Bump to the next free variant for this type if already taken in this basket.
-    for (let i = 0; i < len && used.has(idx); i++) idx = (idx + 1) % len;
-    used.add(idx);
-    usedByType.set(type, used);
-    byCode.set(p.code, idx);
-  }
-  return byCode;
-}
-
-function buildStory(p, variantIndex) {
-  const type = storyType(p);
-  const variants = STORY_TEMPLATES[type] || STORY_TEMPLATES.generic;
-  const base = variantIndex == null ? hashCode(p.code || p.name) : variantIndex;
-  const variant = variants[((base % variants.length) + variants.length) % variants.length];
-  const specs = isLaptopDevice(p) ? parseSpecs(p.name) : {};
-  const values = {
-    name: escapeHtml(p.name),
-    brand: escapeHtml(p.brand),
-    cpu: specs.cpu ? escapeHtml(specs.cpu) : '',
-    ram: specs.ram ? escapeHtml(specs.ram) : '',
-    storage: specs.storage ? escapeHtml(specs.storage) : '',
-    screen: specs.screen ? escapeHtml(specs.screen) : '',
+// Per-tier bundle story for the laptop. Deterministic variant by laptop code;
+// the {specPhrase} sentence drops gracefully when no specs parse (Flagship).
+function buildBundleStory(bundle) {
+  const variants = TIER_STORIES[bundle.tierKey] || TIER_STORIES.business;
+  const variant = variants[hashCode(bundle.laptop.code || bundle.laptop.name) % variants.length];
+  const specs = parseSpecs(bundle.laptop.name);
+  return fillStory(variant, {
+    name: escapeHtml(bundle.laptop.name),
     specPhrase: escapeHtml(specPhrase(specs)),
-  };
-  return fillStory(variant, values);
+  });
 }
 
-// Build the render model. Deliberately excludes yourPrice/margin so they
-// cannot leak into the HTML.
-function toCard(p, variantIndex) {
-  const laptop = isLaptopDevice(p);
-  const specs = laptop ? parseSpecs(p.name) : {};
+// Build the CUSTOMER-FACING render model for a bundle. Deliberately excludes
+// yourPrice / margin / trade cost — only the public bundle price (a sum of
+// public RRP ex-GST) appears.
+function toBundleCard(bundle) {
+  const specs = parseSpecs(bundle.laptop.name);
   return {
-    name: p.name,
-    brand: p.brand,
-    image: encodeImageUrl(p.image),
-    isLaptop: laptop,
-    story: buildStory(p, variantIndex),
-    spec: laptop ? specLine(specs) : '',
-    blurb: laptop ? '' : blurbify(p.description),
-    price: formatExGst(p.rrpInc),
-    badge: p.badge || '',
-    badgeMuted: p.role === 'accessory',
-    buyUrl: buyNowUrl(p.name, p.code),
+    tierLabel: `${bundle.label} Setup`,
+    mostPopular: bundle.mostPopular,
+    laptop: {
+      name: bundle.laptop.name,
+      brand: bundle.laptop.brand,
+      image: encodeImageUrl(bundle.laptop.image),
+      spec: specLine(specs), // empty for messy Flagship names → omitted
+      story: buildBundleStory(bundle),
+    },
+    includes: bundleItems(bundle)
+      .filter((it) => it.role !== 'laptop')
+      .map((it) => it.name),
+    priceLabel: priceLabel(bundlePriceExGst(bundle), { bundle: true }),
+    buyUrl: bundleBuyUrl(bundle),
   };
 }
 
@@ -675,39 +573,33 @@ function renderImageCell(card) {
   );
 }
 
-function renderBadge(card) {
-  if (!card.badge) return '';
-  const bg = card.badgeMuted ? MUTED_BADGE : ACCENT;
-  const fg = card.badgeMuted ? '#ffffff' : '#0a0f14';
-  return (
-    `<span style="display:inline-block;background:${bg};color:${fg};` +
-    `font-size:11px;font-weight:bold;letter-spacing:1px;padding:4px 10px;` +
-    `border-radius:99px;margin-bottom:10px;">${escapeHtml(card.badge)}</span><br/>`
-  );
-}
-
-// Story leads the block, then (laptops) the spec line, then ex-GST price, then
+// Render one bundle block: tier heading (+ MOST POPULAR badge), laptop image,
+// name, spec line, scenario story, the included accessories, bundle price, and
 // the Buy Now button.
-function renderProductBlock(card) {
-  const specBlock = card.isLaptop && card.spec
-    ? `<div style="font-size:13px;font-weight:bold;color:${INK};letter-spacing:.2px;margin-bottom:14px;">${escapeHtml(card.spec)}</div>`
+function renderBundleBlock(card) {
+  const popularBadge = card.mostPopular
+    ? `<span style="display:inline-block;background:${ACCENT};color:#0a0f14;font-size:11px;font-weight:bold;letter-spacing:1px;padding:4px 10px;border-radius:99px;margin-left:10px;vertical-align:middle;">MOST POPULAR</span>`
     : '';
-  const blurbBlock = !card.isLaptop && card.blurb
-    ? `<div style="font-size:13px;color:#5a6b7b;line-height:1.5;margin-bottom:14px;">${escapeHtml(card.blurb)}</div>`
+  const border = card.mostPopular ? `2px solid ${ACCENT}` : '1px solid #e4e9ef';
+  const specBlock = card.laptop.spec
+    ? `<div style="font-size:13px;font-weight:bold;color:${INK};letter-spacing:.2px;margin-bottom:12px;">${escapeHtml(card.laptop.spec)}</div>`
+    : '';
+  const includesBlock = card.includes.length
+    ? `<div style="font-size:13px;color:#41566e;line-height:1.5;margin:0 0 16px 0;padding:10px 12px;background:#f1f4f7;border-radius:8px;"><strong>Includes:</strong> ${escapeHtml(card.includes.join(' + '))}</div>`
     : '';
   return `
-            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin:0 0 14px 0;">
+            <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin:0 0 16px 0;">
               <tr>
-                <td style="padding:22px;background:#ffffff;border:1px solid #e4e9ef;border-radius:12px;font-family:Arial,Helvetica,sans-serif;">
-                  ${renderImageCell(card)}
+                <td style="padding:22px;background:#ffffff;border:${border};border-radius:12px;font-family:Arial,Helvetica,sans-serif;">
+                  <div style="font-size:17px;font-weight:bold;color:${INK};margin-bottom:14px;">${escapeHtml(card.tierLabel)}${popularBadge}</div>
+                  ${renderImageCell(card.laptop)}
                   <div style="height:16px;line-height:16px;font-size:0;">&nbsp;</div>
-                  ${renderBadge(card)}
-                  <div style="font-size:12px;font-weight:bold;color:${ACCENT};text-transform:uppercase;letter-spacing:.5px;">${escapeHtml(card.brand)}</div>
-                  <div style="font-size:18px;font-weight:bold;color:${INK};margin:4px 0 10px 0;line-height:1.3;">${escapeHtml(card.name)}</div>
-                  <div style="font-size:14px;color:#41566e;line-height:1.6;margin-bottom:14px;">${card.story}</div>
+                  <div style="font-size:12px;font-weight:bold;color:${ACCENT};text-transform:uppercase;letter-spacing:.5px;">${escapeHtml(card.laptop.brand)}</div>
+                  <div style="font-size:18px;font-weight:bold;color:${INK};margin:4px 0 10px 0;line-height:1.3;">${escapeHtml(card.laptop.name)}</div>
+                  <div style="font-size:14px;color:#41566e;line-height:1.6;margin-bottom:12px;">${card.laptop.story}</div>
                   ${specBlock}
-                  ${blurbBlock}
-                  <div style="font-size:20px;font-weight:bold;color:${INK};margin-bottom:16px;">${escapeHtml(card.price)}</div>
+                  ${includesBlock}
+                  <div style="font-size:20px;font-weight:bold;color:${INK};margin-bottom:16px;">${escapeHtml(card.priceLabel)}</div>
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
                     <tr>
                       <td align="center" bgcolor="${ACCENT}" style="border-radius:8px;">
@@ -727,7 +619,7 @@ function renderProductBlock(card) {
 // internal margin summary lives solely in buildNotificationHtml() below.
 // ============================================================================
 function renderEmail(cards) {
-  const blocks = cards.map(renderProductBlock).join('\n');
+  const blocks = cards.map(renderBundleBlock).join('\n');
   const year = new Date().getFullYear();
   return `<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
@@ -883,105 +775,120 @@ async function createDraftCampaign(html) {
 // profit) is permitted HERE and ONLY here. It must never reach the customer
 // campaign HTML (renderEmail) or any committed file or log line.
 // ============================================================================
-function buildNotificationHtml(featured, campaignId) {
+function buildNotificationHtml(bundles, campaignId) {
   const idLine =
     `<p style="margin:0 0 16px 0;"><strong>Draft campaign ID:</strong> ` +
     `${campaignId == null ? '(not created — see logs)' : escapeHtml(String(campaignId))}.</p>`;
 
-  if (!featured.length) {
+  if (!bundles.length) {
     return (
       `<div style="font-family:Arial,Helvetica,sans-serif;color:#0e1b2a;">` +
-      `<p>No in-stock products to feature this week — no draft was created.</p>${idLine}</div>`
+      `<p>No in-stock laptops to build bundles this week — no draft was created.</p>${idLine}</div>`
     );
   }
 
-  const roleLabel = {
-    hero: 'Latest tech laptop',
-    value: 'Highest-margin laptop',
-    accessory: 'High-margin add-on',
-  };
+  const roleLabel = { laptop: 'Laptop', dock: 'Dock', input: 'Input device' };
   const money = (n) =>
     '$' + round2(n).toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   const pct = (m) => `${(m * 100).toFixed(1)}%`;
 
   const th =
-    'style="text-align:left;padding:8px 10px;border-bottom:2px solid #0e1b2a;font-size:13px;"';
+    'style="text-align:left;padding:7px 10px;border-bottom:2px solid #0e1b2a;font-size:13px;"';
   const thR = th.replace('text-align:left', 'text-align:right');
-  const td = 'style="padding:8px 10px;border-bottom:1px solid #e4e9ef;font-size:13px;"';
-  const tdR = td.replace('padding:8px 10px;', 'padding:8px 10px;text-align:right;');
+  const td = 'style="padding:7px 10px;border-bottom:1px solid #e4e9ef;font-size:13px;"';
+  const tdR = td.replace('padding:7px 10px;', 'padding:7px 10px;text-align:right;');
+  const sumTd = 'style="padding:8px 10px;border-top:2px solid #0e1b2a;font-size:13px;font-weight:bold;"';
+  const sumTdR = sumTd.replace('padding:8px 10px;', 'padding:8px 10px;text-align:right;');
 
-  let totRrpEx = 0;
-  let totProfit = 0;
+  let grandRrpEx = 0;
+  let grandProfit = 0;
   let marginSum = 0;
-  const rows = featured
-    .map((p) => {
-      const tradeEx = round2(p.yourPrice / 1.1); // YourPrice ex-GST
-      const rrpEx = round2(p.rrpInc / 1.1); // RRP ex-GST
-      const profit = round2(rrpEx - tradeEx); // profit per unit ex-GST
-      const margin = p.rrpInc > 0 ? (p.rrpInc - p.yourPrice) / p.rrpInc : 0;
-      totRrpEx += rrpEx;
-      totProfit += profit;
-      marginSum += margin;
-      return (
+
+  const sections = bundles
+    .map((b) => {
+      const items = bundleItems(b);
+      let bRrpInc = 0;
+      let bYour = 0;
+      let bRrpEx = 0;
+      let bTradeEx = 0;
+      const rows = items
+        .map((it) => {
+          const tradeEx = round2(it.yourPrice / 1.1);
+          const rrpEx = round2(it.rrpInc / 1.1);
+          bRrpInc += it.rrpInc;
+          bYour += it.yourPrice;
+          bRrpEx += rrpEx;
+          bTradeEx += tradeEx;
+          return (
+            `<tr>` +
+            `<td ${td}>${escapeHtml(it.name)}</td>` +
+            `<td ${td}>${roleLabel[it.role] || '—'}</td>` +
+            `<td ${tdR}>${money(tradeEx)}</td>` +
+            `<td ${tdR}>${money(rrpEx)}</td>` +
+            `</tr>`
+          );
+        })
+        .join('');
+      const bMargin = bRrpInc > 0 ? (bRrpInc - bYour) / bRrpInc : 0;
+      const bProfit = round2(bRrpEx - bTradeEx);
+      grandRrpEx += round2(bRrpEx);
+      grandProfit += bProfit;
+      marginSum += bMargin;
+      const note =
+        items.length < 3 ? ` <span style="font-weight:normal;color:#a3623a;">(${3 - items.length} accessory slot(s) unfilled)</span>` : '';
+      const totalsRow =
         `<tr>` +
-        `<td ${td}>${escapeHtml(p.name)}</td>` +
-        `<td ${td}>${roleLabel[p.role] || '—'}</td>` +
-        `<td ${tdR}>${money(tradeEx)}</td>` +
-        `<td ${tdR}>${money(rrpEx)}</td>` +
-        `<td ${tdR}>${pct(margin)}</td>` +
-        `<td ${tdR}>${money(profit)}</td>` +
-        `</tr>`
+        `<td ${sumTd} colspan="2">${escapeHtml(b.label)} bundle total${note}</td>` +
+        `<td ${sumTdR}>${money(round2(bTradeEx))}</td>` +
+        `<td ${sumTdR}>${money(round2(bRrpEx))}</td>` +
+        `</tr>` +
+        `<tr><td ${td} colspan="2" style="padding:7px 10px;font-size:12px;color:#41566e;">` +
+        `Bundle margin ${pct(bMargin)} · profit ${money(bProfit)} ex GST · customer price ${money(round2(bRrpEx))} ex GST</td>` +
+        `<td ${td}></td><td ${td}></td></tr>`;
+      return (
+        `<h3 style="margin:18px 0 6px 0;font-size:15px;">${escapeHtml(b.label)} Setup — ${escapeHtml(b.laptop.name)}</h3>` +
+        `<table role="presentation" cellpadding="0" cellspacing="0" border="0" ` +
+        `style="border-collapse:collapse;width:100%;max-width:760px;font-family:Arial,Helvetica,sans-serif;color:#0e1b2a;">` +
+        `<thead><tr><th ${th}>Item</th><th ${th}>Role</th>` +
+        `<th ${thR}>Trade cost (ex GST)</th><th ${thR}>RRP (ex GST)</th></tr></thead>` +
+        `<tbody>${rows}${totalsRow}</tbody></table>`
       );
     })
     .join('');
 
-  const avgMargin = featured.length ? marginSum / featured.length : 0;
-  const sumTd =
-    'style="padding:10px;border-top:2px solid #0e1b2a;font-size:13px;font-weight:bold;"';
-  const sumTdR = sumTd.replace('padding:10px;', 'padding:10px;text-align:right;');
-  const summaryRow =
-    `<tr>` +
-    `<td ${sumTd} colspan="2">Totals (one of each sells)</td>` +
-    `<td ${sumTdR}>—</td>` +
-    `<td ${sumTdR}>${money(round2(totRrpEx))}</td>` +
-    `<td ${sumTdR}>${pct(avgMargin)}</td>` +
-    `<td ${sumTdR}>${money(round2(totProfit))}</td>` +
-    `</tr>`;
-
-  const table =
+  const avgMargin = bundles.length ? marginSum / bundles.length : 0;
+  const grand =
+    `<h3 style="margin:22px 0 6px 0;font-size:15px;">Grand total (one of each bundle sells)</h3>` +
     `<table role="presentation" cellpadding="0" cellspacing="0" border="0" ` +
-    `style="border-collapse:collapse;width:100%;max-width:760px;font-family:Arial,Helvetica,sans-serif;color:#0e1b2a;">` +
-    `<thead><tr>` +
-    `<th ${th}>Product</th>` +
-    `<th ${th}>Why picked</th>` +
-    `<th ${thR}>Trade cost (ex GST)</th>` +
-    `<th ${thR}>RRP (ex GST)</th>` +
-    `<th ${thR}>Margin %</th>` +
-    `<th ${thR}>Profit / unit (ex GST)</th>` +
-    `</tr></thead>` +
-    `<tbody>${rows}${summaryRow}</tbody></table>`;
+    `style="border-collapse:collapse;font-family:Arial,Helvetica,sans-serif;color:#0e1b2a;font-size:13px;">` +
+    `<tr><td ${sumTd}>Total RRP (ex GST)</td><td ${sumTdR}>${money(round2(grandRrpEx))}</td></tr>` +
+    `<tr><td ${sumTd}>Total profit (ex GST)</td><td ${sumTdR}>${money(round2(grandProfit))}</td></tr>` +
+    `<tr><td ${sumTd}>Average bundle margin</td><td ${sumTdR}>${pct(avgMargin)}</td></tr></table>`;
 
   return (
     `<div style="font-family:Arial,Helvetica,sans-serif;color:#0e1b2a;">` +
-    `<p>This week's featured-hardware campaign draft is ready in Brevo. ` +
-    `Review the products, tweak if needed, and hit Send.</p>` +
+    `<p>This week's bundle campaign draft is ready in Brevo. ` +
+    `Review the bundles, tweak if needed, and hit Send.</p>` +
     idLine +
-    `<h3 style="margin:0 0 6px 0;font-size:15px;">Margin summary — INTERNAL, do not forward</h3>` +
-    table +
+    `<p style="margin:0 0 4px 0;font-size:13px;"><strong>${bundles.length} bundle(s) rendered:</strong> ` +
+    `${escapeHtml(bundles.map((b) => b.label).join(', '))}.</p>` +
+    `<h3 style="margin:14px 0 6px 0;font-size:15px;">Margin summary — INTERNAL, do not forward</h3>` +
+    sections +
+    grand +
     `<p style="font-size:12px;color:#6b7c8c;margin-top:14px;">` +
     `Trade cost, margin and profit are internal only — they never appear in the customer email.</p>` +
     `</div>`
   );
 }
 
-async function notifyDrake(featured, campaignId) {
+async function notifyDrake(bundles, campaignId) {
   const apiKey = process.env.BREVO_API_KEY;
-  const htmlContent = buildNotificationHtml(featured, campaignId);
+  const htmlContent = buildNotificationHtml(bundles, campaignId);
 
   const payload = {
     sender: SENDER,
     to: [{ email: NOTIFY_TO }],
-    subject: 'Weekly featured-hardware draft ready to review',
+    subject: 'Weekly bundle draft ready to review',
     htmlContent,
   };
 
@@ -1030,41 +937,44 @@ async function main() {
     throw new Error('Main feed returned no products (unreachable or empty).');
   }
 
-  const featured = selectFeatured(products);
+  const bundles = selectBundles(products);
 
-  if (featured.length === 0) {
-    console.warn('No in-stock products available this week — skipping draft creation.');
-    // Notify Drake there was nothing to feature (no draft, no file overwrite).
+  if (bundles.length === 0) {
+    console.warn('No in-stock laptops available this week — skipping draft creation.');
+    // Notify there was nothing to bundle (no draft, no file overwrite).
     await notifyDrake([], null);
     return;
   }
 
-  const variantIndices = assignVariantIndices(featured);
-  const cards = featured.map((p) => toCard(p, variantIndices.get(p.code)));
+  const cards = bundles.map(toBundleCard);
   console.log(
-    `Selected ${featured.length} product(s):\n  ` +
-      featured.map((p) => `[${p.role}] ${p.name}`).join('\n  ')
+    `Built ${bundles.length} bundle(s):\n  ` +
+      bundles
+        .map((b) => `[${b.label}] ${b.laptop.name} + ${[b.dock, b.input].filter(Boolean).map((x) => x.name).join(' + ') || '(laptop only)'}`)
+        .join('\n  ')
   );
 
   const html = renderEmail(cards);
 
   // Safety net (defense-in-depth): ensure no trade-price figure leaks into the
-  // output. Cards are built without yourPrice, so this should never trip — but
-  // we check the raw "1200.00" and grouped "1,200.00" forms with digit
+  // CUSTOMER HTML. Cards are built without yourPrice, so this should never trip
+  // — but we check the raw "1200.00" and grouped "1,200.00" forms with digit
   // boundaries so a coincidental substring (e.g. 90.00 inside 590.00) doesn't
-  // cause a false positive.
+  // cause a false positive. We check every item across every bundle.
   const leaks = (haystack, value) => {
     const esc = value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
     return new RegExp(`(?<![\\d.,])${esc}(?![\\d])`).test(haystack);
   };
-  for (const p of featured) {
-    if (!(p.yourPrice > 0)) continue;
-    const forms = [
-      p.yourPrice.toFixed(2),
-      p.yourPrice.toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
-    ];
-    if (forms.some((f) => leaks(html, f))) {
-      throw new Error('Refusing to write: a YourPrice value appears in the generated HTML.');
+  for (const b of bundles) {
+    for (const it of bundleItems(b)) {
+      if (!(it.yourPrice > 0)) continue;
+      const forms = [
+        it.yourPrice.toFixed(2),
+        it.yourPrice.toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 }),
+      ];
+      if (forms.some((f) => leaks(html, f))) {
+        throw new Error('Refusing to write: a YourPrice value appears in the generated HTML.');
+      }
     }
   }
 
@@ -1072,9 +982,9 @@ async function main() {
   console.log(`Wrote ${OUT_FILE} (${html.length} bytes).`);
 
   const campaignId = await createDraftCampaign(html);
-  // The notification carries the INTERNAL margin summary (cost data allowed
-  // here only) — pass the full featured records, not just names.
-  await notifyDrake(featured, campaignId);
+  // The notification carries the INTERNAL per-bundle margin summary (cost data
+  // allowed here only) — pass the full bundle records.
+  await notifyDrake(bundles, campaignId);
 }
 
 if (require.main === module) {
@@ -1086,15 +996,17 @@ if (require.main === module) {
 
 // Exported for tests (no cost data is exported — only pure functions).
 module.exports = {
-  selectFeatured,
-  assignVariantIndices,
-  toCard,
+  selectBundles,
+  bundleItems,
+  bundlePriceExGst,
+  toBundleCard,
   renderEmail,
   buildNotificationHtml,
+  priceLabel,
+  bundleBuyUrl,
   weeklySubject,
   isoWeekNumber,
   isLaptopDevice,
-  isAccessory,
-  accessoryCategory,
+  tierForPrice,
   SUBJECT_LINES,
 };
