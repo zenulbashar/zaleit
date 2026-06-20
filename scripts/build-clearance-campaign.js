@@ -48,8 +48,8 @@ const MAIN_FEED_URL =
 
 // Brevo "Laptop & Devices" list — confirmed ID 3.
 const TARGET_LIST_ID = 3;
-// Verified Brevo sender.
-const SENDER = { name: 'Zaleit IT', email: 'roster@zaleit.com.au' };
+// Verified Brevo sender (mail.zaleit.com.au subdomain — DKIM + DMARC authenticated).
+const SENDER = { name: 'Zaleit IT', email: 'marketing@mail.zaleit.com.au' };
 const NOTIFY_TO = 'support@zaleit.com.au';
 const ENQUIRE_URL = 'https://zaleit.com.au/?service=Hardware#contact';
 const FEATURE_COUNT = 4;
@@ -479,7 +479,7 @@ async function notifyDrake(names, campaignId) {
     `<strong>Draft campaign ID:</strong> ${campaignId == null ? '(not created — see logs)' : campaignId}.</p>`;
 
   const payload = {
-    sender: { name: 'Zaleit Automation', email: SENDER.email },
+    sender: SENDER,
     to: [{ email: NOTIFY_TO }],
     subject: 'Weekly clearance draft ready to review',
     htmlContent,
