@@ -49,7 +49,7 @@ const MAIN_FEED_URL =
 // Brevo "Laptop & Devices" list — confirmed ID 3.
 const TARGET_LIST_ID = 3;
 // Verified Brevo sender (mail.zaleit.com.au subdomain — DKIM + DMARC authenticated).
-const SENDER = { name: 'Zaleit IT', email: 'marketing@mail.zaleit.com.au' };
+const SENDER = { name: 'Zale IT', email: 'marketing@mail.zaleit.com.au' };
 const NOTIFY_TO = 'support@zaleit.com.au';
 const ENQUIRE_URL = 'https://zaleit.com.au/?service=Hardware#contact';
 const FEATURE_COUNT = 4;
@@ -298,7 +298,7 @@ function renderImageCell(card) {
     `<tr><td align="center" valign="middle" height="180" ` +
     `style="height:180px;color:#41566e;font-family:Arial,Helvetica,sans-serif;` +
     `font-size:22px;font-weight:bold;letter-spacing:.5px;">` +
-    `${escapeHtml(card.brand || 'Zaleit IT')}</td></tr></table>`
+    `${escapeHtml(card.brand || 'Zale IT')}</td></tr></table>`
   );
 }
 
@@ -355,7 +355,7 @@ function renderEmail(cards) {
           <!-- Header -->
           <tr>
             <td style="background:${INK};border-radius:12px 12px 0 0;padding:22px 24px;font-family:Arial,Helvetica,sans-serif;">
-              <span style="font-size:22px;font-weight:bold;color:#ffffff;letter-spacing:.3px;">Zaleit <span style="color:${ACCENT};">IT</span></span>
+              <span style="font-size:22px;font-weight:bold;color:#ffffff;letter-spacing:.3px;">Zale <span style="color:${ACCENT};">IT</span></span>
             </td>
           </tr>
 
@@ -391,7 +391,7 @@ ${blocks}
           <!-- Footer -->
           <tr>
             <td style="background:#0a0f14;border-radius:0 0 12px 12px;padding:24px;font-family:Arial,Helvetica,sans-serif;">
-              <p style="margin:0 0 6px 0;font-size:14px;font-weight:bold;color:#ffffff;">Zaleit IT Pty Ltd</p>
+              <p style="margin:0 0 6px 0;font-size:14px;font-weight:bold;color:#ffffff;">Zale IT Pty Ltd</p>
               <p style="margin:0 0 4px 0;font-size:13px;color:#9fb0c0;line-height:1.6;">Brisbane QLD, Australia &middot; Brisbane-based IT &amp; cybersecurity for Australian business.</p>
               <p style="margin:0 0 14px 0;font-size:13px;color:#9fb0c0;">
                 <a href="mailto:support@zaleit.com.au" style="color:${ACCENT};text-decoration:none;">support@zaleit.com.au</a>
@@ -399,8 +399,8 @@ ${blocks}
                 <a href="https://zaleit.com.au" target="_blank" style="color:${ACCENT};text-decoration:none;">zaleit.com.au</a>
               </p>
               <p style="margin:0;font-size:11px;color:#6b7c8c;line-height:1.6;">
-                You're receiving this because you opted in to product updates from Zaleit IT.<br/>
-                <a href="{{unsubscribe}}" style="color:#9fb0c0;text-decoration:underline;">Unsubscribe</a> &middot; &copy; ${year} Zaleit IT
+                You're receiving this because you opted in to product updates from Zale IT.<br/>
+                <a href="{{unsubscribe}}" style="color:#9fb0c0;text-decoration:underline;">Unsubscribe</a> &middot; &copy; ${year} Zale IT
               </p>
             </td>
           </tr>
