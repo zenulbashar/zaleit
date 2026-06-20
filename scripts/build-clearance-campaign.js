@@ -109,8 +109,8 @@ const BUNDLE_DISCOUNT_PCT = 0;
 // chosen deterministically by the laptop's code.
 const TIER_STORIES = {
   business: [
-    'Built for everyday business productivity — email, documents, meetings and the web, all day without fuss. The {name} keeps your team moving. It comes configured with {specPhrase}.',
-    'A dependable setup for the daily grind of business — docs, inboxes and back-to-back calls. The {name} handles it all and standardises nicely across a team. Under the lid: {specPhrase}.',
+    'An affordable, reliable laptop for everyday business tasks — email, documents, meetings and the web. The {name} covers the essentials without stretching the budget. It comes configured with {specPhrase}.',
+    'The smart entry choice for kitting out a team. The {name} handles the day-to-day — docs, inboxes and calls — at a price that is easy to say yes to. Under the lid: {specPhrase}.',
   ],
   performance: [
     'For power users who multitask hard — big spreadsheets, dozens of tabs, design and dev tools running at once. The {name} keeps pace under pressure. It packs {specPhrase}.',
@@ -377,14 +377,8 @@ function selectBundles(products) {
     return p;
   };
 
-  // 1. Laptop per tier: highest latest-tech score within the tier's price band.
   const bundles = [];
-  for (const tierKey of TIER_ORDER) {
-    const inBand = laptops
-      .filter((p) => tierForPrice(exGstOf(p)) === tierKey && !used.has(p.code))
-      .sort(byLatestTechDesc);
-    const laptop = claim(inBand[0]);
-    if (!laptop) continue; // no in-band laptop → skip this bundle
+  const addBundle = (tierKey, laptop) =>
     bundles.push({
       tierKey,
       label: TIER_LABELS[tierKey],
@@ -393,6 +387,22 @@ function selectBundles(products) {
       dock: null,
       input: null,
     });
+
+  // 1a. BUSINESS first: the genuinely CHEAPEST in-stock laptop overall (entry
+  //     price hero), claimed before the other tiers so they pick from what's
+  //     left. Defined by lowest ex-GST, not by band.
+  const bizLaptop = claim(laptops.slice().sort(byPriceAsc)[0]);
+  if (bizLaptop) addBundle('business', bizLaptop);
+
+  // 1b. PERFORMANCE & FLAGSHIP: re-bucket the REMAINING laptops by price band
+  //     (Business laptop already removed) and pick the highest latest-tech score
+  //     within each band — unchanged behaviour.
+  for (const tierKey of ['performance', 'flagship']) {
+    const inBand = laptops
+      .filter((p) => !used.has(p.code) && tierForPrice(exGstOf(p)) === tierKey)
+      .sort(byLatestTechDesc);
+    const laptop = claim(inBand[0]);
+    if (laptop) addBundle(tierKey, laptop);
   }
   if (bundles.length === 0) return [];
 
@@ -545,7 +555,7 @@ function toBundleCard(bundle) {
     },
     includes: bundleItems(bundle)
       .filter((it) => it.role !== 'laptop')
-      .map((it) => it.name),
+      .map((it) => ({ name: it.name, image: encodeImageUrl(it.image) })),
     priceLabel: priceLabel(bundlePriceExGst(bundle), { bundle: true }),
     buyUrl: bundleBuyUrl(bundle),
   };
@@ -573,6 +583,44 @@ function renderImageCell(card) {
   );
 }
 
+// Small accessory thumbnail: the product image, or a neutral placeholder box
+// (no broken image) when the feed item has no image URL.
+function renderThumb(item) {
+  if (item.image) {
+    return (
+      `<img src="${escapeHtml(item.image)}" alt="${escapeHtml(item.name)}" width="80" ` +
+      `style="display:block;width:80px;max-width:80px;height:auto;border:0;border-radius:6px;" />`
+    );
+  }
+  return (
+    `<table role="presentation" cellpadding="0" cellspacing="0" border="0" ` +
+    `style="border-collapse:collapse;width:80px;height:56px;background:#e4e9ef;border-radius:6px;">` +
+    `<tr><td align="center" valign="middle" height="56" ` +
+    `style="height:56px;width:80px;color:#8a99a8;font-family:Arial,Helvetica,sans-serif;font-size:18px;font-weight:bold;">` +
+    `+</td></tr></table>`
+  );
+}
+
+// "Includes:" panel — one email-safe table row per accessory: thumbnail + name.
+function renderIncludes(includes) {
+  if (!includes.length) return '';
+  const rows = includes
+    .map(
+      (it) =>
+        `<tr>` +
+        `<td width="80" valign="middle" style="width:80px;padding:6px 12px 6px 0;">${renderThumb(it)}</td>` +
+        `<td valign="middle" style="font-size:13px;color:#41566e;line-height:1.4;">${escapeHtml(it.name)}</td>` +
+        `</tr>`
+    )
+    .join('');
+  return (
+    `<div style="margin:0 0 16px 0;padding:12px 14px;background:#f1f4f7;border-radius:8px;">` +
+    `<div style="font-size:13px;font-weight:bold;color:${INK};margin-bottom:8px;">Includes:</div>` +
+    `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">` +
+    `${rows}</table></div>`
+  );
+}
+
 // Render one bundle block: tier heading (+ MOST POPULAR badge), laptop image,
 // name, spec line, scenario story, the included accessories, bundle price, and
 // the Buy Now button.
@@ -584,9 +632,7 @@ function renderBundleBlock(card) {
   const specBlock = card.laptop.spec
     ? `<div style="font-size:13px;font-weight:bold;color:${INK};letter-spacing:.2px;margin-bottom:12px;">${escapeHtml(card.laptop.spec)}</div>`
     : '';
-  const includesBlock = card.includes.length
-    ? `<div style="font-size:13px;color:#41566e;line-height:1.5;margin:0 0 16px 0;padding:10px 12px;background:#f1f4f7;border-radius:8px;"><strong>Includes:</strong> ${escapeHtml(card.includes.join(' + '))}</div>`
-    : '';
+  const includesBlock = renderIncludes(card.includes);
   return `
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin:0 0 16px 0;">
               <tr>
@@ -675,7 +721,7 @@ ${blocks}
           <!-- Footer -->
           <tr>
             <td style="background:#0a0f14;border-radius:0 0 12px 12px;padding:24px;font-family:Arial,Helvetica,sans-serif;">
-              <p style="margin:0 0 6px 0;font-size:14px;font-weight:bold;color:#ffffff;">Zale IT Pty Ltd</p>
+              <p style="margin:0 0 6px 0;font-size:14px;font-weight:bold;color:#ffffff;">Zale IT</p>
               <p style="margin:0 0 4px 0;font-size:13px;color:#9fb0c0;line-height:1.6;">Brisbane QLD, Australia &middot; Brisbane-based IT &amp; cybersecurity for Australian business.</p>
               <p style="margin:0 0 14px 0;font-size:13px;color:#9fb0c0;">
                 <a href="mailto:support@zaleit.com.au" style="color:${ACCENT};text-decoration:none;">support@zaleit.com.au</a>
