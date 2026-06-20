@@ -80,6 +80,46 @@ const SUBJECT_LINES = [
 
 const OUT_FILE = path.join(__dirname, '..', 'campaign-clearance.html');
 
+// --- Selection categories (editable) ---------------------------------------
+// True laptop categories — matched EXACTLY against CategoryName (lowercased).
+// NOT a startsWith: that would wrongly match "Notebook Accessories".
+const LAPTOP_CATEGORIES = ['notebooks', 'notebooks workstation'];
+
+// Laptop-relevant accessory categories — an allow-list matched EXACTLY against
+// CategoryName (lowercased). We deliberately do NOT keyword-match product names,
+// and we deliberately EXCLUDE "Bags, Cases & Covers" / "Commercial Bags, Cases &
+// Covers" (polluted with iPad / tablet / Chromebook cases and stylus holders).
+const ACCESSORY_CATEGORIES = [
+  'docking stations',
+  'laptop docking and cradles',
+  'keyboards',
+  'keyboards & mice',
+  'mice',
+  'usb web cams',
+];
+
+// Soft priority for accessories. Tier 1 = genuinely additive to a laptop;
+// tier 2 = redundant with a laptop's built-in (a standalone webcam). Tier is a
+// HARD gate: a tier-2 item is only chosen when tier 1 can't fill the slots.
+const ACCESSORY_PRIORITY = {
+  'docking stations': 1,
+  'laptop docking and cradles': 1,
+  'keyboards & mice': 1,
+  'mice': 1,
+  'keyboards': 1,
+  'usb web cams': 2,
+};
+
+// Maps an accessory CategoryName (lowercased) to a STORY_TEMPLATES key.
+const ACCESSORY_STORY = {
+  'docking stations': 'dock',
+  'laptop docking and cradles': 'dock',
+  'keyboards': 'inputDevice',
+  'keyboards & mice': 'inputDevice',
+  'mice': 'inputDevice',
+  'usb web cams': 'callDevice',
+};
+
 // ----------------------------------------------------------------------------
 // STORY TEMPLATES
 // ----------------------------------------------------------------------------
@@ -253,11 +293,10 @@ async function loadProducts() {
 // Classification
 // ----------------------------------------------------------------------------
 
-// Laptops live under CategoryName "Notebooks" and "Notebooks Workstation"
-// (plural). Match case-insensitively on the start of CategoryName — this
-// catches both and correctly excludes "Notebook Accessories" (singular).
+// True laptop iff CategoryName is EXACTLY one of LAPTOP_CATEGORIES. This
+// excludes "Notebook Accessories" (stylus pens, tethers, etc.) entirely.
 function isLaptopDevice(p) {
-  return /^notebook/i.test((p.category || '').trim());
+  return LAPTOP_CATEGORIES.includes((p.category || '').trim().toLowerCase());
 }
 
 // Box-damaged / open-box / refurbished units must never appear in the email.
@@ -267,22 +306,21 @@ function isExcludedUnit(name) {
   );
 }
 
-// Accessory type buckets, matched on subCategory or name. Returns a bucket key
-// (used both to qualify a product as an accessory and to diversify the picks),
-// or null if it isn't a laptop-complementary accessory.
-function accessoryType(p) {
-  const text = `${p.category} ${p.name}`.toLowerCase();
-  if (/\b(keyboard|mouse|mice|trackpad)\b/.test(text)) return 'inputDevice';
-  if (/\b(dock|docking|port replicator)\b/.test(text)) return 'dock';
-  if (/(laptop bag|notebook bag|carry case|carry bag|sleeve|\bbag\b|\bcase\b)/.test(text))
-    return 'bag';
-  if (/\b(headset|headphone|webcam|web cam)\b/.test(text)) return 'callDevice';
-  if (/\busb-?c? hub\b|\busb hub\b/.test(text)) return 'dock';
-  return null;
+// Returns the accessory CategoryName (lowercased) if it's an allow-listed,
+// laptop-relevant accessory, else null. NO name-keyword matching.
+function accessoryCategory(p) {
+  const c = (p.category || '').trim().toLowerCase();
+  return ACCESSORY_CATEGORIES.includes(c) ? c : null;
 }
 
 function isAccessory(p) {
-  return !isLaptopDevice(p) && accessoryType(p) !== null;
+  return !isLaptopDevice(p) && accessoryCategory(p) !== null;
+}
+
+// Priority tier for an accessory (lower = preferred). Unknown allow-listed
+// categories default to tier 1 (treated as additive).
+function accessoryTier(p) {
+  return ACCESSORY_PRIORITY[accessoryCategory(p)] || 1;
 }
 
 // Story type for a product (drives STORY_TEMPLATES selection).
@@ -292,8 +330,8 @@ function storyType(p) {
     if (/workstation|zbook|\bpro\b/.test(t)) return 'workstationLaptop';
     return 'businessLaptop';
   }
-  const acc = accessoryType(p);
-  return acc && STORY_TEMPLATES[acc] ? acc : 'generic';
+  const key = ACCESSORY_STORY[accessoryCategory(p)];
+  return key && STORY_TEMPLATES[key] ? key : 'generic';
 }
 
 // ----------------------------------------------------------------------------
@@ -401,18 +439,33 @@ function byLatestTechDesc(a, b) {
   return latestTechScore(b) - latestTechScore(a) || b.rrpInc - a.rrpInc;
 }
 
-// Pick up to n accessories by margin, preferring distinct types (don't take two
-// keyboards if a mouse/dock/bag is available). Pool is pre-sorted by margin.
+// Pick up to n accessories. Tier is a HARD gate: tier 1 is filled before tier 2
+// is considered at all (so a webcam is only chosen when there aren't enough
+// tier-1 accessories). Within a tier we prefer DIFFERENT categories first
+// (dock + mouse beats dock + dock), then backfill that tier by margin before
+// dropping to the next tier.
 function pickVariedAccessories(pool, n) {
   const out = [];
-  const usedTypes = new Set();
-  const remaining = pool.slice();
-  while (out.length < n && remaining.length) {
-    let idx = remaining.findIndex((p) => !usedTypes.has(accessoryType(p)));
-    if (idx === -1) idx = 0; // all remaining types already used — take next best
-    const [p] = remaining.splice(idx, 1);
-    out.push(p);
-    usedTypes.add(accessoryType(p));
+  const tiers = [...new Set(pool.map(accessoryTier))].sort((a, b) => a - b);
+  for (const tier of tiers) {
+    if (out.length >= n) break;
+    const tierPool = pool.filter((p) => accessoryTier(p) === tier).sort(byMarginDesc);
+    const usedCats = new Set();
+    // First: distinct categories by margin.
+    for (const p of tierPool) {
+      if (out.length >= n) break;
+      const cat = accessoryCategory(p);
+      if (!usedCats.has(cat)) {
+        out.push(p);
+        usedCats.add(cat);
+      }
+    }
+    // Then: backfill remaining slots from THIS tier (same category allowed)
+    // before moving to the next tier.
+    for (const p of tierPool) {
+      if (out.length >= n) break;
+      if (!out.includes(p)) out.push(p);
+    }
   }
   return out;
 }
@@ -423,6 +476,9 @@ function selectFeatured(products) {
   if (inStock.length === 0) return [];
 
   const laptops = inStock.filter(isLaptopDevice);
+  // No real laptops → skip the week (don't build an accessory-only basket).
+  if (laptops.length === 0) return [];
+
   const selected = [];
   const seen = new Set();
   const take = (p, role, badge) => {
@@ -440,8 +496,9 @@ function selectFeatured(products) {
   const value = laptops.filter((p) => !seen.has(p.code)).sort(byMarginDesc)[0];
   take(value, 'value', 'BEST VALUE');
 
-  // 3 & 4. Accessories — high margin, varied type. Fallback: if fewer than two
-  // laptops were found, the unused laptop slots become more accessories.
+  // 3 & 4. Accessories — allow-listed categories only, tier-then-margin with
+  // category diversity. Slots = whatever the laptops didn't fill (2 laptops → 2
+  // accessories; 1 laptop → 3). If no accessories match, ship the laptops only.
   const accSlots = FEATURE_COUNT - selected.length;
   const accPool = inStock
     .filter((p) => isAccessory(p) && !seen.has(p.code))
@@ -1036,5 +1093,8 @@ module.exports = {
   buildNotificationHtml,
   weeklySubject,
   isoWeekNumber,
+  isLaptopDevice,
+  isAccessory,
+  accessoryCategory,
   SUBJECT_LINES,
 };
