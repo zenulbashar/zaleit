@@ -2,31 +2,26 @@
 'use strict';
 
 /*
- * Zaleit IT — Weekly clearance campaign builder.
+ * Zale IT — Weekly featured-hardware campaign builder.
  *
- * Fetches MMT's CLEARANCE feed (Id=4) and the MAIN stock feed (Id=2), selects
- * the week's featured products, generates a branded HTML email, writes it to
- * campaign-clearance.html, and (when BREVO_API_KEY is present) pushes it to
- * Brevo as a DRAFT email campaign — never sending — then emails Drake to review.
- *
- * Selection strategy:
- *   1. Hero items: in-stock laptops / notebooks / Chromebooks from the
- *      CLEARANCE feed (actual devices, not bags/cases/covers). Badged
- *      "CLEARANCE".
- *   2. Fill remaining slots (up to 4 total) with the highest-margin in-stock
- *      products from the MAIN feed.
+ * Fetches MMT's MAIN stock feed (Id=2), curates a 4-product basket
+ * (1 latest-tech laptop, 1 highest-margin laptop, 2 high-margin laptop
+ * accessories), generates a branded HTML email led by a use-case story per
+ * product, writes it to campaign-clearance.html, and (when BREVO_API_KEY is
+ * present) pushes it to Brevo as a DRAFT email campaign — never sending — then
+ * emails support@ to review.
  *
  * Pricing / privacy: the feed's RRPInc is GST-inclusive; the email shows the
- * ex-GST figure (RRPInc/1.1). YourPrice (trade price) and the computed margin
- * are used ONLY to rank products in memory and are then discarded — they are
- * never written to campaign-clearance.html, the email, the Brevo payload, or
- * any log line.
+ * ex-GST figure (RRPInc / 1.1) divided exactly ONCE here (we read raw RRPInc
+ * from the live feed, never catalogue-data.json's pre-divided rrp). YourPrice
+ * (trade price) and the computed margin are used ONLY to rank products in
+ * memory and are then discarded — never written to the HTML, the email, the
+ * Brevo payload, or any log line.
  *
  * Local testing (the live MMT host is firewalled in some envs): point
- * MMT_CLEARANCE_FILE / MMT_MAIN_FILE (or MMT_FEED_FILE for the clearance feed)
- * at local XML files to parse them instead of hitting the network, e.g.
- *   MMT_CLEARANCE_FILE=./fixture-clearance.xml \
- *   MMT_MAIN_FILE=./fixture-main.xml node scripts/build-clearance-campaign.js
+ * MMT_FEED_FILE (or MMT_MAIN_FILE) at a local XML file to parse it instead of
+ * hitting the network, e.g.
+ *   MMT_FEED_FILE=./fixture-main.xml node scripts/build-clearance-campaign.js
  */
 
 const fs = require('fs');
@@ -41,8 +36,6 @@ const TOKEN = '2f8788cc-74f8-439c-b950-60f5c31720fb';
 const FEED_FILTERS =
   '&af[]=ai&af[]=dp&af[]=tn&af[]=si&af[]=li&af[]=ln&af[]=wt&af[]=um&af[]=st&af[]=sn&af[]=et&af[]=bc';
 
-const CLEARANCE_FEED_URL =
-  `https://www.mmt.com.au/dwapi/Feeds/GetFeedOutput?Id=4&lt=c&ft=xml&tk=${TOKEN}${FEED_FILTERS}`;
 const MAIN_FEED_URL =
   `https://www.mmt.com.au/dwapi/Feeds/GetFeedOutput?Id=2&lt=s&ft=xml&tk=${TOKEN}${FEED_FILTERS}`;
 
@@ -51,12 +44,78 @@ const TARGET_LIST_ID = 3;
 // Verified Brevo sender (mail.zaleit.com.au subdomain — DKIM + DMARC authenticated).
 const SENDER = { name: 'Zale IT', email: 'marketing@mail.zaleit.com.au' };
 const NOTIFY_TO = 'support@zaleit.com.au';
+// Per-product "Buy Now" buttons open a pre-filled email to this address.
+const SALES_EMAIL = 'sales@zaleit.com.au';
 const ENQUIRE_URL = 'https://zaleit.com.au/?service=Hardware#contact';
 const FEATURE_COUNT = 4;
 const ACCENT = '#76b900'; // site green
 const INK = '#0e1b2a'; // dark header
+const MUTED_BADGE = '#41566e'; // accessory "ADD-ON" badge
+
+// Email title — placeholder for Drake to pick. Candidates:
+//   "This Week's Featured Hardware" | "Featured Laptops & Gear"
+//   | "This Week's Laptop Picks & Add-Ons"
+const EMAIL_TITLE = "This Week's Featured Hardware";
+const EMAIL_SUBHEAD =
+  'A curated pick of laptops and the gear that goes with them — chosen by our team.';
 
 const OUT_FILE = path.join(__dirname, '..', 'campaign-clearance.html');
+
+// ----------------------------------------------------------------------------
+// STORY TEMPLATES
+// ----------------------------------------------------------------------------
+//
+// Each product block LEADS with a 2-3 sentence use-case story, chosen by type
+// and filled from per-product data. Placeholders: {name}, {brand}, {cpu},
+// {ram}, {storage}, {screen}, plus {specPhrase} (a natural-language summary of
+// whatever specs parsed). Spec placeholders live in their OWN sentence so that
+// when a spec is missing the whole sentence is dropped — no dangling
+// "built with  and ". A variant is chosen deterministically by product code
+// (stable per product, varied across the basket). See fillStory().
+const STORY_TEMPLATES = {
+  // Mobile workstations: CAD, 3D, video, dev/data — heavy compute.
+  workstationLaptop: [
+    "When the workload is CAD drawings, 3D rendering or multi-stream video editing, the {name} keeps pace. Powered by {specPhrase}, it chews through heavy compute and large data sets without the spinning wheel. A genuine mobile workstation for engineers, editors and developers.",
+    "Some jobs need real horsepower — simulation, rendering, compiling, crunching data. The {name} is built for exactly that. It's configured with {specPhrase} to keep demanding applications responsive all day. Give your power users a machine that won't hold them back.",
+    "Designed for professionals who can't wait on their tools, the {name} delivers workstation-grade performance in a portable shell. Under the hood sits {specPhrase}, ready for 3D, video and data-heavy workflows. Take the studio anywhere the work happens.",
+  ],
+  // Business / ultrabook: hybrid work, meetings, travel, security, battery.
+  businessLaptop: [
+    "The {name} is made for hybrid work — light enough for the commute, secure enough for IT, and ready for back-to-back meetings. With {specPhrase}, it stays quick through email, docs and video calls. Ideal for teams moving between home, office and the road.",
+    "For staff who work everywhere, the {name} balances portability, security and all-day battery. It runs {specPhrase}, so multitasking across browser tabs, spreadsheets and Teams stays smooth. A dependable everyday laptop your whole business can standardise on.",
+    "Meetings, travel, hot-desking — the {name} handles a modern workday with ease. Built around {specPhrase}, it pairs enterprise-grade security with the battery life to leave the charger behind. A clean, professional choice for hybrid teams.",
+  ],
+  // Docking stations: single-cable desk, multi-monitor, hot-desking.
+  dock: [
+    "Turn any desk into a full workstation with the {name}. One cable powers the laptop and drives multiple monitors, keyboard, mouse and network — perfect for hot-desking and tidy setups. Plug in, get to work, unplug and go.",
+    "The {name} ends cable clutter for good. A single connection adds dual displays, wired ethernet and all your peripherals, so shared desks and home offices stay clean and consistent. Ideal for hybrid teams that dock and undock daily.",
+    "Give every desk the same one-cable simplicity with the {name}. Connect once for charging, multi-monitor output and accessories — no more hunting for adapters. A small upgrade that makes hot-desking effortless.",
+  ],
+  // Keyboards / mice: ergonomics, wireless declutter, productivity.
+  inputDevice: [
+    "The {name} brings comfort to every working hour. Ergonomic design and wireless freedom cut the clutter and keep hands relaxed through long sessions. A small change that pays off in all-day productivity.",
+    "Upgrade the everyday with the {name}. Responsive, quiet and wireless, it declutters the desk and keeps focus on the work — not the cables. Comfort and precision your team will feel from day one.",
+    "Built for people who type and click all day, the {name} blends ergonomics with wireless convenience. Less strain, fewer cables, more done. An easy win for any workspace.",
+  ],
+  // Bags / sleeves / cases: protection on the commute, professional look.
+  bag: [
+    "Protect the daily carry with the {name}. Padded protection guards laptops against the knocks of the commute, while a clean, professional finish looks right in any meeting. Travel-ready peace of mind.",
+    "The {name} keeps hardware safe from desk to door to destination. Smart padding shields against bumps and drops, and the sharp design keeps things looking professional. Made for people on the move.",
+    "Commute with confidence using the {name}. Secure, well-padded protection meets a tidy professional look, so your laptop arrives ready for business. Everyday protection that travels well.",
+  ],
+  // Headsets / webcams: clear calls, remote meetings, hybrid teams.
+  callDevice: [
+    "Make every call clear with the {name}. Crisp audio and video cut through the noise of remote and hybrid meetings, so conversations stay sharp and professional. Fewer 'you're on mute' moments, better calls.",
+    "The {name} levels up remote meetings. Clean sound and a clear picture help hybrid teams connect like they're in the same room. A simple upgrade that makes every call count.",
+    "For teams that live in video calls, the {name} delivers the clarity that matters. Sharp audio and a professional image keep meetings smooth from home or office. Communication your colleagues will notice.",
+  ],
+  // Generic fallback for any unmatched accessory — clean, value-led.
+  generic: [
+    "The {name} is a practical, great-value addition to any setup. Reliable, easy to deploy and ready to work from day one. A smart pick for teams that want more without overspending.",
+    "Get dependable performance and clean value with the {name}. It does its job well and fits straight into your existing kit. An easy yes for budget-conscious upgrades.",
+    "Simple, useful and well-priced, the {name} earns its place on the desk. Straightforward to roll out and built to last. Quality that respects the budget.",
+  ],
+};
 
 // ----------------------------------------------------------------------------
 // Parsing helpers (same approach as scripts/fetch-stock.js)
@@ -123,24 +182,16 @@ function round2(n) {
 // Fetch + map
 // ----------------------------------------------------------------------------
 
-function feedFileEnv(kind) {
-  if (kind === 'clearance') {
-    return process.env.MMT_CLEARANCE_FILE || process.env.MMT_FEED_FILE || '';
-  }
-  return process.env.MMT_MAIN_FILE || '';
-}
-
-async function getFeedXml(kind) {
-  const localFile = feedFileEnv(kind);
+async function getFeedXml() {
+  const localFile = process.env.MMT_MAIN_FILE || process.env.MMT_FEED_FILE || '';
   if (localFile) {
-    console.log(`Reading ${kind} feed from local file: ${localFile}`);
+    console.log(`Reading main feed from local file: ${localFile}`);
     return fs.readFileSync(localFile, 'utf8');
   }
-  const url = kind === 'clearance' ? CLEARANCE_FEED_URL : MAIN_FEED_URL;
-  console.log(`Fetching ${kind} feed…`);
-  const res = await fetch(url, { headers: { Accept: 'application/xml, text/xml, */*' } });
+  console.log('Fetching main feed…');
+  const res = await fetch(MAIN_FEED_URL, { headers: { Accept: 'application/xml, text/xml, */*' } });
   if (!res.ok) {
-    throw new Error(`${kind} feed request failed: HTTP ${res.status} ${res.statusText}`);
+    throw new Error(`main feed request failed: HTTP ${res.status} ${res.statusText}`);
   }
   return res.text();
 }
@@ -155,9 +206,8 @@ const parser = new xml2js.Parser({
 
 // Map a raw product node to the internal shape. NOTE: yourPrice/rrpInc are kept
 // here only so we can rank by margin; they are dropped before rendering.
-function mapProduct(p, source) {
+function mapProduct(p) {
   return {
-    source, // 'clearance' | 'main'
     code: pick(p, 'MMTCode'),
     name: pick(p, 'ShortDescription'),
     brand: pick(p, 'ManufacturerName'),
@@ -166,36 +216,144 @@ function mapProduct(p, source) {
     rrpInc: parseFloat(pick(p, 'RRPInc')) || 0,
     yourPrice: parseFloat(pick(p, 'YourPrice')) || 0,
     availability: parseInt(pick(p, 'Availability'), 10) || 0,
-    image: pick(p, 'LargeImageURL'),
+    // The main feed populates one of these image fields (matches fetch-stock.js).
+    image: pick(p, 'LargeImageURL', 'HiresImageURL', 'ThumbnailImageURL'),
     description: pick(p, 'LongDescription'),
   };
 }
 
-async function loadProducts(kind) {
-  try {
-    const xml = await getFeedXml(kind);
-    const parsed = await parser.parseStringPromise(xml);
-    const raw = collectProducts(parsed, []);
-    console.log(`Parsed ${raw.length} products from ${kind} feed.`);
-    return raw.map((p) => mapProduct(p, kind));
-  } catch (err) {
-    console.warn(`Could not load ${kind} feed: ${err.message}`);
-    return [];
+async function loadProducts() {
+  const xml = await getFeedXml();
+  const parsed = await parser.parseStringPromise(xml);
+  const raw = collectProducts(parsed, []);
+  console.log(`Parsed ${raw.length} products from main feed.`);
+  return raw.map(mapProduct);
+}
+
+// ----------------------------------------------------------------------------
+// Classification
+// ----------------------------------------------------------------------------
+
+// Laptops live under CategoryName "Notebooks" and "Notebooks Workstation"
+// (plural). Match case-insensitively on the start of CategoryName — this
+// catches both and correctly excludes "Notebook Accessories" (singular).
+function isLaptopDevice(p) {
+  return /^notebook/i.test((p.category || '').trim());
+}
+
+// Box-damaged / open-box / refurbished units must never appear in the email.
+function isExcludedUnit(name) {
+  return /box damage|box damaged|open box|damaged|b-grade|refurb|refurbished|ex-demo|ex demo/i.test(
+    name || ''
+  );
+}
+
+// Accessory type buckets, matched on subCategory or name. Returns a bucket key
+// (used both to qualify a product as an accessory and to diversify the picks),
+// or null if it isn't a laptop-complementary accessory.
+function accessoryType(p) {
+  const text = `${p.category} ${p.name}`.toLowerCase();
+  if (/\b(keyboard|mouse|mice|trackpad)\b/.test(text)) return 'inputDevice';
+  if (/\b(dock|docking|port replicator)\b/.test(text)) return 'dock';
+  if (/(laptop bag|notebook bag|carry case|carry bag|sleeve|\bbag\b|\bcase\b)/.test(text))
+    return 'bag';
+  if (/\b(headset|headphone|webcam|web cam)\b/.test(text)) return 'callDevice';
+  if (/\busb-?c? hub\b|\busb hub\b/.test(text)) return 'dock';
+  return null;
+}
+
+function isAccessory(p) {
+  return !isLaptopDevice(p) && accessoryType(p) !== null;
+}
+
+// Story type for a product (drives STORY_TEMPLATES selection).
+function storyType(p) {
+  if (isLaptopDevice(p)) {
+    const t = `${p.category} ${p.name}`.toLowerCase();
+    if (/workstation|zbook|\bpro\b/.test(t)) return 'workstationLaptop';
+    return 'businessLaptop';
   }
+  const acc = accessoryType(p);
+  return acc && STORY_TEMPLATES[acc] ? acc : 'generic';
+}
+
+// ----------------------------------------------------------------------------
+// Spec extraction (laptops only) — PARSE THE NAME, best-effort.
+// ----------------------------------------------------------------------------
+//
+// Specs live in the product NAME (a comma-delimited tail), not the marketing
+// description. We extract only tokens LITERALLY PRESENT in the name and never
+// fabricate. Any field not found is omitted entirely.
+function parseSpecs(name) {
+  const n = String(name || '');
+  const specs = {};
+
+  // CPU — HP-style "U7-255H"/"U5-225U"/"U9-..."; Intel Core Ultra/Core i;
+  // AMD Ryzen; Qualcomm Snapdragon X.
+  let m;
+  if ((m = n.match(/\bCore\s+Ultra\s+[579][\w-]*/i))) specs.cpu = `Intel ${m[0].replace(/\s+/g, ' ')}`;
+  else if ((m = n.match(/\b[Uu][579]-\d{3}[A-Z]?\b/))) specs.cpu = `Intel ${m[0].toUpperCase()}`;
+  else if ((m = n.match(/\bCore\s+i[3579][- ]?\d{3,5}[A-Z]*\b/i))) specs.cpu = `Intel ${m[0]}`;
+  else if ((m = n.match(/\bi[3579]-\d{3,5}[A-Z]*\b/i))) specs.cpu = `Intel Core ${m[0]}`;
+  else if ((m = n.match(/\bRyzen\s+[3579][\w\s-]*?\d{3,4}[A-Z]*\b/i)))
+    specs.cpu = `AMD ${m[0].replace(/\s+/g, ' ').trim()}`;
+  else if ((m = n.match(/\bRyzen\s+[3579]\b/i))) specs.cpu = `AMD ${m[0]}`;
+  else if ((m = n.match(/\bSnapdragon\s+X[\w\s-]*\b/i))) specs.cpu = m[0].replace(/\s+/g, ' ').trim();
+
+  // RAM / storage — capacity tokens in order. In "32GB, 512GB" the first GB
+  // value is RAM and the second (GB/TB) is storage.
+  const caps = [...n.matchAll(/\b(\d{1,4})\s?(GB|TB)\b/gi)].map((x) => ({
+    value: parseInt(x[1], 10),
+    unit: x[2].toUpperCase(),
+    raw: `${x[1]}${x[2].toUpperCase()}`,
+  }));
+  if (caps.length >= 2) {
+    specs.ram = caps[0].raw; // first = RAM
+    specs.storage = caps[1].raw; // second = storage
+  } else if (caps.length === 1) {
+    const c = caps[0];
+    // Lone token: TB or large GB → storage; small GB → RAM (best-effort).
+    if (c.unit === 'TB' || c.value >= 128) specs.storage = c.raw;
+    else specs.ram = c.raw;
+  }
+
+  // Screen — NN" plus an adjacent panel token if present.
+  if ((m = n.match(/\b(\d{2})"\s*([A-Z]{2,5})?/))) {
+    const panel = m[2] && /^(WUXGA|FHD|OLED|UHD|QHD|WQXGA|WQHD)$/i.test(m[2]) ? ` ${m[2].toUpperCase()}` : '';
+    specs.screen = `${m[1]}"${panel}`;
+  }
+
+  return specs;
+}
+
+// Render the dedicated spec line shown under a laptop story, e.g.
+// "Intel U7-255H · 32GB RAM · 512GB SSD · 14\" WUXGA". Missing fields omitted.
+function specLine(specs) {
+  const parts = [];
+  if (specs.cpu) parts.push(specs.cpu);
+  if (specs.ram) parts.push(`${specs.ram} RAM`);
+  if (specs.storage) parts.push(`${specs.storage} SSD`);
+  if (specs.screen) parts.push(specs.screen);
+  return parts.join(' · ');
+}
+
+// Natural-language spec phrase woven into the story, e.g.
+// "Intel U7-255H, 32GB RAM, 512GB SSD and a 14\" WUXGA display". Empty if no
+// specs parsed (the story's spec sentence is then dropped — see fillStory).
+function specPhrase(specs) {
+  const parts = [];
+  if (specs.cpu) parts.push(specs.cpu);
+  if (specs.ram) parts.push(`${specs.ram} RAM`);
+  if (specs.storage) parts.push(`${specs.storage} SSD`);
+  if (specs.screen) parts.push(`a ${specs.screen} display`);
+  if (parts.length === 0) return '';
+  if (parts.length === 1) return parts[0];
+  return `${parts.slice(0, -1).join(', ')} and ${parts[parts.length - 1]}`;
 }
 
 // ----------------------------------------------------------------------------
 // Selection
 // ----------------------------------------------------------------------------
-
-// True for actual laptop/notebook/Chromebook devices, false for bags/cases/etc.
-function isLaptopDevice(p) {
-  const text = `${p.category} ${p.parentCategory} ${p.name}`.toLowerCase();
-  const isDevice = /\b(laptop|notebook|chromebook)\b/.test(text);
-  const isAccessory =
-    /\b(bag|bags|case|cases|cover|covers|sleeve|sleeves|backpack|skin|stand|dock)\b/.test(text);
-  return isDevice && !isAccessory;
-}
 
 // margin % — internal ranking only. Never surfaced.
 function marginPct(p) {
@@ -207,28 +365,70 @@ function byMarginDesc(a, b) {
   return marginPct(b) - marginPct(a);
 }
 
-function selectFeatured(clearance, main) {
-  const inStock = (arr) => arr.filter((p) => p.availability > 0);
+// Heuristic "latest tech" score: count signals of a modern AI-era laptop in the
+// name + description. Higher = newer-feeling. This is a heuristic, not a spec
+// lookup — it just biases the hero pick toward current-gen machines.
+function latestTechScore(p) {
+  const t = `${p.name} ${p.description}`.toLowerCase();
+  const signals = [
+    /core ultra/, /\bultra [579]\b/, /\b[u][579]-/, /snapdragon/, /\bai pc\b/, /\bai\b/,
+    /\bnpu\b/, /\btops\b/, /copilot/, /g1i|gen 1i/, /wuxga|oled/, /rtx 50/, /ddr5/, /wi-?fi 7/,
+  ];
+  return signals.reduce((s, re) => s + (re.test(t) ? 1 : 0), 0);
+}
 
-  const clearanceLaptops = inStock(clearance).filter(isLaptopDevice).sort(byMarginDesc);
-  const mainRanked = inStock(main).slice().sort(byMarginDesc);
+// hero ordering: latest-tech score desc, tie-break by highest RRP.
+function byLatestTechDesc(a, b) {
+  return latestTechScore(b) - latestTechScore(a) || b.rrpInc - a.rrpInc;
+}
 
+// Pick up to n accessories by margin, preferring distinct types (don't take two
+// keyboards if a mouse/dock/bag is available). Pool is pre-sorted by margin.
+function pickVariedAccessories(pool, n) {
+  const out = [];
+  const usedTypes = new Set();
+  const remaining = pool.slice();
+  while (out.length < n && remaining.length) {
+    let idx = remaining.findIndex((p) => !usedTypes.has(accessoryType(p)));
+    if (idx === -1) idx = 0; // all remaining types already used — take next best
+    const [p] = remaining.splice(idx, 1);
+    out.push(p);
+    usedTypes.add(accessoryType(p));
+  }
+  return out;
+}
+
+// Returns up to FEATURE_COUNT products, each tagged with { role, badge }.
+function selectFeatured(products) {
+  const inStock = products.filter((p) => p.availability > 0 && !isExcludedUnit(p.name));
+  if (inStock.length === 0) return [];
+
+  const laptops = inStock.filter(isLaptopDevice);
   const selected = [];
   const seen = new Set();
-  const take = (p) => {
-    if (!p.code || seen.has(p.code)) return;
+  const take = (p, role, badge) => {
+    if (!p || !p.code || seen.has(p.code)) return false;
     seen.add(p.code);
-    selected.push(p);
+    selected.push({ ...p, role, badge });
+    return true;
   };
 
-  // Hero clearance laptops first, then highest-margin general stock.
-  for (const p of clearanceLaptops) {
-    if (selected.length >= FEATURE_COUNT) break;
-    take(p);
-  }
-  for (const p of mainRanked) {
-    if (selected.length >= FEATURE_COUNT) break;
-    take(p);
+  // 1. Hero laptop — best "latest tech" signal.
+  const hero = laptops.slice().sort(byLatestTechDesc)[0];
+  take(hero, 'hero', 'LATEST TECH');
+
+  // 2. Value laptop — highest margin among remaining laptops.
+  const value = laptops.filter((p) => !seen.has(p.code)).sort(byMarginDesc)[0];
+  take(value, 'value', 'BEST VALUE');
+
+  // 3 & 4. Accessories — high margin, varied type. Fallback: if fewer than two
+  // laptops were found, the unused laptop slots become more accessories.
+  const accSlots = FEATURE_COUNT - selected.length;
+  const accPool = inStock
+    .filter((p) => isAccessory(p) && !seen.has(p.code))
+    .sort(byMarginDesc);
+  for (const p of pickVariedAccessories(accPool, accSlots)) {
+    take(p, 'accessory', 'ADD-ON');
   }
 
   return selected;
@@ -259,6 +459,7 @@ function blurbify(desc) {
 }
 
 function formatExGst(rrpInc) {
+  // Single division: raw inclusive RRPInc → ex-GST. No double-division.
   const ex = round2(rrpInc / 1.1);
   return 'ex GST $' + ex.toLocaleString('en-AU', {
     minimumFractionDigits: 2,
@@ -266,17 +467,113 @@ function formatExGst(rrpInc) {
   });
 }
 
+// Encode spaces (and other unsafe path chars) in an image URL's PATH only, so
+// MMT URLs like ".../Product assets/Media 1.jpg" render in email clients.
+function encodeImageUrl(u) {
+  if (!u) return '';
+  try {
+    const url = new URL(u);
+    url.pathname = url.pathname
+      .split('/')
+      .map((seg) => encodeURIComponent(decodeURIComponent(seg)))
+      .join('/');
+    return url.toString();
+  } catch (_) {
+    return String(u).replace(/ /g, '%20');
+  }
+}
+
+// "Buy Now" mailto with a pre-filled subject + body. NAME and CODE are
+// URL-encoded; newlines become %0D%0A via encodeURIComponent.
+function buyNowUrl(name, code) {
+  const subject = `Purchase enquiry: ${name}`;
+  const body =
+    `Hi Zale IT,\r\n\r\n` +
+    `I'd like to buy: ${name} (model ${code}).\r\n\r\n` +
+    `Please confirm availability and send a quote.\r\n\r\n` +
+    `Thanks`;
+  return `mailto:${SALES_EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+}
+
+// Stable hash of a string → non-negative integer (deterministic variant pick).
+function hashCode(s) {
+  let h = 0;
+  for (let i = 0; i < s.length; i++) {
+    h = (h * 31 + s.charCodeAt(i)) | 0;
+  }
+  return Math.abs(h);
+}
+
+// Fill a story template. Substitutes {tokens} with per-product values (HTML-
+// escaped). Sentences containing a token whose value is empty are DROPPED
+// entirely, so missing specs never leave dangling text. {name}/{brand} are
+// always present, so their sentences always survive.
+function fillStory(template, values) {
+  const sentences = template.split(/(?<=[.!?])\s+/);
+  const kept = [];
+  for (const sentence of sentences) {
+    const tokens = [...sentence.matchAll(/\{(\w+)\}/g)].map((m) => m[1]);
+    if (tokens.some((t) => !values[t])) continue; // drop sentence with missing data
+    kept.push(sentence.replace(/\{(\w+)\}/g, (_, t) => values[t]));
+  }
+  return kept.join(' ');
+}
+
+// Assign a story-variant index to each product. Deterministic by product code,
+// but de-duplicated within the basket so two same-type products don't reuse the
+// same variant (satisfies "stable per product, varied across the basket").
+function assignVariantIndices(products) {
+  const byCode = new Map();
+  const usedByType = new Map();
+  for (const p of products) {
+    const type = storyType(p);
+    const len = (STORY_TEMPLATES[type] || STORY_TEMPLATES.generic).length;
+    const used = usedByType.get(type) || new Set();
+    let idx = hashCode(p.code || p.name) % len;
+    // Bump to the next free variant for this type if already taken in this basket.
+    for (let i = 0; i < len && used.has(idx); i++) idx = (idx + 1) % len;
+    used.add(idx);
+    usedByType.set(type, used);
+    byCode.set(p.code, idx);
+  }
+  return byCode;
+}
+
+function buildStory(p, variantIndex) {
+  const type = storyType(p);
+  const variants = STORY_TEMPLATES[type] || STORY_TEMPLATES.generic;
+  const idx = variantIndex == null ? hashCode(p.code || p.name) % variants.length : variantIndex;
+  const variant = variants[idx];
+  const specs = isLaptopDevice(p) ? parseSpecs(p.name) : {};
+  const values = {
+    name: escapeHtml(p.name),
+    brand: escapeHtml(p.brand),
+    cpu: specs.cpu ? escapeHtml(specs.cpu) : '',
+    ram: specs.ram ? escapeHtml(specs.ram) : '',
+    storage: specs.storage ? escapeHtml(specs.storage) : '',
+    screen: specs.screen ? escapeHtml(specs.screen) : '',
+    specPhrase: escapeHtml(specPhrase(specs)),
+  };
+  return fillStory(variant, values);
+}
+
 // Build the render model. Deliberately excludes yourPrice/margin so they
 // cannot leak into the HTML.
-function toCard(p) {
+function toCard(p, variantIndex) {
+  const laptop = isLaptopDevice(p);
+  const specs = laptop ? parseSpecs(p.name) : {};
   return {
     name: p.name,
     brand: p.brand,
-    category: p.category || p.parentCategory,
-    image: p.image, // populated for clearance; empty for main feed
-    blurb: blurbify(p.description),
+    image: encodeImageUrl(p.image),
+    isLaptop: laptop,
+    story: buildStory(p, variantIndex),
+    spec: laptop ? specLine(specs) : '',
+    blurb: laptop ? '' : blurbify(p.description),
     price: formatExGst(p.rrpInc),
-    badge: p.source === 'clearance' ? 'CLEARANCE' : '',
+    badge: p.badge || '',
+    badgeMuted: p.role === 'accessory',
+    buyUrl: buyNowUrl(p.name, p.code),
   };
 }
 
@@ -291,7 +588,7 @@ function renderImageCell(card) {
       `style="display:block;width:100%;max-width:560px;height:auto;border:0;border-radius:8px;" />`
     );
   }
-  // Clean placeholder for main-feed products that have no image URL.
+  // Clean placeholder for products with no image URL.
   return (
     `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" ` +
     `style="border-collapse:collapse;background:#f1f4f7;border-radius:8px;">` +
@@ -304,14 +601,24 @@ function renderImageCell(card) {
 
 function renderBadge(card) {
   if (!card.badge) return '';
+  const bg = card.badgeMuted ? MUTED_BADGE : ACCENT;
+  const fg = card.badgeMuted ? '#ffffff' : '#0a0f14';
   return (
-    `<span style="display:inline-block;background:${ACCENT};color:#0a0f14;` +
+    `<span style="display:inline-block;background:${bg};color:${fg};` +
     `font-size:11px;font-weight:bold;letter-spacing:1px;padding:4px 10px;` +
     `border-radius:99px;margin-bottom:10px;">${escapeHtml(card.badge)}</span><br/>`
   );
 }
 
+// Story leads the block, then (laptops) the spec line, then ex-GST price, then
+// the Buy Now button.
 function renderProductBlock(card) {
+  const specBlock = card.isLaptop && card.spec
+    ? `<div style="font-size:13px;font-weight:bold;color:${INK};letter-spacing:.2px;margin-bottom:14px;">${escapeHtml(card.spec)}</div>`
+    : '';
+  const blurbBlock = !card.isLaptop && card.blurb
+    ? `<div style="font-size:13px;color:#5a6b7b;line-height:1.5;margin-bottom:14px;">${escapeHtml(card.blurb)}</div>`
+    : '';
   return `
             <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;margin:0 0 14px 0;">
               <tr>
@@ -320,13 +627,15 @@ function renderProductBlock(card) {
                   <div style="height:16px;line-height:16px;font-size:0;">&nbsp;</div>
                   ${renderBadge(card)}
                   <div style="font-size:12px;font-weight:bold;color:${ACCENT};text-transform:uppercase;letter-spacing:.5px;">${escapeHtml(card.brand)}</div>
-                  <div style="font-size:18px;font-weight:bold;color:${INK};margin:4px 0 8px 0;line-height:1.3;">${escapeHtml(card.name)}</div>
-                  <div style="font-size:14px;color:#41566e;line-height:1.5;margin-bottom:14px;">${escapeHtml(card.blurb)}</div>
+                  <div style="font-size:18px;font-weight:bold;color:${INK};margin:4px 0 10px 0;line-height:1.3;">${escapeHtml(card.name)}</div>
+                  <div style="font-size:14px;color:#41566e;line-height:1.6;margin-bottom:14px;">${card.story}</div>
+                  ${specBlock}
+                  ${blurbBlock}
                   <div style="font-size:20px;font-weight:bold;color:${INK};margin-bottom:16px;">${escapeHtml(card.price)}</div>
                   <table role="presentation" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;">
                     <tr>
                       <td align="center" bgcolor="${ACCENT}" style="border-radius:8px;">
-                        <a href="${ENQUIRE_URL}" target="_blank" style="display:inline-block;padding:12px 26px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#0a0f14;text-decoration:none;border-radius:8px;">Enquire&nbsp;&rarr;</a>
+                        <a href="${escapeHtml(card.buyUrl)}" style="display:inline-block;padding:12px 26px;font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;color:#0a0f14;text-decoration:none;border-radius:8px;">Buy Now&nbsp;&rarr;</a>
                       </td>
                     </tr>
                   </table>
@@ -344,7 +653,7 @@ function renderEmail(cards) {
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>This Week's Clearance Picks</title>
+  <title>${escapeHtml(EMAIL_TITLE)}</title>
 </head>
 <body style="margin:0;padding:0;background:#eef1f4;-webkit-text-size-adjust:100%;">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background:#eef1f4;">
@@ -362,8 +671,8 @@ function renderEmail(cards) {
           <!-- Title -->
           <tr>
             <td style="background:#ffffff;padding:28px 24px 8px 24px;font-family:Arial,Helvetica,sans-serif;">
-              <h1 style="margin:0;font-size:26px;line-height:1.25;color:${INK};">This Week's Clearance Picks</h1>
-              <p style="margin:10px 0 0 0;font-size:15px;color:#41566e;line-height:1.5;">Hand-picked, high-value hardware while stocks last — fresh from our distributor clearance.</p>
+              <h1 style="margin:0;font-size:26px;line-height:1.25;color:${INK};">${escapeHtml(EMAIL_TITLE)}</h1>
+              <p style="margin:10px 0 0 0;font-size:15px;color:#41566e;line-height:1.5;">${escapeHtml(EMAIL_SUBHEAD)}</p>
             </td>
           </tr>
 
@@ -422,11 +731,11 @@ function isoDate() {
   return new Date().toISOString().slice(0, 10);
 }
 
-async function createDraftCampaign(html, names) {
+async function createDraftCampaign(html) {
   const apiKey = process.env.BREVO_API_KEY;
   const payload = {
-    name: `Clearance Picks - ${isoDate()}`,
-    subject: "This week's clearance picks - while stocks last",
+    name: `Featured Hardware - ${isoDate()}`,
+    subject: 'This week’s featured hardware from Zale IT',
     sender: SENDER,
     type: 'classic',
     htmlContent: html,
@@ -473,7 +782,7 @@ async function notifyDrake(names, campaignId) {
   const apiKey = process.env.BREVO_API_KEY;
   const featured = names.map((n) => escapeHtml(n)).join(', ');
   const htmlContent =
-    `<p>This week's clearance campaign draft is ready in Brevo. ` +
+    `<p>This week's featured-hardware campaign draft is ready in Brevo. ` +
     `Review the products, tweak if needed, and hit Send.</p>` +
     `<p><strong>Featured:</strong> ${featured}.<br/>` +
     `<strong>Draft campaign ID:</strong> ${campaignId == null ? '(not created — see logs)' : campaignId}.</p>`;
@@ -481,7 +790,7 @@ async function notifyDrake(names, campaignId) {
   const payload = {
     sender: SENDER,
     to: [{ email: NOTIFY_TO }],
-    subject: 'Weekly clearance draft ready to review',
+    subject: 'Weekly featured-hardware draft ready to review',
     htmlContent,
   };
 
@@ -520,16 +829,13 @@ async function notifyDrake(names, campaignId) {
 // ----------------------------------------------------------------------------
 
 async function main() {
-  const [clearance, main] = await Promise.all([
-    loadProducts('clearance'),
-    loadProducts('main'),
-  ]);
+  const products = await loadProducts();
 
-  if (!clearance.length && !main.length) {
-    throw new Error('Both feeds returned no products (unreachable or empty).');
+  if (!products.length) {
+    throw new Error('Main feed returned no products (unreachable or empty).');
   }
 
-  const featured = selectFeatured(clearance, main);
+  const featured = selectFeatured(products);
 
   if (featured.length === 0) {
     console.warn('No in-stock products available this week — skipping draft creation.');
@@ -538,9 +844,13 @@ async function main() {
     return;
   }
 
-  const cards = featured.map(toCard);
+  const variantIndices = assignVariantIndices(featured);
+  const cards = featured.map((p) => toCard(p, variantIndices.get(p.code)));
   const names = featured.map((p) => p.name);
-  console.log(`Selected ${featured.length} product(s): ${names.join(' | ')}`);
+  console.log(
+    `Selected ${featured.length} product(s):\n  ` +
+      featured.map((p) => `[${p.role}] ${p.name}`).join('\n  ')
+  );
 
   const html = renderEmail(cards);
 
@@ -567,7 +877,7 @@ async function main() {
   fs.writeFileSync(OUT_FILE, html, 'utf8');
   console.log(`Wrote ${OUT_FILE} (${html.length} bytes).`);
 
-  const campaignId = await createDraftCampaign(html, names);
+  const campaignId = await createDraftCampaign(html);
   await notifyDrake(names, campaignId);
 }
 
