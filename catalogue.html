@@ -15,6 +15,7 @@
   --nv:#76b900;--nv-bright:#8fd000;--nv-deep:#3d6200;--nv-mid:#4a7a00;
   --ink:#1a1a1a;--ink-soft:#555;--ink-faint:#6e6e6e;--line:#e0e0e0;--light:#f5f5f5;
   --space:#0a0a0a;--surface:#111;--nav-h:64px;--maxw:1240px;
+  --img-h:180px; /* product card image-box height — tune here */
 }
 html{scroll-behavior:smooth;scroll-padding-top:calc(var(--nav-h) + 70px);-webkit-text-size-adjust:100%}
 body{font-family:'Outfit',system-ui,sans-serif;color:var(--ink);background:#fff;font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -116,8 +117,10 @@ img,svg{display:block;max-width:100%}
 .pc-stock::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
 .pc-stock.in{color:#3d6200;background:#eaf6d4;border:1px solid rgba(118,185,0,.4)}
 .pc-stock.eta{color:#a65a00;background:#fbeede;border:1px solid rgba(214,122,0,.4)}
-.pc-img{aspect-ratio:16/10;background:var(--light);border:1px solid var(--line);margin-bottom:14px;overflow:hidden;display:grid;place-items:center}
-.pc-img img{width:100%;height:100%;object-fit:contain}
+/* Fixed-height image box (--img-h) shared by ALL three states (real image,
+   favicon chip, text box) so every card is the same height. */
+.pc-img{height:var(--img-h);background:#fff;border:1px solid var(--line);margin-bottom:14px;overflow:hidden;display:grid;place-items:center;place-content:center;padding:12px;box-sizing:border-box}
+.pc-img img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain}
 .pc-img-ph{color:var(--ink-faint)}
 .pc-img-ph svg{width:34px;height:34px;opacity:.5}
 .pc-imgchip{flex-direction:column;gap:10px}
