@@ -52,12 +52,31 @@ const ACCENT = '#76b900'; // site green
 const INK = '#0e1b2a'; // dark header
 const MUTED_BADGE = '#41566e'; // accessory "ADD-ON" badge
 
-// Email title — placeholder for Drake to pick. Candidates:
-//   "This Week's Featured Hardware" | "Featured Laptops & Gear"
-//   | "This Week's Laptop Picks & Add-Ons"
-const EMAIL_TITLE = "This Week's Featured Hardware";
+// --- Easily-editable copy (named constants) --------------------------------
+
+// Email title shown in the header inside the email.
+const EMAIL_TITLE = 'Laptops worth a look this week';
+
+// Subhead under the title.
 const EMAIL_SUBHEAD =
-  'A curated pick of laptops and the gear that goes with them — chosen by our team.';
+  'A curated pick of laptops and the gear that goes with them, chosen by our team.';
+
+// Honest "special pricing" framing for the intro — NOT a fake discount.
+// Deliberately avoids "% off" / "sale" / "was/now" (those imply markdowns we
+// aren't showing and trip spam filters). We only convey that pricing is
+// competitive because it's sourced through us as a reseller.
+const SPECIAL_PRICING_LINE =
+  'Sharp, competitive pricing through Zale IT — sourced direct so you don’t overpay.';
+
+// Subject-line pool — rotated weekly (deterministic by ISO week number, so it's
+// stable within a week and varies across weeks). Index = isoWeek % length.
+const SUBJECT_LINES = [
+  'Thinking about a new laptop?',
+  'Need a laptop that keeps up?',
+  'Is it time to upgrade the laptops?',
+  'Looking for your next work laptop?',
+  'A few laptops worth a look this week',
+];
 
 const OUT_FILE = path.join(__dirname, '..', 'campaign-clearance.html');
 
@@ -542,8 +561,8 @@ function assignVariantIndices(products) {
 function buildStory(p, variantIndex) {
   const type = storyType(p);
   const variants = STORY_TEMPLATES[type] || STORY_TEMPLATES.generic;
-  const idx = variantIndex == null ? hashCode(p.code || p.name) % variants.length : variantIndex;
-  const variant = variants[idx];
+  const base = variantIndex == null ? hashCode(p.code || p.name) : variantIndex;
+  const variant = variants[((base % variants.length) + variants.length) % variants.length];
   const specs = isLaptopDevice(p) ? parseSpecs(p.name) : {};
   const values = {
     name: escapeHtml(p.name),
@@ -644,6 +663,12 @@ function renderProductBlock(card) {
             </table>`;
 }
 
+// ============================================================================
+// BOUNDARY: renderEmail() produces the CUSTOMER-FACING campaign HTML (sent via
+// /v3/emailCampaigns). It must NEVER contain cost data — no YourPrice, margin,
+// profit, or trade cost. Only public RRP (ex-GST) and product copy. The
+// internal margin summary lives solely in buildNotificationHtml() below.
+// ============================================================================
 function renderEmail(cards) {
   const blocks = cards.map(renderProductBlock).join('\n');
   const year = new Date().getFullYear();
@@ -673,6 +698,7 @@ function renderEmail(cards) {
             <td style="background:#ffffff;padding:28px 24px 8px 24px;font-family:Arial,Helvetica,sans-serif;">
               <h1 style="margin:0;font-size:26px;line-height:1.25;color:${INK};">${escapeHtml(EMAIL_TITLE)}</h1>
               <p style="margin:10px 0 0 0;font-size:15px;color:#41566e;line-height:1.5;">${escapeHtml(EMAIL_SUBHEAD)}</p>
+              <p style="margin:8px 0 0 0;font-size:14px;color:${INK};font-weight:bold;line-height:1.5;">${escapeHtml(SPECIAL_PRICING_LINE)}</p>
             </td>
           </tr>
 
@@ -731,11 +757,27 @@ function isoDate() {
   return new Date().toISOString().slice(0, 10);
 }
 
+// ISO 8601 week number (1-53). Used to rotate the subject line deterministically.
+function isoWeekNumber(date = new Date()) {
+  const d = new Date(Date.UTC(date.getFullYear(), date.getMonth(), date.getDate()));
+  const dayNum = (d.getUTCDay() + 6) % 7; // Mon=0 … Sun=6
+  d.setUTCDate(d.getUTCDate() - dayNum + 3); // shift to the week's Thursday
+  const firstThursday = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+  const fdDayNum = (firstThursday.getUTCDay() + 6) % 7;
+  firstThursday.setUTCDate(firstThursday.getUTCDate() - fdDayNum + 3);
+  return 1 + Math.round((d - firstThursday) / (7 * 24 * 3600 * 1000));
+}
+
+// Stable-within-week, varied-across-weeks subject line.
+function weeklySubject(date = new Date()) {
+  return SUBJECT_LINES[isoWeekNumber(date) % SUBJECT_LINES.length];
+}
+
 async function createDraftCampaign(html) {
   const apiKey = process.env.BREVO_API_KEY;
   const payload = {
     name: `Featured Hardware - ${isoDate()}`,
-    subject: 'This week’s featured hardware from Zale IT',
+    subject: weeklySubject(),
     sender: SENDER,
     type: 'classic',
     htmlContent: html,
@@ -778,14 +820,106 @@ async function createDraftCampaign(html) {
   return id;
 }
 
-async function notifyDrake(names, campaignId) {
-  const apiKey = process.env.BREVO_API_KEY;
-  const featured = names.map((n) => escapeHtml(n)).join(', ');
-  const htmlContent =
+// ============================================================================
+// BOUNDARY: buildNotificationHtml() is INTERNAL — it is sent ONLY to NOTIFY_TO
+// (support@) via /v3/smtp/email. Cost data (YourPrice / trade cost / margin /
+// profit) is permitted HERE and ONLY here. It must never reach the customer
+// campaign HTML (renderEmail) or any committed file or log line.
+// ============================================================================
+function buildNotificationHtml(featured, campaignId) {
+  const idLine =
+    `<p style="margin:0 0 16px 0;"><strong>Draft campaign ID:</strong> ` +
+    `${campaignId == null ? '(not created — see logs)' : escapeHtml(String(campaignId))}.</p>`;
+
+  if (!featured.length) {
+    return (
+      `<div style="font-family:Arial,Helvetica,sans-serif;color:#0e1b2a;">` +
+      `<p>No in-stock products to feature this week — no draft was created.</p>${idLine}</div>`
+    );
+  }
+
+  const roleLabel = {
+    hero: 'Latest tech laptop',
+    value: 'Highest-margin laptop',
+    accessory: 'High-margin add-on',
+  };
+  const money = (n) =>
+    '$' + round2(n).toLocaleString('en-AU', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+  const pct = (m) => `${(m * 100).toFixed(1)}%`;
+
+  const th =
+    'style="text-align:left;padding:8px 10px;border-bottom:2px solid #0e1b2a;font-size:13px;"';
+  const thR = th.replace('text-align:left', 'text-align:right');
+  const td = 'style="padding:8px 10px;border-bottom:1px solid #e4e9ef;font-size:13px;"';
+  const tdR = td.replace('padding:8px 10px;', 'padding:8px 10px;text-align:right;');
+
+  let totRrpEx = 0;
+  let totProfit = 0;
+  let marginSum = 0;
+  const rows = featured
+    .map((p) => {
+      const tradeEx = round2(p.yourPrice / 1.1); // YourPrice ex-GST
+      const rrpEx = round2(p.rrpInc / 1.1); // RRP ex-GST
+      const profit = round2(rrpEx - tradeEx); // profit per unit ex-GST
+      const margin = p.rrpInc > 0 ? (p.rrpInc - p.yourPrice) / p.rrpInc : 0;
+      totRrpEx += rrpEx;
+      totProfit += profit;
+      marginSum += margin;
+      return (
+        `<tr>` +
+        `<td ${td}>${escapeHtml(p.name)}</td>` +
+        `<td ${td}>${roleLabel[p.role] || '—'}</td>` +
+        `<td ${tdR}>${money(tradeEx)}</td>` +
+        `<td ${tdR}>${money(rrpEx)}</td>` +
+        `<td ${tdR}>${pct(margin)}</td>` +
+        `<td ${tdR}>${money(profit)}</td>` +
+        `</tr>`
+      );
+    })
+    .join('');
+
+  const avgMargin = featured.length ? marginSum / featured.length : 0;
+  const sumTd =
+    'style="padding:10px;border-top:2px solid #0e1b2a;font-size:13px;font-weight:bold;"';
+  const sumTdR = sumTd.replace('padding:10px;', 'padding:10px;text-align:right;');
+  const summaryRow =
+    `<tr>` +
+    `<td ${sumTd} colspan="2">Totals (one of each sells)</td>` +
+    `<td ${sumTdR}>—</td>` +
+    `<td ${sumTdR}>${money(round2(totRrpEx))}</td>` +
+    `<td ${sumTdR}>${pct(avgMargin)}</td>` +
+    `<td ${sumTdR}>${money(round2(totProfit))}</td>` +
+    `</tr>`;
+
+  const table =
+    `<table role="presentation" cellpadding="0" cellspacing="0" border="0" ` +
+    `style="border-collapse:collapse;width:100%;max-width:760px;font-family:Arial,Helvetica,sans-serif;color:#0e1b2a;">` +
+    `<thead><tr>` +
+    `<th ${th}>Product</th>` +
+    `<th ${th}>Why picked</th>` +
+    `<th ${thR}>Trade cost (ex GST)</th>` +
+    `<th ${thR}>RRP (ex GST)</th>` +
+    `<th ${thR}>Margin %</th>` +
+    `<th ${thR}>Profit / unit (ex GST)</th>` +
+    `</tr></thead>` +
+    `<tbody>${rows}${summaryRow}</tbody></table>`;
+
+  return (
+    `<div style="font-family:Arial,Helvetica,sans-serif;color:#0e1b2a;">` +
     `<p>This week's featured-hardware campaign draft is ready in Brevo. ` +
     `Review the products, tweak if needed, and hit Send.</p>` +
-    `<p><strong>Featured:</strong> ${featured}.<br/>` +
-    `<strong>Draft campaign ID:</strong> ${campaignId == null ? '(not created — see logs)' : campaignId}.</p>`;
+    idLine +
+    `<h3 style="margin:0 0 6px 0;font-size:15px;">Margin summary — INTERNAL, do not forward</h3>` +
+    table +
+    `<p style="font-size:12px;color:#6b7c8c;margin-top:14px;">` +
+    `Trade cost, margin and profit are internal only — they never appear in the customer email.</p>` +
+    `</div>`
+  );
+}
+
+async function notifyDrake(featured, campaignId) {
+  const apiKey = process.env.BREVO_API_KEY;
+  const htmlContent = buildNotificationHtml(featured, campaignId);
 
   const payload = {
     sender: SENDER,
@@ -796,7 +930,11 @@ async function notifyDrake(names, campaignId) {
 
   if (!apiKey) {
     console.warn('BREVO_API_KEY not set — skipping notification email.');
-    console.log('Would POST /v3/smtp/email with:', JSON.stringify(payload, null, 2));
+    // NOTE: do not log htmlContent — it contains internal margin/cost data.
+    console.log(
+      `Would POST /v3/smtp/email to ${NOTIFY_TO} · subject "${payload.subject}" ` +
+        `· htmlContent ${htmlContent.length} bytes (redacted — internal margin data).`
+    );
     return;
   }
 
@@ -840,13 +978,12 @@ async function main() {
   if (featured.length === 0) {
     console.warn('No in-stock products available this week — skipping draft creation.');
     // Notify Drake there was nothing to feature (no draft, no file overwrite).
-    await notifyDrake(['(none — no in-stock products this week)'], null);
+    await notifyDrake([], null);
     return;
   }
 
   const variantIndices = assignVariantIndices(featured);
   const cards = featured.map((p) => toCard(p, variantIndices.get(p.code)));
-  const names = featured.map((p) => p.name);
   console.log(
     `Selected ${featured.length} product(s):\n  ` +
       featured.map((p) => `[${p.role}] ${p.name}`).join('\n  ')
@@ -878,10 +1015,26 @@ async function main() {
   console.log(`Wrote ${OUT_FILE} (${html.length} bytes).`);
 
   const campaignId = await createDraftCampaign(html);
-  await notifyDrake(names, campaignId);
+  // The notification carries the INTERNAL margin summary (cost data allowed
+  // here only) — pass the full featured records, not just names.
+  await notifyDrake(featured, campaignId);
 }
 
-main().catch((err) => {
-  console.error('build-clearance-campaign failed:', err.message);
-  process.exit(1);
-});
+if (require.main === module) {
+  main().catch((err) => {
+    console.error('build-clearance-campaign failed:', err.message);
+    process.exit(1);
+  });
+}
+
+// Exported for tests (no cost data is exported — only pure functions).
+module.exports = {
+  selectFeatured,
+  assignVariantIndices,
+  toCard,
+  renderEmail,
+  buildNotificationHtml,
+  weeklySubject,
+  isoWeekNumber,
+  SUBJECT_LINES,
+};
