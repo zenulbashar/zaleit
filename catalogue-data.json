@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-06-21T08:57:54+10:00",
-  "count": 2021,
+  "lastUpdated": "2026-06-22T08:59:38+10:00",
+  "count": 2019,
   "products": [
     {
       "code": "AWMS-DW6-S+B",
@@ -1695,20 +1695,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14KM/4R009AA.jpg",
       "description": "Get everything you want in wireless keyboard and mouse combo  comfort, productivity, reliability and style. Customize the functions of 20+ keys 1 and enjoy precise mouse tracking."
-    },
-    {
-      "code": "695J5AA",
-      "sku": "",
-      "name": "HP 695J5AA 965 4K Streaming Webcam",
-      "brand": "HP",
-      "category": "Components",
-      "subCategory": "USB Web Cams",
-      "rrp": 359.09,
-      "rrpInc": 395,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/26/695J5AA.jpg",
-      "description": "The HP 965 4K Streaming Webcam is a high-quality webcam that is perfect for streamers, YouTubers, and anyone else who wants to look their best on camera without having to spend a fortune. It features a 4K sensor that captures sharp, detailed images, even in low light. It also has a wide field of view, so you can fit more of your background in the frame. The HP 965 Webcam is also easy to use. It simply plugs into your computer's USB port, and you're ready to start streaming. It's also compatible with a variety of streaming platforms, so you can use it with your favorite platform."
     },
     {
       "code": "9VA80AA",
@@ -5768,20 +5754,6 @@
       "stock": 11,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/HP ProDesk 4 Mini G1i Desktop AI PC.png",
-      "description": "The HP ProDesk 4 Mini G1i Desktop AI PC delivers commercial-grade performance, security, and flexible deployment capabilities, with just a single-cable, for businesses of all sizes. This reliable, one-liter PC provides the power to handle mainstream enterprise and SMBs with a powerful Intel® CPU[2] featuring a 13 TOPS NPU.[5] See where AI can take you!"
-    },
-    {
-      "code": "C3FP8PT",
-      "sku": "",
-      "name": "HP ProDesk 4 Mini G1i U7-265T 16GB",
-      "brand": "HP",
-      "category": "Computers",
-      "subCategory": "Desktop Computers",
-      "rrp": 2467.82,
-      "rrpInc": 2714.6,
-      "stock": 3,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Images/Product Images/1cd460fe-68a1-48ff-9df8-8d3cc099ae8d 1.png",
       "description": "The HP ProDesk 4 Mini G1i Desktop AI PC delivers commercial-grade performance, security, and flexible deployment capabilities, with just a single-cable, for businesses of all sizes. This reliable, one-liter PC provides the power to handle mainstream enterprise and SMBs with a powerful Intel® CPU[2] featuring a 13 TOPS NPU.[5] See where AI can take you!"
     },
     {
@@ -22145,7 +22117,7 @@
       "subCategory": "Network - NICs & Adaptors",
       "rrp": 63.59,
       "rrpInc": 69.95,
-      "stock": 10,
+      "stock": 9,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16NA/DUB-E255.jpg",
       "description": "Add lightning-fast multi-Gigabit wired connectivity to your desktop or laptop directly through your USB-C port"
@@ -22271,7 +22243,7 @@
       "subCategory": "Network - Router",
       "rrp": 362.73,
       "rrpInc": 399,
-      "stock": 44,
+      "stock": 41,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16R/NF20MESH2_B.jpg",
       "description": "The CloudMesh Gateway (NF20MESH) works wirelessly with the CloudMesh Satellite (NS-02), forming a single powerful Whole Home Wi-Fi Mesh network with all the control and settings centralized on the gateway. The gateway becomes the Wi-Fi Mesh master node and the Wi-Fi client device roams seamlessly between satellites and the gateway.\r\nNF20MESH: NetComm NF20MESH CloudMesh Wi-Fi 6 VDSL2/ADSL2 Networking Gateway with VoIP\r\nNS-02: NetComm CloudMesh WiFi6 Satellite"
