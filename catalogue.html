@@ -9,6 +9,25 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="canonical" href="https://zaleit.com.au/catalogue.html">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Zale IT">
+<meta property="og:locale" content="en_AU">
+<meta property="og:url" content="https://zaleit.com.au/catalogue.html">
+<meta property="og:title" content="Hardware Catalogue · Zale IT — Brisbane IT &amp; Cybersecurity">
+<meta property="og:description" content="Zale IT hardware catalogue — laptops, desktops, networking, UPS, monitors, accessories and software (prices ex GST) for Australian business. Brisbane-based IT support.">
+<meta property="og:image" content="https://zaleit.com.au/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Zale IT — IT Hardware, Solutions & Support · Brisbane, Australia">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Hardware Catalogue · Zale IT — Brisbane IT &amp; Cybersecurity">
+<meta name="twitter:description" content="Zale IT hardware catalogue — laptops, desktops, networking, UPS, monitors, accessories and software (prices ex GST) for Australian business. Brisbane-based IT support.">
+<meta name="twitter:image" content="https://zaleit.com.au/og-image.png">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
@@ -89,8 +108,12 @@ img,svg{display:block;max-width:100%}
 .cat-title{font-weight:900;font-size:clamp(1.5rem,3.2vw,2.1rem);text-transform:uppercase;color:var(--ink);margin:14px 0 8px}
 .cat-sub{color:var(--ink-soft);max-width:64ch;font-size:1rem}
 
-.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
-.pcard{background:#fff;padding:22px 22px 18px;display:flex;flex-direction:column;position:relative;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,z-index .01s;overflow:hidden}
+/* min-height reserves the grid area so it doesn't collapse/jump between the
+   initial render and the feed JSON populating (CLS mitigation). */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);min-height:520px}
+/* min-height keeps every card a consistent height so the grid layout stays
+   stable as cards re-render/re-sort when the feed arrives (CLS mitigation). */
+.pcard{background:#fff;padding:22px 22px 18px;display:flex;flex-direction:column;position:relative;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,z-index .01s;overflow:hidden;min-height:430px}
 .cat:nth-child(even) .pcard{background:#fff}
 .pcard::after{content:"";position:absolute;top:0;left:-70%;width:55%;height:100%;z-index:2;pointer-events:none;background:linear-gradient(105deg,transparent 40%,rgba(118,185,0,.13) 50%,transparent 60%);transform:skewX(-12deg);transition:left .6s cubic-bezier(.2,.8,.2,1)}
 .pcard:hover{transform:translateY(-4px);z-index:5;box-shadow:0 18px 44px rgba(0,0,0,.14),0 0 0 1px rgba(118,185,0,.5),0 0 26px rgba(118,185,0,.22)}
@@ -110,8 +133,10 @@ img,svg{display:block;max-width:100%}
 .no-results{display:none;text-align:center;padding:60px 0;color:var(--ink-faint);font-size:1.05rem}
 
 /* LIVE STOCK FEED */
-.last-updated{margin-top:14px;display:none;align-items:center;gap:8px;font-size:.8rem;color:rgba(255,255,255,.6)}
-.last-updated.show{display:inline-flex}
+/* Always reserve the line's vertical space (visibility, not display) so revealing
+   the timestamp after the feed loads causes no header shift / page jump (CLS). */
+.last-updated{margin-top:14px;display:inline-flex;align-items:center;gap:8px;font-size:.8rem;color:rgba(255,255,255,.6);visibility:hidden;min-height:1.2em}
+.last-updated.show{visibility:visible}
 .last-updated b{color:#c2e88f;font-weight:600}
 .pc-stock{display:inline-flex;align-items:center;gap:6px;align-self:flex-start;font-size:.68rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;margin-bottom:12px;position:relative;z-index:3}
 .pc-stock::before{content:"";width:7px;height:7px;border-radius:50%;background:currentColor}
@@ -375,14 +400,18 @@ img,svg{display:block;max-width:100%}
     cell.className='pc-img pc-imgchip';cell.innerHTML='';
     var ic=document.createElement('img');
     ic.src='https://www.google.com/s2/favicons?domain='+dom+'&sz=128';
-    ic.alt=item.brand;ic.loading='lazy';ic.referrerPolicy='no-referrer';
+    ic.alt=item.brand;ic.loading='lazy';ic.decoding='async';ic.width=48;ic.height=48;ic.referrerPolicy='no-referrer';
     ic.onerror=function(){fallbackText(cell,item);};
     var lbl=document.createElement('div');lbl.className='pc-imgbrand';lbl.textContent=item.brand;
     cell.appendChild(ic);cell.appendChild(lbl);
   }
   function buildImageCell(item){
     var cell=document.createElement('div');cell.className='pc-img';
-    if(item.image){var img=document.createElement('img');img.src=encodeImageUrl(item.image);img.alt=item.name;img.loading='lazy';img.onerror=function(){fallbackBrand(cell,item);};cell.appendChild(img);}
+    if(item.image){var img=document.createElement('img');img.src=encodeImageUrl(item.image);img.alt=item.name;img.loading='lazy';img.decoding='async';
+      /* Reserve intrinsic space inside the fixed .pc-img box before the image
+         downloads (CSS object-fit:contain keeps aspect; prevents image-load CLS). */
+      img.width=200;img.height=156;
+      img.onerror=function(){fallbackBrand(cell,item);};cell.appendChild(img);}
     else{fallbackBrand(cell,item);}
     return cell;
   }
