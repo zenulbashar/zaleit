@@ -457,18 +457,45 @@ img,svg{display:block;max-width:100%}
       tabBar.appendChild(b);
     });
   }
+  /* ===== lazy render (batched) — keeps initial DOM light regardless of
+     tab/result size; more cards mount on scroll via IntersectionObserver. ===== */
+  var BATCH=48,currentList=[],rendered=0;
+  /* Sentinel lives as a SIBLING after the grid so grid.innerHTML='' never
+     destroys it. aria-hidden + non-focusable: no focus trap, footer stays
+     reachable once batches load. */
+  var sentinel=document.createElement('div');
+  sentinel.id='catSentinel';sentinel.setAttribute('aria-hidden','true');
+  sentinel.style.cssText='height:1px';
+  if(grid&&grid.parentNode)grid.parentNode.insertBefore(sentinel,grid.nextSibling);
+  var io=('IntersectionObserver' in window)?new IntersectionObserver(function(entries){
+    for(var i=0;i<entries.length;i++)if(entries[i].isIntersecting){appendBatch();break;}
+  },{rootMargin:'800px 0px'}):null;
+  function appendBatch(){
+    var end=io?Math.min(rendered+BATCH,currentList.length):currentList.length;
+    var frag=document.createDocumentFragment();
+    for(var i=rendered;i<end;i++)frag.appendChild(buildCard(currentList[i]));
+    grid.appendChild(frag);rendered=end;
+    if(io){
+      if(rendered<currentList.length){
+        sentinel.style.display='';
+        /* re-observe to re-check intersection (fills short lists/viewport) */
+        io.unobserve(sentinel);io.observe(sentinel);
+      }else{
+        sentinel.style.display='none';io.unobserve(sentinel);
+      }
+    }
+  }
   function renderGrid(){
     var q=input?lc(input.value):'';
-    var list=q?ALL.filter(function(it){return lc(it.name+' '+it.brand+' '+(it.model||'')).indexOf(q)!==-1;}):ALL.filter(function(it){return it.tab===activeTab;});
-    grid.innerHTML='';
-    var frag=document.createDocumentFragment();
-    list.forEach(function(it){frag.appendChild(buildCard(it));});
-    grid.appendChild(frag);
-    noResults.style.display=list.length?'none':'block';
-    if(q){countEl.textContent='Search: '+list.length+' result'+(list.length===1?'':'s')+' across all categories';tabBar.style.opacity='.45';if(cresult)cresult.textContent=list.length+' found';}
-    else{var t=null;TABS.forEach(function(x){if(x.id===activeTab)t=x;});countEl.textContent=(t?t.label:'')+' — '+list.length+' product'+(list.length===1?'':'s');tabBar.style.opacity='';if(cresult)cresult.textContent='';}
+    currentList=q?ALL.filter(function(it){return lc(it.name+' '+it.brand+' '+(it.model||'')).indexOf(q)!==-1;}):ALL.filter(function(it){return it.tab===activeTab;});
+    grid.innerHTML='';rendered=0;
+    noResults.style.display=currentList.length?'none':'block';
+    if(q){countEl.textContent='Search: '+currentList.length+' result'+(currentList.length===1?'':'s')+' across all categories';tabBar.style.opacity='.45';if(cresult)cresult.textContent=currentList.length+' found';}
+    else{var t=null;TABS.forEach(function(x){if(x.id===activeTab)t=x;});countEl.textContent=(t?t.label:'')+' — '+currentList.length+' product'+(currentList.length===1?'':'s');tabBar.style.opacity='';if(cresult)cresult.textContent='';}
+    appendBatch();
   }
-  if(input)input.addEventListener('input',renderGrid);
+  var searchTimer;
+  if(input)input.addEventListener('input',function(){clearTimeout(searchTimer);searchTimer=setTimeout(renderGrid,180);});
   function rebuild(feedProducts){
     ALL=[];
     CURATED.forEach(function(c){var it=normCurated(c);if(it)ALL.push(it);});
@@ -482,7 +509,10 @@ img,svg{display:block;max-width:100%}
     if(v&&box){v.textContent=txt;box.classList.add('show');}
   }
   rebuild([]);
-  fetch('catalogue-data.json',{cache:'no-cache'})
+  /* Default cache mode — let the browser honour the HTTP Cache-Control set in
+     /_headers (max-age + stale-while-revalidate) instead of revalidating every
+     visit. Daily feed updates still propagate within ~1h via revalidation. */
+  fetch('catalogue-data.json')
     .then(function(r){if(!r.ok)throw new Error('HTTP '+r.status);return r.json();})
     .then(function(data){showLastUpdated(data&&data.lastUpdated);rebuild((data&&data.products)||[]);})
     .catch(function(err){console.warn('Stock feed unavailable:',err.message);});

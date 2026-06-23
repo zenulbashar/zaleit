@@ -1,0 +1,5 @@
+# Cloudflare Pages headers. Path-scoped rules only — does not affect other routes.
+# The product feed updates ~once daily; cache it so repeat visits are instant
+# while still picking up changes within the hour (revalidation + SWR).
+/catalogue-data.json
+  Cache-Control: public, max-age=3600, stale-while-revalidate=86400
