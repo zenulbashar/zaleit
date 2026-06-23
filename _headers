@@ -1,5 +1,30 @@
-# Cloudflare Pages headers. Path-scoped rules only — does not affect other routes.
-# The product feed updates ~once daily; cache it so repeat visits are instant
-# while still picking up changes within the hour (revalidation + SWR).
+# Cloudflare Pages headers.
+# Rules apply in order; for a given header the LAST matching rule wins.
+# Static assets (e.g. /assets/*, /og-image.png, images) are intentionally NOT
+# listed here, so they keep Pages' default caching — only HTML pages are forced
+# to revalidate, and the data feed keeps its own short-cache rule below.
+
+# --- HTML pages: always revalidate -----------------------------------------
+# max-age=0 + must-revalidate means the browser/edge may store the page but
+# MUST re-check it against the origin (via ETag/If-None-Match) before reuse.
+# A 304 is returned when unchanged (cheap); the correct body is returned when
+# it changed. This prevents a stale/cached page (e.g. the homepage) from being
+# served on reload for a different URL such as /catalogue.html.
+/
+  Cache-Control: public, max-age=0, must-revalidate
+/index.html
+  Cache-Control: public, max-age=0, must-revalidate
+/catalogue
+  Cache-Control: public, max-age=0, must-revalidate
+/catalogue.html
+  Cache-Control: public, max-age=0, must-revalidate
+/category/*
+  Cache-Control: public, max-age=0, must-revalidate
+/product/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+# --- Product feed (data, not a page) ----------------------------------------
+# Short cache + stale-while-revalidate: repeat visits are instant while the
+# daily stock update still propagates within ~1h. (Unchanged from before.)
 /catalogue-data.json
   Cache-Control: public, max-age=3600, stale-while-revalidate=86400
