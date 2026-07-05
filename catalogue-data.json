@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-07-05T08:45:49+10:00",
+  "lastUpdated": "2026-07-06T08:50:29+10:00",
   "count": 1982,
   "products": [
     {
@@ -5443,7 +5443,7 @@
       "subCategory": "Notebooks",
       "rrp": 1627.82,
       "rrpInc": 1790.6,
-      "stock": 39,
+      "stock": 38,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/C2BP3AT.jpg",
       "description": "The HP ProBook 4 G1i 16-inch Notebook PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[5], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] and long battery life, this feature-rich PC is future-ready for long-term productivity and helps enable hybrid work."
@@ -5611,7 +5611,7 @@
       "subCategory": "Notebooks",
       "rrp": 1907.82,
       "rrpInc": 2098.6,
-      "stock": 40,
+      "stock": 39,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/A45SSPT.jpg",
       "description": "The HP ProBook 460 16-inch laptop provides growing businesses with commercial-grade performance, multi-layered endpoint security, and durability in an easily upgradeable design. Powered by the latest Intel processor and long battery life, this feature-rich PC is well-equipped for long-term productivity and helps enable hybrid work."
@@ -7165,7 +7165,7 @@
       "subCategory": "Charging Cabinets",
       "rrp": 1253.64,
       "rrpInc": 1379,
-      "stock": 16,
+      "stock": 14,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15D/LYTE10SDAUS.jpg",
       "description": "The 'Lyte 10 Single Door ' charges 10 devices up to 16\" screen size - Chromebooks, laptops and tablets (including protective cases), POS devices, tooling and other chargeable equipment. It features individual shelf compartments to store devices horizontally within a compact footprint. The LapCabby Lyte Mobile offers fast charging and ensures devices are ready to go when you need them. It offers silent charging with a unique ventilation system and no noisy fan. Maximum security & safety is guaranteed with a lock that includes a 7-pin activation system and separate lockable power compartment. It's built to last; with high density materials, components and construction"
@@ -7501,7 +7501,7 @@
       "subCategory": "Notebooks",
       "rrp": 1953.64,
       "rrpInc": 2149,
-      "stock": 0,
+      "stock": 20,
       "eta": "2026-06-29",
       "image": "https://www.mmt.com.au/Files/Uploads/ThinkBook_14_G9_IRL_CT1_03.jpg",
       "description": ""
@@ -11953,7 +11953,7 @@
       "subCategory": "Monitors",
       "rrp": 1317.27,
       "rrpInc": 1449,
-      "stock": 10,
+      "stock": 9,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/SW272Q.jpg",
       "description": "Certified with TUV Rheinland Reflection-Free Certifications, SW272Q utilises fine-coating panel to eliminate glare and reflection for simulated paper-texture visual experiences on screen under different types of ambient lighting to get perfect results."
@@ -26499,7 +26499,7 @@
       "subCategory": "Warranty - Laptop",
       "rrp": 151.45,
       "rrpInc": 166.6,
-      "stock": 472,
+      "stock": 471,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/35L/U86DVE.jpg",
       "description": "Get back to work quickly with HP Premium Support, which resolves most issues remotely during standard business hours. If a physical repair is needed, an HP expert is dispatched to the employee’s location, with expedited resolution."
