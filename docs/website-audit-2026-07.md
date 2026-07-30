@@ -135,7 +135,7 @@ The homepage's `#services` section markets *service lines* — "Email & Microsof
 ```js
 const FEED_URL =
   'https://www.mmt.com.au/dwapi/Feeds/GetFeedOutput?Id=2&lt=s&ft=xml' +
-  '&tk=2f8788cc-74f8-439c-b950-60f5c31720fb' +
+  '&tk=2f8788cc-****-****-****-************' +   // ← redacted in this report; live value is in the file
   '&af[]=ai&af[]=dp&…';
 ```
 The `tk` parameter is a live access token for the MMT distributor feed, hardcoded and committed. It is present in the full git history, so removing it from `HEAD` does not revoke it.
