@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-08-02T08:43:46+10:00",
+  "lastUpdated": "2026-08-03T08:45:08+10:00",
   "count": 2017,
   "products": [
     {
@@ -1691,7 +1691,7 @@
       "subCategory": "Memory",
       "rrp": 383.64,
       "rrpInc": 422,
-      "stock": 11,
+      "stock": 6,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/05/5S4C4AA.jpg",
       "description": "HP 16GB DDR5 4800 1x16GB Sodimm Memory 5S4C4AA"
@@ -4477,7 +4477,7 @@
       "subCategory": "Notebooks",
       "rrp": 4275.09,
       "rrpInc": 4702.6,
-      "stock": 12,
+      "stock": 11,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BQ4E4PT.jpg",
       "description": "Equip your high-performing teams with an AI-enhanced PC[3] that offers the power, security, and collaboration tools essential for both office and hybrid work environments. The HP EliteBook 8 G1i 14 inch AI PC efficiently meets the requirements of multitasking teams worldwide."
@@ -5877,7 +5877,7 @@
       "subCategory": "Notebooks",
       "rrp": 2106.5,
       "rrpInc": 2317.15,
-      "stock": 46,
+      "stock": 43,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/A45SVPT.jpg",
       "description": "The HP ProBook 460 16-inch laptop provides growing businesses with commercial-grade performance, multi-layered endpoint security, and durability in an easily upgradeable design. Powered by the latest Intel processor and long battery life, this feature-rich PC is well-equipped for long-term productivity and helps enable hybrid work."
@@ -7655,7 +7655,7 @@
       "subCategory": "Notebooks",
       "rrp": 2659.09,
       "rrpInc": 2925,
-      "stock": 10,
+      "stock": 7,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/21SQ0005AU.jpg",
       "description": "The Lenovo ThinkBook 14 2-in-1 G5 is a sleek and versatile convertible laptop designed for professionals. It features an Intel Core U5-225U processor, 16GB RAM, and a 512GB SSD for efficient multitasking and storage. The 14\" WUXGA touchscreen display enhances productivity and creativity, while Windows 11 Pro ensures a modern and secure operating system. With a 1-year onsite warranty, it offers reliability and performance for business users. Its compact design and robust features make it ideal for professionals seeking flexibility and power."
@@ -9587,7 +9587,7 @@
       "subCategory": "Notebook Accessories",
       "rrp": 190,
       "rrpInc": 209,
-      "stock": 30,
+      "stock": 26,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/CF-VZSU1AW.png",
       "description": "Compatible with TOUGHBOOK 33"
@@ -20899,7 +20899,7 @@
       "subCategory": "Network - Switches",
       "rrp": 272.68,
       "rrpInc": 299.95,
-      "stock": 30,
+      "stock": 29,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16S/DGS-F1010P-E.jpg",
       "description": "DGS-F1010P-E is 10 port 1Gps with 8 PoE port switch that offers 8 10/100/1000 Mbps PoE ports, 2 10/100/1000Mbps uplink ports, auto detection and identification IEEE802.3af/at standard PD device, then carry power to it. Therefore, do not worry it will destroy the private standard PoE or NonPoE equipment. DGS-F1010P-E is the best choice for mini type commercial network because it economically uses PoE deployment wireless AP and IP camera. It can resolve the problem of maintenance tedious, wireless coverage, terminal device powered, surveillance project. Maximum save the cost."
@@ -27199,7 +27199,7 @@
       "subCategory": "Warranty - Laptop",
       "rrp": 151.45,
       "rrpInc": 166.6,
-      "stock": 179,
+      "stock": 176,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/35L/U86DVE.jpg",
       "description": "Get back to work quickly with HP Premium Support, which resolves most issues remotely during standard business hours. If a physical repair is needed, an HP expert is dispatched to the employee’s location, with expedited resolution."
