@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-08-23T08:10:36+10:00",
-  "count": 2032,
+  "lastUpdated": "2026-08-24T08:10:54+10:00",
+  "count": 2031,
   "products": [
     {
       "code": "AW-ORA10-F-S",
@@ -211,6 +211,20 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/SH-MDUC-10C.jpg",
       "description": "The Shintaro Multi Device Charger is designed to efficiently charge up to ten devices simultaneously, including iPads, smartphones, and tablets. Ideal for home, office, or classroom use, this charger leverages the latest GaN technology for compact size and effective heat management, ensuring safe and optimal charging for all connected devices. Each USB-C port delivers up to 5V 3A PD3.0, collectively providing 200 watts of power. Equipped with smart cooling and multiple safety protections against overcurrent and overheating, this portable charger is a must-have for fast, reliable charging."
+    },
+    {
+      "code": "SH-GWUC100L",
+      "sku": "",
+      "name": "Shintaro USB-C PD 3.0 100W GaN Wall Charger",
+      "brand": "Shintaro",
+      "category": "",
+      "subCategory": "Public MegaMenu",
+      "rrp": 54.5,
+      "rrpInc": 59.95,
+      "stock": 474,
+      "eta": "",
+      "image": "https://www.mmt.com.au/Files/Images/Product Images/SH-GWUC100L.png",
+      "description": "Powered by advanced GaN™ technology, this charger delivers up to 100W USB-C Power Delivery™ for ultra-fast, efficient charging of MacBook Pro, high-performance Windows laptops, gaming laptops, tablets, smartphones, and other USB-C devices. Designed to power even the most demanding devices, it minimises heat build-up for cooler, safer, and more reliable everyday charging.\r\nThe integrated USB-C cable means it's ready to use straight out of the box - no extra cables required. Its lightweight, ultra-compact, travel-friendly design makes it the perfect companion for work, home, or life on the move.\r\nEngineered for broad compatibility, it delivers reliable power across your essential devices. Built-in safety features protect against overcharging, overheating, and short circuits, delivering dependable performance while helping extend the lifespan of your devices.\r\nSupporting Qualcomm® Quick Charge™ 5, USB Power Delivery™ (PD) 3.0, and Programmable Power Supply (PPS), the charger intelligently optimises power delivery to compatible devices for faster, safer, and more efficient charging.\r\nInput: AC 100–240V, 50/60Hz, 2A\r\nUSB-C Output (PD 3.0): DC 5V/9V/12V/15V = 3A (Max.). 20V = 5A (Max.)\r\nTotal Power: 100W (Max.)\r\nDimensions: 68 × 67 × 32 mm\r\nWhat's in the Box:\r\n1 × 100W GaN USB-C Laptop Charger\r\n1 × User Manual"
     },
     {
       "code": "FWD32W830K+Q",
@@ -10573,20 +10587,6 @@
       "description": "The TOUGHBOOK 56 is a rugged yet portable 14” laptop, designed to endure demanding conditions while remaining sleek and ergonomic. With hot-swappable batteries providing up to 24 hours of operation and modular expansion options, it adapts to the needs of workers on the move."
     },
     {
-      "code": "FZ-56B0124BA",
-      "sku": "",
-      "name": "Panasonic Toughbook 56 Mk1 Ultra5 TS WUXGA 4G",
-      "brand": "Panasonic",
-      "category": "Computers",
-      "subCategory": "Notebooks",
-      "rrp": 5544.55,
-      "rrpInc": 6099,
-      "stock": 9,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/15/FZ-56_01_Front View.png",
-      "description": "The TOUGHBOOK 56 is a rugged yet portable 14” laptop, designed to endure demanding conditions while remaining sleek and ergonomic. With hot-swappable batteries providing up to 24 hours of operation and modular expansion options, it adapts to the needs of workers on the move."
-    },
-    {
       "code": "FZ-56B012GBA",
       "sku": "",
       "name": "Panasonic Toughbook 56 Mk1 Ultra5 TS WUXGA 4G",
@@ -11229,20 +11229,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/SH-STYLUS.jpg",
       "description": "The Shintaro Capacitive Touch Stylus (Model: 15SHSTYLUS) is designed for use with all capacitive touch screens, including iPads, iPhones, Samsung Galaxy devices, and tablets. This precision stylus offers a comfortable grip, enhancing your ability to navigate, draw, or take notes on your touchscreen devices. It features a built-in clip for easy storage and portability, making it a practical accessory for both home and travel. With dimensions of 105mm in length and a diameter of 7mm, this stylus provides a balance of functionality and convenience, ensuring you can interact with your devices effortlessly and efficiently."
-    },
-    {
-      "code": "SH-GWUC100L",
-      "sku": "",
-      "name": "Shintaro USB-C PD 3.0 100W GaN Wall Charger",
-      "brand": "Shintaro",
-      "category": "Computers",
-      "subCategory": "Tablet Power & Charging Accessories",
-      "rrp": 54.5,
-      "rrpInc": 59.95,
-      "stock": 474,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Images/Product Images/SH-GWUC100L.png",
-      "description": "Powered by advanced GaN™ technology, this charger delivers up to 100W USB-C Power Delivery™ for ultra-fast, efficient charging of MacBook Pro, high-performance Windows laptops, gaming laptops, tablets, smartphones, and other USB-C devices. Designed to power even the most demanding devices, it minimises heat build-up for cooler, safer, and more reliable everyday charging.\r\nThe integrated USB-C cable means it's ready to use straight out of the box - no extra cables required. Its lightweight, ultra-compact, travel-friendly design makes it the perfect companion for work, home, or life on the move.\r\nEngineered for broad compatibility, it delivers reliable power across your essential devices. Built-in safety features protect against overcharging, overheating, and short circuits, delivering dependable performance while helping extend the lifespan of your devices.\r\nSupporting Qualcomm® Quick Charge™ 5, USB Power Delivery™ (PD) 3.0, and Programmable Power Supply (PPS), the charger intelligently optimises power delivery to compatible devices for faster, safer, and more efficient charging.\r\nInput: AC 100–240V, 50/60Hz, 2A\r\nUSB-C Output (PD 3.0): DC 5V/9V/12V/15V = 3A (Max.). 20V = 5A (Max.)\r\nTotal Power: 100W (Max.)\r\nDimensions: 68 × 67 × 32 mm\r\nWhat's in the Box:\r\n1 × 100W GaN USB-C Laptop Charger\r\n1 × User Manual"
     },
     {
       "code": "SH-GWUC65L",
@@ -22053,20 +22039,6 @@
       "description": "Matrox Monarch LCS video encoding appliance makes live webcasting simple, delivering high-quality streams to Facebook Live, YouTube, or a favorite content delivery network (CDN) with multi-camera production value, without operator assistance. Whether webcasting house of worship services, enterprise communications, government meetings, or similar live events, the webcast process should be as easy as possible. Set the production layout and delivery settings before the event; when ready to start, simply connect live sources—camera or computer—to the inputs and begin the webcast with a single push of a button."
     },
     {
-      "code": "NF20MESH2+B",
-      "sku": "",
-      "name": "Netcomm NF20MESH Gateway+NS-02 Satellite",
-      "brand": "NetComm",
-      "category": "Networking",
-      "subCategory": "Network - Router",
-      "rrp": 362.73,
-      "rrpInc": 399,
-      "stock": 4,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/16R/NF20MESH2_B.jpg",
-      "description": "The CloudMesh Gateway (NF20MESH) works wirelessly with the CloudMesh Satellite (NS-02), forming a single powerful Whole Home Wi-Fi Mesh network with all the control and settings centralized on the gateway. The gateway becomes the Wi-Fi Mesh master node and the Wi-Fi client device roams seamlessly between satellites and the gateway.\r\nNF20MESH: NetComm NF20MESH CloudMesh Wi-Fi 6 VDSL2/ADSL2 Networking Gateway with VoIP\r\nNS-02: NetComm CloudMesh WiFi6 Satellite"
-    },
-    {
       "code": "NS71",
       "sku": "",
       "name": "Netcomm NS71 Wi-Fi 7 EasyMesh Satellite",
@@ -26881,6 +26853,20 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/1532337620_1417380.jpg",
       "description": "This 1.30:1-1.96:1 Zoom Lens from Sony is used with VPL-FHZ120L and VPL-FHZ90L laser projectors. The lens offers a throw ratio of 1.30 to 1.96:1 and the recommended screen size is 60 to 600\"."
+    },
+    {
+      "code": "FZ-56B0124BA",
+      "sku": "",
+      "name": "Panasonic Toughbook 56 Mk1 Ultra5 TS WUXGA 4G",
+      "brand": "Panasonic",
+      "category": "Public MegaMenu",
+      "subCategory": "Panasonic Toughbook",
+      "rrp": 5544.55,
+      "rrpInc": 6099,
+      "stock": 9,
+      "eta": "",
+      "image": "https://www.mmt.com.au/Files/Product assets/Images/15/FZ-56_01_Front View.png",
+      "description": "The TOUGHBOOK 56 is a rugged yet portable 14” laptop, designed to endure demanding conditions while remaining sleek and ergonomic. With hot-swappable batteries providing up to 24 hours of operation and modular expansion options, it adapts to the needs of workers on the move."
     },
     {
       "code": "DL10",
