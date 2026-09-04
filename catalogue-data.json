@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-04T09:39:52+10:00",
-  "count": 2059,
+  "lastUpdated": "2026-09-05T09:31:55+10:00",
+  "count": 2037,
   "products": [
     {
       "code": "AW-ORA10-F-S",
@@ -221,7 +221,7 @@
       "subCategory": "Highlighted Products",
       "rrp": 127.23,
       "rrpInc": 139.95,
-      "stock": 435,
+      "stock": 427,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/SH-MDUC-10C.jpg",
       "description": "The Shintaro Multi Device Charger is designed to efficiently charge up to ten devices simultaneously, including iPads, smartphones, and tablets. Ideal for home, office, or classroom use, this charger leverages the latest GaN technology for compact size and effective heat management, ensuring safe and optimal charging for all connected devices. Each USB-C port delivers up to 5V 3A PD3.0, collectively providing 200 watts of power. Equipped with smart cooling and multiple safety protections against overcurrent and overheating, this portable charger is a must-have for fast, reliable charging."
@@ -379,6 +379,20 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/FWD85XR30M2.png",
       "description": "Pop of brilliance. Smart and refined. Bright, crisp, and true-to-life color that pops off the screen. With 4 HDMI 2.1 ports, smooth 120Hz motion, clear sound, and Google Gemini, this big-screen TV makes every choice feel easy—and every moment look its best."
+    },
+    {
+      "code": "DS1525+",
+      "sku": "",
+      "name": "Synology DS1525+ 5 Bay DiskStation NAS, 3 Yr Wty",
+      "brand": "Synology",
+      "category": "",
+      "subCategory": "Networking",
+      "rrp": 2271.82,
+      "rrpInc": 2499,
+      "stock": 11,
+      "eta": "",
+      "image": "https://www.mmt.com.au/Files/Product assets/Images/29/DS1525_.jpg",
+      "description": "Synology DS1525+ is a versatile 5-bay storage solution that scales with your needs, with support for storage expansion,1 10GbE networking,2 and SSD caching3. Built-in 2.5GbE networking \r\nprovides excellent networking performance out of the box. Powered by Synology DiskStation Manager (DSM), this device is a flexible all-in-one solution for data sharing, synchronization, backup, and\r\nsurveillance."
     },
     {
       "code": "RS3621XS+",
@@ -711,7 +725,7 @@
       "subCategory": "Desktop Supercomputing",
       "rrp": 8635.45,
       "rrpInc": 9499,
-      "stock": 0,
+      "stock": 6,
       "eta": "2026-10-21",
       "image": "https://www.mmt.com.au/Files/Uploads/940-54242-0005-000-2T.jpg",
       "description": "Powered by the NVIDIA GB10 Grace Blackwell Superchip, NVIDIA DGX Spark™ delivers up to one petaFLOP1 of FP4 AI performance in a power-efficient, compact form factor. With the NVIDIA AI software stack preinstalled and 128 GB of memory, developers can prototype, fine-tune, and inference the latest generation of reasoning AI models from DeepSeek, Meta, NVIDIA, Google, Qwen, and others with up to 200 billion parameters locally.\r\nClick here to contact our dedicated AI sales team about the DGX Spark\r\nFor more product information, please click here"
@@ -726,7 +740,7 @@
       "rrp": 12986.36,
       "rrpInc": 14285,
       "stock": 2,
-      "eta": "2026-09-14",
+      "eta": "",
       "image": "https://www.mmt.com.au",
       "description": "The NVIDIA IGX Thor Developer Kit Mini is a compact development platform for physical AI, industrial robotics, medical systems and real-time edge workloads.\r\nBased on the NVIDIA IGX Thor platform\r\nDesigned for AI and sensor processing\r\nSupports NVIDIA enterprise edge software\r\nIntended for industrial and medical development\r\nSuitable for physical AI and clanker prototyping\r\nOrigin: China\r\nThe Mini configuration provides a development environment for evaluating IGX Thor software and workloads before creating a production system. NVIDIA’s public download centre identifies a Mini Product Specification, but the accessible search result does not expose the complete SKU-specific configuration\r\nClick here to contact our dedicated AI sales team about Jetson\r\nFor more product information, please click here"
     },
@@ -740,7 +754,7 @@
       "rrp": 3635.45,
       "rrpInc": 3999,
       "stock": 10,
-      "eta": "2026-09-14",
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/41/900-13701-0040-000_1.jpg",
       "description": "The NVIDIA Jetson AGX Orin 32GB is a production embedded module for AI-powered robotics, machine vision and autonomous equipment. It provides a balanced combination of AI performance, memory, power efficiency and high-speed connectivity.\r\nNVIDIA Ampere GPU architecture\r\n32GB memory\r\nArm CPU architecture\r\nSupports multiple AI inference pipelines\r\nIntegrated vision and deep-learning acceleration\r\nHigh-speed camera and peripheral support\r\nSuitable for edge vision and clanker systems\r\nThe module enables advanced AI workloads to run locally near connected equipment and sensors.\r\nClick here to contact our dedicated AI sales team about Jetson\r\nFor more product information, please click here"
     },
@@ -753,7 +767,7 @@
       "subCategory": "Artificial Intelligence",
       "rrp": 6491.82,
       "rrpInc": 7141,
-      "stock": 2,
+      "stock": 1,
       "eta": "2026-09-22",
       "image": "https://www.mmt.com.au/Files/Uploads/Jetson-AGX-Orin-Dev-Kit-whiteBG.jpg",
       "description": "The NVIDIA Jetson AGX Orin 64GB Developer Kit is a complete platform for developing generative AI, robotics, computer vision and autonomous-machine applications. It shares one SoC architecture with production Jetson Orin modules and can emulate their performance and power profiles.\r\nNVIDIA Ampere GPU architecture\r\n64GB memory\r\nExtensive standard interfaces\r\nFlexible carrier-board connectivity\r\nSupports NVIDIA JetPack SDK\r\nDesigned for rapid AI prototyping\r\nSuitable for advanced robotics and clanker projects\r\nOrigin: China, USA or Vietnam\r\nThe kit helps developers build and validate applications before moving to production modules.\r\nClick here to contact our dedicated AI sales team about Jetson\r\nFor more product information, please click here"
@@ -767,7 +781,7 @@
       "subCategory": "Artificial Intelligence",
       "rrp": 5934.55,
       "rrpInc": 6528,
-      "stock": 30,
+      "stock": 0,
       "eta": "2099-09-09",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/Jetson-AGX-Orin-Module-Front (2).png",
       "description": "The NVIDIA Jetson AGX Orin 64GB Module delivers up to 275 TOPS of AI performance in a compact, production-ready form factor. With 64GB memory and configurable power from 15W to 60W, it provides more than eight times the performance of Jetson AGX Xavier for advanced edge AI workloads.\r\nPowered by the NVIDIA Jetson software stack, the module helps developers build and deploy generative AI, computer vision and autonomous machine applications efficiently. Its scalable architecture makes it ideal for demanding embedded systems requiring high AI performance and power efficiency.\r\nPopular applications:\r\nAdvanced robotics\r\nAutonomous machines\r\nComputer vision\r\nIndustrial automation\r\nGenerative AI at the edge\r\nClick here to contact our dedicated AI sales team about Jetson\r\nFor more product information, please click here"
@@ -782,7 +796,7 @@
       "rrp": 6362.73,
       "rrpInc": 6999,
       "stock": 20,
-      "eta": "2026-09-14",
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/Jetson-AGX-Orin-Module-Front (2).png",
       "description": "NVIDIA Jetson AGX Orin 64GB provides high-performance embedded computing for generative AI, robotics and computer vision applications requiring confirmed USA origin.\r\nNVIDIA Ampere GPU architecture\r\n64GB memory\r\nArm CPU architecture\r\nSupports concurrent AI inference pipelines\r\nIntegrated vision and AI acceleration\r\nHigh-speed sensor connectivity\r\nSuitable for autonomous machines and clanker systems\r\nOrigin: USA\r\nThis production module enables sophisticated AI inference and sensor processing directly within robotic and industrial equipment.\r\nClick here to contact our dedicated AI sales team about Jetson\r\nFor more product information, please click here"
     },
@@ -894,7 +908,7 @@
       "rrp": 36.32,
       "rrpInc": 39.95,
       "stock": 822,
-      "eta": "2099-09-21",
+      "eta": "2026-10-31",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14H/01H024.jpg",
       "description": "Confidently take on testing season with Gumdrop’s reliable, stereo sound DropTech Headphones. With best-in-class drop protection at an affordable price, these headphones will ace any test. The DropTech Headphones are are compatible with 3.5mm Audio Jack. Every feature was added with students in mind. The twistable, break-resistant, and adjustable headband was tested to fit students comfortably. Do your students chew on cords? The braided, 4 foot long, cord is chew-proof to complete the student-proof design. Our volume-limiting design offers a sound pressure between 75-110 dB."
     },
@@ -1033,7 +1047,7 @@
       "subCategory": "Headphones",
       "rrp": 9,
       "rrpInc": 9.9,
-      "stock": 3546,
+      "stock": 3540,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14H/SH-121.jpg",
       "description": "Easily connect your wired headset to your USB-C laptop or smartphone with the Shintaro USB-C Headphone Jack. This compact and lightweight adaptor features a built-in 32-bit Digital to Audio Converter (DAC), delivering high-fidelity audio and supports both microphone and headset functionality. Simply plug the adaptor into your device and enjoy seamless sound quality with no additional setup required."
@@ -1089,7 +1103,7 @@
       "subCategory": "Headphones",
       "rrp": 10.86,
       "rrpInc": 11.95,
-      "stock": 12050,
+      "stock": 12049,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14H/SH-101.jpg",
       "description": "Enjoy your favourite music, stay productive throughout the day, or unwind with your favourite shows using the Shintaro Lightweight Headphone - designed for all-day comfort, clarity, and convenience. Featuring high-quality stereo sound, inline volume control, and a 2.4m cable for added flexibility, it's ideal for work, study, or play. Hands-free 3.5mm connectivity for devices including phones, tablets, notebooks and PCs. Lightweight yet durable, the Shintaro headphone offers reliable performance and long-lasting value."
@@ -1243,7 +1257,7 @@
       "subCategory": "Headphones",
       "rrp": 40.86,
       "rrpInc": 44.95,
-      "stock": 912,
+      "stock": 906,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14H/SH-127.jpg",
       "description": "The Shintaro Stereo USB Headset (Model: 14SH-127) is designed for clear audio and comfortable use during music playback, gaming, or video conferencing. It features a noise-cancelling microphone that minimizes background noise, ensuring your voice is heard clearly. The headset is equipped with a steel adjustable headband and soft over-the-ear pads for comfort during long sessions. With a 180-degree adjustable microphone and in-line volume control, you can easily manage audio settings. This headset connects via a USB-A port, making it compatible with USB 2.0, 3.0, and 3.1 on both PC and Mac. Its 2-meter cable provides flexibility while you work or play."
@@ -1523,7 +1537,7 @@
       "subCategory": "Digital Flash Memory",
       "rrp": 15.41,
       "rrpInc": 16.95,
-      "stock": 3029,
+      "stock": 2944,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/09M/TUSDH16GCL10U03.jpg",
       "description": "A perfect partner for your mobile devices TEAMGROUP micro SDXC/SDHC it's a high-performance memory card satisfies the high-speed access requirement of smartphones, tablets, cameras, drones and vehicle video recorders. TEAMGROUP micro SDXC/SDHC memory cards allow you to record and take Full HD videos and photos with no worries at all."
@@ -1537,7 +1551,7 @@
       "subCategory": "Digital Flash Memory",
       "rrp": 24.5,
       "rrpInc": 26.95,
-      "stock": 1095,
+      "stock": 1046,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/09M/TUSDH32GCL10U03.jpg",
       "description": "A perfect partner for your mobile devices TEAMGROUP micro SDXC/SDHC it’s a high-performance memory card satisfies the high-speed access requirement of smartphones,\r\ntablets, cameras, drones and vehicle video recorders."
@@ -1823,20 +1837,6 @@
       "description": "AVer CAM570 is a 4K dual lens camera with a 36X Total zoom PTZ camera and a second AI lens with 95°FOV. Equipped with built-in audio sensor, CAM570 detects human voices up to 10M and offers audio tracking function. AI technology such as Smart Gallery and gesture control can capture every attendees up-close with premium video quality.\r\nSpecifications\r\nDual Camera\r\nPTZ optical zoom lens\r\nImage Sensor: 1/2.8” 4K Sony Exmor CMOS\r\nFrame Rates: (16:9) 4K 30fps; 1920 x 1080, 1600 x 900, 1280 x 720, 960 x 540, 848 x 480, 800 x 448, 640 x 360, at 60, 30, 15fps; (4:3) 1280 x 960, 800 x 600, 640 x 480 at 60, 30, 15fps\r\n36X Zoom*: 12X optical; 3X digital zoom\r\nViewing Angles: DFOV 90°; HFOV 78°; VFOV 50°\r\nLens Focal Length: 3.4mm (Wide) ~ 40.3mm (Tele)\r\nLens F#: 1.8 (Wide) ~ 3.6 (Tele)\r\nWide Dynamic Range (WDR): Superb backlight compensation\r\nMinimum Focus Distance: 1.5 m\r\nViewing Area: Pan: ±170°; Tilt: +90° (up) / -30° (down)\r\nPreset Positions: 10 via IR remote, 128 via RS-232\r\nImage flip and image mirror\r\nSecondary fixed lens (AI lens)\r\nImage Sensor: 1/2.5” 4K Sony Exmor CMOS\r\nFrame rates and resolution set according to PTZ lens settings\r\nWide field of view: DFOV 95°; HFOV 82°; VFOV 52°\r\n*Please use Room Management (PTZApp 2) to set up 36X zoom\r\n*Please don't put the CAM570 on the table. This will block the view of AI lens and the AI detection function will malfunction. The suggested installation height is 1.5m away from the floor.\r\n*When the resolution is set to 4K or the frame rate to 60fps, features including PIP, Image Flip, Image Mirror, and OSD (On Screen Display) Setting will be disabled automatically.\r\nAudio Sensor\r\nAudio pick-up range: 10m, ±60°\r\n3 pairs of sensor, each composed of 4 sensors\r\n* The built-in sensor is for the audio-tracking function, it cannot be used as an audio source for video-conferencing software.\r\nConnectivity\r\nUSB type-B 3.1 connector, backward compatible with USB 2.0\r\n12V/2A DC jack power adapter\r\nType Non-B Mini DIN 9 for RS-232 in & out connection (VISCA control panel and camera daisy-chain)\r\nIP (RJ-45)\r\nHDMI\r\nAudio in* (1Vrms input)\r\n*To avoid tracking the speakerphone, please insert speakerphone's Line-out to CAM570's Line-in port.\r\nUSB\r\n3.1 Gen 1, backward compatible with USB 2.0\r\nUVC 1.1 (USB video)\r\nControl\r\nIR remote control\r\nVISCA/pelco P/pelco D via RS-232 (128 preset points via VISCA command)\r\nRemote side: VISCA over IP, IP (RJ-45)\r\nUVC plug and play\r\nWebUI: Browser IP access via Chrome. (Not support IE)\r\nOSD setting: HDMI out to TV monitor\r\nRoom Management (PTZApp 2)\r\nSoftware Tools\r\nRoom Management (PTZApp 2) - Supports Windows® 7 or later, macOS® 11.6 or later\r\nEnterprise Management (PTZ Management) - Supports Windows® 10 or later\r\nCloud Management - Supports Chrome™ & Microsoft Edge browsers\r\nEZManager 2 - Supports Windows® 7 or later\r\nEZLive - Supports Windows® 7 or later\r\nSystem Requirements\r\nWindows® 7/10/11\r\nMac OS X 10.14 or later\r\nChromebox 3 version 94.0.4606.114 or later\r\nHardware Specs\r\n3.2 GHz Intel® Core™ i5-4460 processor\r\n4 GB RAM or more\r\nUSB 3.1 port, backward compatible with USB 2.0\r\nCompatible Applications\r\nZoom, Microsoft® Teams, Google Meet™, Intel® Unite™, RingCentral, BlueJeans, V-Cube, LiveOn, CyberLink U Meeting®, TrueConf, Adobe® Connect, Cisco Webex®, Fuze, GoToMeeting™, VidyoConnect™, vMix, WebRTC, Wirecast, XSplit\r\n*For 4K UHD support, please check system/hardware requirements with your software application provider.\r\n**Specifications may vary depending on countries and are subject to change without notice."
     },
     {
-      "code": "VB350",
-      "sku": "",
-      "name": "AVer VB350 4K Dual Lens PTZ Video Bar",
-      "brand": "Aver",
-      "category": "Components",
-      "subCategory": "USB Web Cams",
-      "rrp": 3044.55,
-      "rrpInc": 3349,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Uploads/vb350.png",
-      "description": "With a streamlined design, dual 4K lenses, seamless lens switching, upgraded audio technology, and simple setup, the VB350 is the ultimate all-in-one solution for next-level video meetings. Level up to premium audio and video by using this powerful new video bar in your mid-to-large conference rooms. \r\nSpecifications\r\nCamera\r\n4K dual-lens technology delivers a wide 113° field of view (FOV) with 18X zoom\r\n4K 3X Varifocal Lens: FOV (D/H/V) 92°/81°/50°\r\n4K Fixed Lens: FOV (D/H/V) 113°/105°/71°\r\nImage Sensor: 1/2.8” 4K Sony Exmor CMOS\r\nFrame Rate: (16:9) 1280 x 720 at 60, 30, 15fps; 4K, 3264 x 1836, 2560 x 1440, 1920 x 1080, 1600 x 900, 960 x 540, 848 x 480, 800 x 448, 640 x 360 at 30, 15fps; (4:3) 1280 x 960, 800 x 600, 640 x 480 at 30, 15fps\r\nAdjustable Audio Fence: Freedom to define audio pickup range (wide/medium/narrow)\r\nSmartFrame & SmartSpeaker: Automatic tracking and FOV adjustment to fit all participants and focus on the speaker\r\nPresentation Mode: Voice-triggered tracking on both defined areas and speakers\r\nConfigure the Smart Gallery function via Room Management (PTZApp 2) to enhance visibility\r\nGesture Control for intuitive camera control\r\nWDR, White Balance and more image settings via Room Management (PTZApp 2)\r\nMinimum Focus Distance: 100 cm\r\nPeople Counting API: Enterprises and third-party software providers can obtain people-counting and meeting-interval data tor better understand meeting space usage\r\nMotorised Pan and Tilt Movement\r\nViewing Area: Pan: 165°, Tilt: 101°\r\n10 Camera Presets\r\nAudio\r\nBeamforming Elements: 14\r\nPickup Range: 10 Meters\r\nVolume up to 96 dB SPL at 1/2 Meters\r\nAcoustic Echo Cancellation (AEC): Yes\r\nNoise Suppression: Yes\r\nHDMI\r\nOne Cable Solution: Built-in USB 3.1 (Gen 1) to HDMI Adapter\r\n4K HDMI output to TV (Need to install HDMI adapter driver on Windows® 7 and macOS®)\r\nVideo Format\r\nVideo Format: YUV, YUY2, MJPEG\r\nNetwork Video Compression Format: H.264\r\nNetwork Protocols: RTSP, RTMP\r\nUSB\r\n3.1 Gen 1, backward compatible with USB 2.0\r\nUVC 1.1 (USB Video), UAC 1.0 (USB Audio)\r\nConnectivity\r\n12V/5A Power Adapter\r\nMini DIN 6 for RS-232 Connection\r\nUSB: USB 2.0 Type A x 3, USB 3.1 Type B (Backward compatible with USB 2.0) x 1\r\nHDMI Out: 1\r\nPhone In: 1\r\nNetwork: RJ-45 x 1\r\nAudio In/Out: RJ-45 x 1\r\nControl\r\nIR Remote Control\r\nSupported Web Browsers: Chrome™\r\nVISCA / Pelco P / Pelco D via RS-232 / VISCA over IP\r\nUVC/UAC Plug-and-Play\r\nRoom Management (PTZApp 2)\r\nSystem Requirements\r\nSoftware\r\nWindows® 7/10/11\r\nmac OS® X 10.14 or later\r\nGoogle Chromebook™ (Chrome OS 94.0.4606.114 or later)\r\nHardware\r\n3.2 GHz Intel® Core™ i5-4460 Processor\r\n4 GB RAM or more\r\nUSB 3.1 Port (Backward compatible with USB 2.0)\r\nSoftware Tools\r\nRoom Management (PTZApp 2) - Supports Windows® 7 or later, macOS® 11.6 or later\r\nEnterprise Management (PTZ Management) - Supports Windows® 10 or later\r\nEZManager 2 - Supports Windows® 7 or later\r\nEZLive - Supports Windows® 7 or later, macOS® 10.13 or later\r\nPackage Contents\r\nVB350\r\nPower Adapter & Cable\r\nUSB 3.1 Type B to Type A Cable (3 m)\r\nUSB 3.1 Type A to Type C Adapter\r\nQR Code Card\r\nWall-mount Bracket\r\nTripod Screws\r\nRemote Control\r\nWall-mount Drill Paper\r\nCompatible Applications - Zoom, Microsoft® Teams, Google Meet™, Intel® Unite™, RingCentral, BlueJeans, V-Cube, LiveOn, CyberLink U Meeting®, TrueConf, Adobe® Connect, Cisco Webex®, Fuze, GoToMeeting™, VidyoConnect™, vMix, WebRTC, Wirecast, XSplit"
-    },
-    {
       "code": "VC520PRO2",
       "sku": "",
       "name": "AVer VC520PRO2 FHD Camera + Speakerphone",
@@ -2111,7 +2111,7 @@
       "subCategory": "Portable Power",
       "rrp": 181.77,
       "rrpInc": 199.95,
-      "stock": 72,
+      "stock": 71,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/CY5381PBCHE.png",
       "description": "More than just a Laptop Power Bank—your ultra-portable powerhouse. With 2x USB-C and 1x USB-A ports, fast-charge up to 3x devices at once, including your laptop, tablet, and phone. Delivering 140W single USB-C Power Delivery 3.1, it charges powerful laptops fast.\r\nCarry-on approved and travel-friendly, it comes with a compact case to keep your power organised on the move. Get up to 5.3 full charges for iPhone 16 or 4.5 charges for Samsung S25, plus pass-through charging when you need it most.\r\nCarry-on approved\r\nCharge up to 3x devices simultaneously with a powerful 27,000mAh capacity—this Power Bank is allowed on most airlines, making it perfect for travellers.\r\n140W power & capacity\r\nFully recharge a MacBook Air 15” from 0-100%* battery or get up to 5.3 full charges for iPhone 16 or 4.5 charges for Samsung S25.\r\n*Delivers 140W output when only one USB-C port is used; the total output will be reduced if both USB-C ports are in use simultaneously. Total max output is 148W.\r\nUltra-fast recharging\r\nPair with a 100W USB-C wall charger to fully recharge from 0 to 100% in approximately 1.5 hours. Plus, pass-through charging ensures you're always powered when you need it most.\r\nTrack your charge\r\nStay informed with the smart LCD display. Monitor the charging speed of connected devices, remaining battery life, and the Power Bank’s battery temperature in real time.\r\n* Always check airline rules and laws for carry-on suitability"
@@ -2209,7 +2209,7 @@
       "subCategory": "Memory",
       "rrp": 456.91,
       "rrpInc": 502.6,
-      "stock": 288,
+      "stock": 283,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/05/83P91AA.jpg",
       "description": "Upgrade your capacity for uninterrupted, undeterred, unbelievably fast speed. Upgrading to 16 GB DDR5 5600MHz SODIMM to open up your workspace to its full potential. Make way for all the things you need to get done, at once, with state-of-the-art processing power."
@@ -2237,7 +2237,7 @@
       "subCategory": "Keyboards & Mice",
       "rrp": 45.82,
       "rrpInc": 50.4,
-      "stock": 8,
+      "stock": 4,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14KM/1Y4D0UT.jpg",
       "description": "Extend your input capabilities with keyboards and mice from HP."
@@ -2475,7 +2475,7 @@
       "subCategory": "Keyboards",
       "rrp": 209.05,
       "rrpInc": 229.95,
-      "stock": 3,
+      "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/920-010111.png",
       "description": "Introducing ERGO K860, a split ergonomic keyboard designed for better posture, less strain, and more support. You’ll type more naturally with a curved, split keyframe that improves typing posture."
@@ -2517,8 +2517,8 @@
       "subCategory": "USB Web Cams",
       "rrp": 181.77,
       "rrpInc": 199.95,
-      "stock": 0,
-      "eta": "2026-07-04",
+      "stock": 1,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/960-001423.png",
       "description": "Bring your best self to every meeting. Brio 500 ensures that you always look and sound natural in meetings so you can connect more genuinely with others."
     },
@@ -2629,7 +2629,7 @@
       "subCategory": "Keyboards & Mice",
       "rrp": 49.09,
       "rrpInc": 54,
-      "stock": 22,
+      "stock": 21,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14KM/920-003235.jpg",
       "description": "With a compact design, this keyboard features all the keys you need, including a number pad while being smaller than a full-size keyboard. Perfect for tight workspaces, or smaller frames, so you can place your mouse closer for less reaching and better body posture. Plus, it’s easy to move anywhere your work takes you."
@@ -2657,7 +2657,7 @@
       "subCategory": "Keyboards & Mice",
       "rrp": 63.59,
       "rrpInc": 69.95,
-      "stock": 88,
+      "stock": 78,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14KM/920-006314.jpg",
       "description": "MK270r Wireless Combo brings together the convenience and comfort of a full-sized keyboard with a sculpted, compact mouse. With media keys, a number pad and precise cursor control to make your work a whole lot smoother."
@@ -2685,7 +2685,7 @@
       "subCategory": "Keyboards & Mice",
       "rrp": 90,
       "rrpInc": 99,
-      "stock": 58,
+      "stock": 57,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14KM/920-006491/920-012.jpg",
       "description": "The perfect combination of great comfort, modern design, powerful features and extra-long battery life.(Combo powered by 2xAAA and 1xAA, included)"
@@ -2797,8 +2797,8 @@
       "subCategory": "Memory",
       "rrp": 635.45,
       "rrpInc": 699,
-      "stock": 1,
-      "eta": "",
+      "stock": 0,
+      "eta": "2099-09-09",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/crucial-ddr5-SODIMM-iso-3.png",
       "description": "Crucial DDR5 Laptop Memory can empower your computer to transfer 50% more data than DDR4 at launch, resulting in faster load times, file transfers, downloads, refresh rates and less lag time."
     },
@@ -2825,7 +2825,7 @@
       "subCategory": "Mice",
       "rrp": 17.23,
       "rrpInc": 18.95,
-      "stock": 384,
+      "stock": 365,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14M/SH-SM03.jpg",
       "description": "Discover the Shintaro 3 Button Optical Mouse, an ergonomically designed and stylish accessory perfect for any workspace. This wired mouse features an advanced optical sensor, ensuring reliable precision on virtually any surface, eliminating the cleaning hassles associated with traditional ball mice. With a user-friendly USB connection and included PS/2 adapter, it offers versatile compatibility with various devices. The three buttons provide effortless navigation for your daily tasks, while its sleek design complements your tech setup. Whether you're working, studying, or gaming, enjoy comfort and efficiency with the Shintaro Optical Mouse, engineered for high performance in every situation."
@@ -2867,7 +2867,7 @@
       "subCategory": "Mice",
       "rrp": 20.86,
       "rrpInc": 22.95,
-      "stock": 209,
+      "stock": 206,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/14M/SH-MBTM.jpg",
       "description": "Meet the Shintaro Mini Bluetooth Mouse, the perfect companion for your notebook. This compact, stylish mouse utilizes Bluetooth V3.0 technology, eliminating the need for cumbersome dongles while offering seamless wireless connectivity. Designed for precision, it features an optical sensor that works effortlessly on various surfaces and five buttons, including a scroll wheel for easy navigation. Compatible with Windows, Mac, and Android devices, it ensures a versatile user experience. Its ergonomic design provides comfort during extended use, and it requires just one AA battery (included) for operation."
@@ -2923,7 +2923,7 @@
       "subCategory": "USB - Cables",
       "rrp": 9.05,
       "rrpInc": 9.95,
-      "stock": 253,
+      "stock": 227,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/28UC/SH-AD-USBC-USBA.jpg",
       "description": "The Shintaro USB-C Male to USB-A Female Adapter (Model: 28SH-ADUSBCUSBA) is a cost-effective solution for connecting your legacy USB-A peripherals to the USB-C port on your Mac, PC, or Notebook. This portable adapter is compatible with USB 2.0, 3.0, and 3.1 connections, ensuring seamless data transfer and charging. It supports power charging up to 3A and data transfer speeds of 5Gbps, making it a reliable choice for users needing to connect older devices to newer systems. Compact and lightweight, with dimensions of 15 x 9 x 1 mm and weighing just 0.052 Kg, this adapter is perfect for both home and travel, providing essential connectivity for all your devices."
@@ -3329,7 +3329,7 @@
       "subCategory": "Bags, Cases & Covers",
       "rrp": 99.09,
       "rrpInc": 109,
-      "stock": 164,
+      "stock": 149,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/EKP107.jpg",
       "description": "With dedicated pockets for an iPad/Pro/Kindle/tablet and up to a 15.6-inch laptop, as well as spacious, well-organized compartments, the Advance is the lightweight and sturdy companion that's perfect for your most important business needs."
@@ -3343,7 +3343,7 @@
       "subCategory": "Bags, Cases & Covers",
       "rrp": 71.82,
       "rrpInc": 79,
-      "stock": 500,
+      "stock": 499,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/EKP109-ECO-01.jpg",
       "description": "The EVERKI Advance Laptop Backpack (ECO) delivers dependable protection and clean organization at a price that works. A dedicated padded compartment holds a laptop up to 16 inches, with a separate pocket for a tablet up to 13 inches, so your devices travel safe and separate. Well-planned compartments and a hidden stash pocket keep chargers, cables, documents and daily essentials in order, while a high-contrast lining helps you find small items fast. Ergonomic shoulder straps and an optional chest strap spread the load on longer days, and a trolley handle pass-through lets the bag ride your wheeled luggage through the airport. Multifunctional side pockets carry a bottle or umbrella, and durable zippers with metal pulls stand up to daily use. Made from recycled RPET fabric and backed by EVERKI's Limited Lifetime Warranty against manufacturing defects (EU: 30-year manufacturing and materials defect warranty)."
@@ -3371,7 +3371,7 @@
       "subCategory": "Bags, Cases & Covers",
       "rrp": 50,
       "rrpInc": 55,
-      "stock": 2313,
+      "stock": 2312,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/EKB407NCH14.jpg",
       "description": "The Advance is everything you need well-padded laptop compartment, a range of slots and pockets, ergonomic and stashable shoulder strap, trolley handle pass-through and nothing you don't. This smart, durable briefcase is the perfect laptop carry solution for long-distance travel or everyday use.\r\nEducation deployments (institution-issued cases used by students): 6-year limited warranty from original purchase date."
@@ -3385,7 +3385,7 @@
       "subCategory": "Bags, Cases & Covers",
       "rrp": 44.55,
       "rrpInc": 49,
-      "stock": 792,
+      "stock": 782,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/EKB407NCH.jpg",
       "description": "The Advance is everything you need well-padded laptop compartment, a range of slots and pockets, ergonomic and stashable shoulder strap, trolley handle pass-through and nothing you don’t. This smart, durable briefcase is the perfect laptop carry solution for long-distance travel or everyday use."
@@ -3735,7 +3735,7 @@
       "subCategory": "Commercial Bags, Cases & Covers",
       "rrp": 99.09,
       "rrpInc": 109,
-      "stock": 284,
+      "stock": 283,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15E/EKP129.jpg",
       "description": "With its slim profile, durable materials and quality construction, reflective strips for safety and the added security of integrated laptop corner guards, the Glide is the perfect compact backpack for the daily commuter."
@@ -3839,20 +3839,6 @@
       "description": "The EVERKI magnetic key holder uses a FIDLOCK fastener and comes in two parts: a dock with a large ring that hooks into a bag’s loop, and a key module with ring that stays on your keyring. Snap in with one hand; pull to the side to release. Works with all EVERKI bags with an existing key-hook. The new EVERKI Onyx Navy features a dedicated loop so you can use the standard key leash and this magnetic holder at the same time. Also compatible with non-EVERKI bags. All you need is a loop to hook the ring into."
     },
     {
-      "code": "EKA723",
-      "sku": "",
-      "name": "Everki RECTANGLE ROTATABLE RACK BOTTOM",
-      "brand": "Everki",
-      "category": "Computers",
-      "subCategory": "Bags, Cases & Covers",
-      "rrp": 135.45,
-      "rrpInc": 149,
-      "stock": 2,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/EKA723.jpg",
-      "description": ""
-    },
-    {
       "code": "EKW230",
       "sku": "",
       "name": "Everki RFID Passport Wallet",
@@ -3893,20 +3879,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/EKF821.jpg",
       "description": "Everki goes the extra mile to protect your valuables from the elements because there's no telling when you will find yourself stuck in inclement weather with expensive gear on your back. That's why our water-repellant weather cover stretches to neatly slip over the backpack's entire exposed surface to protect contents from rain, snow and dust. It easily detaches to allow for convenient cleaning and drying and can be quickly replaced when you are ready for your next adventure."
-    },
-    {
-      "code": "EKA761",
-      "sku": "",
-      "name": "Everki STANDARD WALL HANGER 25cm",
-      "brand": "Everki",
-      "category": "Computers",
-      "subCategory": "Bags, Cases & Covers",
-      "rrp": 44.55,
-      "rrpInc": 49,
-      "stock": 5,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/EKA761.jpg",
-      "description": ""
     },
     {
       "code": "EKP118E-ECO",
@@ -4141,7 +4113,7 @@
       "subCategory": "Bags, Cases & Covers",
       "rrp": 72.68,
       "rrpInc": 79.95,
-      "stock": 54,
+      "stock": 50,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/02A002.jpg",
       "description": "As learning tools, iPad devices are being used more and more by kids at home, in school, or at play. But kids will be kids and accidents do happen. Gumdrop has you covered with the lightweight yet rugged FoamTech case that features a handy handle that can also be folded for viewing and typing modes. Even with all this protection, FoamTech allows access to all ports and buttons, as well as the camera and speakers. The back of the case features a window cut-out for easy asset tagging. Protect your investment and have peace of mind with the FoamTech rugged case from Gumdrop Cases. The case is designed to accommodate the Apple Pencil and other third-party styluses."
@@ -4463,7 +4435,7 @@
       "subCategory": "Notebooks",
       "rrp": 1907.82,
       "rrpInc": 2098.6,
-      "stock": 15,
+      "stock": 14,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/HP 200 G2Ri 16_1.jpg",
       "description": "The HP 200 G2Ri 16-inch Notebook AI PC delivers AI-ready performance in a cost-optimized design that doesn’t strain your IT ecosystem. With Intel® Core™ processors and up to 18 TOPS NPU, enjoy smooth video calls and accelerate AI workloads across a big screen, all fortified with hardware security and durability fit for businesses and classrooms."
@@ -4477,7 +4449,7 @@
       "subCategory": "Notebooks",
       "rrp": 1907.82,
       "rrpInc": 2098.6,
-      "stock": 16,
+      "stock": 14,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/puf2mnqqhl.png",
       "description": "The HP 200 G2Ri 14-inch AI PC delivers AI-ready performance in a cost-optimized design that doesn’t strain your IT ecosystem. Featuring an Intel® Core™ processors[2] with up to 18 TOPS NPU[3], this device seamlessly integrates hardware security, striking visuals, and flexible configurations fit for businesses and classrooms."
@@ -4491,7 +4463,7 @@
       "subCategory": "Warranty - Desktop",
       "rrp": 0,
       "rrpInc": 0,
-      "stock": 35,
+      "stock": 32,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/35D/hp.png",
       "description": "When hardware issues come up, the sooner you can get running again, the better. Have expertise at the ready with HP Hardware Next Business Day1 Onsite Service, and vastly improve your product uptime. With high-quality remote assistance or convenient onsite support available the next business day, help is there when you need it—so you can get back to work."
@@ -4547,7 +4519,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 2850,
       "rrpInc": 3135,
-      "stock": 20,
+      "stock": 19,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19/A41KCPT.jpg",
       "description": "The HP Elite Mini 800 Desktop PC delivers the high-performance needed to develop complex presentations, crunch big numbers, and quickly create compelling content. Equipped with a powerful Intel processor, responsive graphics, and smart deployment options, this is the right PC for big jobs done in small spaces."
@@ -4575,7 +4547,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 2646,
       "rrpInc": 2910.6,
-      "stock": 36,
+      "stock": 35,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19/B93CZPT.jpg",
       "description": "The HP Elite 800 SFF Desktop PC delivers uncompromising performance, expandability, and reliability in a space-saving design. Equipped with the latest Intel processor, speedy storage, and memory, this is the right PC for big jobs performed in smaller workspaces."
@@ -4687,7 +4659,7 @@
       "subCategory": "Notebooks",
       "rrp": 3468.71,
       "rrpInc": 3815.58,
-      "stock": 8,
+      "stock": 7,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BQ4M5PT.jpg",
       "description": "AI-based experiences and modern connectivity enhance user productivity. The HP EliteBook 6 G1i AI 16 inch PC offers an 11 TOPS NPU, enterprise-grade security and manageability in a highly configurable PC that meets the demanding needs of enterprise users."
@@ -4715,7 +4687,7 @@
       "subCategory": "Notebooks",
       "rrp": 3244.18,
       "rrpInc": 3568.6,
-      "stock": 27,
+      "stock": 24,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BQ4L1PT.jpg",
       "description": "AI-based experiences and modern connectivity enhance user productivity. The HP EliteBook 6 G1i AI 14 inch PC offers an 11 TOPS NPU[3], enterprise-grade security and manageability in a highly configurable PC that meets the demanding needs of enterprise users."
@@ -4953,7 +4925,7 @@
       "subCategory": "Notebooks",
       "rrp": 4914.21,
       "rrpInc": 5405.63,
-      "stock": 13,
+      "stock": 25,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BX3Q7PT.jpg",
       "description": "Equip your high-performing teams with an AI-enhanced PC[3] that offers the power, security, and collaboration tools essential for both office and hybrid work environments. The HP EliteBook 8 G1i 14 inch AI PC efficiently meets the requirements of multitasking teams worldwide."
@@ -4967,7 +4939,7 @@
       "subCategory": "Notebooks",
       "rrp": 5726,
       "rrpInc": 6298.6,
-      "stock": 22,
+      "stock": 27,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BQ4F0PT.jpg",
       "description": "Equip your high-performing teams with an AI-enhanced PC[3] that offers the power, security, and collaboration tools essential for both office and hybrid work environments. The HP EliteBook 8 G1i 14 inch AI PC efficiently meets the requirements of multitasking teams worldwide."
@@ -4995,7 +4967,7 @@
       "subCategory": "Notebooks",
       "rrp": 5894.1,
       "rrpInc": 6483.51,
-      "stock": 18,
+      "stock": 17,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BQ4F3PT.jpg",
       "description": "Experience unparalleled productivity and efficiency with the HP EliteBook 8 G1i 14-inch Next Gen AI PC. Designed for strategic work, offering seamless multitasking and unique collaboration features. Accomplish more, faster than ever, with AI that maintains momentum, offloads tasks, and analyzes data like never before.[3]"
@@ -5261,7 +5233,7 @@
       "subCategory": "Notebooks",
       "rrp": 4300.55,
       "rrpInc": 4730.6,
-      "stock": 23,
+      "stock": 22,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BQ4T4PT.jpg",
       "description": "Experience unparalleled productivity and efficiency with the HP EliteBook 8 G1i 16-inch Next Gen AI PC. Designed for strategic work, offering seamless multitasking and unique collaboration features. Accomplish more, faster than ever, with AI that maintains momentum, offloads tasks, and analyzes data like never before."
@@ -5303,8 +5275,8 @@
       "subCategory": "Notebooks",
       "rrp": 3963.4,
       "rrpInc": 4359.74,
-      "stock": 0,
-      "eta": "2026-09-09",
+      "stock": 14,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/HP EliteBook 8 G2i 14_1.jpg",
       "description": "Automate tasks to save time and multitask without lag on the easy to carry HP EliteBook 8 G2i 14 inch AI PC. This HP Copilot+ PC[4] with HP Wolf Security[5], enterprise management, and long battery life helps global travelers stay focused on the go."
     },
@@ -5348,20 +5320,6 @@
       "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/B9GC8PT.jpg",
-      "description": "Leave a lasting impression with the brilliantly designed HP EliteBook Ultra G1i Next Gen AI PC. This new signature of success mirrors your executive style and unifies your decision making with AI and advanced conferencing features that take your strategy to action."
-    },
-    {
-      "code": "B9GC9PT",
-      "sku": "",
-      "name": "HP Elitebook Ultra G1i 14 AI 14\" BV",
-      "brand": "HP",
-      "category": "Computers",
-      "subCategory": "Notebooks",
-      "rrp": 6207.09,
-      "rrpInc": 6827.8,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/15/B9GC9PT.jpg",
       "description": "Leave a lasting impression with the brilliantly designed HP EliteBook Ultra G1i Next Gen AI PC. This new signature of success mirrors your executive style and unifies your decision making with AI and advanced conferencing features that take your strategy to action."
     },
     {
@@ -5597,7 +5555,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 3000,
       "rrpInc": 3300,
-      "stock": 31,
+      "stock": 30,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19/BP0F8PT.jpg",
       "description": "Delivering exceptional AI-enhanced performance with the latest Intel® Core Ultra processor[2] with an up to 13 TOPS NPU[3], the HP EliteDesk 8 Mini G1i AI PC's compact design, versatile deployment options, and advanced security features make it the ideal choice for modern workspaces."
@@ -5625,7 +5583,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 4019.27,
       "rrpInc": 4421.2,
-      "stock": 33,
+      "stock": 31,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19/BP0G1PT.jpg",
       "description": "Delivering exceptional AI-enhanced performance with the latest Intel® Core Ultra processor[2] with an up to 13 TOPS NPU[3], the HP EliteDesk 8 Mini G1i AI PC's compact design, versatile deployment options, and advanced security features make it the ideal choice for modern workspaces."
@@ -5681,7 +5639,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 4070.18,
       "rrpInc": 4477.2,
-      "stock": 2,
+      "stock": 1,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/D00ZMPT 1.jpg",
       "description": "Exceed demanding expectations with the HP EliteDesk 8 SFF G1i AI PC is the perfect choice for small workspaces. Powered by the latest Intel® Core™ Ultra processor with a 13 TOPS NPU, this secure, scalable, and powerful AI PC tackles your multitasking needs."
@@ -5849,7 +5807,7 @@
       "subCategory": "Notebooks",
       "rrp": 3362.73,
       "rrpInc": 3699,
-      "stock": 3,
+      "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/c06b89b4-f7a0-444f-903a-fa07629aa857.jpg",
       "description": "The sleek and powerful HP OmniBook X Series runs on Intel® Core™ Ultra processor with advanced AI capabilities, featuring dual fans and a copper cooling plate that keep performance steady under pressure. Stay powered and connected with fast-charging, dual-sided USB-C® ports and Wi-Fi® 7."
@@ -5877,7 +5835,7 @@
       "subCategory": "Bags, Cases & Covers",
       "rrp": 45,
       "rrpInc": 49.5,
-      "stock": 83,
+      "stock": 73,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/1X644AA_1.jpg",
       "description": "Commute with a stylish and durable backpack thoughtfully designed with the environment in mind and made with recycled fabric. The HP Prelude Pro Recycled Backpack comes with safety features for your peace of mind when you carry your devices from work to home and beyond."
@@ -5891,7 +5849,7 @@
       "subCategory": "Bags, Cases & Covers",
       "rrp": 35.45,
       "rrpInc": 39,
-      "stock": 245,
+      "stock": 244,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/1X645AA.jpg",
       "description": "Commute with a stylish and durable top load thoughtfully designed with the environment in mind and made with recycled fabric. The HP Prelude Pro Recycled Topload comes with safety features for your peace of mind when you carry your devices from work to home and beyond."
@@ -5905,7 +5863,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 1751.82,
       "rrpInc": 1927,
-      "stock": 125,
+      "stock": 121,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19/BE8R8AT.jpg",
       "description": "Upgrade the warranty to 3 years onsite with the additional purchase of the U10N3E CarePack\r\nThe HP Pro Mini 260 Desktop provides users with the business-grade performance and features in a compact chassis. This PC is powered by the latest Intel processor and provides varied features to meet the day-to-day requirements of your business at an affordable price."
@@ -5947,7 +5905,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 2354.93,
       "rrpInc": 2590.42,
-      "stock": 50,
+      "stock": 49,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/HP Pro Mini 260 G9_1.jpg",
       "description": "The HP Pro Mini 260 Desktop provides users with the business-grade performance and features in a compact chassis. This PC is powered by the latest Intel® processor[2] and provides varied features to meet the day-to-day requirements of your business at an affordable price."
@@ -6045,7 +6003,7 @@
       "subCategory": "Notebooks",
       "rrp": 2660,
       "rrpInc": 2926,
-      "stock": 20,
+      "stock": 26,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BP9C8PT.jpg",
       "description": "The HP ProBook 4 G1i 16-inch Notebook AI PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[6], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] with 11 TOPS NPU[4] and long battery life, this feature-rich PC is future-ready for long-term productivity and AI exploration."
@@ -6059,7 +6017,7 @@
       "subCategory": "Notebooks",
       "rrp": 3295,
       "rrpInc": 3624.5,
-      "stock": 19,
+      "stock": 29,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BP9D2PT.jpg",
       "description": "The HP ProBook 4 G1i 16-inch Notebook AI PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[6], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] with 11 TOPS NPU[4] and long battery life, this feature-rich PC is future-ready for long-term productivity and AI exploration."
@@ -6073,7 +6031,7 @@
       "subCategory": "Notebooks",
       "rrp": 2619.27,
       "rrpInc": 2881.2,
-      "stock": 27,
+      "stock": 22,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BP9C9PT.jpg",
       "description": "The HP ProBook 4 G1i 16-inch Notebook AI PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[6], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] with 11 TOPS NPU[4] and long battery life, this feature-rich PC is future-ready for long-term productivity and AI exploration."
@@ -6101,7 +6059,7 @@
       "subCategory": "Notebooks",
       "rrp": 2376.36,
       "rrpInc": 2614,
-      "stock": 66,
+      "stock": 63,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BP9C7PT.jpg",
       "description": "The HP ProBook 4 G1i 16-inch Notebook AI PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[6], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] with 11 TOPS NPU[4] and long battery life, this feature-rich PC is future-ready for long-term productivity and AI exploration."
@@ -6115,7 +6073,7 @@
       "subCategory": "Notebooks",
       "rrp": 2836.91,
       "rrpInc": 3120.6,
-      "stock": 29,
+      "stock": 27,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BP9E2PT.jpg",
       "description": "The HP ProBook 4 G1i 16-inch Notebook AI PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[6], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] with 11 TOPS NPU[4] and long battery life, this feature-rich PC is future-ready for long-term productivity and AI exploration."
@@ -6129,7 +6087,7 @@
       "subCategory": "Notebooks",
       "rrp": 2364.41,
       "rrpInc": 2600.85,
-      "stock": 34,
+      "stock": 28,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BP9E3PT.jpg",
       "description": "The HP ProBook 4 G1i 14-inch Notebook AI PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[6], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] with 11 TOPS NPU[4] and long battery life, this feature-rich PC is future-ready for long-term productivity and AI exploration."
@@ -6143,8 +6101,8 @@
       "subCategory": "Notebooks",
       "rrp": 2423.64,
       "rrpInc": 2666,
-      "stock": 68,
-      "eta": "",
+      "stock": 0,
+      "eta": "2026-09-09",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BP9F2PT.jpg",
       "description": "The HP ProBook 4 G1i 14-inch Notebook AI PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[6], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] with 11 TOPS NPU[4] and long battery life, this feature-rich PC is future-ready for long-term productivity and AI exploration."
     },
@@ -6157,7 +6115,7 @@
       "subCategory": "Notebooks",
       "rrp": 1907.82,
       "rrpInc": 2098.6,
-      "stock": 130,
+      "stock": 34,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/HP Probook 4 G1iR 16_1.jpg",
       "description": "The HP ProBook 4 G1iR 16-inch Notebook PC provides growing businesses with commercial-grade performance, multi-layered endpoint security, and durability in an easily upgradeable design. Powered by the latest Intel® processor and long battery life, this feature-rich PC is future-ready for long-term productivity and helps enable hybrid work."
@@ -6185,7 +6143,7 @@
       "subCategory": "Notebooks",
       "rrp": 1627.82,
       "rrpInc": 1790.6,
-      "stock": 40,
+      "stock": 35,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/C2BP3AT.jpg",
       "description": "The HP ProBook 4 G1i 16-inch Notebook PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[5], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] and long battery life, this feature-rich PC is future-ready for long-term productivity and helps enable hybrid work."
@@ -6339,7 +6297,7 @@
       "subCategory": "Notebooks",
       "rrp": 3165,
       "rrpInc": 3481.5,
-      "stock": 11,
+      "stock": 14,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/HP ProBook 4 G2i 16_1.jpg",
       "description": "Unify diverse workflows for hybrid professionals who need AI-enhanced performance[3] they can explore across an expansive screen. The HP ProBook 4 G2i 16-inch Notebook integrates seamless upgradeability, reliable battery life and enterprise-grade security in a sleek device with a spacious view."
@@ -6367,7 +6325,7 @@
       "subCategory": "Notebooks",
       "rrp": 3621.91,
       "rrpInc": 3984.1,
-      "stock": 11,
+      "stock": 14,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/HP ProBook 4 G2i 16_1.jpg",
       "description": "Bundle Contains:\r\n1x DF7J9PT + 1x 83P91AA & MMT Install RAM"
@@ -6451,7 +6409,7 @@
       "subCategory": "Notebooks",
       "rrp": 2756.82,
       "rrpInc": 3032.5,
-      "stock": 49,
+      "stock": 47,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/DC0N9PT 1.jpg",
       "description": "Step into hybrid workflows with accelerated speed and a compact design crafted for on-the-go performance. The HP ProBook 4 G2iR 14-inch Notebook AI PC is your passport to mobility, security, and AI-enhanced productivity supported with reliable battery life for growing professionals who need a device that can keep up."
@@ -6485,20 +6443,6 @@
       "description": "The HP ProBook 460 16-inch laptop provides growing businesses with commercial-grade performance, multi-layered endpoint security, and durability in an easily upgradeable design. Powered by the latest Intel processor and long battery life, this feature-rich PC is well-equipped for long-term productivity and helps enable hybrid work."
     },
     {
-      "code": "A45T9PT",
-      "sku": "",
-      "name": "HP Probook 465 G11 -A45T9PT- AMD Ryzen 7-7735U / 16GB (8GBx2) 4800MHz / 512GB SSD / 16\" WUXGA / W11P",
-      "brand": "HP",
-      "category": "Computers",
-      "subCategory": "Notebooks",
-      "rrp": 2275.14,
-      "rrpInc": 2502.65,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Uploads/HP Probook 465 G11_1.jpg",
-      "description": "The HP ProBook 465 16-inch laptop provides growing businesses with commercial-grade performance, multi-layered endpoint security[3], and durability in an easily upgradeable design. Powered by the latest AMD processor[2] and long battery life, this feature-rich PC is well-equipped for long-term productivity and helps enable hybrid work."
-    },
-    {
       "code": "C3FP7PT",
       "sku": "",
       "name": "HP ProDesk 4 Mini G1i Intel",
@@ -6507,7 +6451,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 2658.73,
       "rrpInc": 2924.6,
-      "stock": 57,
+      "stock": 55,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/HP ProDesk 4 Mini G1i Desktop AI PC.png",
       "description": "The HP ProDesk 4 Mini G1i Desktop AI PC delivers commercial-grade performance, security, and flexible deployment capabilities, with just a single-cable, for businesses of all sizes. This reliable, one-liter PC provides the power to handle mainstream enterprise and SMBs with a powerful Intel® CPU[2] featuring a 13 TOPS NPU.[5] See where AI can take you!"
@@ -6521,7 +6465,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 2467.82,
       "rrpInc": 2714.6,
-      "stock": 18,
+      "stock": 15,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/1cd460fe-68a1-48ff-9df8-8d3cc099ae8d 1.png",
       "description": "The HP ProDesk 4 Mini G1i Desktop AI PC delivers commercial-grade performance, security, and flexible deployment capabilities, with just a single-cable, for businesses of all sizes. This reliable, one-liter PC provides the power to handle mainstream enterprise and SMBs with a powerful Intel® CPU[2] featuring a 13 TOPS NPU.[5] See where AI can take you!"
@@ -6535,7 +6479,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 2810.18,
       "rrpInc": 3091.2,
-      "stock": 21,
+      "stock": 19,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19/C3FP4PT.jpg",
       "description": "The HP ProDesk 4 SFF G1i Desktop AI PC provides users in evolving work environments with commercial-grade customization and scalability in a space-saving design. The Intel® Core Ultra processor[2] and 13 TOPS NPU[3] help optimize handling daily tasks by distributing power and exploring the potential of AI to improve business performance."
@@ -6605,7 +6549,7 @@
       "subCategory": "Bags, Cases & Covers",
       "rrp": 39,
       "rrpInc": 42.9,
-      "stock": 28,
+      "stock": 20,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15B/3E5F9AA.jpg",
       "description": "Now you can feel good about the bag you use to protect your laptop. Designed to keep your laptop protected and accessories organized, the Renew Business 14.1-inch Laptop Bag uses environmentally-responsible materials that are durable, easy to clean and designed for comfort."
@@ -6647,7 +6591,7 @@
       "subCategory": "Docking Stations",
       "rrp": 362.73,
       "rrpInc": 399,
-      "stock": 11,
+      "stock": 10,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15AD/9X472UT.jpg",
       "description": "Powering your workday flows naturally with the HP Thunderbolt 4 100W G6 Dock. Focus on what matters with hands-off management, frictionless connections to your devices and power that's ready when you need it. With state-of-the-art security, your devices remain safe."
@@ -6675,7 +6619,7 @@
       "subCategory": "Docking Stations",
       "rrp": 571.45,
       "rrpInc": 628.6,
-      "stock": 37,
+      "stock": 36,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15AD/AW5M5UT.jpg",
       "description": "Work without interruptions and maximize productivity with ultimate power delivery from the HP Thunderbolt 4 Ultra 280W G6 Dock. Effortlessly manage, connect and power the devices you love with state-of-the-art security and connectivity."
@@ -6717,7 +6661,7 @@
       "subCategory": "Notebook Accessories",
       "rrp": 262.18,
       "rrpInc": 288.4,
-      "stock": 70,
+      "stock": 200,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15A/15HA-9X3V1UT.jpg",
       "description": "Kickstart your day with less hassle and more hustle. The HP USB-C 100W G6 Dock boots your ecosystem as you arrive, connects instantly[1] via a single USB-C cable, and streamlines your setup with ample ports and seamless, secure connectivity all while staying up to date with remote manageability."
@@ -6773,8 +6717,8 @@
       "subCategory": "Desktop Computers Workstation",
       "rrp": 6503,
       "rrpInc": 7153.3,
-      "stock": 0,
-      "eta": "2026-09-07",
+      "stock": 2,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/HP Z1 TWR G1i_1.jpg",
       "description": "Workstation performance is now within reach with a tower built for designing, editing, and gaming. Go beyond a commercial PC with the HP Z1 Tower, delivering pro-level, expandable performance certified for pro-apps, with support for high-end graphics."
     },
@@ -6871,7 +6815,7 @@
       "subCategory": "Desktop Computers Workstation",
       "rrp": 5474,
       "rrpInc": 6021.4,
-      "stock": 4,
+      "stock": 3,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19WS/BV2Q6PT.jpg",
       "description": "Experience new levels of performance for professional workflows. The HP Z2 Tower AI workstation is reengineered to support high-end graphics and seamlessly run both single and multi-threaded apps for fast modeling, simulation, and rendering. Enjoy easy expandability to upgrade, when needs evolve."
@@ -6927,7 +6871,7 @@
       "subCategory": "Notebooks Workstation",
       "rrp": 3428,
       "rrpInc": 3770.8,
-      "stock": 15,
+      "stock": 14,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15WS/BV8B6PT_1.jpg",
       "description": "Pro-level performance combines with true mobility in this sleek and powerful laptop. Review 3D designs, create with AI tools in pro apps, and work across multiple projects wherever you are. Stay productive with an AI workstation that delivers both performance and long-lasting battery."
@@ -6941,7 +6885,7 @@
       "subCategory": "Notebooks Workstation",
       "rrp": 3944.55,
       "rrpInc": 4339,
-      "stock": 13,
+      "stock": 4,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15WS/BV5K9PT.jpg",
       "description": "Pro-level performance combines with true mobility in this sleek and powerful laptop. Review 3D designs, create with AI tools in pro apps, and work across multiple projects wherever you are. Stay productive with an AI workstation that delivers both performance and long-lasting battery."
@@ -6969,7 +6913,7 @@
       "subCategory": "Notebooks Workstation",
       "rrp": 7132,
       "rrpInc": 7845.2,
-      "stock": 3,
+      "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15WS/BV5L0PT.jpg",
       "description": "Pro-level performance combines with true mobility in this sleek and powerful laptop. Review 3D designs, create with AI tools in pro apps, and work across multiple projects wherever you are. Stay productive with an AI workstation that delivers both performance and long-lasting battery."
@@ -7039,7 +6983,7 @@
       "subCategory": "Notebooks Workstation",
       "rrp": 6418,
       "rrpInc": 7059.8,
-      "stock": 6,
+      "stock": 5,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15WS/BV5L7PT.jpg",
       "description": "Pro-level performance combines with true mobility in this sleek and powerful laptop. Review 3D designs, create with AI tools in pro apps, and work across multiple projects wherever you are. Stay productive with an AI workstation that delivers both performance and long-lasting battery."
@@ -7081,7 +7025,7 @@
       "subCategory": "Notebooks Workstation",
       "rrp": 3180.55,
       "rrpInc": 3498.6,
-      "stock": 24,
+      "stock": 23,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/HP ZBook 8 G1i 14_1.jpg",
       "description": "Pro-level performance combines with true mobility in this sleek and powerful laptop. Review 3D designs, create with AI tools in pro apps, and work across multiple projects wherever you are. Stay productive with an AI workstation that delivers both performance and long-lasting battery."
@@ -7225,20 +7169,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/HP ZBook X G2i 16_1.jpg",
       "description": "Work with generative AI to explore design concepts, or complete 3D modeling and conceptual designs—all on the go. Built to give pros the power they need at an exceptional value[1], the HP ZBook X delivers advanced AI performance, scalable high-end graphics and memory, and all-day battery life.[2]"
-    },
-    {
-      "code": "C20S8PT",
-      "sku": "",
-      "name": "HP Zbook X Ultra 7 255H 32GB DDR5 1TB",
-      "brand": "HP",
-      "category": "Computers",
-      "subCategory": "Notebooks Workstation",
-      "rrp": 6011.82,
-      "rrpInc": 6613,
-      "stock": 3,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/15WS/C20S8PT.jpg",
-      "description": "Upgrade to professional ISV certified performance at an affordable price. Power up your productivity on this durable yet premium AI workstation. Pro-grade components deliver exceptional performance to work with generative AI to explore design concepts, or complete 3D modeling and conceptual design."
     },
     {
       "code": "A45SVPT+Q",
@@ -7739,7 +7669,7 @@
       "subCategory": "Docking Stations",
       "rrp": 190,
       "rrpInc": 209,
-      "stock": 124,
+      "stock": 112,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15AD/JCD543P.jpg",
       "description": "The USB-C Triple Display Docking Station provides extra connectivity from your computer. Extend up to three monitors through HDMI, VGA, and DisplayPort or HDMI. With its flexible USB-C cord, it keeps in mind the location of the USB-C port on your device, ensuring an easy connection. These multi-adapters allow you to add an additional USB 3.1/SD/microSD computer peripheral, HDMI/DisplayPort/VGA monitor and Gigabit Ethernet through your USB port. One of the USB Type-A ports supports fast charging BC1.2 for a smartphone, tablet or iPad. The USB-C port supports power delivery 3.0, allowing you to keep charging your notebook or smartphone while using the adapter."
@@ -7865,7 +7795,7 @@
       "subCategory": "Docking Stations",
       "rrp": 135.45,
       "rrpInc": 149,
-      "stock": 27,
+      "stock": 26,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15AD/JTS224.jpg",
       "description": "JTS224 is made of durable aluminium and is designed to support iPad Pro and iPad Air. It is foldable for easy transportation and storage. The viewing angle can be adjusted to your liking and improves your viewing experience. The integrated USB-C docking station includes an HDMI 2.0 port, two USB Type-A 5Gbps ports, SD / microSD 3.0 card reader, audio/mic combo jack and PD 100W pass-through (requires seperate power supply), giving you the connections you need for increased productivity."
@@ -8263,6 +8193,20 @@
       "description": "The Lenovo ThinkBook 14 G8 is a business-oriented laptop designed for productivity and everyday tasks. Featuring a powerful Intel Core processor, ample storage, and a comfortable keyboard, it's a reliable and efficient workhorse for professionals on the go.\r\nUpgrade from 1 Year to 3 Year Warranty with 5WS0K27114"
     },
     {
+      "code": "21SJ006TAU",
+      "sku": "",
+      "name": "Lenovo ThinkBook 14 G8 U7-255H, 32GB, 512GB, 14\" WUXGA, W11P, 1Y OS",
+      "brand": "Lenovo",
+      "category": "Computers",
+      "subCategory": "Notebooks",
+      "rrp": 2362.73,
+      "rrpInc": 2599,
+      "stock": 0,
+      "eta": "2026-09-10",
+      "image": "https://www.mmt.com.au/Files/Product assets/Images/15/21SJ006TAU.jpg",
+      "description": "The Lenovo ThinkBook 14 G8 is a business-oriented laptop designed for productivity and everyday tasks. Featuring a powerful Intel Core processor, ample storage, and a comfortable keyboard, it's a reliable and efficient workhorse for professionals on the go.\r\nUpgrade from 1 Year to 3 Year Warranty with 5WS0K27114"
+    },
+    {
       "code": "21UY001UAU",
       "sku": "",
       "name": "Lenovo ThinkBook 14 G9 C5-210H, 16GB, 512GB, 14\" WUXGA, W11P, 1Y OS",
@@ -8341,7 +8285,7 @@
       "subCategory": "Notebooks",
       "rrp": 1899.09,
       "rrpInc": 2089,
-      "stock": 56,
+      "stock": 25,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/ThinkBook_16_G9_IRL_CT1_03.jpg",
       "description": "The Lenovo ThinkBook 16 G9 is a 16-inch Intel-powered business laptop designed for everyday productivity, combining a bright WUXGA display, responsive performance with Intel® Core™ processors, up to 16 GB of memory and fast SSD storage, modern connectivity (Wi-Fi 6E, Bluetooth), and Windows 11 Pro — ideal for multitasking and professional use."
@@ -8369,7 +8313,7 @@
       "subCategory": "Notebooks",
       "rrp": 2299.09,
       "rrpInc": 2529,
-      "stock": 35,
+      "stock": 34,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/21US005BAU.jpeg",
       "description": ""
@@ -8383,7 +8327,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 1729.09,
       "rrpInc": 1902,
-      "stock": 24,
+      "stock": 22,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19/13A40008AU.jpg",
       "description": "This Lenovo M70Q G6 TINY Desktop is compact powerhouse combines an Intel U5-225T CPU and 16GB RAM for smooth performance. Its 1L size maximizes workspace efficiency, while the 512GB SSD offers fast storage. With Windows 11 Pro, easy upgrades, and 3-year onsite support, it’s ideal for businesses seeking reliable, space-saving computing."
@@ -8481,8 +8425,8 @@
       "subCategory": "Desktop Computers",
       "rrp": 1399.09,
       "rrpInc": 1539,
-      "stock": 0,
-      "eta": "2026-09-04",
+      "stock": 20,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/19/13B9005EAU.jpg",
       "description": "Whether you need to connect securely with remote devices or transfer data safely and quickly across the globe, the ThinkCentre neo 50q Tiny has the answer. It can also handle complex, volume-heavy tasks with ease, and supports up to WiFi 6. So connecting with teams and clients, wherever they are based, is both seamless and hassle-free."
     },
@@ -8526,6 +8470,20 @@
       "stock": 3,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/ThinkCentre_neo_50q_Gen_6_CT1_02.png",
+      "description": "The Lenovo ThinkCentre neo 50q Gen 6 is a compact Copilot+ business desktop powered by Intel® Core™ Ultra processors, delivering AI-enhanced performance, efficient multitasking, and flexible connectivity in a space-saving Tiny form factor."
+    },
+    {
+      "code": "13HR002FAU-3YR",
+      "sku": "",
+      "name": "Lenovo ThinkCentre Neo 50Q G6 Tiny U5-226V, 16GB, 512GB, W11P, 3Y OS",
+      "brand": "Lenovo",
+      "category": "Computers",
+      "subCategory": "Desktop Computers",
+      "rrp": 1544.55,
+      "rrpInc": 1699,
+      "stock": 0,
+      "eta": "2026-09-09",
+      "image": "https://www.mmt.com.au/Files/Images/Product Images/13HR002FAU 1.jpg",
       "description": "The Lenovo ThinkCentre neo 50q Gen 6 is a compact Copilot+ business desktop powered by Intel® Core™ Ultra processors, delivering AI-enhanced performance, efficient multitasking, and flexible connectivity in a space-saving Tiny form factor."
     },
     {
@@ -8635,7 +8593,7 @@
       "subCategory": "Notebooks",
       "rrp": 3362.73,
       "rrpInc": 3699,
-      "stock": 3,
+      "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/21QT003VAU 1.jpg",
       "description": "The Lenovo ThinkPad P14s Gen 6 is a powerful AI-ready mobile workstation that combines Intel Core Ultra processing, professional-grade graphics, ISV-certified performance, and all-day mobility in a compact 14.5-inch design for demanding professional workflows."
@@ -8697,20 +8655,6 @@
       "description": ""
     },
     {
-      "code": "21R30009AU",
-      "sku": "",
-      "name": "Lenovo ThinkPad T14S 2-in-1 G1 U7-255H, 32GB, 512GB, 14\" WUXGA TOUCH, W11P(AI), 3Y PREM",
-      "brand": "Lenovo",
-      "category": "Computers",
-      "subCategory": "Notebooks",
-      "rrp": 2971.82,
-      "rrpInc": 3269,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Images/Product Images/ThinkPad_T14s_2_in_1_Gen_1_CT1_07.png",
-      "description": "The Lenovo ThinkPad T14s 2-in-1 Gen 1 provides a versatile computing experience with its 360° flip design, allowing users to switch seamlessly between laptop and tablet modes. Equipped with a 14-inch IPS touchscreen display featuring a native resolution of 1920 x 1200, this device offers vibrant visuals suited for work and entertainment."
-    },
-    {
       "code": "21R1002LAU",
       "sku": "",
       "name": "Lenovo ThinkPad T14S G6 U5-225U, 16GB, 512GB, 14\" WUXGA, W11P, 3Y PREM",
@@ -8733,7 +8677,7 @@
       "subCategory": "Notebooks",
       "rrp": 2771.82,
       "rrpInc": 3049,
-      "stock": 10,
+      "stock": 9,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/ThinkPad_T14s_Gen_6_Intel_CT1_10.png",
       "description": ""
@@ -8775,23 +8719,9 @@
       "subCategory": "Notebooks",
       "rrp": 3190,
       "rrpInc": 3509,
-      "stock": 3,
-      "eta": "",
+      "stock": 0,
+      "eta": "2026-09-09",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/21QE0022AU.jpg",
-      "description": "The Lenovo ThinkPad T16 G3 is an excellent choice for business professionals who require a powerful and reliable laptop for demanding workloads. Its combination of performance, durability, and AI-enhanced features makes it an ideal investment for those who need to stay productive and efficient in the modern business environment"
-    },
-    {
-      "code": "21QE0023AU",
-      "sku": "",
-      "name": "Lenovo ThinkPad T16 G4 U7-255H, 32GB, 512GB, 16\" WUXGA, W11P, 3Y OS",
-      "brand": "Lenovo",
-      "category": "Computers",
-      "subCategory": "Notebooks",
-      "rrp": 2908.18,
-      "rrpInc": 3199,
-      "stock": 6,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/15/21QE0023AU.jpg",
       "description": "The Lenovo ThinkPad T16 G3 is an excellent choice for business professionals who require a powerful and reliable laptop for demanding workloads. Its combination of performance, durability, and AI-enhanced features makes it an ideal investment for those who need to stay productive and efficient in the modern business environment"
     },
     {
@@ -8817,7 +8747,7 @@
       "subCategory": "Laptop Docking and Cradles",
       "rrp": 271.82,
       "rrpInc": 299,
-      "stock": 40,
+      "stock": 39,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/40BF0100AU.png",
       "description": "Designed to enhance everyday productivity, the Lenovo™ ThinkPad® USB4 Dock 5000 is the Successor of our famous Universal USB-C Dock equipped with cutting edge USB4 Technology, The dock can connect to your laptop with 40Gbps bandwidth USB4 upstream connectivity, that allows you to extend your monitor setup with more pixels and higher refresh rates. It can output 65W charge power to your laptop with 100W power adapter, or you can choose a 135W power adapter to boost the charge power up to 100W to you laptop."
@@ -8921,20 +8851,6 @@
       "description": "Premium Thunderbolt™ 4 Docking Experience: ThinkPad Thunderbolt 4 Workstation Dock delivers reliable and consistent industry leading video, data and power connectivity; Maximize Your Productivity: Expand your horizon with versatile 8K display support or multiple 4K displays support, Upto 230W Power Delivery to Workstation, silent firmware upgrades, VPro/AMT support and transfer data at lightning fast 40Gbps. The ThinkPad Thunderbolt 4 Workstation Dock is future-proof and fully loaded to take your productivity, efficiency and creativity to the peak."
     },
     {
-      "code": "40B00135AU",
-      "sku": "",
-      "name": "Lenovo Universal Thunderbolt 4 Dock 4K HDMI(1), DP(2), USB(4), TB(1), 100W PD, 3YR",
-      "brand": "Lenovo",
-      "category": "Computers",
-      "subCategory": "Laptop Docking and Cradles",
-      "rrp": 422.73,
-      "rrpInc": 465,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Images/Product Images/40B00135AU.png",
-      "description": "Enterprise-Grade Universal Thunderbolt 4 Docking Experience: ThinkPad Universal Thunderbolt 4 Dock delivers reliable and consistent industry leading video, data and power connectivity in a Windows based mixed-PC environment. Maximize Your Productivity: Expand your horizon with versatile 8K display support or multiple 4K displays support, silent firmware upgrades, VPro/AMT support and transfer data at lightning fast 40Gbps."
-    },
-    {
       "code": "20XX-SBWY00-RFB",
       "sku": "",
       "name": "REFURB Lenovo X1 Carbon G9 i7-1185G7, 32GB RAM, 512GB SSD, 14\" FHD, W11P, 12M MMT WTY",
@@ -8943,7 +8859,7 @@
       "subCategory": "Notebooks",
       "rrp": 1544.55,
       "rrpInc": 1699,
-      "stock": 14,
+      "stock": 13,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/RFB 1.jpg",
       "description": "Refurbished products are items which have been returned to an authorized repair facility for testing, inspection, or which have been repaired by certified technicians. Products may have minor cosmetic blemishes, scratches or slight signs of wear. Products may not come with original packaging materials. For warranty or DOA please contact MMT."
@@ -9195,7 +9111,7 @@
       "subCategory": "Notebook Accessories",
       "rrp": 117.27,
       "rrpInc": 129,
-      "stock": 5,
+      "stock": 3,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/CF-VPF34U.png",
       "description": "Compatible with TOUGHBOOK 33"
@@ -9377,7 +9293,7 @@
       "subCategory": "Notebook Accessories",
       "rrp": 153.64,
       "rrpInc": 169,
-      "stock": 26,
+      "stock": 21,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15A/CF-AA5713A2A.png",
       "description": "Toughbook 40, 33, 54, 55, G2 compatible."
@@ -9545,7 +9461,7 @@
       "subCategory": "Notebook Accessories",
       "rrp": 99.09,
       "rrpInc": 109,
-      "stock": 29,
+      "stock": 27,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/CF-VNP332U.png",
       "description": "The Digitizer Stylus Pen (CF-VNP332U) is designed for use with touch/digitizer screens, fully compatibility for TOUGHBOOK 33."
@@ -9825,7 +9741,7 @@
       "subCategory": "Tablet Accessories",
       "rrp": 344.55,
       "rrpInc": 379,
-      "stock": 139,
+      "stock": 93,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/FZ-VZSU1UU - angled right_crop.jpg",
       "description": "The Long-life Battery Packy (FZ-VZSU1UU) is a battery pack designed for compatibility with the TOUGHBOOK G2 Standard."
@@ -9885,20 +9801,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/7160-0531-03-P-NQR.jpeg",
       "description": ""
-    },
-    {
-      "code": "CF-VEK331LAP",
-      "sku": "",
-      "name": "Panasonic Premium Keyboard for CF-33",
-      "brand": "Panasonic",
-      "category": "Computers",
-      "subCategory": "Notebook Accessories",
-      "rrp": 1362.73,
-      "rrpInc": 1499,
-      "stock": 2,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/CF-VEK331LAP.png",
-      "description": "Compatible with TOUGHBOOK 33"
     },
     {
       "code": "FZ-VPFG11U",
@@ -10161,7 +10063,7 @@
       "subCategory": "Tablet Accessories",
       "rrp": 644.55,
       "rrpInc": 709,
-      "stock": 73,
+      "stock": 62,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/FZ-VEBG21U.png",
       "description": "Compatible with TOUGHBOOK G2. Includes USB-A (4), HDMI (2), Serial, Ethernet"
@@ -10357,7 +10259,7 @@
       "subCategory": "Notebooks",
       "rrp": 3926.36,
       "rrpInc": 4319,
-      "stock": 63,
+      "stock": 62,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/FZ-55_00_Promo.jpg",
       "description": "The Panasonic Toughbook 55 breaks new ground offering unrivalled flexibility in even the most demanding and unpredictable environments with its innovative modular expansion packs. I/O, optical drives, authentication readers, and even discrete graphic expansion packs are user-upgradeable. Backwards compatibility with the previous generation of docks protects customers investments while saving time and resources."
@@ -10469,7 +10371,7 @@
       "subCategory": "Notebooks",
       "rrp": 4817.27,
       "rrpInc": 5299,
-      "stock": 63,
+      "stock": 62,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/FZ-55_00_Promo.jpg",
       "description": "The Panasonic Toughbook 55 breaks new ground offering unrivalled flexibility in even the most demanding and unpredictable environments with its innovative modular expansion packs. I/O, optical drives, authentication readers, and even discrete graphic expansion packs are user-upgradeable. Backwards compatibility with the previous generation of docks protects customers investments while saving time and resources."
@@ -10567,7 +10469,7 @@
       "subCategory": "Notebooks",
       "rrp": 5544.55,
       "rrpInc": 6099,
-      "stock": 9,
+      "stock": 8,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/FZ-56_01_Front View.png",
       "description": "The TOUGHBOOK 56 is a rugged yet portable 14” laptop, designed to endure demanding conditions while remaining sleek and ergonomic. With hot-swappable batteries providing up to 24 hours of operation and modular expansion options, it adapts to the needs of workers on the move."
@@ -10595,7 +10497,7 @@
       "subCategory": "Notebooks",
       "rrp": 5544.55,
       "rrpInc": 6099,
-      "stock": 9,
+      "stock": 8,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/FZ-56_00_Promo.jpg",
       "description": "The TOUGHBOOK 56 is a rugged yet portable 14” laptop, designed to endure demanding conditions while remaining sleek and ergonomic. With hot-swappable batteries providing up to 24 hours of operation and modular expansion options, it adapts to the needs of workers on the move."
@@ -11071,7 +10973,7 @@
       "subCategory": "Notebook Accessories",
       "rrp": 54.5,
       "rrpInc": 59.95,
-      "stock": 444,
+      "stock": 441,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15A/SH-PDUC100W.jpg",
       "description": "The Shintaro 100W Universal USB-C Laptop Charger offers fast, efficient charging for a variety of devices, including laptops, tablets, and smartphones. Compatible with MacBook, Chromebook, iPhone, iPad, Samsung smartphones, and more, this charger features a USB-C Power Delivery 3.0 port and a USB Type-A fast-charging port (max 2.4A) for powering up to two devices simultaneously.\r\n Equipped with a built-in intelligent IC, it automatically detects connected devices to optimize charging. The charger includes multiple safety protections against over-current, over-voltage, and overheating. A 1.2m USB-C charging cable is included for your convenience."
@@ -11113,10 +11015,10 @@
       "subCategory": "Tablet Accessories",
       "rrp": 541.77,
       "rrpInc": 595.95,
-      "stock": 45,
+      "stock": 37,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/SH-MDUC-16T.jpg",
-      "description": "The Shintaro USB-C Charging Dock delivers high-powered, intelligent and flexible device management, purpose-built for large-scale deployments across education, government, corporate, enterprise, healthcare, retail, and hospitality sectors. Designed for desktops, workstations, classrooms, laboratories, hot desks, and shared charging locations, it offers faster, more efficient charging in a compact design.\r\nPowered by advanced GaN (Gallium Nitride) technology, it delivers faster, more efficient charging in a compact form factor.\r\nEquipped with 16 USB-C PD3.0 ports delivering an impressive combined output of 1000W, it can charge up to 10 laptops at 100W or 16 devices at 60W. It fast charges iPhone®, iPad®, MacBook®, smartphones, tablets, notebooks, laptops, & Chromebook devices up to 16\".\r\nFor optimal charging performance, Shintaro 30cm 240W USB-C to USB-C Premium Braided Charging Cables are sold separately in packs of 16. One pack is sufficient to fully equip a 16-bay dock.\r\nThe InnovateCharger App gives you full control, allowing you to optimise and oversee all charging activity while benefiting from integrated safety protections. It offers versatile, intelligent, real-time monitoring & remote control of all connected charging trolleys, with support for multiple languages. Built to last & backed by a 1-year* Manufacturer's Warranty."
+      "description": "The Shintaro USB-C Charging Dock delivers high-powered, intelligent and flexible device management, purpose-built for large-scale deployments across education, government, corporate, enterprise, healthcare, retail, and hospitality sectors. Designed for desktops, workstations, classrooms, laboratories, hot desks, and shared charging locations, it offers faster, more efficient charging in a compact design.\r\nPowered by advanced GaN (Gallium Nitride) technology, it delivers faster, more efficient charging in a compact form factor.\r\nEquipped with 16 USB-C PD3.0 ports delivering an impressive combined output of 1000W, it can charge up to 10 laptops at 100W or 16 devices at 60W. Spacious 23mm-wide slots provide a comfortable fit for a wide range of everyday devices, while the 123mm slot height supports secure, organised and accessible storage. It fast charges iPhone®, iPad®, MacBook®, smartphones, tablets, notebooks, laptops, & Chromebook devices up to 16\".\r\nFor optimal charging performance, Shintaro 30cm 240W USB-C to USB-C Premium Braided Charging Cables are sold separately in packs of 16. One pack is sufficient to fully equip a 16-bay dock.\r\nThe InnovateCharger App gives you full control, allowing you to optimise and oversee all charging activity while benefiting from integrated safety protections. It offers versatile, intelligent, real-time monitoring & remote control of all connected charging trolleys, with support for multiple languages. Built to last & backed by a 1-year* Manufacturer's Warranty."
     },
     {
       "code": "SH-MDUC-C32S",
@@ -11141,7 +11043,7 @@
       "subCategory": "Notebook Accessories",
       "rrp": 45.41,
       "rrpInc": 49.95,
-      "stock": 597,
+      "stock": 561,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15A/SH-GDUC65W.jpg",
       "description": "The Shintaro 65W GaN USB-C Notebook Charger delivers efficient and powerful charging for a variety of devices, including Lenovo, Dell, HP, and MacBook models. Utilising advanced GaN technology, it provides a rapid output of up to 65W, supporting both Power Delivery (PD) and Quick Charge (QC) for fast and reliable performance. This charger prevents overcharging, overheating, and overcurrent, ensuring safety and compliance with electrical standards. With its compact design, it's perfect for on-the-go users needing a reliable power solution for laptops, smartphones, and tablets."
@@ -11197,7 +11099,7 @@
       "subCategory": "Tablet Accessories",
       "rrp": 13.59,
       "rrpInc": 14.95,
-      "stock": 1318,
+      "stock": 1312,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/SH-STYLUS.jpg",
       "description": "The Shintaro Capacitive Touch Stylus (Model: 15SHSTYLUS) is designed for use with all capacitive touch screens, including iPads, iPhones, Samsung Galaxy devices, and tablets. This precision stylus offers a comfortable grip, enhancing your ability to navigate, draw, or take notes on your touchscreen devices. It features a built-in clip for easy storage and portability, making it a practical accessory for both home and travel. With dimensions of 105mm in length and a diameter of 7mm, this stylus provides a balance of functionality and convenience, ensuring you can interact with your devices effortlessly and efficiently."
@@ -11239,7 +11141,7 @@
       "subCategory": "Notebook Accessories",
       "rrp": 22.68,
       "rrpInc": 24.95,
-      "stock": 74,
+      "stock": 72,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15A/SH-AD-USBC-RJ45.jpg",
       "description": "The Shintaro USB-C to Ethernet adaptor allows you to connect USB Type-C 3.1 to RJ45 with advanced twisted pair crossover detection and auto-correction (HP Auto-MDIX) technology. This adapter supports Gigabit Ethernet speeds of up to 10000 Mbps and requires no additional software or drivers - just plug it in, and you're ready to go."
@@ -11436,7 +11338,7 @@
       "rrp": 156.82,
       "rrpInc": 172.5,
       "stock": 0,
-      "eta": "2026-10-30",
+      "eta": "2026-10-15",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/BP133W1B.jpg",
       "description": "Enables incredibly vivid screen viewing with proprietary technology that enables 85% transmission of the device's brightness. On average, 25% more brightness than the other black privacy filters on the market. Nanolouver technology that powers a premium visual experience, perfectly balancing privacy, exceptional brightness and clarity."
     },
@@ -11449,8 +11351,8 @@
       "subCategory": "Screen Filters",
       "rrp": 156.82,
       "rrpInc": 172.5,
-      "stock": 0,
-      "eta": "2026-09-07",
+      "stock": 3,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/BP133W1E.jpg",
       "description": "Get the revolutionary new privacy filter that so seamlessly protects your onscreen data, you'll hardly know it's there, but visual hackers around you will. Introducing the 3M Bright Screen Privacy Filter. Easy to apply, easy to use, easy to forget it’s there. Only from 3M, the experts in screen privacy."
     },
@@ -11575,8 +11477,8 @@
       "subCategory": "Screen Filters",
       "rrp": 132.73,
       "rrpInc": 146,
-      "stock": 0,
-      "eta": "2026-09-07",
+      "stock": 59,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/BPNAP005.jpg",
       "description": "Enables incredibly vivid screen viewing with proprietary technology that enables 85% transmission of the device's brightness. On average, 25% more brightness than the other black privacy filters on the market. Nanolouver technology that powers a premium visual experience, perfectly balancing privacy, exceptional brightness and clarity. This Filter will work with Apple MacBook Pro 16in with Retina Display (2021)."
     },
@@ -11589,7 +11491,7 @@
       "subCategory": "Screen Filters",
       "rrp": 118.91,
       "rrpInc": 130.8,
-      "stock": 4,
+      "stock": 54,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/BPNAP006.jpg",
       "description": "Enables incredibly vivid screen viewing with proprietary technology that enables 85% transmission of the device's brightness. On average, 25% more brightness than the other black privacy filters on the market. Nanolouver technology that powers a premium visual experience, perfectly balancing privacy, exceptional brightness and clarity. This Filter fits Apple MacBook Air 13in with Retina Display (2018-Present)"
@@ -11660,7 +11562,7 @@
       "rrp": 125,
       "rrpInc": 137.5,
       "stock": 0,
-      "eta": "2026-10-30",
+      "eta": "2026-10-15",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/BPTMS002.jpg",
       "description": "Enables incredibly vivid screen viewing with proprietary technology that enables 85% transmission of the device's brightness. On average, 25% more brightness than the other black privacy filters on the market. Nanolouver technology that powers a premium visual experience, perfectly balancing privacy, exceptional brightness and clarity."
     },
@@ -11727,8 +11629,8 @@
       "brand": "3M",
       "category": "Display",
       "subCategory": "Screen Filters",
-      "rrp": 140.26,
-      "rrpInc": 154.29,
+      "rrp": 17.27,
+      "rrpInc": 19,
       "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/3m.png",
@@ -11783,8 +11685,8 @@
       "brand": "3M",
       "category": "Display",
       "subCategory": "Screen Filters",
-      "rrp": 151.85,
-      "rrpInc": 167.03,
+      "rrp": 90,
+      "rrpInc": 99,
       "stock": 1,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/3m.png",
@@ -11982,7 +11884,7 @@
       "rrp": 299.95,
       "rrpInc": 329.94,
       "stock": 0,
-      "eta": "2026-10-30",
+      "eta": "2026-10-15",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/PF240W1EM.jpg",
       "description": "The 3M COMPLY Magnetic Attach for Monitors allows you to quick-click between world-class privacy and screen sharing thanks to ultra strong magnets that click the filter securely into place. Leveraging the power of rare earth magnets, the proprietary modern design seamlessly attaches the privacy filter to the monitor display, ensuring a crisp, clear image."
     },
@@ -12029,20 +11931,6 @@
       "description": "ASUS TUF Gaming VG27AQ, LG UltraGear 27GL83A-B, LG UltraGear 27GN750-B, Samsung S27F354FHN, Sceptre C275W-1920RN, Sceptre C278W-1920R, Sceptre E275W-FPT"
     },
     {
-      "code": "PF270W9EM",
-      "sku": "",
-      "name": "3M PF270W9EM Privacy Filter",
-      "brand": "3M",
-      "category": "Display",
-      "subCategory": "Screen Filters",
-      "rrp": 430.1,
-      "rrpInc": 473.11,
-      "stock": 0,
-      "eta": "2026-10-30",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/PF270W9EM.jpg",
-      "description": "The 3M COMPLY Magnetic Attach for Monitors allows you to quick-click between world-class privacy and screen sharing thanks to ultra strong magnets that click the filter securely into place. Leveraging the power of rare earth magnets, the proprietary modern design seamlessly attaches the privacy filter to the monitor display, ensuring a crisp, clear image."
-    },
-    {
       "code": "PF340W2B",
       "sku": "",
       "name": "3M PF340W2B Privacy Filter",
@@ -12051,8 +11939,8 @@
       "subCategory": "Screen Filters",
       "rrp": 537.79,
       "rrpInc": 591.57,
-      "stock": 0,
-      "eta": "2026-09-07",
+      "stock": 2,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/3m.png",
       "description": "3M privacy and protection products work simply and beautifully on most of today's monitors to help protect your screens, and help keep the information displayed on them private. Ingenious microlouver technology delivers world-class effective privacy. You get crisp image clarity on your monitor, while visual hackers with side views are kept in the dark. This Filter fits : AOC CU34G2X/BK"
     },
@@ -12080,7 +11968,7 @@
       "rrp": 633.69,
       "rrpInc": 697.06,
       "stock": 0,
-      "eta": "2026-10-30",
+      "eta": "2026-10-15",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/3m.png",
       "description": "3M privacy and protection products work simply and beautifully on most of today's monitors to help protect your screens, and help keep the information displayed on them private. Ingenious microlouver technology delivers world-class effective privacy. You get crisp image clarity on your monitor, while visual hackers with side views are kept in the dark.This Filter fits: Dell UltraSharp U3821DW Curved USB-C Hub Monitor, HP Z38c, LG 38BK95C-W, LG 38BN75C-B, LG 38WK95C, LG 38WN95C-W, LG UltraGear 38GL950G-B."
     },
@@ -12457,7 +12345,7 @@
       "subCategory": "Monitors",
       "rrp": 635.45,
       "rrpInc": 699,
-      "stock": 41,
+      "stock": 37,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/PD2706U.jpg",
       "description": "BenQ empowers creative professionals with AQCOLOR technology to help inspire ideas and make projects come to life. Experience intuitive color matching and streamlined color management for effortless color consistency across displays. Featuring a 3840x2160 resolution, 60Hz refresh rate, and P3 wide colour gamut for vibrant visuals. Ideal for design professionals, it offers 90W USB-C compatibility for Mac devices, ensuring easy connectivity and charging."
@@ -13031,7 +12919,7 @@
       "subCategory": "Monitors",
       "rrp": 237,
       "rrpInc": 260.7,
-      "stock": 143,
+      "stock": 135,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/B0BU9UT.jpg",
       "description": "Expand your view in comfort with a spacious, thoughtfully designed 23.8 inches of workspace. Boasting a crisp, smooth screen and a simple yet functional design, this HP Series 3 Pro 23.8\" FHD monitor lets you work better all day."
@@ -13059,7 +12947,7 @@
       "subCategory": "Monitors",
       "rrp": 315.64,
       "rrpInc": 347.2,
-      "stock": 40,
+      "stock": 28,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/B0CG8UT.jpg",
       "description": "The HP Series 3 Pro 327PH is a 27\" FHD IPS professional monitor that delivers vibrant, color-accurate visuals with 1920x1080 resolution and 178° wide viewing angles. Designed for ergonomic comfort, it features height adjustment and tilt adjustment, allowing for optimal screen positioning. With VGA, DisplayPort, and HDMI inputs, it supports multiple devices for flexible workspace setups. The anti-glare IPS panel reduces eye strain, while the 3-year warranty ensures long-term reliability. Ideal for offices and creative workspaces, this monitor combines large-screen clarity with professional-grade adjustability for enhanced productivity."
@@ -13073,7 +12961,7 @@
       "subCategory": "Monitors",
       "rrp": 245,
       "rrpInc": 269.5,
-      "stock": 81,
+      "stock": 80,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/B11W5AT.jpg",
       "description": "Take on a full day of projects, meetings, and more with this HP Series 5 23.8\" FHD Monitor. Its sleek design complements any workspace, while the beautiful screen, adjustable stand, and built-in dual speakers bring your productivity to the next level."
@@ -13101,7 +12989,7 @@
       "subCategory": "Monitors",
       "rrp": 325,
       "rrpInc": 357.5,
-      "stock": 194,
+      "stock": 191,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/9D9L6UT.jpg",
       "description": "Get more out of your workday with the HP Series 5 Pro 23.8 FHD Monitor. Create the setup that works for the way you work, wherever you work, with refined visual clarity and adjustable comfort built into a sleek, modern design."
@@ -13143,7 +13031,7 @@
       "subCategory": "Monitors",
       "rrp": 355.09,
       "rrpInc": 390.6,
-      "stock": 13,
+      "stock": 6,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/9D9A7AA.jpg",
       "description": "Get more out of your workday with the HP Series 5 Pro 24 WUXGA Monitor. Create the setup that works for the way you work, wherever you work, with refined visual clarity and adjustable comfort built into a sleek, modern design."
@@ -13185,7 +13073,7 @@
       "subCategory": "Monitors",
       "rrp": 647.82,
       "rrpInc": 712.6,
-      "stock": 79,
+      "stock": 78,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/9E0G5AA.jpg",
       "description": "Plug into more possibilities with the HP Series 5 Pro 27 QHD USB-C? Monitor. Its sleek, modern design gives you crisp, stunning visuals and enhanced 100W power delivery with a single cable connection that seamlessly connects to PCs and peripherals at home or in the office."
@@ -13199,7 +13087,7 @@
       "subCategory": "Monitors",
       "rrp": 380.55,
       "rrpInc": 418.6,
-      "stock": 48,
+      "stock": 47,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/B28F5UT.jpg",
       "description": "Stay focused and in your flow. The HP Series 5 Pro 27 FHD Monitor keeps you working productively and comfortably. See your work come to life seamlessly and lightning-fast, with clear details and consistent colors. All built into a sleek, modern design."
@@ -13353,7 +13241,7 @@
       "subCategory": "Monitors",
       "rrp": 271.82,
       "rrpInc": 299,
-      "stock": 6,
+      "stock": 5,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/ThinkVision_E27Q_40_CT2_01.png",
       "description": ""
@@ -13479,8 +13367,8 @@
       "subCategory": "Display Accessories",
       "rrp": 126.36,
       "rrpInc": 139,
-      "stock": 1,
-      "eta": "",
+      "stock": 0,
+      "eta": "2099-09-09",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13LA/910-001358.jpg",
       "description": "The convenient controls of this wireless presenter will help you make your point."
     },
@@ -13550,7 +13438,7 @@
       "rrp": 299.09,
       "rrpInc": 329,
       "stock": 0,
-      "eta": "2026-10-05",
+      "eta": "2026-10-12",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/24B2U3301.jpg",
       "description": "This monitor delivers business efficiency. Not only is it equipped with essential features, but it also has ones that stand out like its 120hz refresh rate, SoftBlue, Flicker-Free, VESA mount, and more."
     },
@@ -13690,7 +13578,7 @@
       "rrp": 335.45,
       "rrpInc": 369,
       "stock": 0,
-      "eta": "2026-10-05",
+      "eta": "2026-10-12",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/27E1N1800A.jpg",
       "description": "View all tasks with this monitor in 4K quality, which produces incredibly sharp imagery. In addition, this monitor's IPS panel and HDR-grade visuals make for a great monitor for any and all tasks."
     },
@@ -13745,7 +13633,7 @@
       "subCategory": "Monitors",
       "rrp": 226.36,
       "rrpInc": 249,
-      "stock": 42,
+      "stock": 40,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/27E2N1500L.jpg",
       "description": "This monitor is packed with features that allow you to work with absolute precision. Its Quad HD resolution, along with HDR and IPS display, this monitor showcases detailed imagery with the utmost color accuracy."
@@ -13759,7 +13647,7 @@
       "subCategory": "Monitors",
       "rrp": 271.82,
       "rrpInc": 299,
-      "stock": 43,
+      "stock": 33,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/27M2N3200PF.jpg",
       "description": "This 27-inch Fast IPS monitor brings sharp visuals to gaming. With its overclockable 260Hz refresh rate and 0.3ms Smart MBR, you can expect clear visuals and a high-quality all-around gaming experience."
@@ -13829,7 +13717,7 @@
       "subCategory": "Monitors",
       "rrp": 590,
       "rrpInc": 649,
-      "stock": 27,
+      "stock": 21,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/32B2U3601H.jpg",
       "description": "Speed through daily tasks in comfort with this monitor's SoftBlue technology and 100Hz refresh rate. Productivity-enhancing features like USB-C and pop-up webcam with Windows Hello deliver the performance and convenience you expect."
@@ -13900,7 +13788,7 @@
       "rrp": 544.55,
       "rrpInc": 599,
       "stock": 0,
-      "eta": "2026-10-05",
+      "eta": "2026-10-12",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/34B2U3600C.jpg",
       "description": "This monitor is all about quality. With its WQHD resolution, Smart KVM switch, and USB-C to RJ45 connectivity, it is the ideal option for switching between sources and connecting to the internet without compromising on picture quality."
     },
@@ -13983,7 +13871,7 @@
       "subCategory": "Monitors",
       "rrp": 617.27,
       "rrpInc": 679,
-      "stock": 48,
+      "stock": 47,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13L/32B1U3900.jpg",
       "description": "This 32-inch monitor showcases beautiful imagery in 4K resolution and a 1.074 billion color gamut. In addition, its USB-C connection allows you to easily connect peripherals during a busy workday."
@@ -14403,7 +14291,7 @@
       "subCategory": "Display Accessories",
       "rrp": 18.14,
       "rrpInc": 19.95,
-      "stock": 446,
+      "stock": 444,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13LA/SH-DPHDMI-2M.jpg",
       "description": "Elevate your connectivity options with the Shintaro DP to HDMI Male 2m Cable. This versatile cable converts DisplayPort signals to HDMI, delivering high-bandwidth video. Designed to support HDMI and be backwards compatible, it ensures a seamless connection for all your devices. Experience stunning visuals with 4K resolution, making it perfect for gaming, streaming, or presentations. The 2-meter length offers flexibility in positioning your devices, while its durable construction guarantees reliability. Upgrade your setup with the Shintaro DP to HDMI cable and enjoy effortless high-definition performance."
@@ -14487,7 +14375,7 @@
       "subCategory": "Screen Filters",
       "rrp": 36.32,
       "rrpInc": 39.95,
-      "stock": 11,
+      "stock": 10,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13SF/SH-133W9H.jpg",
       "description": "Keep your work secure and your eyes comfortable with the Privacy Screen Filter. With 65% light transmission, this black filter is perfect for laptops and smaller displays, blocking side views and reducing glare in bright conditions. Blue light reduction technology helps minimize eye strain, making it ideal for professionals working long hours on the go. Upgrade your display with superior privacy and eye protection."
@@ -15089,7 +14977,7 @@
       "subCategory": "Monitors - Digital Signage",
       "rrp": 680.91,
       "rrpInc": 749,
-      "stock": 23,
+      "stock": 22,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/DS225+.png",
       "description": "The Synology DiskStation DS225+ is a compact 2-bay NAS solution designed to centralize data management, offering a comprehensive suite of tools through Synology DiskStation Manager DSM for managing, sharing, and protecting files and photos, backing up devices and data, and serving as the core of a smart surveillance system. 3 Year Warranty extendable to 5 years with EW201 ( additional purchase)"
@@ -15599,6 +15487,20 @@
       "description": "Breakthrough Performance Designed for Compact Workstations\r\nThe NVIDIA RTX PRO™ 4000 Blackwell SFF Edition sets a new standard for low-profile GPUs, combining NVIDIA Blackwell’s advanced architecture with 24 GB of GDDR7 memory to deliver the industry’s highest performance in a compact design. Designed for professionals who demand maximum AI, graphics, and compute performance available in compact systems.\r\nThe NVIDIA RTX PRO4000 Blackwell SFF Edition redefines what's possible in a compact, low-profile GPU, combining NVIDIA's revolutionary Blackwell architecture with 24 GB of ultra-fast GDDR7 memory to provide full size performance in a small form factor. Built to accelerate demanding professional workflows, it offers incredible AI compute, next-generation neural graphics, and unmatched power efficiency for its class. Equipped with fifth-generation Tensor Cores and fourth-generation RT Cores, the RTX PRO 4000 SFF effortlessly tackles large, complex datasets and multi-app workflows."
     },
     {
+      "code": "900-5G147-2550-000",
+      "sku": "",
+      "name": "NVIDIA RTX PRO 4500 Blackwell 32GB",
+      "brand": "NVIDIA",
+      "category": "Graphic Output",
+      "subCategory": "Graphics Cards - Workstation",
+      "rrp": 7726.36,
+      "rrpInc": 8499,
+      "stock": 0,
+      "eta": "2099-09-09",
+      "image": "https://www.mmt.com.au/Files/Product assets/Images/11W/900-5G147-2550-000.jpg",
+      "description": "The NVIDIA RTX Pro 4500 is Powered by the NVIDIA Blackwell architecture, a paradigm shift in accelerated computing that merges unprecedented AI, ray tracing, and neural rendering advancements to redefine professional workflows for the next decade. It has a Dual slot card featuring 32 GB of GDDR7 memory and a 200W maximum power limit. NVIDIA RTX Pro 4500 supports x1 PCIe CEM5 connectivity. The new SM features increased processing throughput, and new neural shaders that integrate neural networks inside of programmable shaders to drive the next decade of AI-augmented graphics innovations."
+    },
+    {
       "code": "900-5G153-2570-000",
       "sku": "",
       "name": "NVIDIA RTX PRO 5000 72GB Blackwell",
@@ -16014,7 +15916,7 @@
       "rrp": 80,
       "rrpInc": 88,
       "stock": 11,
-      "eta": "2026-09-04",
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/ADB-WP.png",
       "description": "Atdec Wall plate\r\nADB-WP wall plate connects ADB rails to walls and poles.\r\nThe two configurations are: \r\nFixed direct to wall\r\nBack-to-back rails fixed to pole (requires ADB-RPJ)\r\nTechnical details:\r\nHigh quality steel\r\nBlack finish\r\n10 year warranty\r\nPart the Atdec modular digital signage family. See preconfigured ADB solutions or learn more about our standard and modular digital signage range."
     },
@@ -16075,20 +15977,6 @@
       "description": "The AWM-FC desk fixing is a mounting component in the AWM modular family. Due to its compact design the clamp is often used where there's a potential of interference with the elements under the desk such as cable cages. Top mounting installation ensures quick an easy attachment. Suitable for desks up to 33mm."
     },
     {
-      "code": "AWM-LC-B",
-      "sku": "",
-      "name": "Atdec AWM Channel Clamp - Black",
-      "brand": "Atdec",
-      "category": "Mounting Solutions",
-      "subCategory": "Monitors - Mounts",
-      "rrp": 58,
-      "rrpInc": 63.8,
-      "stock": 4,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWM-LC-B.jpg",
-      "description": "The AWM-LC is a part of the Atdec modular family. The clamp is used exclusively with the AWM-DB dynamic arm enabling its attachment to the AWM- posts and wall channels."
-    },
-    {
       "code": "AWM-LC-S",
       "sku": "",
       "name": "Atdec AWM Channel Clamp - Silver",
@@ -16097,7 +15985,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 58,
       "rrpInc": 63.8,
-      "stock": 15,
+      "stock": 14,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWM-LC-S.jpg",
       "description": "The AWM-LC is a part of the Atdec modular family. The clamp is used exclusively with the AWM-DB dynamic arm enabling its attachment to the AWM- posts and wall channels."
@@ -16293,7 +16181,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 257,
       "rrpInc": 282.7,
-      "stock": 14,
+      "stock": 6,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/AWM-A46HT-B.png",
       "description": "AWM-A46HT-B heavy duty swing arm is designed for heavy and large monitors, including ultrawides. It has a black finish.\r\nAWM-A46HT-B assembles with posts for desk mounting, and is a futureproof post solution with easy upgrade when new monitors are purchased. This arm is not designed to assemble with a wall channel."
@@ -16335,7 +16223,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 115,
       "rrpInc": 126.5,
-      "stock": 12,
+      "stock": 8,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
       "description": "The AWM-LTH heavy duty VESA tilt head accessory is a mounting component in the AWM modular family. Compatible with the following AWM components: AWM-A46, AWM-A71, AWM-AHX, AWM-LC."
@@ -16391,7 +16279,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 240,
       "rrpInc": 264,
-      "stock": 7,
+      "stock": 6,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWM-A71-W.jpg",
       "description": "AWM-A71 is a long swing arm in the Atdec Modular workspace family. The arm is typically used for multi-monitor post configurations with 3+ displays."
@@ -16447,7 +16335,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 97,
       "rrpInc": 106.7,
-      "stock": 40,
+      "stock": 38,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWM-P40G-B.jpg",
       "description": "The AWM-P40G post is a mounting component in the AWM modular family. Suitable for single, dual and triple display configurations mounted in one row."
@@ -16489,7 +16377,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 215,
       "rrpInc": 236.5,
-      "stock": 33,
+      "stock": 31,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWM-A46T-B.jpg",
       "description": "AWM-A46T-B is a medium swing arm in the Atdec Modular workspace family. It has a black finish. The arm is popular on single, dual, and multi-monitor post configurations. \r\nChoose me for:\r\n'Set & Forget' positioning\r\nSwivel, pan, and tilt adjustability \r\nFlexible height when mounted on a post or wall channel\r\nSpecifications:\r\nMonitors weighing \r\nFlat to 12kg (26.5lb)\r\nCurved to 10kg (22lb)\r\nTilt -15° to +40°\r\nPan 360°\r\nQuick release/attachment display mechanism\r\nMade of recyclable aluminium\r\n10 year warranty\r\nBlack finish"
@@ -16755,7 +16643,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 161,
       "rrpInc": 177.1,
-      "stock": 24,
+      "stock": 18,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/atdec-awm-p75g-b-f3q_1__56623.jpg",
       "description": "AWM-P75G-B is a post in the Atdec Modular family. It has a black finish.\r\nThis post is used for monitors mounted in two layers or when extra height range is wanted.\r\nThe post features guide marks which serve as a reference for setting the height of attached arms, which is particularly useful in projects with multiple installations.\r\nSpecifications:\r\nHeight 750mm (29.53\") \r\nRecyclable aluminium material\r\nAdvanced cable management \r\n10 year warranty\r\nBlack finish"
@@ -17217,7 +17105,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 552,
       "rrpInc": 607.2,
-      "stock": 16,
+      "stock": 15,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWMS-2-4640T-B-B_B.jpg",
       "description": "The AWMS-2-4640 is a dual arm combination attached to a medium post. This configuration suits dual monitor desks in a large proportion of workspace projects. The two arms can be installed in a side-by-side or back-to-back monitor configuration. Display height, viewing angle and orientation can be set to individual requirements. Built from lightweight and yet durable materials, the mount can be easily recycled at the end of its life.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-P40G-B: Atdec 400mm Medium Post With Guide Marks Black\r\nAWM-FB-B: Atdec Bolt Through Kit Black"
@@ -17273,7 +17161,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 588,
       "rrpInc": 646.8,
-      "stock": 16,
+      "stock": 15,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
       "description": "The AWMS-2-4640 is a dual arm combination attached to a medium post. This configuration suits dual monitor desks in a large proportion of workspace projects. The two arms can be installed in a side-by-side or back-to-back monitor configuration. Display height, viewing angle and orientation can be set to individual requirements. Built from lightweight and yet durable materials, the mount can be easily recycled at the end of its life.\r\nAWM-FF-B: Atdec F-Clamp Desk Fixing Black\r\nAWM-P40G-B: Atdec 400mm Medium Post With Guide Marks Black\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black"
@@ -17301,7 +17189,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 583,
       "rrpInc": 641.3,
-      "stock": 16,
+      "stock": 15,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
       "description": "The AWMS-2-4640 is a dual arm combination attached to a medium post. This configuration suits dual monitor desks in a large proportion of workspace projects. The two arms can be installed in a side-by-side or back-to-back monitor configuration. Display height, viewing angle and orientation can be set to individual requirements. Built from lightweight and yet durable materials, the mount can be easily recycled at the end of its life.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-P40G-B: Atdec 400mm Medium Post With Guide Marks Black\r\nAC-GC-B: Atdec Grommet Clamp Black"
@@ -17511,7 +17399,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 608,
       "rrpInc": 668.8,
-      "stock": 33,
+      "stock": 31,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/atdec-awms-2-5940-b-b3q-m34__93297.jpg",
       "description": "Dual extended-reach arms on post: AWMS-2-5940 has two independently adjustable extended-reach swing arms attached to a medium post. This solution holds two monitors side-by-side and is purpose designed for dual 34\" curved monitors - a pairing that would exceed the reach of standard dual monitor arms. The additional arm length distributes the weight of deep-profile displays appropriately, and the 180° rotation limiter prevents arm swing from encroaching on workstation dividers or adjacent desks. Each arm moves in three dimensions with smooth fingertip control; the post enables vertical positioning and leaves the door open for future reconfigurations. \r\nGrommet mount: AC-GC-S grommet desk fixing allows attachment of monitor mounts via desk grommet holes. Grommet desk fixing is frequently used in workspace projects where desk specifiers can request pre-bored grommet holes. Grommet fixings are compatible with Atdec workspace solutions for a highly robust mount."
@@ -17595,7 +17483,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 731,
       "rrpInc": 804.1,
-      "stock": 7,
+      "stock": 3,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/AWMS-2-46H75-G-B+B.png",
       "description": "AWM-A46HT-B heavy duty swing arm is designed for heavy and large monitors, including ultrawides. It has a black finish. AWM-A46HT-B assembles with posts for desk mounting, and is a futureproof post solution with easy upgrade when new monitors are purchased. This arm is not designed to assemble with a wall channel."
@@ -17623,7 +17511,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 753,
       "rrpInc": 828.3,
-      "stock": 7,
+      "stock": 3,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/AWMS-2-46H75-H-B+B.jpg",
       "description": "AWM-A46HT-B assembles with posts for desk mounting, and is a futureproof post solution with easy upgrade when new monitors are purchased. This arm is not designed to assemble with a wall channel."
@@ -17987,7 +17875,7 @@
       "subCategory": "Wall Mounts",
       "rrp": 624,
       "rrpInc": 686.4,
-      "stock": 7,
+      "stock": 5,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13WM/AD-WM-9080.jpg",
       "description": "Atdec Full motion wall mount to 90kg (200lb)\r\nAD-WM-9080 full motion wall mount has capacity 90kg (200lb). The mounted display can be moved in/out, laterally, up/down, and rotationally.\r\nThe mount has fixed angle parallel to the wall and multiple features for fast and easy installation. Lateral shift enables the display to be positioned exactly as desired, even if offset to the wall bracket position. It has a built-in spirit level, forgiving slotted mounting holes, quick-connect display attachment, and easy to conceal magnetic tipped display release cords.\r\nChoose me for:\r\nMount site isn't an optimal viewing angle\r\nEasy access to the rear of the display \r\nPre-assembled for easy installation \r\nTechnical:\r\nHolds displays:\r\nto 90kg (200lb)\r\n50\" to 100\"\r\nDisplay adjustments:\r\nTilt -10° to +5°\r\nPan -90° to +90°\r\nRotational levelling -5° to +5°\r\nLateral shift +/-200mm (7.9\") \r\nArm extension 110mm to 980mm (4\" to 39\") \r\nVESA universal to 800x600\r\nCable management \r\nAluminium and steel material \r\n10 year warranty\r\n* wall mount hardware not included\r\nLearn more about Atdec digital signage mounts"
@@ -18001,7 +17889,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 56,
       "rrpInc": 61.6,
-      "stock": 45,
+      "stock": 37,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/AC-GC-B.png",
       "description": "Grommet mount\r\nAC-GC-B grommet desk fixing allows attachment of monitor mounts via desk grommet holes. Grommet desk fixing is frequently used in workspace projects where desk specifiers can request pre-bored grommet holes. \r\nGrommet fixings are compatible with Atdec workspace solutions for a highly robust mount. \r\nTechnical specifications:\r\nFor grommet holes 60mm - 80mm (2.36\" - 3.15\") \r\nDesk thickness 18mm - 36mm (0.71\" - 1.42\")\r\nTop plate diameter 112mm (4.41\")\r\nAllows cables to pass discretely through to under desk\r\nAll mounting hardware included\r\nBlack finish\r\nPDF installation guide is linked at bottom of the page. Button links to on-page installation guide.\r\nAC-GC INSTALLATION GUIDE"
@@ -18547,7 +18435,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 313,
       "rrpInc": 344.3,
-      "stock": 58,
+      "stock": 57,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AW-ORA10-F-B.jpg",
       "description": "Ora 10 is a higher capacity monitor arm for modern ergonomic workspaces that holds monitors to 49\". \r\nA universal dynamic monitor arm for single or dual monitor desks, it comes with a preassembled F-clamp. It has a black finish. \r\nOra 10 extends the proven performance of Ora to this heavier class of monitors. Ora is the most awarded monitor arm including iF, Red Dot, and Good Design.\r\nChoose me for:\r\nMonitors 27\" to 49\"*\r\nDynamic function\r\n* Always check monitor weight and depth - learn how to measure monitor depth or contact us for support."
@@ -18659,7 +18547,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 290,
       "rrpInc": 319,
-      "stock": 12,
+      "stock": 11,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AW-ORA-F-B.jpg",
       "description": "Ora is a sophisticated monitor arm with clamp for modern ergonomic workspaces. This Ora comes complete with an F-clamp desk fixing and black finish. \r\nOrder code: AW-ORA-F-B\r\nOra is the most awarded monitor arm including iF, Red Dot, and Good Design.\r\nChoose me for:\r\nCommercial workspace projects\r\nFast unboxing & assembly\r\nFeatures for fast setup at scale\r\nHigh stability with curved & flat monitors\r\nVirtually all single and dual monitor desks\r\nOra uses innovative material and manufacturing techniques for superior aesthetics and performance. It achieves high stable capacity despite its sleek minimalist form. This comes from a unique single-piece monocoque architecture that augments strength, amplified by natural geometric forces created via arm movement. Ora is vibration resistant for a crisp and confident user experience.\r\nAwarded Good Design KR, Spark, iF AWARD, Red Dot Award, Good Design Chicago Athenaeum, Good Design JP, Good Design AU. \r\nOra is a complete monitor arm, clamp, and components."
@@ -18898,7 +18786,7 @@
       "rrp": 276,
       "rrpInc": 303.6,
       "stock": 6,
-      "eta": "2026-09-04",
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/24M/SD-DP-750.jpg",
       "description": "The Atdec Donut Poles offer superior display versatility. They come in three different lengths each including one QuickShift Donut to guarantee a customized display installation. The cutting-edge QuickShift lever allows the screen to be moved up and down the pole by hand, without the need for any tools. Viewing angle and screen orientation are also fully adjustable thanks to the ball joint mechanism, finished off with a quick release mechanism to rapidly remove and change screens. Built in internal cable management ensures a professional finish for maximum display impact."
     },
@@ -18981,7 +18869,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 1077,
       "rrpInc": 1184.7,
-      "stock": 8,
+      "stock": 7,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWMS-4-4675-G-B_B.jpg",
       "description": "AWMS-4-4675 is a quad arm combination on a tall post. It holds four monitors up to 32\" in a two-over-two configurations. Until recently this mount was primarily used in visually dense applications like security monitoring and finance, where the ability to arrange applications on separate screens is convenient. We have recently seen four smaller curved ultra wide monitors mounted by users creating immersive cockpits. Fingertip adjustments of optimal viewing angle, tilt, and orientation are smooth and responsive. This assists optimal ergonomic setup including multi-user areas, eg security consoles.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-P75G-B: Atdec 750mm Tall Post With Guide Marks Black\r\nAC-GC-B: Atdec Grommet Clamp Black"
@@ -19009,7 +18897,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 1099,
       "rrpInc": 1208.9,
-      "stock": 8,
+      "stock": 7,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWMS-4-4675-H-B_B.jpg",
       "description": "The AWMS-4-4675 is a quad 460mm arm combination attached to a 750mm post with F-Clamp. Display height, optimal viewing angle and orientation can be set to individual requirements. Built from lightweight and yet durable aluminum, the mount can be easily recycled at the end of its life. This solution is part of the Atdec modular family and consists of the following individual components: 1 x AWM-P75G post and 4 x AWM-A46 display arms and Heavy-Duty F Clamp desk fixing.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-P75G-B: Atdec 750mm Tall Post With Guide Marks Black\r\nAWM-FH-B: Atdec Heavy Duty F-Clamp Desk Fixing Black"
@@ -19079,7 +18967,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 347,
       "rrpInc": 381.7,
-      "stock": 14,
+      "stock": 7,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/TH-1040-CTS.jpg",
       "description": "The TH-1040-CTS is a cutting edge ceiling mount offering superior display versatility, combined with enhanced safety features and hassle-free installation. The \"donut\" mounting head effortlessly rotates the screen through 360 degrees around the pole and to maximise display impact the VESA Ball Mount can infinitely adjust display position by 20 degrees in any direction. Display height is also customised with the telescopic pole adjustments. Installation is simple, with in-built safety features to prevent the unlikely event of the telescopic poles separating."
@@ -19233,7 +19121,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 278,
       "rrpInc": 305.8,
-      "stock": 40,
+      "stock": 37,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
       "description": "The AWMThe AWMS-1340 is a single short swing monitor arm attached to a medium post. It is frequently used at point of sale or point of service (POS), with all-in-one devices and touchscreens. AWMS-1340 is an elegant and discrete addition to offices, retail, and service areas.\r\nAWM-A13T-B: Atdec AWM-A13T 130mm Short Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-P40G-B: Atdec 400mm Medium Post With Guide Marks Black\r\nAC-GC-B: Atdec Grommet Clamp Black"
@@ -19345,7 +19233,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 373,
       "rrpInc": 410.3,
-      "stock": 33,
+      "stock": 31,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
       "description": "AWMS-4640 is a single swing monitor arm attached to a post. The swing arm reaches up to 448mm (17.64\") from the post, and the head has smooth fingertip tilt, pan, and landscape-portrait rotation. This enables easy adjustment for optimal viewing angle and an ergonomic desk setup. Another benefit of the swing arm is easy access to cables and monitor ports at rear.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-P40G-B: Atdec 400mm Medium Post With Guide Marks Black\r\nAWM-FF-B: Atdec F-Clamp Desk Fixing Black"
@@ -19373,7 +19261,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 368,
       "rrpInc": 404.8,
-      "stock": 33,
+      "stock": 31,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
       "description": "AWMS-4640 is a single swing monitor arm attached to a post. The swing arm reaches up to 448mm (17.64\") from the post, and the head has smooth fingertip tilt, pan, and landscape-portrait rotation. This enables easy adjustment for optimal viewing angle and an ergonomic desk setup. Another benefit of the swing arm is easy access to cables and monitor ports at rear.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-P40G-B: Atdec 400mm Medium Post With Guide Marks Black\r\nAC-GC-B: Atdec Grommet Clamp Black"
@@ -19429,7 +19317,7 @@
       "subCategory": "Wall Mounts",
       "rrp": 269,
       "rrpInc": 295.9,
-      "stock": 33,
+      "stock": 31,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13WM/AWMS-46W35T-B_B.jpg",
       "description": "Atdec AWMS-46W35 is a single swing arm attached to a wall channel. It is perfect for public display, point of sale (POS), and medical environments. Touch screen compatible. It is also a convenient solution for tight workstations.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-W35-B: Atdec Wall Channel 350mm Black"
@@ -19533,20 +19421,6 @@
       "description": "AWMS-HXB is a powerful heavy duty dynamic monitor arm. It is used to mount a single large heavy monitor, including ultrawides. \r\nThe arm has long horizontal and vertical reach plus smooth fingertip adjustment of tilt, pan, and rotation. Users with sit-to-stand desks and hot desks will easily achieve optimal viewing angle and ergonomics with this mount.\r\nAWM-LTHT-B: Atdec AWM-LTH Heavy Duty Tilt Head, VESA 75x75, 100x100, Black\r\nAWM-AHX-B: Atdec AWM-AHX Heavy Duty Dynamic Arm. Max Load 16kg. Black\r\nAWM-LB-B: Atdec Mounting Base for AWM-AD - Blk\r\nAWM-FH-B: Atdec Heavy Duty F-Clamp Desk Fixing Black"
     },
     {
-      "code": "AWMS-HX40T-G-B+B",
-      "sku": "",
-      "name": "Atdec Single Monitor Heavy-Duty Dynamic Arm on Medium Post - Grommet Clamp - Black",
-      "brand": "Atdec",
-      "category": "Mounting Solutions",
-      "subCategory": "Monitors - Mounts",
-      "rrp": 641,
-      "rrpInc": 705.1,
-      "stock": 4,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWMS-HX40T-G-B_B.jpg",
-      "description": "AWMS-HX40 combines a powerful heavy duty dynamic arm and head with the flexibility of a post. This solution mounts large heavy monitors including ultrawides. \r\nThe arm can be set at any height on the post, and the arm itself has long horizontal and vertical reach. The specialist heavy duty tilt head holds large monitors securely while allowing smooth fingertip adjustment of tilt, pan, and rotation.\r\nAWM-LTHT-B: Atdec AWM-LTH Heavy Duty Tilt Head, VESA 75x75, 100x100, Black\r\nAWM-AHX-B: Atdec AWM-AHX Heavy Duty Dynamic Arm. Max Load 16kg. Black\r\nAWM-LC-B: Atdec Arm Channel Clamp Black\r\nAWM-P40G-B: Atdec 400mm Medium Post With Guide Marks Black\r\nAC-GC-B: Atdec Grommet Clamp Black"
-    },
-    {
       "code": "AWMS-HX40T-G-S+B",
       "sku": "",
       "name": "Atdec Single Monitor Heavy-Duty Dynamic Arm on Medium Post - Grommet Clamp - Silver",
@@ -19559,20 +19433,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
       "description": "AWMS-HX40 combines a powerful heavy duty dynamic arm and head with the flexibility of a post. This solution mounts large heavy monitors including ultrawides. \r\nThe arm can be set at any height on the post, and the arm itself has long horizontal and vertical reach. The specialist heavy duty tilt head holds large monitors securely while allowing smooth fingertip adjustment of tilt, pan, and rotation.\r\nAWM-LTHT-S: Atdec AWM-LTH Heavy Duty Tilt Head, VESA 75x75, 100x100, Silver\r\nAWM-AHX-S: Atdec AWM-AHX Heavy Duty Dynamic Arm. Max Load 16kg. Silver\r\nAWM-LC-S: Atdec Arm Channel Clamp Silver\r\nAWM-P40G-S: Atdec 400mm Medium Post With Guide Marks Silver\r\nAC-GC-S: Atdec Grommet Clamp Silver"
-    },
-    {
-      "code": "AWMS-HX40T-H-B+B",
-      "sku": "",
-      "name": "Atdec Single Monitor Heavy-Duty Dynamic Arm on Medium Post - Heavy-Duty F-Clamp - Black",
-      "brand": "Atdec",
-      "category": "Mounting Solutions",
-      "subCategory": "Monitors - Mounts",
-      "rrp": 663,
-      "rrpInc": 729.3,
-      "stock": 4,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/AWMS-HX40T-H-B_B.jpg",
-      "description": "AWMS-HX40 combines a powerful heavy duty dynamic arm and head with the flexibility of a post. This solution mounts large heavy monitors including ultrawides. \r\nThe arm can be set at any height on the post, and the arm itself has long horizontal and vertical reach. The specialist heavy duty tilt head holds large monitors securely while allowing smooth fingertip adjustment of tilt, pan, and rotation.\r\nAWM-LTHT-B: Atdec AWM-LTH Heavy Duty Tilt Head, VESA 75x75, 100x100, Black\r\nAWM-AHX-B: Atdec AWM-AHX Heavy Duty Dynamic Arm. Max Load 16kg. Black\r\nAWM-LC-B: Atdec Arm Channel Clamp Black\r\nAWM-P40G-B: Atdec 400mm Medium Post With Guide Marks Black\r\nAWM-FH-B: Atdec Heavy Duty F-Clamp Desk Fixing Black"
     },
     {
       "code": "AWMS-HX40T-H-S+B",
@@ -19737,8 +19597,8 @@
       "subCategory": "Wall Mounts",
       "rrp": 168,
       "rrpInc": 184.8,
-      "stock": 10,
-      "eta": "2026-09-04",
+      "stock": 9,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13WM/AF-AT-W-P.jpg",
       "description": "AF-AT-W-P is a single swing monitor arm attached to a wall channel, with polished silver finish. \r\nThe swing arm extends and retracts smoothly, with fingertip adjustments. The head swivels and rotates landscape-portrait for complete flexibility. This ensures users easily achieve optimal viewing angle.\r\nChoose me for: \r\nPoint of service and sale \r\nRetail, medical, education\r\nFeatures & specifications: \r\nMonitors to 32\" \r\nFlat to 8kg (17.6lb) \r\nCurved to 5.5kg (12lb)\r\nVibration resistant \r\nHead movement:\r\nTilt +/-70°\r\nPan +/-90°\r\nPortrait-landscape rotation\r\n360° rotation around pole, can be limited to 180°\r\nErgonomic workplace health\r\nRecyclable materials\r\n10 year warranty \r\nPolished silver finish\r\nLearn more about Atdec modular mounts."
     },
@@ -19836,7 +19696,7 @@
       "rrp": 228,
       "rrpInc": 250.8,
       "stock": 10,
-      "eta": "2099-09-09",
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13WM/TH-40100-UF.jpg",
       "description": "The TH-40100-UF is the ideal mounting solution for large displays and heavy touch screens weighing up to 150kg (330lbs) and up to 100\" in size. Its low profile design supports the display just 39mm (1.5\") from the wall while a range of pre and post installation adjustment features, including spacers for uneven surface mounting, help to simplify the installation process. Incorporating a lockable security bar and robust steel construction adds additional security in challenging public environments."
     },
@@ -19849,8 +19709,8 @@
       "subCategory": "Wall Mounts",
       "rrp": 81,
       "rrpInc": 89.1,
-      "stock": 45,
-      "eta": "2099-09-09",
+      "stock": 43,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13WM/AD-WT-5060_2.jpg",
       "description": "AD-WT-5060 mounts displays to 50kg (110lb). It has the ability to tilt the display up and down, plus space at rear to conceal media devices.\r\nMultiple features for fast and easy installation are incorporated to the design. Lateral shift enables the display to be horizontally positioned as desired, and the built-in spirit level and forgiving slotted mounting holes simplify correct wall plate positioning.\r\nWhen mounting to stud walls, AD-WT-5060 will accomodate both common stud patterns. \r\nChoose me for:\r\nDisplay tilt functionality\r\nSpace at rear of display\r\nMounting most displays\r\nDisplays to ~80\" \r\nTouchscreens to ~60\"\r\nMost wall constructions\r\nTechnical:\r\nHolds displays to 50kg (110lb)\r\nTilt -10° to +5°\r\nProfile to wall 56mm (2.2\")\r\nVESA universal to 600x400\r\nSteel material \r\n10 year warranty\r\n* wall mount hardware not included\r\nLearn more about Atdec digital signage mounts"
     },
@@ -20023,20 +19883,6 @@
       "description": "Atdec Triple monitor mount on post\r\nAWMS-3-13714 is a triple monitor mount with swing arms. It can be used for three monitors of the same or differing sizes. The monitors must be in a single layer. \r\nChoose me for:\r\nThree 24\" monitors in landscape orientation with cockpit\r\nThree large monitors in portrait orientation\r\nLarge central display with portrait monitors either side\r\nFeatures & specifications:\r\nMiddle monitor:\r\nFlat to 12kg (26.5lb)\r\nCurved to 10kg (22lb)\r\nSide monitors: \r\nto 9kg (20lb) each flat & curved\r\nEach monitor head:\r\nTilt -15° to +40°\r\nPan 360°\r\nMonitor rotation 95°\r\nConcealed cable management\r\nSmooth fingertip adjustments\r\nLight, durable, & recyclable materials\r\nUpgradable & reconfigurable\r\n10 year warranty\r\nSilver finish\r\nLearn more about Atdec modular mounts for workspaces.\r\nAWM-A71T-S: Atdec AWM-A71T 710mm Long Swing Monitor Arm, Adjustable Tilt and Pan, Silver\r\nAWM-A13T-S: Atdec AWM-A13T 130mm Short Swing Monitor Arm, Adjustable Tilt and Pan, Silver\r\nAWM-P40G-S: Atdec 400mm Medium Post With Guide Marks Silver\r\nAWM-FH-S: Atdec Heavy Duty F-Clamp Desk Fixing Silver"
     },
     {
-      "code": "AWMS-3-TH467-G-B+B",
-      "sku": "",
-      "name": "Atdec Triple Monitor Mount Stack Mount - Grommet Clamp - Black",
-      "brand": "Atdec",
-      "category": "Mounting Solutions",
-      "subCategory": "Monitors - Mounts",
-      "rrp": 820,
-      "rrpInc": 902,
-      "stock": 4,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
-      "description": "The AWMS-3-TH467 is a robust desk mount designed to support three displays in a \"pyramid\" like configuration. Two articulated arms are capable of supporting screens up to 32\" side-by-side, while the short arm can accommodate wide and ultra-wide displays. It maximises display real estate and saves valuable desk space at the same time. Monitor arms can be installed in any of 4 available post channels and arranged to the desired configuration. Modular by nature, this mount can be easily upgraded/downgraded. This solution consists of: 2x AWM-A46T medium swing arms, 1x AWM-LTHT heavy duty tilt head, 1x AWM-LC channel clamp, 1x AWM-P75G tall post and Grommet Clamp desk fixing.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-LTHT-B: Atdec AWM-LTH Heavy Duty Tilt Head, VESA 75x75, 100x100, Black\r\nAWM-LC-B: Atdec Arm Channel Clamp Black\r\nAWM-P75G-B: Atdec 750mm Tall Post With Guide Marks Black\r\nAC-GC-B: Atdec Grommet Clamp Black"
-    },
-    {
       "code": "AWMS-3-TH467-G-S+B",
       "sku": "",
       "name": "Atdec Triple Monitor Mount Stack Mount - Grommet Clamp - Silver",
@@ -20049,20 +19895,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
       "description": "The AWMS-3-TH467 is a robust desk mount designed to support three displays in a \"pyramid\" like configuration. Two articulated arms are capable of supporting screens up to 32\" side-by-side, while the short arm can accommodate wide and ultra-wide displays. It maximises display real estate and saves valuable desk space at the same time. Monitor arms can be installed in any of 4 available post channels and arranged to the desired configuration. Modular by nature, this mount can be easily upgraded/downgraded. This solution consists of: 2x AWM-A46T medium swing arms, 1x AWM-LTHT heavy duty tilt head, 1x AWM-LC channel clamp, 1x AWM-P75G tall post and Grommet Clamp desk fixing.\r\nAWM-A46T-S: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Silver\r\nAWM-LTHT-S: Atdec AWM-LTH Heavy Duty Tilt Head, VESA 75x75, 100x100, Silver\r\nAWM-LC-S: Atdec Arm Channel Clamp Silver\r\nAWM-P75G-S: Atdec 750mm Tall Post With Guide Marks Silver\r\nAC-GC-S: Atdec Grommet Clamp Silver"
-    },
-    {
-      "code": "AWMS-3-TH467-H-B+B",
-      "sku": "",
-      "name": "Atdec Triple Monitor Mount Stack Mount - Heavy-Duty F-Clamp - Black",
-      "brand": "Atdec",
-      "category": "Mounting Solutions",
-      "subCategory": "Monitors - Mounts",
-      "rrp": 842,
-      "rrpInc": 926.2,
-      "stock": 4,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/atdec.png",
-      "description": "The AWMS-3-TH467 is a robust desk mount designed to support three displays in a \"pyramid\" like configuration. Two articulated arms are capable of supporting screens up to 32\" side-by-side, while the short arm can accommodate wide and ultra-wide displays. It maximises display real estate and saves valuable desk space at the same time. Monitor arms can be installed in any of 4 available post channels and arranged to the desired configuration. Modular by nature, this mount can be easily upgraded/downgraded. This solution consists of: 2x AWM-A46T medium swing arms, 1x AWM-LTHT heavy duty tilt head, 1x AWM-LC channel clamp, 1x AWM-P75G tall post and Heavy-Duty F Clamp desk fixing.\r\nAWM-A46T-B: Atdec AWM-A46T 460mm Medium Swing Monitor Arm, Adjustable Tilt and Pan, Black\r\nAWM-LTHT-B: Atdec AWM-LTH Heavy Duty Tilt Head, VESA 75x75, 100x100, Black\r\nAWM-LC-B: Atdec Arm Channel Clamp Black\r\nAWM-P75G-B: Atdec 750mm Tall Post With Guide Marks Black\r\nAWM-FH-B: Atdec Heavy Duty F-Clamp Desk Fixing Black"
     },
     {
       "code": "AWMS-3-TH467-H-S+B",
@@ -20591,7 +20423,7 @@
       "subCategory": "Mobile Trolleys",
       "rrp": 1453.64,
       "rrpInc": 1599,
-      "stock": 4,
+      "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/TBMS-MOB-FH+B.png",
       "description": "The TouchBoard Mobile Fixed Height System is engineered from high tensile steel and rigid aluminum materials and designed to support modern LED touch panels up to 136kg. This system provides a modern addition to any corporate, boardroom or education environment. Sturdy and robust and able to support larger 86\" and 98\" LED touch panels. Modular in design, this system can convert to the Wall Mount of Free Standing Fixed Height System providing the ability to adjust with the changing needs of the customer."
@@ -20605,7 +20437,7 @@
       "subCategory": "Mobile Trolleys - Motorised",
       "rrp": 1680.91,
       "rrpInc": 1849,
-      "stock": 4,
+      "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/TBMS-MOB-HA-A+B.png",
       "description": "The TouchBoard Mobile Height Adjustable System with Actuator Lift is engineered from high tensile steel and rigid aluminum materials and designed to support modern LED touch panels up to 136kg. Using a single linear actuator, this system provides a modern addition to any corporate, boardroom or education environment. Sturdy and robust and able to support larger 86\" and 108\" LED touch panels. Modular in design, this system can convert to the Wall Mount of Free Standing Height Adjustable System providing the ability to adjust with the changing needs of the customer. Available in motorized, electric height adjustable to provide added flexibility for mixed or shared learning spaces."
@@ -20647,7 +20479,7 @@
       "subCategory": "Wall Mounts",
       "rrp": 1635.45,
       "rrpInc": 1799,
-      "stock": 14,
+      "stock": 12,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/TBMS-WALL-HA-A+B.png",
       "description": "The TouchBoard Wall Mount Height Adjustable System with Actuator Lift is engineered from high tensile steel and rigid aluminium materials and designed to support modern LED touch panels up to 136kg. Using a single linear actuator, this system provides a modern addition to any corporate, boardroom or education environment. Strong aluminium extrusions to transfer load to the floor rather than the wall, making it ideal for mounting in places where existing walls may not be structurally adequate.Sturdy and robust and able to support larger 86” and 98” panels. Modular in design, this system can convert to the Mobile or Free Standing Height Adjustable System. Available in motorised, electric height adjustable to provide added flexibility. A central laptop tray is included as standard. Options include a side laptop tray, keyboard, PC and webcam mount as well as brackets to support VESA mounts up to 1470mm."
@@ -20927,7 +20759,7 @@
       "subCategory": "Network - Switches",
       "rrp": 1453.64,
       "rrpInc": 1599,
-      "stock": 17,
+      "stock": 16,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16S/C1200-24P-4G.jpg",
       "description": "Cisco Catalyst 1200 Series Switches are the latest in affordable smart switches that combine powerful network performance, simplified management, and reliability with a comprehensive suite of network features that you need for a solid small business network."
@@ -21586,7 +21418,7 @@
       "rrp": 3272.68,
       "rrpInc": 3599.95,
       "stock": 0,
-      "eta": "2099-09-09",
+      "eta": "2026-09-14",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16S/DGS-1530-52P.jpg",
       "description": "The DGS-1530 Series are part of the Layer 2 family of D-Link's Stackable Smart Switch product line that provides wired Gigabit speeds for Metro Ethernet and campus networks. They feature a variety of ports, including 10/100/1000BASE-T RJ-45 ports, 1G SFP ports, and 10G SFP+ ports for increased network bandwidth. Surge protection, advanced Layer 2 functions, and a suite of security and management tools make the DGS-1530 Series Stackable Smart Switch ideal for Metro Ethernet and campus applications."
     },
@@ -21907,7 +21739,7 @@
       "subCategory": "Network - Wireless Access Point",
       "rrp": 163.59,
       "rrpInc": 179.95,
-      "stock": 2,
+      "stock": 1,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16W/DIR-X3000Z.jpg",
       "description": "Equipped with the latest Wi-Fi 6 technology, the DIR-X3000Z AX3000 Mesh Gigabit Wireless Router delivers exceptional performance for your smart home, offering combined dual-band wireless speeds of up to 3000Mbps (2402Mbps on 5GHz + 574Mbps on 2.4GHz). Featuring 160MHz bandwidth and 1024-QAM, DIR-X3000Z provides true Gigabit speeds of up to 3Gbps - ideal for ultra-smooth streaming, gaming, and high-speed downloads. You can also expand your home network by adding additional DIR-X3000Z units via built-in Mesh technology, allowing you to move freely across your entire home, no matter how large or small. Designed for modern home environments, its robust capacity supports multiple devices transmit"
@@ -22123,20 +21955,6 @@
       "description": "The DPE-301GI offers a ready-to-use PoE solution by supplying up to 30 watts of output power using PoE+ technology. It is compliant with the IEEE 802.3af/at (PoE/PoE+) standards, ensuring compatibility with older and newer PoE devices. The DPE-301GI PoE Injector supports Gigabit connectivity and designed to be deployed in situations where high bandwidth is required."
     },
     {
-      "code": "DIS-N240-48",
-      "sku": "",
-      "name": "D-Link Power Supply DIS-Series Switches",
-      "brand": "D-Link",
-      "category": "Networking",
-      "subCategory": "Network - Accessories",
-      "rrp": 209.05,
-      "rrpInc": 229.95,
-      "stock": 0,
-      "eta": "2026-09-18",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/16A/d-link.png",
-      "description": "Power Supply for DIS-Series Industrial Switches, output 48-55V DC 240W, operating temp up to 70°C"
-    },
-    {
       "code": "DEM-CB100S",
       "sku": "",
       "name": "D-Link SFP+ to SFP+ Direct Attach Cable",
@@ -22173,7 +21991,7 @@
       "subCategory": "Network - NICs & Adaptors",
       "rrp": 36.32,
       "rrpInc": 39.95,
-      "stock": 29,
+      "stock": 25,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16NA/DUB-1312.jpg",
       "description": "The DUB-1312 USB 3.0 to Gigabit Ethernet Adapter allows you to instantly add gigabit connectivity to your desktop, notebook, or ultrabook computer. Just plug the DUB-1312 in to an available USB 3.0 port and youre ready to connect to your switch, hub, or router with the speed and reliability of a wired gigabit connection. High-speed gigabit Ethernet allows you to transfer large files in no time, or make light work of backups to a server or network storage device. The adapter eliminates the need to open your computer to install a network card, and it also keeps your computers expansion slots free for other uses."
@@ -22233,20 +22051,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16W/DAP-X2810.jpg",
       "description": "The DAP-X2810 works with Nuclias Connect - a software-based management platform (with optional hardware controller) that can be used on-premises, or as a cloud solution hosted on a public cloud service. Admin tasks can be swiftly carried out from the Nuclias Connect app, or server/PC-based software for easy access, automation, and network scalability."
-    },
-    {
-      "code": "DAP-X3060OU",
-      "sku": "",
-      "name": "D-Link Wi-Fi 6 4x4 Outdoor Access Point",
-      "brand": "D-Link",
-      "category": "Networking",
-      "subCategory": "Network - Wireless Access Point",
-      "rrp": 781.77,
-      "rrpInc": 859.95,
-      "stock": 5,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/16W/DAP-X3060OU.jpg",
-      "description": "The DAP-X3060OU delivers high performance Wi-Fi 6 speeds, enhanced capacity, interference-free coverage, and simple management via Nuclias Connect"
     },
     {
       "code": "DSL-245GE",
@@ -22313,7 +22117,7 @@
       "subCategory": "Network - Router",
       "rrp": 362.73,
       "rrpInc": 399,
-      "stock": 58,
+      "stock": 105,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16R/NF20MESH2_B.jpg",
       "description": "The CloudMesh Gateway (NF20MESH) works wirelessly with the CloudMesh Satellite (NS-02), forming a single powerful Whole Home Wi-Fi Mesh network with all the control and settings centralized on the gateway. The gateway becomes the Wi-Fi Mesh master node and the Wi-Fi client device roams seamlessly between satellites and the gateway.\r\nNF20MESH: NetComm NF20MESH CloudMesh Wi-Fi 6 VDSL2/ADSL2 Networking Gateway with VoIP\r\nNS-02: NetComm CloudMesh WiFi6 Satellite"
@@ -22327,7 +22131,7 @@
       "subCategory": "Network - Router",
       "rrp": 180.91,
       "rrpInc": 199,
-      "stock": 16,
+      "stock": 15,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/NS71.png",
       "description": ""
@@ -22369,7 +22173,7 @@
       "subCategory": "Network - Router",
       "rrp": 171.82,
       "rrpInc": 189,
-      "stock": 58,
+      "stock": 128,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16R/NF20MESH.jpg",
       "description": "The CloudMesh Gateway (NF20MESH) works wirelessly with the CloudMesh Satellite (NS-02), forming a single powerful Whole Home Wi-Fi Mesh network with all the control and settings centralized on the gateway. The gateway becomes the Wi-Fi Mesh master node and the Wi-Fi client device roams seamlessly between satellites and the gateway."
@@ -23495,20 +23299,6 @@
       "description": "Mini Data Management Hub - Bring scattered data under control with the DS124, a super compact data hub that empowers effortless data centralization, organization, and sharing. License-free solutions in Synology DiskStation Manager (DSM) allow you to establish a secure private cloud, conveniently access files from any device, and collaborate seamlessly with partners or clients."
     },
     {
-      "code": "DS1525+",
-      "sku": "",
-      "name": "Synology DS1525+ 5 Bay DiskStation NAS, 3 Yr Wty",
-      "brand": "Synology",
-      "category": "Networking",
-      "subCategory": "NAS - Network Attached Storage",
-      "rrp": 2271.82,
-      "rrpInc": 2499,
-      "stock": 11,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/29/DS1525_.jpg",
-      "description": "Synology DS1525+ is a versatile 5-bay storage solution that scales with your needs, with support for storage expansion,1 10GbE networking,2 and SSD caching3. Built-in 2.5GbE networking \r\nprovides excellent networking performance out of the box. Powered by Synology DiskStation Manager (DSM), this device is a flexible all-in-one solution for data sharing, synchronization, backup, and\r\nsurveillance."
-    },
-    {
       "code": "DS1525NEO+",
       "sku": "",
       "name": "Synology DS1525NEO+ 5 Bay DiskStation NAS - Non-ECC RAM Option",
@@ -23587,7 +23377,7 @@
       "subCategory": "NAS - Network Attached Storage",
       "rrp": 426.36,
       "rrpInc": 469,
-      "stock": 98,
+      "stock": 97,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/29/DS223J.jpg",
       "description": "The DS223j is an efficient one-stop solution for all your data storage and sharing needs. With  two bays of storage and Synology DiskStation Manager (DSM) on board, the DS223j allows  you to create a private cloud to protect your files, share your data across several devices, store security footage with intelligent video surveillance tools, and more."
@@ -23811,7 +23601,7 @@
       "subCategory": "NAS - Accessories",
       "rrp": 299.09,
       "rrpInc": 329,
-      "stock": 11,
+      "stock": 10,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/E10G30-T1.png",
       "description": "The Synology E10G30-T1 10GbE network adapter boosts the network performance of compatible Synology systems1. Designed for growing business environments, it enables faster data transfers and smoother operation in backup, post-production, virtualization, and other bandwidth-intensive workloads."
@@ -23941,20 +23731,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/PS500.png",
       "description": "Simplify PoE deployment with the Synology PS500, a 5-port unmanaged Gigabit PoE+ switch that powers Synology Cameras and PoE-enabled devices for a complete, plug-and-play surveillance setup."
-    },
-    {
-      "code": "PSU500W4",
-      "sku": "",
-      "name": "Synology PSU 500W_4",
-      "brand": "Synology",
-      "category": "Networking",
-      "subCategory": "Network - Accessories",
-      "rrp": 408.18,
-      "rrpInc": 449,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Images/Product Images/PSU500W4.png",
-      "description": ""
     },
     {
       "code": "PSU500W-RPMODULE2",
@@ -24119,7 +23895,7 @@
       "subCategory": "NAS - Accessories",
       "rrp": 808.18,
       "rrpInc": 889,
-      "stock": 25,
+      "stock": 24,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/29A/D4ES01-8G.jpg",
       "description": "Synology RAM D4ES01-8G DDR4 ECC Unbuffered SODIMM for Applied Models: DS1621xs+, DS1621+, DS1821+, RS1221+ RS1221RP+"
@@ -24237,20 +24013,6 @@
       "description": "DDR4 ECC Unbuffered DIMM\r\nEAN: 4711174726479\r\nCapacity: 8GB\r\nWarranty: 5 Years\r\nApplied Models:\r\n25 series:RS2825RP+"
     },
     {
-      "code": "D4ER02-16G",
-      "sku": "",
-      "name": "Synology RAM Module D4ER02-16G",
-      "brand": "Synology",
-      "category": "Networking",
-      "subCategory": "Network - Accessories",
-      "rrp": 3490,
-      "rrpInc": 3839,
-      "stock": 6,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Images/Product Images/D4ER02-16G.png",
-      "description": "Applied Models:\r\n26 series:RS6426xs+, RS4826xs+, RS1626xs+"
-    },
-    {
       "code": "D4NS01-4G",
       "sku": "",
       "name": "Synology RAM Module D4NS01-4G DDR4 non-ECC SODIMM",
@@ -24315,7 +24077,7 @@
       "subCategory": "NAS - Network Attached Storage",
       "rrp": 4109.64,
       "rrpInc": 4520.6,
-      "stock": 3,
+      "stock": 2,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/RS1221RP+ (2).jpg",
       "description": "A compact design for space efficiency\r\nThe RS1221+ and its RX418 expansion units are designed to help you save space in compact deployments. At only 30 centimeters, half the length of a typical 2U unit, it fits perfectly snug onto 2-post or shallow rackmount enclosures. The RS1221RP+ with dual power supplies comes in at 38 cm, also fitting most shallow depth enclosures.3-year hardware warranty, extendable to 5 years with the purchase of EW202.\r\nFits into shallow rackmount enclosures\r\nEasy-to-install on 2-post racks"
@@ -24455,24 +24217,10 @@
       "subCategory": "NAS - Network Attached Storage",
       "rrp": 1771.82,
       "rrpInc": 1949,
-      "stock": 3,
+      "stock": 1,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/29/RS422_.jpg",
       "description": "Synology RackStation RS422+ is a 4-bay rackmount NAS enclosed in a compact 1U chassis. Powered by the powerful Synology DiskStation Manager (DSM) operating system, it offers an affordable all-in- one solution for data sharing, synchronization, and backup to small businesses and home lab owners looking to meet their daily data management needs. Synology RS422+ is backed by Synology's 3-year limited warranty.\r\nWarranty Extension to 5 Years with the additional purchase of the EW201."
-    },
-    {
-      "code": "RS6426XS+",
-      "sku": "",
-      "name": "Synology RS6426xs+ 16 Bay Enterprise NAS",
-      "brand": "Synology",
-      "category": "Networking",
-      "subCategory": "NAS - Network Attached Storage",
-      "rrp": 13235.09,
-      "rrpInc": 14558.6,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Images/Product Images/RS6426xs+_front.png",
-      "description": "The RS6426xs+ is an all‑in‑one solution for central data management, backup, and surveillance. Designed to grow with your business, it features 64‑bay scalability via four RX1225RP 12‑bay expansion units, versatile networking configurations, and SSD caching support. A full suite of reliability, availability, and serviceability features ensures continuous operation."
     },
     {
       "code": "RS826+",
@@ -24965,20 +24713,6 @@
       "description": "Disk tray for Synology servers: RS1619xs+, RS1221RP+, RS1221+, RS1219+, RS822RP+, RS822+, RS820RP+, RS820+, RS819, RS818RP+, RS818+, RS422+, RX418"
     },
     {
-      "code": "VIRTUALDSM",
-      "sku": "",
-      "name": "Synology VIRTUAL DSM",
-      "brand": "Synology",
-      "category": "Networking",
-      "subCategory": "NAS - Accessories",
-      "rrp": 362.73,
-      "rrpInc": 399,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/29A/VIRTUALDSM.jpg",
-      "description": "With a Synology Virtual DSM license, you can run Virtual DSM on Virtual Machine Manager to enjoy the full range of features provided in the standard DiskStation Manager, including file services and add-on applications. Virtual Machine Manager enables High Availability, ultra-fast snapshots, and protection plans, which helps enhance system up-time and management flexibility."
-    },
-    {
       "code": "EW201-VIRTUAL",
       "sku": "",
       "name": "Synology Warranty Extension EW201 2Years (Individual License Email)",
@@ -25309,7 +25043,7 @@
       "subCategory": "Network - Transceivers",
       "rrp": 463.64,
       "rrpInc": 510,
-      "stock": 43,
+      "stock": 42,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/vertiv-rdu120-1-front.png",
       "description": "The Vertiv Liebert Intellislot RDU120 Network Card enables communication among Vertiv products such as Vertiv Environet Alert, Vertiv Power Insight, Vertiv Power Assist and LIFE Services. It provides web access, data via SNMP, Modbus and BACNet for Vertiv equipment. Using this card allows you to have real-time view of parametric data and system statuses. It supports environmental monitoring via Geist Sensors for temperature, humidity, leak detection, door closures and contact closures."
@@ -25505,7 +25239,7 @@
       "subCategory": "UPS Accessories",
       "rrp": 622.73,
       "rrpInc": 685,
-      "stock": 4,
+      "stock": 5,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/31D/F15R-SNMP.jpg",
       "description": "The Power Management Card allows a UPS/ATS system and environmental sensor to be managed, monitored, and configured."
@@ -27317,34 +27051,6 @@
       "description": "Contains installation frame, cover, screws, connecting lines, etc. Adapts to two-module surface mounting. Cover and installation frame are made of aviation Aluminum"
     },
     {
-      "code": "DS-2CD2386G2-ISUSL2",
-      "sku": "",
-      "name": "Hikvision 4K Acusense Turret Network",
-      "brand": "Hikvision",
-      "category": "Security",
-      "subCategory": "Surveillance - IP Cameras",
-      "rrp": 362.73,
-      "rrpInc": 399,
-      "stock": 0,
-      "eta": "2099-09-09",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/30/DS-2CD2386G2-ISUSL2.jpg",
-      "description": "The DS-2CD2386G2-ISU/SL is a 2.8mm outdoor, IP67-rated dome camera with a 30m IR range. Hikvision’s AcuSense Gen2 range advances area protection and perimeter security by combining existing features (like line crossing and perimeter detection) with enhanced deep learning algorithms. AcuSense accurately distinguishes people and vehicles from other moving objects, reducing false video motion alarms by up to 95%."
-    },
-    {
-      "code": "HIK-DS-2CD2E43G2-U-2",
-      "sku": "",
-      "name": "Hikvision 4MP AcuSense In-Ceiling Fixed",
-      "brand": "Hikvision",
-      "category": "Security",
-      "subCategory": "Surveillance - IP Cameras",
-      "rrp": 330.91,
-      "rrpInc": 364,
-      "stock": 0,
-      "eta": "2099-09-09",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/30/hikvision.png",
-      "description": "Empowered by deep learning algorithms, Hikvision AcuSense technology brings human and vehicle targets classification alarms to front- and back-end devices. The system focuses on human and vehicle targets, vastly improving alarm efficiency and effectiveness."
-    },
-    {
       "code": "HIK-DS-2CD2166G2-I-2",
       "sku": "",
       "name": "Hikvision 6MP AcuSense Dome IP67 IR",
@@ -27591,7 +27297,7 @@
       "subCategory": "Warranty - Laptop",
       "rrp": 308.18,
       "rrpInc": 339,
-      "stock": 170,
+      "stock": 200,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/35L/U86DVE.jpg",
       "description": "Get back to work quickly with HP Premium Support, which resolves most issues remotely during standard business hours. If a physical repair is needed, an HP expert is dispatched to the employee’s location, with expedited resolution."
@@ -27829,7 +27535,7 @@
       "subCategory": "Hard Disk Drives - 3.5in",
       "rrp": 0,
       "rrpInc": 0,
-      "stock": 58,
+      "stock": 53,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/barracuda-2tb-dm008-hero-left-270x270.png",
       "description": ""
@@ -27885,7 +27591,7 @@
       "subCategory": "Hard Disk Drives - 3.5in",
       "rrp": 0,
       "rrpInc": 0,
-      "stock": 51,
+      "stock": 50,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/ST4000VN006 Seagate IronWolf Int 4TB SATA HDD.png",
       "description": "IronWolf is designed for consumer and commercial NAS. Delivering Tough, Ready and Scalable 24x7 performance in multi-bay, networked environments."
@@ -28031,20 +27737,6 @@
       "description": "Get in touch with total storage freedom. Revolutionize your workflows with game-changing convenience and ease. High-capacity with bus-powered single-cable USB-C connectivity, One Touch delivers a fuss-free, clutter-free backup experience that lets you work anywhere, anytime. Built to perform with exceptional reliability and smart software, it’s a value-packed solution that’s multi-platform compatible, ideal for everyday use or protecting long-term data."
     },
     {
-      "code": "STNB8000400",
-      "sku": "",
-      "name": "Seagate One Touch 8TB 3.5” External HDD",
-      "brand": "Seagate",
-      "category": "Storage",
-      "subCategory": "Hard Disk Drives - 3.5in External",
-      "rrp": 0,
-      "rrpInc": 0,
-      "stock": 2,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Images/Product Images/seagate-flow-drive-top-v6-blue1.png",
-      "description": "Get in touch with total storage freedom. Revolutionize your workflows with game-changing convenience and ease. High-capacity with bus-powered single-cable USB-C connectivity, One Touch delivers a fuss-free, clutter-free backup experience that lets you work anywhere, anytime. Built to perform with exceptional reliability and smart software, it’s a value-packed solution that’s multi-platform compatible, ideal for everyday use or protecting long-term data."
-    },
-    {
       "code": "SH-R128GBU3",
       "sku": "",
       "name": "Shintaro 128GB Rotating Pocket Disk",
@@ -28067,7 +27759,7 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 41.77,
       "rrpInc": 45.95,
-      "stock": 147,
+      "stock": 144,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/SH-RC128.jpg",
       "description": "Elevate your data storage experience with the Shintaro 32GB USB-C OTG Pocket Disk Drive. This high-speed storage solution features dual connectivity with both USB-C and USB-A, making it compatible with a wide range of devices, including PCs, smartphones, and tablets. Its ultra-compact, lightweight design (just 9g) and slim rotating form factor make it perfect for on-the-go use.\r\nEncased in a full-metal enclosure, this drive offers a sleek, premium look and feel.Enjoy fast data transfers with read speeds up to 40-100MB/s and write speeds up to 15-30MB/s. The drive supports hot plug-and-play functionality, ensuring effortless connectivity. Backward compatibility with USB 2.0 and 1.1 allows it to work with older devices as well. With support for Windows, Mac, and Android, it’s a versatile and reliable storage solution for any user."
@@ -28081,7 +27773,7 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 13.59,
       "rrpInc": 14.95,
-      "stock": 1560,
+      "stock": 1487,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/SH-R16GB.jpg",
       "description": "The Shintaro 16GB Rotating Pocket Disk is a reliable, on-the-go data storage solution. Its durable plastic body, paired with a metal rotating protective cover that safely shields the USB connector, provides both lightweight portability and robust protection for your files. With high-speed USB 2.0 connectivity, transferring and storing files is simple and efficient. Enjoy read speeds up to 10-20MB/s and write speeds of 3-8MB/s, making file management smooth and hassle-free.\r\nFully compatible with Windows and Mac OS systems and easily reformatable, this portable drive adapts to your storage needs, keeping your important data always within reach."
@@ -28095,7 +27787,7 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 17.23,
       "rrpInc": 18.95,
-      "stock": 153,
+      "stock": 124,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/SH-R16GBU3.jpg",
       "description": "The Shintaro 16GB Rotating Pocket Disk is your reliable solution for convenient data storage and fast file transfers. Its durable plastic body, paired with a metal rotating protective cover that safely shields the USB connector, provides both lightweight portability and robust protection for your files, while ensuring the connector stays safe during travel and everyday use. Compliant with USB 3.2 (Gen 1), this high-speed rotary pocket disk offers impressive read speeds of 40–100MB/s and write speeds of 15–30MB/s, while being backward compatible with USB 2.0. Its plug-and-play functionality ensures effortless connectivity across various devices, including Windows and Mac OS systems.\r\nDesigned for durability, it features shock resistance of up to 1000g, making it a perfect travel companion. Lightweight and compact, with dimensions of 57.5 × 19× 11 mm, it effortlessly fits in your pocket."
@@ -28109,7 +27801,7 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 34.5,
       "rrpInc": 37.95,
-      "stock": 368,
+      "stock": 354,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/SH-R16GB-3PK.jpg",
       "description": "The Shintaro 16GB Rotating Pocket Disk – Triple Pack is a reliable, on-the-go data storage solution. Each drive features a durable plastic body, paired with a metal rotating protective cover that safely shields the USB connector, providing both lightweight portability and robust protection for your files. With high-speed USB 2.0 connectivity, transferring and storing files is simple and efficient. Enjoy read speeds up to 10-20MB/s and write speeds of 3-8MB/s, making file management smooth and hassle-free.\r\nFully compatible with Windows and Mac OS systems and easily reformatable, these portable drives adapt to your storage needs, keeping your important data always within reach."
@@ -28137,7 +27829,7 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 15.41,
       "rrpInc": 16.95,
-      "stock": 556,
+      "stock": 521,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/SH-R32GB.jpg",
       "description": "The Shintaro 32GB Rotating Pocket Disk is a reliable, on-the-go data storage solution. Its durable plastic body, paired with a metal rotating protective cover that safely shields the USB connector, provides both lightweight portability and robust protection for your files. With high-speed USB 2.0 connectivity, transferring and storing files is simple and efficient. Enjoy read speeds up to 10-20MB/s and write speeds of 3-8MB/s, making file management smooth and hassle-free.\r\nFully compatible with Windows and Mac OS systems and easily reformatable, this portable drive adapts to your storage needs, keeping your important data always within reach."
@@ -28179,7 +27871,7 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 19.05,
       "rrpInc": 20.95,
-      "stock": 1115,
+      "stock": 1030,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/SH-R64GB.jpg",
       "description": "The Shintaro 64GB Rotating Pocket Disk is a reliable, on-the-go data storage solution. Its durable plastic body, paired with a metal rotating protective cover that safely shields the USB connector, provides both lightweight portability and robust protection for your files. With high-speed USB 2.0 connectivity, transferring and storing files is simple and efficient. Enjoy read speeds up to 10-20MB/s and write speeds of 3-8MB/s, making file management smooth and hassle-free.\r\nFully compatible with Windows and Mac OS systems and easily reformatable, this portable drive adapts to your storage needs, keeping your important data always within reach."
@@ -28207,7 +27899,7 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 34.5,
       "rrpInc": 37.95,
-      "stock": 385,
+      "stock": 382,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/SH-RC64GB.jpg",
       "description": "Elevate your data storage experience with the Shintaro 32GB USB-C OTG Pocket Disk Drive. This high-speed storage solution features dual connectivity with both USB-C and USB-A, making it compatible with a wide range of devices, including PCs, smartphones, and tablets. Its ultra-compact, lightweight design (just 9g) and slim rotating form factor make it perfect for on-the-go use.\r\nEncased in a full-metal enclosure, this drive offers a sleek, premium look and feel. Enjoy fast data transfers with read speeds up to 40-100MB/s and write speeds up to 15-30MB/s.  The drive supports hot plug-and-play functionality, ensuring effortless connectivity. Backward compatibility with USB 2.0 and 1.1 allows it to work with older devices as well. With support for Windows, Mac, and Android, it’s a versatile and reliable storage solution for any user."
@@ -28235,7 +27927,7 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 29.05,
       "rrpInc": 31.95,
-      "stock": 330,
+      "stock": 324,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/SH-R8GB-3PK.jpg",
       "description": "The Shintaro 8GB Rotating Pocket Disk – Triple Pack is a reliable, on-the-go data storage solution. Each drive features a durable plastic body, paired with a metal rotating protective cover that safely shields the USB connector, providing both lightweight portability and robust protection for your files. With high-speed USB 2.0 connectivity, transferring and storing files is simple and efficient. Enjoy read speeds up to 10-20MB/s and write speeds of 3-8MB/s, making file management smooth and hassle-free.\r\nFully compatible with Windows and Mac OS systems and easily reformatable, these portable drives adapt to your storage needs, keeping your important data always within reach."
@@ -28333,7 +28025,7 @@
       "subCategory": "Hard Disk Drives - 3.5in",
       "rrp": 699.09,
       "rrpInc": 769,
-      "stock": 45,
+      "stock": 37,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/HAT3300_6TB_2025.png",
       "description": "Synology Plus Series HDD 6TB, Internal 3.5\" SATA, 5400RPM, 3 Year Warranty"
@@ -28403,7 +28095,7 @@
       "subCategory": "Hard Disk Drives - 3.5in",
       "rrp": 2199.09,
       "rrpInc": 2419,
-      "stock": 55,
+      "stock": 25,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/HAT5320-20T.png",
       "description": ""
@@ -28431,7 +28123,7 @@
       "subCategory": "Hard Disk Drives - 3.5in",
       "rrp": 908.18,
       "rrpInc": 999,
-      "stock": 48,
+      "stock": 43,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/06/HAT5320-4T.jpg",
       "description": "Enterprise storage drives for Synology systems\r\nSynology HAT5300 HDD offers class-leading performance thanks to tight integration with DSM and Synology hardware. With over 400,000 hours of in-house validation testing and backed by Synology’s 5-year limited warranty, the HAT5300 series brings unmatched reliability to Synology deployments."
@@ -28641,8 +28333,8 @@
       "subCategory": "USB Pocket Drive",
       "rrp": 26.36,
       "rrpInc": 29,
-      "stock": 0,
-      "eta": "2099-09-09",
+      "stock": 479,
+      "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/08/TC175332GB01.jpg",
       "description": "Team Group releases the rounded C175 USB drives with black color. C175 looks like mysterious, luxury black pearl born from the deep blue ocean. The streamlined unibody design is able to offer users a well-rounded and comfortable hand held feeling."
     },
@@ -28739,7 +28431,7 @@
       "subCategory": "Hard Disk Drives - 3.5in",
       "rrp": 0,
       "rrpInc": 0,
-      "stock": 55,
+      "stock": 54,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/WD64PURZ.jpg",
       "description": "WD Purple drives are designed to meet the challenges of 24x7 video surveillance recording. These drives are engineered specifically for surveillance to help withstand the elevated heat fluctuations and equipment vibrations within NVR environments. An average desktop drive is built to run for only short intervals, not the harsh 24/7 always-on environment of a high-definition surveillance system. With WD Purple drives, you get reliable, surveillance-class storage that’s tested for compatibility in a wide range of security systems. Exclusive AllFrame™ technology helps reduce frame loss and improve overall video playback."
@@ -28753,7 +28445,7 @@
       "subCategory": "Hard Disk Drives - 3.5in",
       "rrp": 0,
       "rrpInc": 0,
-      "stock": 11,
+      "stock": 7,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/06/WD85PURZ.jpg",
       "description": "WD Purple drives are designed to meet the challenges of 24x7 video surveillance recording. These drives are engineered specifically for surveillance to help withstand the elevated heat fluctuations and equipment vibrations within NVR environments. An average desktop drive is built to run for only short intervals, not the harsh 24/7 always on environment of a high-definition surveillance system. With WD Purple drives, you get reliable, surveillance-class storage that's tested for compatibility in a wide range of security systems. Exclusive WD All Frame technology helps reduce frame loss and improve overall video playback."
