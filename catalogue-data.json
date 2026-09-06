@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-09-06T09:27:25+10:00",
-  "count": 2034,
+  "lastUpdated": "2026-09-07T09:20:48+10:00",
+  "count": 2033,
   "products": [
     {
       "code": "AW-ORA10-F-S",
@@ -725,7 +725,7 @@
       "subCategory": "Desktop Supercomputing",
       "rrp": 8635.45,
       "rrpInc": 9499,
-      "stock": 6,
+      "stock": 0,
       "eta": "2026-10-21",
       "image": "https://www.mmt.com.au/Files/Uploads/940-54242-0005-000-2T.jpg",
       "description": "Powered by the NVIDIA GB10 Grace Blackwell Superchip, NVIDIA DGX Spark™ delivers up to one petaFLOP1 of FP4 AI performance in a power-efficient, compact form factor. With the NVIDIA AI software stack preinstalled and 128 GB of memory, developers can prototype, fine-tune, and inference the latest generation of reasoning AI models from DeepSeek, Meta, NVIDIA, Google, Qwen, and others with up to 200 billion parameters locally.\r\nClick here to contact our dedicated AI sales team about the DGX Spark\r\nFor more product information, please click here"
@@ -5513,7 +5513,7 @@
       "subCategory": "Notebooks",
       "rrp": 3284.15,
       "rrpInc": 3612.57,
-      "stock": 12,
+      "stock": 11,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/86V28PA.jpg",
       "description": "Lead and excel with a 2-in-1 PC that optimizes performance, audio, and video based on where and how you are working. With enclosures that contain 90 percent recycled magnesium, the powerful HP Elite x360 1040 elevates design, flexibility, connectivity, and security."
@@ -5989,7 +5989,7 @@
       "subCategory": "Notebooks",
       "rrp": 2891.64,
       "rrpInc": 3180.8,
-      "stock": 13,
+      "stock": 12,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/BP9C3PT.jpg",
       "description": "The HP ProBook 4 G1i 14-inch Notebook AI PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[6], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] with 11 TOPS NPU[4] and long battery life, this feature-rich PC is future-ready for long-term productivity and AI exploration."
@@ -6143,7 +6143,7 @@
       "subCategory": "Notebooks",
       "rrp": 1627.82,
       "rrpInc": 1790.6,
-      "stock": 35,
+      "stock": 34,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15/C2BP3AT.jpg",
       "description": "The HP ProBook 4 G1i 16-inch Notebook PC provides growing businesses with commercial-grade performance, multi-layered endpoint security[5], and durability in an easily upgradeable design. Powered by the latest Intel® processor[2] and long battery life, this feature-rich PC is future-ready for long-term productivity and helps enable hybrid work."
@@ -6451,7 +6451,7 @@
       "subCategory": "Desktop Computers",
       "rrp": 2658.73,
       "rrpInc": 2924.6,
-      "stock": 55,
+      "stock": 53,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/HP ProDesk 4 Mini G1i Desktop AI PC.png",
       "description": "The HP ProDesk 4 Mini G1i Desktop AI PC delivers commercial-grade performance, security, and flexible deployment capabilities, with just a single-cable, for businesses of all sizes. This reliable, one-liter PC provides the power to handle mainstream enterprise and SMBs with a powerful Intel® CPU[2] featuring a 13 TOPS NPU.[5] See where AI can take you!"
@@ -8243,7 +8243,7 @@
       "subCategory": "Notebooks",
       "rrp": 1953.64,
       "rrpInc": 2149,
-      "stock": 22,
+      "stock": 21,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/ThinkBook_14_G9_IRL_CT1_03.jpg",
       "description": "Upgrade from 1 Year to 3 Year Warranty with 5WS0K27114"
@@ -8579,7 +8579,7 @@
       "subCategory": "Notebooks",
       "rrp": 4244.55,
       "rrpInc": 4669,
-      "stock": 2,
+      "stock": 1,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/ThinkPad_P14s_Gen_6_Intel_CT1_01.jpg",
       "description": "The ThinkPad P14s Gen 6 (Intel) delivers workstation-level performance in a lightweight 14.5-inch design, powered by the latest Intel Core Ultra processors and professional-grade graphics options. Built for creators, engineers, and business professionals, it combines AI-enhanced productivity, vibrant high-resolution displays, and legendary ThinkPad durability for demanding workflows anywhere."
@@ -10959,7 +10959,7 @@
       "subCategory": "Tablet Accessories",
       "rrp": 74.92,
       "rrpInc": 82.41,
-      "stock": 8,
+      "stock": 7,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/15TA/RAM-201U-D.jpg",
       "description": "The RAM-201U-D consists of a long double socket arm that accommodates 1.5\" C size ball bases, device holders, and adapters. With an overall length of 9.125\", this is the longest C size RAM double socket arm size and adds more reach to your favorite mounting solution. The easy to adjust knob allows for near-infinite adjustability."
@@ -14977,7 +14977,7 @@
       "subCategory": "Monitors - Digital Signage",
       "rrp": 680.91,
       "rrpInc": 749,
-      "stock": 22,
+      "stock": 21,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Images/Product Images/DS225+.png",
       "description": "The Synology DiskStation DS225+ is a compact 2-bay NAS solution designed to centralize data management, offering a comprehensive suite of tools through Synology DiskStation Manager DSM for managing, sharing, and protecting files and photos, backing up devices and data, and serving as the core of a smart surveillance system. 3 Year Warranty extendable to 5 years with EW201 ( additional purchase)"
@@ -17609,7 +17609,7 @@
       "subCategory": "Wall Mounts",
       "rrp": 58,
       "rrpInc": 63.8,
-      "stock": 17,
+      "stock": 16,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13WM/AD-WF-5060.jpg",
       "description": "Atdec Fixed wall mount to 50kg (110lb)\r\nAD-WF-5060 mounts displays to walls with capacity 50kg (110lb). It has a low profile of 25mm (1\").\r\nThe mount has fixed angle parallel to the wall and multiple features for fast and easy installation. Lateral shift enables the display to be positioned exactly as desired, even if offset to the wall bracket position. It has a built-in spirit level, forgiving slotted mounting holes, quick-connect display attachment, and easy to conceal magnetic tipped display release cords.\r\nIf mounting to stud walls; this mounting plate manages all standard stud patterns. \r\nChoose me for:\r\nMounting most displays\r\nDisplays to ~80\" \r\nTouchscreens to ~60\"\r\nMost wall constructions\r\nTechnical:\r\nHolds displays to 50kg (110lb)\r\nVESA universal to 600x400\r\nSteel material \r\n10 year warranty\r\n* wall mount hardware not included\r\nLearn more about Atdec digital signage mounts"
@@ -18211,7 +18211,7 @@
       "subCategory": "Monitors - Mounts",
       "rrp": 385,
       "rrpInc": 423.5,
-      "stock": 11,
+      "stock": 1,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/13M/TH-1040-CTL.jpg",
       "description": "The TH-1040-CTL is a cutting edge ceiling mount, offering superior display versatility, combined with enhanced safety features and hassle-free installation. The \"donut\" mounting head effortlessly rotates the screen through 360 degrees around the pole and to maximise display impact the VESA Ball Mount can infinitely adjust display position by 20 degrees in any direction. Display height is also customised with the telescopic pole adjustments. Installation is simple, with in-built safety features to prevent the unlikely event of the telescopic poles separating."
@@ -18659,7 +18659,7 @@
       "subCategory": "POS Mounts",
       "rrp": 183,
       "rrpInc": 201.3,
-      "stock": 19,
+      "stock": 13,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Uploads/atdec-apas-htm-p300__87630.jpg",
       "description": "APAS-HTM-P300 is a mount for POS applications. It holds one all-in-one POS device securely on a top pole VESA head.\r\nChoose me for:\r\nSingle POS device mount\r\nFixed post height\r\nSpecifications:\r\nPOS device to 10kg (22lb) \r\nPost height 300mm (12\") \r\nDevice VESA 75x75 and 100x100\r\nSecure connection to counter\r\nConcealed cable management\r\nSteel material\r\n10 year warranty\r\nLearn more about Atdec modular mounts for point of sale and service."
@@ -21179,7 +21179,7 @@
       "subCategory": "Network - Switches",
       "rrp": 2454.5,
       "rrpInc": 2699.95,
-      "stock": 2,
+      "stock": 1,
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/16S/DMS-1250-28P.jpg",
       "description": "The DMS-1250 Series is D-Link's newest family of Multi-Gigabit Ethernet smart switches. It provides multi-Gigabit connectivity, Power over Ethernet (PoE) capability, multiple management interfaces and advanced layer 2 features. The DMS-1250 Series provides a high-performace solution to expand your network and adapts to your business needs."
@@ -26349,20 +26349,6 @@
       "eta": "",
       "image": "https://www.mmt.com.au/Files/Product assets/Images/17C/44469806.jpg",
       "description": ""
-    },
-    {
-      "code": "LH650",
-      "sku": "",
-      "name": "BenQ LH650 1080P Business Projector",
-      "brand": "BenQ",
-      "category": "Projectors",
-      "subCategory": "Projectors - Large Venue",
-      "rrp": 1817.27,
-      "rrpInc": 1999,
-      "stock": 1,
-      "eta": "",
-      "image": "https://www.mmt.com.au/Files/Product assets/Images/13PL/LH650.jpg",
-      "description": "Futureproof your workspace with laser technology. The LH650 not only saves power and maintenance costs but its compact size and high brightness also ensure an efficient and uninterrupted meeting experience. BenQ SmartEco technology adjusts light source power intelligently without sacrificing image quality, saving up to 70% more energy than traditional Eco Mode. Laser technology conserves energy an additional 23% compared to traditional mercury lamps, while the device dims itself to minimum power in just 1.5 seconds."
     },
     {
       "code": "LH750",
